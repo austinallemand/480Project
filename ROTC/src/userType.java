@@ -15,6 +15,7 @@ public class userType extends javax.swing.JFrame {
      */
     public userType() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
