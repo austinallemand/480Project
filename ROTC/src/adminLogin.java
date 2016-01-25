@@ -123,7 +123,7 @@ public class adminLogin extends javax.swing.JFrame {
     }//GEN-LAST:event_adminLoginActionPerformed
 
     private void goBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_goBackActionPerformed
-        userType goBack = new userType();
+        //userType goBack = new userType();
         this.dispose();
         goBack.setVisible(true);
     }//GEN-LAST:event_goBackActionPerformed
