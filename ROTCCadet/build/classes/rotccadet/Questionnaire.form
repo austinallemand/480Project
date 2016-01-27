@@ -23,7 +23,7 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jScrollPane1" alignment="1" pref="779" max="32767" attributes="0"/>
+          <Component id="jScrollPane1" alignment="0" pref="779" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
@@ -45,12 +45,33 @@
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
-                              <EmptySpace min="-2" pref="255" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabelEagleScount" min="-2" max="-2" attributes="0"/>
                                   <Group type="102" attributes="0">
-                                      <Component id="jLabelJROTC" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="1" attributes="0">
+                                          <Component id="jLabelPS" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabelDB" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabelGPS" alignment="1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel10" min="-2" pref="313" max="-2" attributes="0"/>
+                                          <Component id="jLabelJROTC" alignment="1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabelEagleScount" alignment="1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jButton1" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      </Group>
                                       <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <EmptySpace max="32767" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jLabelNoD" alignment="1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel8" alignment="1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel12" alignment="1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel14" alignment="1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel2" alignment="1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabelEC" alignment="1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel3" alignment="1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel5" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="9" pref="9" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <Group type="103" groupAlignment="0" attributes="0">
@@ -62,53 +83,10 @@
                                           <Component id="userSSN" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <Group type="102" attributes="0">
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Group type="102" attributes="0">
-                                              <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="goBack" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Group type="102" attributes="0">
-                                              <EmptySpace min="44" pref="44" max="-2" attributes="0"/>
-                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                                                      <Component id="jComboBox1" max="32767" attributes="0"/>
-                                                      <Component id="userEagleScout" max="32767" attributes="0"/>
-                                                  </Group>
-                                                  <Group type="102" alignment="0" attributes="0">
-                                                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                                          <Component id="userPriorS" alignment="0" max="32767" attributes="0"/>
-                                                          <Component id="userGuardPriorS" alignment="0" max="32767" attributes="0"/>
-                                                      </Group>
-                                                      <EmptySpace max="-2" attributes="0"/>
-                                                      <Group type="103" groupAlignment="0" attributes="0">
-                                                          <Component id="userHasPriorS" min="-2" max="-2" attributes="0"/>
-                                                          <Group type="102" alignment="0" attributes="0">
-                                                              <Component id="userHasPriorGuardS" min="-2" max="-2" attributes="0"/>
-                                                              <EmptySpace max="-2" attributes="0"/>
-                                                              <Component id="userGuardStatus" min="-2" max="-2" attributes="0"/>
-                                                          </Group>
-                                                      </Group>
-                                                  </Group>
-                                                  <Component id="userEnlistment" alignment="0" min="-2" pref="410" max="-2" attributes="0"/>
-                                              </Group>
-                                          </Group>
-                                      </Group>
-                                      <EmptySpace min="0" pref="461" max="32767" attributes="0"/>
-                                  </Group>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="userDeath" alignment="1" max="32767" attributes="0"/>
-                                          <Component id="userENumber" alignment="1" max="32767" attributes="0"/>
-                                          <Component id="userEAddress" alignment="1" max="32767" attributes="0"/>
-                                          <Component id="userEmergency" alignment="1" max="32767" attributes="0"/>
-                                          <Component id="userChildN" alignment="1" max="32767" attributes="0"/>
-                                          <Component id="userChildA" alignment="1" max="32767" attributes="0"/>
-                                          <Component id="userRelationship" alignment="1" max="32767" attributes="0"/>
-                                          <Component id="userChildName" alignment="1" max="32767" attributes="0"/>
-                                          <Component id="jTextField6" alignment="1" max="32767" attributes="0"/>
-                                          <Component id="jTextFieldMT" alignment="1" max="32767" attributes="0"/>
+                                          <Component id="userPartnerName" alignment="1" max="32767" attributes="0"/>
                                           <Component id="userCWUID" alignment="1" max="32767" attributes="0"/>
                                           <Component id="userApt" alignment="1" max="32767" attributes="0"/>
                                           <Component id="userFN" max="32767" attributes="0"/>
@@ -118,33 +96,61 @@
                                           <Component id="userMI" alignment="0" max="32767" attributes="0"/>
                                           <Component id="userStreet" alignment="0" max="32767" attributes="0"/>
                                           <Group type="102" alignment="0" attributes="0">
-                                              <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
-                                              <Component id="userAreaCode" min="-2" pref="33" max="-2" attributes="0"/>
+                                              <Component id="userAreaCode" min="-2" pref="38" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Component id="userMPN" min="-2" pref="45" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Component id="userLPN" max="32767" attributes="0"/>
                                           </Group>
                                           <Component id="userCity" alignment="1" max="32767" attributes="0"/>
-                                          <Component id="userChildDoB" alignment="1" max="32767" attributes="0"/>
                                           <Group type="102" attributes="0">
+                                              <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="userZip" alignment="0" min="-2" pref="59" max="-2" attributes="0"/>
-                                                  <Component id="userGender" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="userState" alignment="0" min="-2" pref="43" max="-2" attributes="0"/>
-                                                  <Component id="userRace" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="jComboBox2" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="jComboBox3" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="jTextField5" alignment="0" min="-2" pref="392" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                      <Component id="userZip" alignment="0" min="-2" pref="59" max="-2" attributes="0"/>
+                                                      <Component id="userGender" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="userState" alignment="0" min="-2" pref="43" max="-2" attributes="0"/>
+                                                      <Component id="userRace" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="userMaritialS" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="userChildren" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="userPartnerState" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
+                                                      <Component id="userPartnerCity" alignment="0" min="-2" pref="79" max="-2" attributes="0"/>
+                                                      <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                                          <Component id="userPartnerPoB" alignment="0" pref="145" max="32767" attributes="0"/>
+                                                          <Component id="userPartnerNumber" alignment="0" max="32767" attributes="0"/>
+                                                      </Group>
+                                                      <Component id="userDeath" alignment="0" pref="392" max="32767" attributes="0"/>
+                                                      <Component id="userENumber" alignment="0" max="32767" attributes="0"/>
+                                                      <Component id="userEAddress" alignment="0" max="32767" attributes="0"/>
+                                                      <Component id="userEmergency" alignment="0" max="32767" attributes="0"/>
+                                                      <Component id="userNoD" alignment="0" max="32767" attributes="0"/>
+                                                      <Component id="userPartnerAddress" alignment="0" max="32767" attributes="0"/>
+                                                      <Group type="102" alignment="0" attributes="0">
+                                                          <Component id="userPriorS" min="-2" pref="106" max="-2" attributes="0"/>
+                                                          <EmptySpace max="-2" attributes="0"/>
+                                                          <Component id="userHasPriorS" min="-2" max="-2" attributes="0"/>
+                                                      </Group>
+                                                      <Group type="102" alignment="0" attributes="0">
+                                                          <Component id="userGuardStatus" min="-2" max="-2" attributes="0"/>
+                                                          <EmptySpace max="-2" attributes="0"/>
+                                                          <Component id="userHasPriorGuardS" min="-2" max="-2" attributes="0"/>
+                                                      </Group>
+                                                      <Component id="userEnlistment" alignment="0" max="32767" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                                      <Component id="userJuniorROTC" alignment="0" max="32767" attributes="0"/>
+                                                      <Component id="userEagleScout" alignment="0" max="32767" attributes="0"/>
+                                                      <Component id="goBack" alignment="0" max="32767" attributes="0"/>
+                                                  </Group>
                                               </Group>
-                                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                              <EmptySpace min="0" pref="478" max="32767" attributes="0"/>
                                           </Group>
                                       </Group>
                                   </Group>
                               </Group>
                           </Group>
                           <Group type="102" attributes="0">
-                              <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="176" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="1" attributes="0">
                                   <Component id="jLabelState" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabelCity" min="-2" max="-2" attributes="0"/>
@@ -162,25 +168,11 @@
                                   <Component id="jLabelAM" alignment="1" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabelPGD" alignment="1" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel4" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabelNoD" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel8" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel2" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabelCN" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabelRtC" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabelCA" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="CDoB" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabelChildN" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel3" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel5" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabelDB" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabelEC" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabelPS" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabelGPS" alignment="1" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabelGender" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jButton1" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel10" min="-2" pref="313" max="-2" attributes="0"/>
                                   <Component id="jLabelEmail" alignment="1" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabelCWUID" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel11" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel13" alignment="1" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
@@ -284,112 +276,104 @@
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabelMS" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jComboBox2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="userMaritialS" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextFieldMT" min="-2" max="-2" attributes="0"/>
+                          <Component id="userPartnerName" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField5" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
+                          <Component id="userPartnerAddress" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabel13" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="userPartnerCity" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="userPartnerState" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel14" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabel12" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="userPartnerNumber" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="userPartnerPoB" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabelNoD" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField6" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="userNoD" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jComboBox3" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="userChildren" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabelCN" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="userChildName" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabelRtC" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="userRelationship" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabelCA" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="userChildA" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="CDoB" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="userChildDoB" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabelChildN" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="userChildN" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabelEC" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="userEmergency" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="userEAddress" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                          <Component id="userEAddress" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="userENumber" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
-                              <Component id="jLabelDB" min="-2" max="-2" attributes="0"/>
+                              <Component id="userENumber" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="userDeath" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="userPriorS" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="userHasPriorS" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabelPS" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
+                              <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="userDeath" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabelDB" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabelPS" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="userPriorS" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="userHasPriorS" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabelGPS" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="userGuardPriorS" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="userHasPriorGuardS" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="userGuardStatus" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="userHasPriorGuardS" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelGPS" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel10" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
                           <Component id="userEnlistment" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabelJROTC" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="userJuniorROTC" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="jComboBox1" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabelJROTC" min="-2" max="-2" attributes="0"/>
+                          <Component id="userEagleScout" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelEagleScount" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="userEagleScout" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabelEagleScount" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace pref="84" max="32767" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="goBack" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" pref="282" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -400,7 +384,7 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="userMIActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JComboBox" name="jComboBox3">
+            <Component class="javax.swing.JComboBox" name="userChildren">
               <Properties>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                   <StringArray count="3">
@@ -413,8 +397,6 @@
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
               </AuxValues>
-            </Component>
-            <Component class="javax.swing.JTextField" name="userChildDoB">
             </Component>
             <Component class="javax.swing.JLabel" name="jLabelSSN">
               <Properties>
@@ -431,11 +413,6 @@
             <Component class="javax.swing.JLabel" name="jLabelMI">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Middle Initial:"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="jLabelCN">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Child Name:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabelEmail">
@@ -458,11 +435,6 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="userCWUIDActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabelCA">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Child Address:"/>
-              </Properties>
-            </Component>
             <Component class="javax.swing.JComboBox" name="userPriorS">
               <Properties>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
@@ -481,8 +453,6 @@
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
               </AuxValues>
-            </Component>
-            <Component class="javax.swing.JTextField" name="userChildN">
             </Component>
             <Component class="javax.swing.JLabel" name="jLabelNoD">
               <Properties>
@@ -516,7 +486,7 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="userGenderActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JComboBox" name="jComboBox2">
+            <Component class="javax.swing.JComboBox" name="userMaritialS">
               <Properties>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                   <StringArray count="4">
@@ -533,16 +503,6 @@
             </Component>
             <Component class="javax.swing.JTextField" name="userAcMajor">
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabelChildN">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Child Number:"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="jLabelRtC">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Relationship to Child:"/>
-              </Properties>
-            </Component>
             <Component class="javax.swing.JButton" name="jButton1">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Submit"/>
@@ -556,27 +516,9 @@
                 <Property name="text" type="java.lang.String" value="Prior Service:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JComboBox" name="userGuardPriorS">
-              <Properties>
-                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="3">
-                    <StringItem index="0" value="Please Pick:"/>
-                    <StringItem index="1" value="Yes"/>
-                    <StringItem index="2" value="No"/>
-                  </StringArray>
-                </Property>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="userGuardPriorSActionPerformed"/>
-                <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="userGuardPriorSPropertyChange"/>
-              </Events>
-              <AuxValues>
-                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-              </AuxValues>
-            </Component>
             <Component class="javax.swing.JLabel" name="jLabel4">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Maritial Temp, name address, number"/>
+                <Property name="text" type="java.lang.String" value="Partner Name:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabelMS">
@@ -620,9 +562,7 @@
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
               </AuxValues>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField5">
-            </Component>
-            <Component class="javax.swing.JTextField" name="userChildA">
+            <Component class="javax.swing.JTextField" name="userPartnerPoB">
             </Component>
             <Component class="javax.swing.JTextField" name="userSSN">
             </Component>
@@ -638,11 +578,9 @@
                 <Property name="text" type="java.lang.String" value="Do you have any children?"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="userChildName">
-            </Component>
             <Component class="javax.swing.JLabel" name="jLabel8">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Maritial place of birth, city, state"/>
+                <Property name="text" type="java.lang.String" value="Partner place of Birth:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="userEmergency">
@@ -692,16 +630,9 @@
                 <Property name="text" type="java.lang.String" value="Guardian Prior Service:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField6">
-            </Component>
-            <Component class="javax.swing.JTextField" name="userRelationship">
+            <Component class="javax.swing.JTextField" name="userNoD">
             </Component>
             <Component class="javax.swing.JTextField" name="userMPN">
-            </Component>
-            <Component class="javax.swing.JLabel" name="CDoB">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Child Date of Birth:"/>
-              </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="userEmail">
               <Events>
@@ -733,7 +664,7 @@
                 <Property name="text" type="java.lang.String" value="Ethnicity:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextFieldMT">
+            <Component class="javax.swing.JTextField" name="userPartnerName">
             </Component>
             <Component class="javax.swing.JTextField" name="userDoB">
               <Events>
@@ -804,7 +735,7 @@
                 <Property name="text" type="java.lang.String" value="Junior ROTC:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JComboBox" name="jComboBox1">
+            <Component class="javax.swing.JComboBox" name="userJuniorROTC">
               <Properties>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                   <StringArray count="5">
@@ -848,11 +779,42 @@
                     <StringItem index="3" value="Active Duty"/>
                   </StringArray>
                 </Property>
-                <Property name="enabled" type="boolean" value="false"/>
               </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="userGuardStatusMouseClicked"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="userGuardStatusActionPerformed"/>
+              </Events>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
               </AuxValues>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel11">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Partner Address:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel12">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Phone Number:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="userPartnerAddress">
+            </Component>
+            <Component class="javax.swing.JTextField" name="userPartnerNumber">
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel13">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Partner City:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel14">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Partner State:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="userPartnerCity">
+            </Component>
+            <Component class="javax.swing.JTextField" name="userPartnerState">
             </Component>
           </SubComponents>
         </Container>
