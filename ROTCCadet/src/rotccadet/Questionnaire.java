@@ -1,5 +1,7 @@
 package rotccadet;
-
+import java.io.PrintWriter;
+import java.io.File;
+import java.io.FileNotFoundException;
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -27,7 +29,7 @@ public class Questionnaire extends javax.swing.JFrame {
     private String state;
     private String zipCode;
     private String gender;
-    
+
 
     
     
@@ -672,27 +674,59 @@ public class Questionnaire extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
-        firstName = userFN.getText();
-        lastName = userLN.getText();
-        middleInitial = userMI.getText();
-        cwuID = userCWUID.getText();
-        email = userEmail.getText();
-        dateOfBirth = userDoB.getText();
-        areaCode = userAreaCode.getText();
-        middleThreePhoneNumber = userMPN.getText();
-        lastThreePhoneNumber = userLPN.getText();
-        aptNumber = userApt.getText();
-        streetAddress = userStreet.getText();
-        city = userCity.getText();
-        state = userState.getText();
-        zipCode = userZip.getText();
-        gender = (String)userGender.getSelectedItem();
-
-        this.dispose();
-        Confirmation confirm = new Confirmation(firstName,lastName,middleInitial,
-            cwuID,email, dateOfBirth,areaCode,middleThreePhoneNumber,lastThreePhoneNumber,aptNumber,
-            streetAddress,city,state,zipCode, gender);
-        confirm.setVisible(true);
+        try
+        {
+            File savedFile = new File("C:/cadetQuestionare.txt");
+            //open the file
+            PrintWriter outputFile = new PrintWriter (savedFile);
+            outputFile.println(userAcMajor.getText());
+            outputFile.println(userApt.getText());
+            outputFile.println(userAreaCode.getText());
+            outputFile.println(userCWUID.getText());
+            outputFile.println(userChildren.getSelectedItem());
+            outputFile.println(userCity.getText());
+            outputFile.println(userDeath.getText());
+            outputFile.println(userDoB.getText());
+            outputFile.println(userEAddress.getText());
+            outputFile.println(userENumber.getText());
+            outputFile.println(userEagleScout.getSelectedItem());
+            outputFile.println(userEmergency.getText());
+            outputFile.println(userEmail.getText());
+            outputFile.println(userEnlistment.getText());
+            outputFile.println(userFN.getText());
+            outputFile.println(userGender.getSelectedItem());
+            outputFile.println(userGradDate.getText());
+            outputFile.println(userGuardStatus.getSelectedItem());
+            outputFile.println(userHasPriorGuardS.getSelectedItem());
+            outputFile.println(userHasPriorS.getSelectedItem());
+            outputFile.println(userJuniorROTC.getSelectedItem());
+            outputFile.println(userLN.getText());
+            outputFile.println(userLPN.getText());
+            outputFile.println(userMI.getText());
+            outputFile.println(userMPN.getText());
+            outputFile.println(userMaritialS.getSelectedItem());
+            outputFile.println(userNoD.getText());
+            outputFile.println(userPartnerAddress.getText());
+            outputFile.println(userPartnerName.getText());
+            outputFile.println(userPartnerNumber.getText());
+            outputFile.println(userPartnerState.getText());
+            outputFile.println(userPriorS.getSelectedItem());
+            outputFile.println(userRace.getSelectedItem());
+            outputFile.println(userPartnerPoB.getText());
+            outputFile.println(encrypt(Integer.parseInt(userSSN.getText())));
+            outputFile.println(userState.getText());
+            outputFile.println(userStreet.getText());
+            outputFile.println(userZip.getText());
+            outputFile.close ();
+        }
+        catch (FileNotFoundException e)
+        {
+            e.printStackTrace();
+        }
+        
+        
+        
+       
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void userDoBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userDoBActionPerformed
@@ -875,4 +909,17 @@ public class Questionnaire extends javax.swing.JFrame {
     private javax.swing.JTextField userStreet;
     private javax.swing.JTextField userZip;
     // End of variables declaration//GEN-END:variables
+
+    /*********
+    Bit shift encryption for SSNs (similiar to a Ceasear shift)
+    *********/
+    private int encrypt(int passedSSN){
+        int shiftOne = 3;
+        int encryptedSSN = passedSSN;
+//
+        encryptedSSN = encryptedSSN >> shiftOne;
+
+        return encryptedSSN;
+    }
+    
 }
