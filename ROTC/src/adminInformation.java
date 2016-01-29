@@ -10,6 +10,7 @@ import java.util.logging.Logger;
 import javax.swing.AbstractAction;
 import javax.swing.Action;
 import javax.swing.JOptionPane;
+import java.io.*;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -126,21 +127,21 @@ public class adminInformation extends javax.swing.JFrame {
         userPartnerNumber = new javax.swing.JTextField();
         jLabel35 = new javax.swing.JLabel();
         userPartnerPoB = new javax.swing.JTextField();
-        userChildren = new javax.swing.JComboBox<>();
-        userGender = new javax.swing.JComboBox<>();
-        userRace = new javax.swing.JComboBox<>();
-        userMaritialS = new javax.swing.JComboBox<>();
         jLabel36 = new javax.swing.JLabel();
         userENumber = new javax.swing.JTextField();
-        userPriorS = new javax.swing.JComboBox<>();
-        userHasPriorS = new javax.swing.JComboBox<>();
-        userGuardStatus = new javax.swing.JComboBox<>();
-        userHasPriorGuardS = new javax.swing.JComboBox<>();
-        userEnlistment = new javax.swing.JComboBox<>();
-        userJuniorROTC = new javax.swing.JComboBox<>();
-        userEagleScout = new javax.swing.JComboBox<>();
         jLabel37 = new javax.swing.JLabel();
         userDeath = new javax.swing.JTextField();
+        userGender = new javax.swing.JTextField();
+        userRace = new javax.swing.JTextField();
+        userMaritialS = new javax.swing.JTextField();
+        userChildren = new javax.swing.JTextField();
+        userPriorS = new javax.swing.JTextField();
+        userHasPriorS = new javax.swing.JTextField();
+        userGuardStatus = new javax.swing.JTextField();
+        userHasPriorGuardS = new javax.swing.JTextField();
+        userEnlistment = new javax.swing.JTextField();
+        userJuniorROTC = new javax.swing.JTextField();
+        userEagleScout = new javax.swing.JTextField();
         jLabel34 = new javax.swing.JLabel();
         importCadet = new javax.swing.JButton();
 
@@ -163,6 +164,11 @@ public class adminInformation extends javax.swing.JFrame {
         removeCadet.setText("Remove");
 
         updateCadet.setText("Update");
+        updateCadet.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                updateCadetActionPerformed(evt);
+            }
+        });
 
         cadetForm.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Please Select a Form", "Item 2", "Item 3", "Item 4" }));
         cadetForm.addActionListener(new java.awt.event.ActionListener() {
@@ -319,14 +325,6 @@ public class adminInformation extends javax.swing.JFrame {
 
         jLabel35.setText("Partner Place of Birth:");
 
-        userChildren.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Yes", "No" }));
-
-        userGender.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Male", "Female" }));
-
-        userRace.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Race 1", "Race 2", "Race 3", "Race 4", "Race 5", "Race 6" }));
-
-        userMaritialS.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Single", "Married", "Widowed" }));
-
         jLabel36.setText("Emergency Number:");
 
         userENumber.addActionListener(new java.awt.event.ActionListener() {
@@ -335,33 +333,15 @@ public class adminInformation extends javax.swing.JFrame {
             }
         });
 
-        userPriorS.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Please Pick", "Yes", "No" }));
-        userPriorS.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                userPriorSActionPerformed(evt);
-            }
-        });
-
-        userHasPriorS.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Army", "Air Force", "Navy", "Marines", "Cost Guard", "Merchant Marine" }));
-        userHasPriorS.setEnabled(false);
-
-        userGuardStatus.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Guardian Status:", "Civilian", "Retired Military", "Active Duty" }));
-        userGuardStatus.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                userGuardStatusActionPerformed(evt);
-            }
-        });
-
-        userHasPriorGuardS.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Army", "Air Force", "Navy", "Marines", "Coast Guard", "Merchant Marine" }));
-        userHasPriorGuardS.setEnabled(false);
-
-        userEnlistment.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "No", "Yes" }));
-
-        userJuniorROTC.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "None", "1 Year", "2 Years", "3 Years", "4 Years" }));
-
-        userEagleScout.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "No", "Yes" }));
-
         jLabel37.setText("Death Beneficary");
+
+        userHasPriorGuardS.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                userHasPriorGuardSActionPerformed(evt);
+            }
+        });
+
+        userEagleScout.setText("jTextField1");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -407,59 +387,65 @@ public class adminInformation extends javax.swing.JFrame {
                             .addComponent(jLabel35)
                             .addComponent(jLabel36)
                             .addComponent(jLabel37))
-                        .addGap(21, 21, 21)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addGap(0, 1, Short.MAX_VALUE)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(userFN, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 398, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(userLN, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 398, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(userCWUID, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(userEmail)
-                            .addComponent(userDoB)
-                            .addComponent(userStreet)
-                            .addComponent(userApt)
-                            .addComponent(userCity)
-                            .addComponent(userState)
-                            .addComponent(userZip)
-                            .addComponent(userSSN)
-                            .addComponent(userAcMajor)
-                            .addComponent(userGradDate)
-                            .addComponent(userPartnerName)
-                            .addComponent(userPartnerAddress)
-                            .addComponent(userPartnerCity)
-                            .addComponent(userPartnerState)
-                            .addComponent(userNoD)
-                            .addComponent(userEmergency)
-                            .addComponent(userEAddress)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(userAreaCode, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(userMPN, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(userLPN))
-                            .addComponent(userENumber)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(userPartnerNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(userPartnerPoB, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(userChildren, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(userGender, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(userMaritialS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(userRace, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(userPriorS, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(userGuardStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGap(26, 26, 26)
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(userHasPriorGuardS, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(userHasPriorS, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addComponent(userEnlistment, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(userJuniorROTC, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(userEagleScout, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(userGender, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(userEnlistment)
+                                    .addComponent(userJuniorROTC)
+                                    .addComponent(userEagleScout, javax.swing.GroupLayout.DEFAULT_SIZE, 94, Short.MAX_VALUE))
                                 .addGap(0, 0, Short.MAX_VALUE))
-                            .addComponent(userDeath)))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(21, 21, 21)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(userChildren, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(userMaritialS, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(userRace, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                        .addGap(0, 1, Short.MAX_VALUE)
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(userFN, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 398, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(userLN, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 398, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(userCWUID, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(userEmail)
+                                    .addComponent(userDoB)
+                                    .addComponent(userStreet)
+                                    .addComponent(userApt)
+                                    .addComponent(userCity)
+                                    .addComponent(userState)
+                                    .addComponent(userZip)
+                                    .addComponent(userSSN)
+                                    .addComponent(userAcMajor)
+                                    .addComponent(userGradDate)
+                                    .addComponent(userPartnerName)
+                                    .addComponent(userPartnerAddress)
+                                    .addComponent(userPartnerCity)
+                                    .addComponent(userPartnerState)
+                                    .addComponent(userNoD)
+                                    .addComponent(userEmergency)
+                                    .addComponent(userEAddress)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(userAreaCode, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(userMPN, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(userLPN))
+                                    .addComponent(userENumber)
+                                    .addComponent(userDeath)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(userPartnerNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(userPartnerPoB, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(userGuardStatus, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(userPriorS, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addGap(32, 32, 32)
+                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                    .addComponent(userHasPriorGuardS, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+                                                    .addComponent(userHasPriorS))))
+                                        .addGap(0, 0, Short.MAX_VALUE))))))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(userMI, javax.swing.GroupLayout.PREFERRED_SIZE, 398, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -613,7 +599,7 @@ public class adminInformation extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel31)
                     .addComponent(userEagleScout, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(129, Short.MAX_VALUE))
+                .addContainerGap(132, Short.MAX_VALUE))
         );
 
         jLabel34.setText("Admin Access");
@@ -634,7 +620,7 @@ public class adminInformation extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 175, Short.MAX_VALUE))
+                        .addGap(0, 2098, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jLabel34)
@@ -686,13 +672,17 @@ public class adminInformation extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 765, Short.MAX_VALUE))
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 661, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 1215, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(100, 100, 100)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 1104, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();
@@ -768,27 +758,97 @@ public class adminInformation extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_userENumberActionPerformed
 
-    private void userPriorSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userPriorSActionPerformed
-        String yes = (String)userPriorS.getSelectedItem(); 
-            if(yes.equals("Yes")) {
-            userHasPriorS.setEnabled(true);
-            
-        }else
-                userHasPriorS.setEnabled(false);
-    }//GEN-LAST:event_userPriorSActionPerformed
-
-    private void userGuardStatusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userGuardStatusActionPerformed
-        String yes = (String)userGuardStatus.getSelectedItem(); 
-            if(yes.equals("Retired Military") || yes.equals("Active Duty")) {
-            userHasPriorGuardS.setEnabled(true);
-            
-        }else
-                userHasPriorGuardS.setEnabled(false);
-    }//GEN-LAST:event_userGuardStatusActionPerformed
-
     private void importCadetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_importCadetActionPerformed
-        // TODO add your handling code here:
+        try {  
+            FileReader fileReader = new FileReader(fileName);
+            BufferedReader bufferedReader = new BufferedReader(fileReader);
+            
+            userAcMajor.setText(bufferedReader.readLine());
+            userApt.setText(bufferedReader.readLine());
+            userAreaCode.setText(bufferedReader.readLine());
+            userAreaCode.setText(bufferedReader.readLine());
+            userCWUID.setText(bufferedReader.readLine());
+            userChildren.setText(bufferedReader.readLine());
+            userCity.setText(bufferedReader.readLine());
+            userDeath.setText(bufferedReader.readLine());
+            userDoB.setText(bufferedReader.readLine());
+            userEAddress.setText(bufferedReader.readLine());
+            userENumber.setText(bufferedReader.readLine());
+            userEagleScout.setText(bufferedReader.readLine());
+            userEmergency.setText(bufferedReader.readLine());
+            userEmail.setText(bufferedReader.readLine());
+            userEnlistment.setText(bufferedReader.readLine());
+            userFN.setText(bufferedReader.readLine());
+            userGender.setText(bufferedReader.readLine());
+            userGradDate.setText(bufferedReader.readLine());
+            userGuardStatus.setText(bufferedReader.readLine());
+            userHasPriorGuardS.setText(bufferedReader.readLine());
+            userHasPriorS.setText(bufferedReader.readLine());
+            userJuniorROTC.setText(bufferedReader.readLine());
+            userLN.setText(bufferedReader.readLine());
+            userLPN.setText(bufferedReader.readLine());
+            userMI.setText(bufferedReader.readLine());
+            userMPN.setText(bufferedReader.readLine());
+            userMaritialS.setText(bufferedReader.readLine());
+            userNoD.setText(bufferedReader.readLine());
+            userPartnerAddress.setText(bufferedReader.readLine());
+            userPartnerName.setText(bufferedReader.readLine());
+            userPartnerNumber.setText(bufferedReader.readLine());
+            userPartnerState.setText(bufferedReader.readLine());
+            userPriorS.setText(bufferedReader.readLine());
+            userRace.setText(bufferedReader.readLine());
+            userPartnerPoB.setText(bufferedReader.readLine());
+            //deEncrpty the SSN
+            String tempSSN = bufferedReader.readLine();
+            int tempintSSN = Integer.parseInt(tempSSN);
+            tempintSSN = deEncrypt(tempintSSN);
+            userSSN.setText(Integer.toString(tempintSSN));
+            
+            userState.setText(bufferedReader.readLine());
+            userStreet.setText(bufferedReader.readLine());
+            userZip.setText(bufferedReader.readLine());
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        }
+        catch(IOException ex) {
+            
+        }
+        
     }//GEN-LAST:event_importCadetActionPerformed
+
+    private void updateCadetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateCadetActionPerformed
+     Confirmation confirm = new Confirmation(userFN.getText(),userLN.getText(), userMI.getText(), userCWUID.getText(),userEmail.getText(),userDoB.getText(), userAreaCode.getText(), userMPN.getText(),userLPN.getText(),
+                                            userApt.getText(),userStreet.getText(),userCity.getText(),userState.getText(),userZip.getText(),
+                                            userGender.getText(),userSSN.getText(),userAcMajor.getText(),userGradDate.getText(), userRace.getText(), userMaritialS.getText(),userPartnerName.getText(),userPartnerAddress.getText(),
+                                            userPartnerCity.getText(), userPartnerState.getText(),
+                                            userPartnerNumber.getText(),userPartnerPoB.getText(),userNoD.getText(), userChildren.getText(), userEmergency.getText(),userEAddress.getText(),userENumber.getText(),
+                                            userDeath.getText(),userPriorS.getText(),userHasPriorS.getText(),userGuardStatus.getText(),userHasPriorGuardS.getText(),
+                                            userEnlistment.getText(),userJuniorROTC.getText(), userEagleScout.getText());
+    }//GEN-LAST:event_updateCadetActionPerformed
+
+    private void userHasPriorGuardSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userHasPriorGuardSActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_userHasPriorGuardSActionPerformed
 
     /**
      * @param args the command line arguments
@@ -878,28 +938,28 @@ public class adminInformation extends javax.swing.JFrame {
     private javax.swing.JTextField userApt;
     private javax.swing.JTextField userAreaCode;
     private javax.swing.JTextField userCWUID;
-    private javax.swing.JComboBox<String> userChildren;
+    private javax.swing.JTextField userChildren;
     private javax.swing.JTextField userCity;
     private javax.swing.JTextField userDeath;
     private javax.swing.JTextField userDoB;
     private javax.swing.JTextField userEAddress;
     private javax.swing.JTextField userENumber;
-    private javax.swing.JComboBox<String> userEagleScout;
+    private javax.swing.JTextField userEagleScout;
     private javax.swing.JTextField userEmail;
     private javax.swing.JTextField userEmergency;
-    private javax.swing.JComboBox<String> userEnlistment;
+    private javax.swing.JTextField userEnlistment;
     private javax.swing.JTextField userFN;
-    private javax.swing.JComboBox<String> userGender;
+    private javax.swing.JTextField userGender;
     private javax.swing.JTextField userGradDate;
-    private javax.swing.JComboBox<String> userGuardStatus;
-    private javax.swing.JComboBox<String> userHasPriorGuardS;
-    private javax.swing.JComboBox<String> userHasPriorS;
-    private javax.swing.JComboBox<String> userJuniorROTC;
+    private javax.swing.JTextField userGuardStatus;
+    private javax.swing.JTextField userHasPriorGuardS;
+    private javax.swing.JTextField userHasPriorS;
+    private javax.swing.JTextField userJuniorROTC;
     private javax.swing.JTextField userLN;
     private javax.swing.JTextField userLPN;
     private javax.swing.JTextField userMI;
     private javax.swing.JTextField userMPN;
-    private javax.swing.JComboBox<String> userMaritialS;
+    private javax.swing.JTextField userMaritialS;
     private javax.swing.JTextField userNoD;
     private javax.swing.JTextField userPartnerAddress;
     private javax.swing.JTextField userPartnerCity;
@@ -907,11 +967,25 @@ public class adminInformation extends javax.swing.JFrame {
     private javax.swing.JTextField userPartnerNumber;
     private javax.swing.JTextField userPartnerPoB;
     private javax.swing.JTextField userPartnerState;
-    private javax.swing.JComboBox<String> userPriorS;
-    private javax.swing.JComboBox<String> userRace;
+    private javax.swing.JTextField userPriorS;
+    private javax.swing.JTextField userRace;
     private javax.swing.JTextField userSSN;
     private javax.swing.JTextField userState;
     private javax.swing.JTextField userStreet;
     private javax.swing.JTextField userZip;
     // End of variables declaration//GEN-END:variables
+    private String fileName = "cadetQuestionare.txt";
+
+    /*********
+    Bit shift encryption for SSNs (similiar to a Ceasear shift)
+    *********/
+    private int deEncrypt(int passedSSN){
+        int shiftOne = 3;
+        int encryptedSSN = passedSSN;
+        
+        encryptedSSN = encryptedSSN << shiftOne;
+
+        return encryptedSSN;
+    }
 }
+

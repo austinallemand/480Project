@@ -30,15 +30,20 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
+          <Group type="102" alignment="1" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jScrollPane2" pref="765" max="32767" attributes="0"/>
+              <Component id="jScrollPane2" pref="661" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jScrollPane2" alignment="0" pref="1215" max="32767" attributes="0"/>
+          <Group type="102" attributes="0">
+              <EmptySpace min="-2" pref="100" max="-2" attributes="0"/>
+              <Component id="jScrollPane2" pref="1104" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -57,7 +62,7 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
                               <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="175" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="2098" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -136,6 +141,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Update"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="updateCadetActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JComboBox" name="cadetForm">
               <Properties>
@@ -211,67 +219,77 @@
                                       <Component id="jLabel36" alignment="1" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabel37" alignment="1" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" alignment="1" attributes="0">
-                                          <EmptySpace min="0" pref="1" max="32767" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="userFN" alignment="1" min="-2" pref="398" max="-2" attributes="0"/>
-                                              <Component id="userLN" alignment="1" min="-2" pref="398" max="-2" attributes="0"/>
-                                          </Group>
-                                      </Group>
-                                      <Component id="userCWUID" alignment="1" max="32767" attributes="0"/>
-                                      <Component id="userEmail" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="userDoB" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="userStreet" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="userApt" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="userCity" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="userState" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="userZip" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="userSSN" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="userAcMajor" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="userGradDate" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="userPartnerName" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="userPartnerAddress" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="userPartnerCity" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="userPartnerState" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="userNoD" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="userEmergency" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="userEAddress" max="32767" attributes="0"/>
                                       <Group type="102" alignment="0" attributes="0">
-                                          <Component id="userAreaCode" min="-2" pref="111" max="-2" attributes="0"/>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="userMPN" min="-2" pref="87" max="-2" attributes="0"/>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="userLPN" max="32767" attributes="0"/>
-                                      </Group>
-                                      <Component id="userENumber" alignment="0" max="32767" attributes="0"/>
-                                      <Group type="102" attributes="0">
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="userPartnerNumber" alignment="0" min="-2" pref="255" max="-2" attributes="0"/>
-                                              <Component id="userPartnerPoB" min="-2" pref="258" max="-2" attributes="0"/>
-                                              <Component id="userChildren" min="-2" max="-2" attributes="0"/>
-                                              <Component id="userGender" min="-2" max="-2" attributes="0"/>
-                                              <Component id="userMaritialS" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="userRace" min="-2" max="-2" attributes="0"/>
-                                              <Group type="102" alignment="0" attributes="0">
-                                                  <Group type="103" groupAlignment="1" attributes="0">
-                                                      <Component id="userPriorS" min="-2" pref="91" max="-2" attributes="0"/>
-                                                      <Component id="userGuardStatus" min="-2" pref="91" max="-2" attributes="0"/>
-                                                  </Group>
-                                                  <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                                                  <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Component id="userHasPriorGuardS" alignment="1" min="-2" pref="91" max="-2" attributes="0"/>
-                                                      <Component id="userHasPriorS" alignment="1" min="-2" pref="91" max="-2" attributes="0"/>
-                                                  </Group>
-                                              </Group>
-                                              <Component id="userEnlistment" min="-2" pref="91" max="-2" attributes="0"/>
-                                              <Component id="userJuniorROTC" min="-2" pref="91" max="-2" attributes="0"/>
-                                              <Component id="userEagleScout" min="-2" pref="91" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                              <Component id="userGender" min="-2" pref="91" max="-2" attributes="0"/>
+                                              <Component id="userEnlistment" max="32767" attributes="0"/>
+                                              <Component id="userJuniorROTC" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="userEagleScout" pref="94" max="32767" attributes="0"/>
                                           </Group>
                                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                       </Group>
-                                      <Component id="userDeath" alignment="0" max="32767" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="userChildren" alignment="1" max="32767" attributes="0"/>
+                                              <Component id="userMaritialS" alignment="1" max="32767" attributes="0"/>
+                                              <Component id="userRace" alignment="1" max="32767" attributes="0"/>
+                                              <Group type="102" alignment="1" attributes="0">
+                                                  <EmptySpace min="0" pref="1" max="32767" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Component id="userFN" alignment="1" min="-2" pref="398" max="-2" attributes="0"/>
+                                                      <Component id="userLN" alignment="1" min="-2" pref="398" max="-2" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                              <Component id="userCWUID" alignment="1" max="32767" attributes="0"/>
+                                              <Component id="userEmail" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="userDoB" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="userStreet" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="userApt" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="userCity" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="userState" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="userZip" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="userSSN" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="userAcMajor" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="userGradDate" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="userPartnerName" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="userPartnerAddress" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="userPartnerCity" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="userPartnerState" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="userNoD" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="userEmergency" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="userEAddress" max="32767" attributes="0"/>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="userAreaCode" min="-2" pref="111" max="-2" attributes="0"/>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Component id="userMPN" min="-2" pref="87" max="-2" attributes="0"/>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Component id="userLPN" max="32767" attributes="0"/>
+                                              </Group>
+                                              <Component id="userENumber" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="userDeath" alignment="0" max="32767" attributes="0"/>
+                                              <Group type="102" attributes="0">
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Component id="userPartnerNumber" alignment="0" min="-2" pref="255" max="-2" attributes="0"/>
+                                                      <Component id="userPartnerPoB" min="-2" pref="258" max="-2" attributes="0"/>
+                                                      <Group type="102" alignment="0" attributes="0">
+                                                          <Group type="103" groupAlignment="0" attributes="0">
+                                                              <Component id="userGuardStatus" alignment="1" min="-2" pref="91" max="-2" attributes="0"/>
+                                                              <Component id="userPriorS" min="-2" pref="91" max="-2" attributes="0"/>
+                                                          </Group>
+                                                          <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                              <Component id="userHasPriorGuardS" pref="70" max="32767" attributes="0"/>
+                                                              <Component id="userHasPriorS" max="32767" attributes="0"/>
+                                                          </Group>
+                                                      </Group>
+                                                  </Group>
+                                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                      </Group>
                                   </Group>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
@@ -467,7 +485,7 @@
                               <Component id="jLabel31" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="userEagleScout" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="129" max="32767" attributes="0"/>
+                          <EmptySpace pref="132" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -729,63 +747,6 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="userPartnerPoB">
                 </Component>
-                <Component class="javax.swing.JComboBox" name="userChildren">
-                  <Properties>
-                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                      <StringArray count="2">
-                        <StringItem index="0" value="Yes"/>
-                        <StringItem index="1" value="No"/>
-                      </StringArray>
-                    </Property>
-                  </Properties>
-                  <AuxValues>
-                    <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-                  </AuxValues>
-                </Component>
-                <Component class="javax.swing.JComboBox" name="userGender">
-                  <Properties>
-                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                      <StringArray count="2">
-                        <StringItem index="0" value="Male"/>
-                        <StringItem index="1" value="Female"/>
-                      </StringArray>
-                    </Property>
-                  </Properties>
-                  <AuxValues>
-                    <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-                  </AuxValues>
-                </Component>
-                <Component class="javax.swing.JComboBox" name="userRace">
-                  <Properties>
-                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                      <StringArray count="6">
-                        <StringItem index="0" value="Race 1"/>
-                        <StringItem index="1" value="Race 2"/>
-                        <StringItem index="2" value="Race 3"/>
-                        <StringItem index="3" value="Race 4"/>
-                        <StringItem index="4" value="Race 5"/>
-                        <StringItem index="5" value="Race 6"/>
-                      </StringArray>
-                    </Property>
-                  </Properties>
-                  <AuxValues>
-                    <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-                  </AuxValues>
-                </Component>
-                <Component class="javax.swing.JComboBox" name="userMaritialS">
-                  <Properties>
-                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                      <StringArray count="3">
-                        <StringItem index="0" value="Single"/>
-                        <StringItem index="1" value="Married"/>
-                        <StringItem index="2" value="Widowed"/>
-                      </StringArray>
-                    </Property>
-                  </Properties>
-                  <AuxValues>
-                    <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-                  </AuxValues>
-                </Component>
                 <Component class="javax.swing.JLabel" name="jLabel36">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Emergency Number:"/>
@@ -796,125 +757,40 @@
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="userENumberActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JComboBox" name="userPriorS">
-                  <Properties>
-                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                      <StringArray count="3">
-                        <StringItem index="0" value="Please Pick"/>
-                        <StringItem index="1" value="Yes"/>
-                        <StringItem index="2" value="No"/>
-                      </StringArray>
-                    </Property>
-                  </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="userPriorSActionPerformed"/>
-                  </Events>
-                  <AuxValues>
-                    <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-                  </AuxValues>
-                </Component>
-                <Component class="javax.swing.JComboBox" name="userHasPriorS">
-                  <Properties>
-                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                      <StringArray count="6">
-                        <StringItem index="0" value="Army"/>
-                        <StringItem index="1" value="Air Force"/>
-                        <StringItem index="2" value="Navy"/>
-                        <StringItem index="3" value="Marines"/>
-                        <StringItem index="4" value="Cost Guard"/>
-                        <StringItem index="5" value="Merchant Marine"/>
-                      </StringArray>
-                    </Property>
-                    <Property name="enabled" type="boolean" value="false"/>
-                  </Properties>
-                  <AuxValues>
-                    <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-                  </AuxValues>
-                </Component>
-                <Component class="javax.swing.JComboBox" name="userGuardStatus">
-                  <Properties>
-                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                      <StringArray count="4">
-                        <StringItem index="0" value="Guardian Status:"/>
-                        <StringItem index="1" value="Civilian"/>
-                        <StringItem index="2" value="Retired Military"/>
-                        <StringItem index="3" value="Active Duty"/>
-                      </StringArray>
-                    </Property>
-                  </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="userGuardStatusActionPerformed"/>
-                  </Events>
-                  <AuxValues>
-                    <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-                  </AuxValues>
-                </Component>
-                <Component class="javax.swing.JComboBox" name="userHasPriorGuardS">
-                  <Properties>
-                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                      <StringArray count="6">
-                        <StringItem index="0" value="Army"/>
-                        <StringItem index="1" value="Air Force"/>
-                        <StringItem index="2" value="Navy"/>
-                        <StringItem index="3" value="Marines"/>
-                        <StringItem index="4" value="Coast Guard"/>
-                        <StringItem index="5" value="Merchant Marine"/>
-                      </StringArray>
-                    </Property>
-                    <Property name="enabled" type="boolean" value="false"/>
-                  </Properties>
-                  <AuxValues>
-                    <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-                  </AuxValues>
-                </Component>
-                <Component class="javax.swing.JComboBox" name="userEnlistment">
-                  <Properties>
-                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                      <StringArray count="2">
-                        <StringItem index="0" value="No"/>
-                        <StringItem index="1" value="Yes"/>
-                      </StringArray>
-                    </Property>
-                  </Properties>
-                  <AuxValues>
-                    <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-                  </AuxValues>
-                </Component>
-                <Component class="javax.swing.JComboBox" name="userJuniorROTC">
-                  <Properties>
-                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                      <StringArray count="5">
-                        <StringItem index="0" value="None"/>
-                        <StringItem index="1" value="1 Year"/>
-                        <StringItem index="2" value="2 Years"/>
-                        <StringItem index="3" value="3 Years"/>
-                        <StringItem index="4" value="4 Years"/>
-                      </StringArray>
-                    </Property>
-                  </Properties>
-                  <AuxValues>
-                    <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-                  </AuxValues>
-                </Component>
-                <Component class="javax.swing.JComboBox" name="userEagleScout">
-                  <Properties>
-                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                      <StringArray count="2">
-                        <StringItem index="0" value="No"/>
-                        <StringItem index="1" value="Yes"/>
-                      </StringArray>
-                    </Property>
-                  </Properties>
-                  <AuxValues>
-                    <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-                  </AuxValues>
-                </Component>
                 <Component class="javax.swing.JLabel" name="jLabel37">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Death Beneficary"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="userDeath">
+                </Component>
+                <Component class="javax.swing.JTextField" name="userGender">
+                </Component>
+                <Component class="javax.swing.JTextField" name="userRace">
+                </Component>
+                <Component class="javax.swing.JTextField" name="userMaritialS">
+                </Component>
+                <Component class="javax.swing.JTextField" name="userChildren">
+                </Component>
+                <Component class="javax.swing.JTextField" name="userPriorS">
+                </Component>
+                <Component class="javax.swing.JTextField" name="userHasPriorS">
+                </Component>
+                <Component class="javax.swing.JTextField" name="userGuardStatus">
+                </Component>
+                <Component class="javax.swing.JTextField" name="userHasPriorGuardS">
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="userHasPriorGuardSActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JTextField" name="userEnlistment">
+                </Component>
+                <Component class="javax.swing.JTextField" name="userJuniorROTC">
+                </Component>
+                <Component class="javax.swing.JTextField" name="userEagleScout">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="jTextField1"/>
+                  </Properties>
                 </Component>
               </SubComponents>
             </Container>
