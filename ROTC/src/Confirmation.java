@@ -1,3 +1,5 @@
+
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -10,22 +12,6 @@
  */
 public class Confirmation extends javax.swing.JFrame {
 
-    private String firstName;
-    private String lastName;
-    private String middleInitial;
-    private String cwuID;
-    private String email;
-    private String dateOfBirth;
-    private String areaCode;
-    private String middleThreePhoneNumber;
-    private String lastThreePhoneNumber;
-    private String aptNumber;
-    private String streetAddress;
-    private String city;
-    private String state;
-    private String zipCode;
-    private String gender;
-    
     
     
     
@@ -42,48 +28,39 @@ public class Confirmation extends javax.swing.JFrame {
      public Confirmation( String passedFirstName, String passedLastName, String passedMiddleInitial, 
             String passedCwuID, String passedEmail, String passedDateOfBirth, String passedAreaCode,
             String passedMiddleThreePhoneNumber, String passedLastThreePhoneNumber, String passedAptNumber,
-            String passedStreetAddress, String passedCity, String passedState, String passedZipcode, String passedGender){
+            String passedStreetAddress, String passedCity, String passedState, String passedZipcode, String passedGender, String passedSSN, String passedAcaM,
+            String passedPGradD, String passedEthnicity, String passedMaritialS, String passedPName, String passedPAddress, String passedPCity, String passedPState,
+            String passedPNumber, String passedPoB, String passedNoD, String passedChildren, String passedEContact, String passedEAdress, String passedENumber,
+            String passedDBeneficiary, String passedPriorS,String passedHasPriorS, String passedGuardianPS,String passedGuardianHasPS, String passedEnlisted, 
+             String passedJunior, String passedEagle
+            ){
        
          initComponents();
          this.setLocationRelativeTo(null);
          
-        firstName = passedFirstName;
-        lastName = passedLastName;
-        middleInitial = passedMiddleInitial;
-        cwuID = passedCwuID;
-        email = passedEmail;
-        dateOfBirth = passedDateOfBirth;
-        areaCode = passedAreaCode;
-        middleThreePhoneNumber = passedMiddleThreePhoneNumber;
-        lastThreePhoneNumber = passedLastThreePhoneNumber;       
-        aptNumber = passedAptNumber;
-        streetAddress = passedStreetAddress; 
-        city = passedCity;       
-        state = passedState;
-        zipCode = passedZipcode;
-        gender = passedGender;
+       
         
       
-        conFN.setText(firstName);
-        conLN.setText(lastName);
-        conMI.setText(middleInitial);
-        conCWUID.setText(cwuID);
-        conEmail.setText(email);
-        conDoB.setText(dateOfBirth);
+        conFN.setText(passedFirstName);
+        conLN.setText(passedLastName);
+        conMI.setText(passedMiddleInitial);
+        conCWUID.setText(passedCwuID);
+        conEmail.setText(passedEmail);
+        conDoB.setText(passedDateOfBirth);
         
-        if(areaCode.isEmpty() || middleThreePhoneNumber.isEmpty() || lastThreePhoneNumber.isEmpty()) {
-                conPNum.setText("");
+        if(passedAreaCode.isEmpty() || passedMiddleThreePhoneNumber.isEmpty() || passedLastThreePhoneNumber.isEmpty()) {
+                conPNum.setText("No input found");
             }else
-                conPNum.setText("(" + areaCode + ")" + " - " + middleThreePhoneNumber + " - " + lastThreePhoneNumber);
+                conPNum.setText("(" + passedAreaCode + ")" + " - " + passedMiddleThreePhoneNumber + " - " + passedLastThreePhoneNumber);
         
         
         
-        conStreet.setText(streetAddress);
-        conAptNumber.setText(aptNumber);
-        conCity.setText(city);
-        conState.setText(state);
-        conZip.setText(zipCode);
-        conGender.setText(gender);
+        conStreet.setText(passedStreetAddress);
+        conAptNumber.setText(passedAptNumber);
+        conCity.setText(passedCity);
+        conState.setText(passedState);
+        conZip.setText(passedZipcode);
+        conGender.setText(passedGender);
         
      }
     /**
@@ -125,19 +102,64 @@ public class Confirmation extends javax.swing.JFrame {
         conGender = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         conAptNumber = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
+        jLabel26 = new javax.swing.JLabel();
+        jLabel27 = new javax.swing.JLabel();
+        jLabel28 = new javax.swing.JLabel();
+        jLabel29 = new javax.swing.JLabel();
+        jLabel30 = new javax.swing.JLabel();
+        jLabel31 = new javax.swing.JLabel();
+        jLabel32 = new javax.swing.JLabel();
+        jLabel33 = new javax.swing.JLabel();
+        jLabel34 = new javax.swing.JLabel();
+        jLabel35 = new javax.swing.JLabel();
+        jLabel36 = new javax.swing.JLabel();
+        conSSN = new javax.swing.JLabel();
+        conAcaM = new javax.swing.JLabel();
+        conGradD = new javax.swing.JLabel();
+        conEthnicity = new javax.swing.JLabel();
+        conMaritialS = new javax.swing.JLabel();
+        conPartnerN = new javax.swing.JLabel();
+        conPAddress = new javax.swing.JLabel();
+        conPCity = new javax.swing.JLabel();
+        conPState = new javax.swing.JLabel();
+        ConPNumber = new javax.swing.JLabel();
+        conPPoB = new javax.swing.JLabel();
+        conNoD = new javax.swing.JLabel();
+        conChildren = new javax.swing.JLabel();
+        conEContact = new javax.swing.JLabel();
+        conEAddress = new javax.swing.JLabel();
+        conENumber = new javax.swing.JLabel();
+        conDeathB = new javax.swing.JLabel();
+        conDPrior = new javax.swing.JLabel();
+        conGuardianPS = new javax.swing.JLabel();
+        conEnlisted = new javax.swing.JLabel();
+        conJunior = new javax.swing.JLabel();
+        conEagle = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setText("Please confirm that all information is correct.");
 
-        jButton1.setText("Confirm");
+        jButton1.setText("Save to Database");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
-        jButton3.setText("Cancel");
+        jButton3.setText("Go Back");
+        jButton3.setActionCommand("Go back");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -172,7 +194,7 @@ public class Confirmation extends javax.swing.JFrame {
 
         jLabel5.setText("Email:");
 
-        jLabel8.setText("Date of birth (MM/DD/YYYY):");
+        jLabel8.setText("Date of birth (YYYY\\MM\\DD):");
 
         jLabel11.setText("City:");
 
@@ -196,6 +218,94 @@ public class Confirmation extends javax.swing.JFrame {
 
         conAptNumber.setText("N/A");
 
+        jLabel15.setText("Social Secuirty Number");
+
+        jLabel16.setText("Academenic Major");
+
+        jLabel17.setText("Projected Grad. Date");
+
+        jLabel18.setText("Ethnicity");
+
+        jLabel19.setText("Maritial Status:");
+
+        jLabel20.setText("Partner Name:");
+
+        jLabel21.setText("Partner Address:");
+
+        jLabel22.setText("Partner City:");
+
+        jLabel23.setText("Partner State:");
+
+        jLabel24.setText("Partner Number:");
+
+        jLabel25.setText("Partner Place of Birth:");
+
+        jLabel26.setText("Number of Dependents:");
+
+        jLabel27.setText("Do you have any children:");
+
+        jLabel28.setText("Emergency Contact:");
+
+        jLabel29.setText("Emergency Address");
+
+        jLabel30.setText("Emergency Number:");
+
+        jLabel31.setText("Death Beneficary");
+
+        jLabel32.setText("Prior Service:");
+
+        jLabel33.setText("Guardian Prior Service:");
+
+        jLabel34.setText("Enlisted or Warrant officer:");
+
+        jLabel35.setText("Junior ROTC:");
+
+        jLabel36.setText("Eagle Scout:");
+
+        conSSN.setText("jLabel37");
+
+        conAcaM.setText("jLabel38");
+
+        conGradD.setText("jLabel39");
+
+        conEthnicity.setText("jLabel40");
+
+        conMaritialS.setText("jLabel41");
+
+        conPartnerN.setText("jLabel42");
+
+        conPAddress.setText("jLabel43");
+
+        conPCity.setText("jLabel44");
+
+        conPState.setText("jLabel45");
+
+        ConPNumber.setText("jLabel46");
+
+        conPPoB.setText("jLabel47");
+
+        conNoD.setText("jLabel48");
+
+        conChildren.setText("jLabel49");
+
+        conEContact.setText("jLabel50");
+
+        conEAddress.setText("jLabel51");
+
+        conENumber.setText("jLabel52");
+
+        conDeathB.setText("jLabel53");
+
+        conDPrior.setText("jLabel54");
+
+        conGuardianPS.setText("jLabel55");
+
+        conEnlisted.setText("jLabel56");
+
+        conJunior.setText("jLabel57");
+
+        conEagle.setText("jLabel58");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -203,6 +313,28 @@ public class Confirmation extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel36)
+                    .addComponent(jLabel35)
+                    .addComponent(jLabel34)
+                    .addComponent(jLabel33)
+                    .addComponent(jLabel32)
+                    .addComponent(jLabel31)
+                    .addComponent(jLabel30)
+                    .addComponent(jLabel29)
+                    .addComponent(jLabel28)
+                    .addComponent(jLabel27)
+                    .addComponent(jLabel26)
+                    .addComponent(jLabel25)
+                    .addComponent(jLabel24)
+                    .addComponent(jLabel23)
+                    .addComponent(jLabel22)
+                    .addComponent(jLabel21)
+                    .addComponent(jLabel20)
+                    .addComponent(jLabel19)
+                    .addComponent(jLabel18)
+                    .addComponent(jLabel17)
+                    .addComponent(jLabel16)
+                    .addComponent(jLabel15)
                     .addComponent(jLabel14)
                     .addComponent(jLabel9)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -221,42 +353,64 @@ public class Confirmation extends javax.swing.JFrame {
                     .addComponent(jLabel13))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(conFN, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(10, 10, 10)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(conCWUID)
-                                    .addComponent(conLN)
-                                    .addComponent(conMI)
-                                    .addComponent(conStreet)
-                                    .addComponent(conDoB)
-                                    .addComponent(conPNum)
-                                    .addComponent(conAptNumber)
-                                    .addComponent(conCity)
-                                    .addComponent(conState)
-                                    .addComponent(conZip)
-                                    .addComponent(conGender))
-                                .addGap(0, 0, Short.MAX_VALUE)))
+                                    .addComponent(conFN, javax.swing.GroupLayout.DEFAULT_SIZE, 615, Short.MAX_VALUE)
+                                    .addComponent(conLN, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(conDoB, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                         .addContainerGap())
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(conEmail)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(conMI, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(conCWUID, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(conEmail, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(conPNum, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(conStreet, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(conAptNumber, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(conCity, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(conState, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(conZip, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(conGender, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(conSSN, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(conAcaM, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(conGradD, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(conEthnicity, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(conMaritialS, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(conPartnerN, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(conPAddress, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(conPCity, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(conPState, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(ConPNumber, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(conPPoB, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(conNoD, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(conChildren, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(conEContact, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(conEAddress, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(conENumber, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(conDeathB, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(conDPrior, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(conGuardianPS, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(conEnlisted, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(conJunior, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(conEagle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(conFN)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(conLN))
+                    .addComponent(conFN)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel6)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel2)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel2)
+                            .addComponent(conLN))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel7)
@@ -301,24 +455,111 @@ public class Confirmation extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9)
                     .addComponent(conGender))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel15)
+                    .addComponent(conSSN))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel16)
+                    .addComponent(conAcaM))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel17)
+                    .addComponent(conGradD))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel18)
+                    .addComponent(conEthnicity))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel19)
+                    .addComponent(conMaritialS))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel20)
+                    .addComponent(conPartnerN))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel21)
+                    .addComponent(conPAddress))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel22)
+                    .addComponent(conPCity))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel23)
+                    .addComponent(conPState))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel24)
+                    .addComponent(ConPNumber))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel25)
+                    .addComponent(conPPoB))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel26)
+                    .addComponent(conNoD))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel27)
+                    .addComponent(conChildren))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel28)
+                    .addComponent(conEContact))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel29)
+                    .addComponent(conEAddress))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel30)
+                    .addComponent(conENumber))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel31)
+                    .addComponent(conDeathB))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel32)
+                    .addComponent(conDPrior))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel33)
+                    .addComponent(conGuardianPS))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel34)
+                    .addComponent(conEnlisted))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel35)
+                    .addComponent(conJunior))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel36)
+                    .addComponent(conEagle))
+                .addContainerGap(100, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(21, 21, 21))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(55, 55, 55)
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(95, 95, 95)
+                        .addContainerGap()
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(107, 107, 107)
                         .addComponent(jButton1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButton3)))
@@ -329,13 +570,12 @@ public class Confirmation extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
-                    .addComponent(jButton3))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jButton3)))
         );
 
         pack();
@@ -347,11 +587,7 @@ public class Confirmation extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         
-        Questionnaire reConfirm = new Questionnaire(firstName, lastName, middleInitial, cwuID, email, dateOfBirth, areaCode, middleThreePhoneNumber,
-                                                    lastThreePhoneNumber, aptNumber, streetAddress, city, state, zipCode, gender);
-        reConfirm.setVisible(true);
-        this.dispose();
-        
+      
     }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
@@ -391,16 +627,38 @@ public class Confirmation extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel ConPNumber;
+    private javax.swing.JLabel conAcaM;
     private javax.swing.JLabel conAptNumber;
     private javax.swing.JLabel conCWUID;
+    private javax.swing.JLabel conChildren;
     private javax.swing.JLabel conCity;
+    private javax.swing.JLabel conDPrior;
+    private javax.swing.JLabel conDeathB;
     private javax.swing.JLabel conDoB;
+    private javax.swing.JLabel conEAddress;
+    private javax.swing.JLabel conEContact;
+    private javax.swing.JLabel conENumber;
+    private javax.swing.JLabel conEagle;
     private javax.swing.JLabel conEmail;
+    private javax.swing.JLabel conEnlisted;
+    private javax.swing.JLabel conEthnicity;
     private javax.swing.JLabel conFN;
     private javax.swing.JLabel conGender;
+    private javax.swing.JLabel conGradD;
+    private javax.swing.JLabel conGuardianPS;
+    private javax.swing.JLabel conJunior;
     private javax.swing.JLabel conLN;
     private javax.swing.JLabel conMI;
+    private javax.swing.JLabel conMaritialS;
+    private javax.swing.JLabel conNoD;
+    private javax.swing.JLabel conPAddress;
+    private javax.swing.JLabel conPCity;
     private javax.swing.JLabel conPNum;
+    private javax.swing.JLabel conPPoB;
+    private javax.swing.JLabel conPState;
+    private javax.swing.JLabel conPartnerN;
+    private javax.swing.JLabel conSSN;
     private javax.swing.JLabel conState;
     private javax.swing.JLabel conStreet;
     private javax.swing.JLabel conZip;
@@ -412,8 +670,30 @@ public class Confirmation extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
