@@ -10,12 +10,32 @@
  *
  * @author Austin
  */
+import java.awt.event.KeyEvent;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.AbstractAction;
+import javax.swing.Action;
+import javax.swing.JOptionPane;
+import java.io.*;
+
+
+
+
+
+
+
 public class Confirmation extends javax.swing.JFrame {
 
-    
-    
-    
-    
+    private boolean conChildren1;
+    private boolean conPrior1;
+    private boolean conGuardianPS1;
+    private boolean conEagle1;
+    private String fullName, conPrior2, conGuardianPS2;
     /**
      * Creates new form Confirmation
      */
@@ -30,7 +50,7 @@ public class Confirmation extends javax.swing.JFrame {
             String passedMiddleThreePhoneNumber, String passedLastThreePhoneNumber, String passedAptNumber,
             String passedStreetAddress, String passedCity, String passedState, String passedZipcode, String passedGender, String passedSSN, String passedAcaM,
             String passedPGradD, String passedEthnicity, String passedMaritialS, String passedPName, String passedPAddress, String passedPCity, String passedPState,
-            String passedPNumber, String passedPoB, String passedNoD, String passedChildren, String passedEContact, String passedEAdress, String passedENumber,
+            String passedPNumber, String passedPoB, String passedNoD, String passedChildren, String passedEContact, String passedEStreet,String passedECity, String passedEState, String passedENumber,
             String passedDBeneficiary, String passedPriorS,String passedHasPriorS, String passedGuardianPS,String passedGuardianHasPS, String passedEnlisted, 
              String passedJunior, String passedEagle
             ){
@@ -51,17 +71,79 @@ public class Confirmation extends javax.swing.JFrame {
         if(passedAreaCode.isEmpty() || passedMiddleThreePhoneNumber.isEmpty() || passedLastThreePhoneNumber.isEmpty()) {
                 conPNum.setText("No input found");
             }else
-                conPNum.setText("(" + passedAreaCode + ")" + " - " + passedMiddleThreePhoneNumber + " - " + passedLastThreePhoneNumber);
-        
-        
-        
+                conPNum.setText("(" + passedAreaCode + ")" + "-" + passedMiddleThreePhoneNumber + "-" + passedLastThreePhoneNumber);
+       
         conStreet.setText(passedStreetAddress);
         conAptNumber.setText(passedAptNumber);
         conCity.setText(passedCity);
         conState.setText(passedState);
         conZip.setText(passedZipcode);
         conGender.setText(passedGender);
+        conSSN.setText(passedSSN);
+        conAcaM.setText(passedAcaM);
+        conGradD.setText(passedPGradD);
+        conEthnicity.setText(passedEthnicity);
+        conMaritialS.setText(passedMaritialS);
+        conPartnerN.setText(passedPName);
+        conPAddress.setText(passedPAddress);
+        conPCity.setText(passedPCity);
+        conPState.setText(passedPState);
+        conPNumber.setText(passedPNumber);
+        conPPoB.setText(passedPoB);
+        conNoD.setText(passedNoD);
+        conChildren.setText(passedChildren);
+        conEContact.setText(passedEContact);
+        conEStreet.setText(passedEStreet);
+        conECity.setText(passedECity);
+        conEState.setText(passedEState);
+        conENumber.setText(passedENumber);
+        conDeathB.setText(passedDBeneficiary);
+        conPrior.setText(passedPriorS + " " + passedHasPriorS );
+        conPrior2 = passedHasPriorS;
+        conGuardianPS.setText(passedGuardianPS + " " + passedGuardianHasPS);
+        conEnlisted.setText(passedEnlisted);
+        conJunior.setText(passedJunior);
+        conEagle.setText(passedEagle);
         
+        
+        //String conChildren1 = conChildren.getText();
+        
+        if(conChildren.getText().equals("Yes"))
+            conChildren1 = true;
+        else
+            conChildren1 = false;
+
+      
+        
+        if(passedPriorS.equals("Yes")){
+            conPrior1 = true;
+            conPrior2 = passedHasPriorS;
+        }
+        else
+            conPrior1 = false;
+            conPrior2 = "N/A";
+            
+        //String conGuardianPS1 = conGuardianPS.getText();
+    
+        
+        if(passedGuardianPS.equals("Retired Military") || passedGuardianPS.equals("Active Duty")){
+            conGuardianPS1 = true;
+            conGuardianPS2 = passedGuardianHasPS;
+        }
+        else {
+            conGuardianPS1 = false;
+            conGuardianPS2 = "N/A";
+        }
+
+        //String conEagle1 = conEagle.getText();
+        
+        if(conEagle.getText().equals("Yes"))
+            conEagle1 = true;
+        else
+            conEagle1 = false;
+        String fullName = conLN + ", " + conFN + " " + conMI;
+                
+     
      }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -73,8 +155,7 @@ public class Confirmation extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
         jPanel1 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         conLN = new javax.swing.JLabel();
@@ -133,38 +214,29 @@ public class Confirmation extends javax.swing.JFrame {
         conPAddress = new javax.swing.JLabel();
         conPCity = new javax.swing.JLabel();
         conPState = new javax.swing.JLabel();
-        ConPNumber = new javax.swing.JLabel();
+        conPNumber = new javax.swing.JLabel();
         conPPoB = new javax.swing.JLabel();
         conNoD = new javax.swing.JLabel();
         conChildren = new javax.swing.JLabel();
         conEContact = new javax.swing.JLabel();
-        conEAddress = new javax.swing.JLabel();
+        conEStreet = new javax.swing.JLabel();
         conENumber = new javax.swing.JLabel();
         conDeathB = new javax.swing.JLabel();
-        conDPrior = new javax.swing.JLabel();
+        conPrior = new javax.swing.JLabel();
         conGuardianPS = new javax.swing.JLabel();
         conEnlisted = new javax.swing.JLabel();
         conJunior = new javax.swing.JLabel();
         conEagle = new javax.swing.JLabel();
+        jLabel37 = new javax.swing.JLabel();
+        conECity = new javax.swing.JLabel();
+        jLabel38 = new javax.swing.JLabel();
+        conEState = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setText("Please confirm that all information is correct.");
-
-        jButton1.setText("Save to Database");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-
-        jButton3.setText("Go Back");
-        jButton3.setActionCommand("Go back");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
 
         jLabel3.setText("Street Address:");
 
@@ -246,7 +318,7 @@ public class Confirmation extends javax.swing.JFrame {
 
         jLabel28.setText("Emergency Contact:");
 
-        jLabel29.setText("Emergency Address");
+        jLabel29.setText("Emergency Street");
 
         jLabel30.setText("Emergency Number:");
 
@@ -280,7 +352,7 @@ public class Confirmation extends javax.swing.JFrame {
 
         conPState.setText("jLabel45");
 
-        ConPNumber.setText("jLabel46");
+        conPNumber.setText("jLabel46");
 
         conPPoB.setText("jLabel47");
 
@@ -290,13 +362,13 @@ public class Confirmation extends javax.swing.JFrame {
 
         conEContact.setText("jLabel50");
 
-        conEAddress.setText("jLabel51");
+        conEStreet.setText("jLabel51");
 
         conENumber.setText("jLabel52");
 
         conDeathB.setText("jLabel53");
 
-        conDPrior.setText("jLabel54");
+        conPrior.setText("jLabel54");
 
         conGuardianPS.setText("jLabel55");
 
@@ -306,6 +378,29 @@ public class Confirmation extends javax.swing.JFrame {
 
         conEagle.setText("jLabel58");
 
+        jLabel37.setText("Emergency City");
+
+        conECity.setText("jLabel51");
+
+        jLabel38.setText("Emergency State");
+
+        conEState.setText("jLabel51");
+
+        jButton1.setText("Save to Database");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        jButton3.setText("Go Back");
+        jButton3.setActionCommand("Go back");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -313,6 +408,8 @@ public class Confirmation extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel38)
+                    .addComponent(jLabel37)
                     .addComponent(jLabel36)
                     .addComponent(jLabel35)
                     .addComponent(jLabel34)
@@ -364,7 +461,7 @@ public class Confirmation extends javax.swing.JFrame {
                                 .addComponent(conDoB, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                         .addContainerGap())
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(conMI, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(conCWUID, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -385,19 +482,27 @@ public class Confirmation extends javax.swing.JFrame {
                             .addComponent(conPAddress, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(conPCity, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(conPState, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(ConPNumber, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(conPNumber, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(conPPoB, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(conNoD, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(conChildren, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(conEContact, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(conEAddress, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(conEStreet, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(conENumber, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(conDeathB, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(conDPrior, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(conPrior, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(conGuardianPS, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(conEnlisted, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(conJunior, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(conEagle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+                            .addComponent(conEagle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(conECity, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(conEState, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(99, 99, 99)
+                .addComponent(jButton1)
+                .addGap(18, 18, 18)
+                .addComponent(jButton3)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -494,7 +599,7 @@ public class Confirmation extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel24)
-                    .addComponent(ConPNumber))
+                    .addComponent(conPNumber))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel25)
@@ -514,8 +619,16 @@ public class Confirmation extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel29)
-                    .addComponent(conEAddress))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(conEStreet))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel37)
+                    .addComponent(conECity))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel38)
+                    .addComponent(conEState))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel30)
                     .addComponent(conENumber))
@@ -526,7 +639,7 @@ public class Confirmation extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel32)
-                    .addComponent(conDPrior))
+                    .addComponent(conPrior))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel33)
@@ -543,8 +656,14 @@ public class Confirmation extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel36)
                     .addComponent(conEagle))
-                .addContainerGap(100, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton1)
+                    .addComponent(jButton3))
+                .addContainerGap(24, Short.MAX_VALUE))
         );
+
+        jScrollPane1.setViewportView(jPanel1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -557,12 +676,7 @@ public class Confirmation extends javax.swing.JFrame {
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(107, 107, 107)
-                        .addComponent(jButton1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton3)))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -571,18 +685,53 @@ public class Confirmation extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton3)))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 904, Short.MAX_VALUE)
+                .addGap(29, 29, 29))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+   /* (LASTNAME, FIRSTNAME, MIDDLEINITIAL, CWUID,EMAIL,DATEOFBIRTHMDDYYYY,PHONENUMBER,STREETADDRESS
+          ,APT,CITY,STATE,ZIPCODE,GENDER,SSAN,ACAMAJOR,GRADDATE,ETHNICITY,MARITIALSTATUS,PARTNERNAME,PARTNERADDRESS,PARTNERCITY
+        ,PARTNERSTATE,PARTNERNUMBER,PARTNERNUMBER,PARTNERPOB,DEPENDANTS,CHILDREN,EMERGENCYCONTACT,EMERGENCYSTREET,EMERGENCYNUMBER,
+        DEATHBENEFICARY,PRIORSERVICE,PRIORSERVICEYES,GUARDIANPRIORSERVICE,GUARDIANPRIORSERVICEYES,ENLISTEDWARRANT
+        ,JUNIORROTC,EAGESCOUT)
+    */
+    
+    
+    
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+     Connection con = null;
+     
+     try {
+         String url = "jdbc:derby://localhost:1527/CadetInfo";
+         String username = "adminCadre";
+         String password = "cadrecwu";
+         con = DriverManager.getConnection(url, username, password);
+         Statement sta = con.createStatement();
+         System.out.println(conChildren1 + " " + conPrior1 + " " +conGuardianPS1 + " " +conEagle1);
+         
+         sta.executeUpdate("INSERT INTO INFO " +
+ "VALUES ('"+conLN.getText()+"', '"+conFN.getText()+"', '"+conMI.getText()+"','"+fullName+"', '"+conSSN.getText()+"','"+conDoB.getText()+"','"+conCWUID.getText()+"',"
+                 + " '"+conEmail.getText()+"','"+conPNum.getText()+"', '"+conStreet.getText()+"', '"+conAptNumber.getText()+"',"
+                 + "'"+conCity.getText()+"', '"+conState.getText()+"', '"+conZip.getText()+"','"+conGender.getText()+"', "
+                 + "'"+conAcaM.getText()+"', '"+conGradD.getText()+"', '"+conEthnicity.getText()+"', "
+                 + "'"+conMaritialS.getText()+"','"+conPartnerN.getText()+"', '"+conPAddress.getText()+"', '"+conPCity.getText()+"', "
+                 + "'"+conPState.getText()+"','"+conPNumber.getText()+"', '"+conPPoB.getText()+"', '"+conNoD.getText()+"', '"+ conChildren1+"', "
+                 + "'"+conEContact.getText()+"', '"+conEStreet.getText()+"', '"+conECity.getText()+"', '"+conEState.getText()+"', '"+conENumber.getText()+"', '"+conDeathB.getText()+"', "
+                 + "'"+conPrior1+"', '"+conPrior2+"', '"+conGuardianPS1+"', '"+conGuardianPS2+"', "
+                 + "'"+conEnlisted.getText()+"', '"+conJunior.getText()+"', '"+conEagle1+"')");
+         
+         sta.close();
+         
+     }catch (Exception e) {
+      System.err.println("Exception: "+e.getMessage());
+    }
+        
+        
+        
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -616,7 +765,7 @@ public class Confirmation extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(Confirmation.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-        Questionnaire question = new Questionnaire();
+        //Questionnaire question = new Questionnaire();
         //jLabel14 = question.
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -627,18 +776,18 @@ public class Confirmation extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel ConPNumber;
     private javax.swing.JLabel conAcaM;
     private javax.swing.JLabel conAptNumber;
     private javax.swing.JLabel conCWUID;
     private javax.swing.JLabel conChildren;
     private javax.swing.JLabel conCity;
-    private javax.swing.JLabel conDPrior;
     private javax.swing.JLabel conDeathB;
     private javax.swing.JLabel conDoB;
-    private javax.swing.JLabel conEAddress;
+    private javax.swing.JLabel conECity;
     private javax.swing.JLabel conEContact;
     private javax.swing.JLabel conENumber;
+    private javax.swing.JLabel conEState;
+    private javax.swing.JLabel conEStreet;
     private javax.swing.JLabel conEagle;
     private javax.swing.JLabel conEmail;
     private javax.swing.JLabel conEnlisted;
@@ -655,9 +804,11 @@ public class Confirmation extends javax.swing.JFrame {
     private javax.swing.JLabel conPAddress;
     private javax.swing.JLabel conPCity;
     private javax.swing.JLabel conPNum;
+    private javax.swing.JLabel conPNumber;
     private javax.swing.JLabel conPPoB;
     private javax.swing.JLabel conPState;
     private javax.swing.JLabel conPartnerN;
+    private javax.swing.JLabel conPrior;
     private javax.swing.JLabel conSSN;
     private javax.swing.JLabel conState;
     private javax.swing.JLabel conStreet;
@@ -694,6 +845,8 @@ public class Confirmation extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel37;
+    private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -701,5 +854,6 @@ public class Confirmation extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }
