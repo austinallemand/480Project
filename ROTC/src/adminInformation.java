@@ -412,75 +412,64 @@ public class adminInformation extends javax.swing.JFrame {
                             .addComponent(jLabel36)
                             .addComponent(jLabel37)
                             .addComponent(jLabel39))
+                        .addGap(21, 21, 21)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addGap(21, 21, 21)
-                                .addComponent(userECity))
+                            .addComponent(userECity, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(userENumber, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(userChildren, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(userMaritialS, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(userRace, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(userCWUID, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(userEmail)
+                            .addComponent(userDoB)
+                            .addComponent(userStreet)
+                            .addComponent(userApt)
+                            .addComponent(userCity)
+                            .addComponent(userState)
+                            .addComponent(userZip)
+                            .addComponent(userSSN)
+                            .addComponent(userAcMajor)
+                            .addComponent(userGradDate)
+                            .addComponent(userPartnerName)
+                            .addComponent(userPartnerAddress)
+                            .addComponent(userPartnerCity)
+                            .addComponent(userPartnerState)
+                            .addComponent(userNoD)
+                            .addComponent(userEmergency)
+                            .addComponent(userEStreet)
                             .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(userAreaCode, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(userGender, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(userEnlistment)
-                                    .addComponent(userJuniorROTC)
-                                    .addComponent(userEagleScout, javax.swing.GroupLayout.DEFAULT_SIZE, 94, Short.MAX_VALUE))
-                                .addGap(0, 0, Short.MAX_VALUE))
+                                .addComponent(userMPN, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(userLPN, javax.swing.GroupLayout.DEFAULT_SIZE, 177, Short.MAX_VALUE))
+                            .addComponent(userDeath)
+                            .addComponent(userMI, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(userLN)
+                            .addComponent(userFN, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(21, 21, 21)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(userENumber, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(userChildren, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(userMaritialS, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(userRace, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                        .addGap(0, 1, Short.MAX_VALUE)
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(userFN, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 398, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(userLN, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 398, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addComponent(userCWUID, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(userEmail)
-                                    .addComponent(userDoB)
-                                    .addComponent(userStreet)
-                                    .addComponent(userApt)
-                                    .addComponent(userCity)
-                                    .addComponent(userState)
-                                    .addComponent(userZip)
-                                    .addComponent(userSSN)
-                                    .addComponent(userAcMajor)
-                                    .addComponent(userGradDate)
-                                    .addComponent(userPartnerName)
-                                    .addComponent(userPartnerAddress)
-                                    .addComponent(userPartnerCity)
-                                    .addComponent(userPartnerState)
-                                    .addComponent(userNoD)
-                                    .addComponent(userEmergency)
-                                    .addComponent(userEStreet)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(userAreaCode, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(userMPN, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(userLPN))
-                                    .addComponent(userDeath)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(userPartnerNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(userPartnerPoB, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addComponent(userGuardStatus, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(userPriorS, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                .addGap(32, 32, 32)
-                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                    .addComponent(userHasPriorGuardS, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
-                                                    .addComponent(userHasPriorS))))
-                                        .addGap(0, 0, Short.MAX_VALUE))))))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(userMI, javax.swing.GroupLayout.PREFERRED_SIZE, 398, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(userGender, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(userPartnerNumber, javax.swing.GroupLayout.DEFAULT_SIZE, 255, Short.MAX_VALUE)
+                                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(userGuardStatus, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(userPriorS, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGap(32, 32, 32)
+                                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                .addComponent(userHasPriorGuardS, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+                                                .addComponent(userHasPriorS)))
+                                        .addComponent(userPartnerPoB))
+                                    .addComponent(userEagleScout, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(userJuniorROTC, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 91, Short.MAX_VALUE)
+                                        .addComponent(userEnlistment, javax.swing.GroupLayout.Alignment.TRAILING)))
+                                .addGap(0, 0, Short.MAX_VALUE))))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGap(86, 86, 86)
                         .addComponent(jLabel38)
-                        .addGap(30, 30, 30)
+                        .addGap(23, 23, 23)
                         .addComponent(userEState)))
                 .addContainerGap())
         );
@@ -776,7 +765,29 @@ public class adminInformation extends javax.swing.JFrame {
 
     private void searchCadetKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_searchCadetKeyPressed
         if(evt.getKeyCode() == KeyEvent.VK_ENTER){
-            Fill();
+            //Fill();
+         
+            Connection con = null;  
+         try { 
+         String url = "jdbc:derby://localhost:1527/CadetInfo";
+         String username = "adminCadre";
+         String password = "cadrecwu";
+         con = DriverManager.getConnection(url, username, password);
+         Statement sta = con.createStatement();
+         //String search = "SELECT * FROM INFO WHERE CWUID "
+         
+         
+         
+         
+         
+            
+            
+           }catch (Exception e) {
+      System.err.println("Exception: "+e.getMessage());
+    }
+            
+            
+            
         }
     }//GEN-LAST:event_searchCadetKeyPressed
 

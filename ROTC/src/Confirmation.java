@@ -31,11 +31,8 @@ import java.io.*;
 
 public class Confirmation extends javax.swing.JFrame {
 
-    private boolean conChildren1;
-    private boolean conPrior1;
-    private boolean conGuardianPS1;
-    private boolean conEagle1;
-    private String fullName, conPrior2, conGuardianPS2;
+
+    
     /**
      * Creates new form Confirmation
      */
@@ -58,7 +55,7 @@ public class Confirmation extends javax.swing.JFrame {
          initComponents();
          this.setLocationRelativeTo(null);
          
-       
+        String fullName, conPrior2, conGuardianPS2;
         
       
         conFN.setText(passedFirstName);
@@ -98,50 +95,16 @@ public class Confirmation extends javax.swing.JFrame {
         conEState.setText(passedEState);
         conENumber.setText(passedENumber);
         conDeathB.setText(passedDBeneficiary);
-        conPrior.setText(passedPriorS + " " + passedHasPriorS );
-        conPrior2 = passedHasPriorS;
-        conGuardianPS.setText(passedGuardianPS + " " + passedGuardianHasPS);
+        conPrior.setText(passedPriorS);
+        conPriorYes.setText(passedHasPriorS);
+        
+        conGuardianPSYes.setText(passedGuardianHasPS);
+        conGuardianPS.setText(passedGuardianPS);
         conEnlisted.setText(passedEnlisted);
         conJunior.setText(passedJunior);
         conEagle.setText(passedEagle);
-        
-        
-        //String conChildren1 = conChildren.getText();
-        
-        if(conChildren.getText().equals("Yes"))
-            conChildren1 = true;
-        else
-            conChildren1 = false;
+        conFull.setText(passedLastName+ ","+passedFirstName +", "+passedMiddleInitial); 
 
-      
-        
-        if(passedPriorS.equals("Yes")){
-            conPrior1 = true;
-            conPrior2 = passedHasPriorS;
-        }
-        else
-            conPrior1 = false;
-            conPrior2 = "N/A";
-            
-        //String conGuardianPS1 = conGuardianPS.getText();
-    
-        
-        if(passedGuardianPS.equals("Retired Military") || passedGuardianPS.equals("Active Duty")){
-            conGuardianPS1 = true;
-            conGuardianPS2 = passedGuardianHasPS;
-        }
-        else {
-            conGuardianPS1 = false;
-            conGuardianPS2 = "N/A";
-        }
-
-        //String conEagle1 = conEagle.getText();
-        
-        if(conEagle.getText().equals("Yes"))
-            conEagle1 = true;
-        else
-            conEagle1 = false;
-        String fullName = conLN + ", " + conFN + " " + conMI;
                 
      
      }
@@ -156,7 +119,7 @@ public class Confirmation extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jPanel1 = new javax.swing.JPanel();
+        conFullName = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         conLN = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
@@ -233,6 +196,9 @@ public class Confirmation extends javax.swing.JFrame {
         conEState = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        conPriorYes = new javax.swing.JLabel();
+        conGuardianPSYes = new javax.swing.JLabel();
+        conFull = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -401,13 +367,19 @@ public class Confirmation extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        conPriorYes.setText("jLabel54");
+
+        conGuardianPSYes.setText("jLabel55");
+
+        conFull.setText("jLabel40");
+
+        javax.swing.GroupLayout conFullNameLayout = new javax.swing.GroupLayout(conFullName);
+        conFullName.setLayout(conFullNameLayout);
+        conFullNameLayout.setHorizontalGroup(
+            conFullNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(conFullNameLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(conFullNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel38)
                     .addComponent(jLabel37)
                     .addComponent(jLabel36)
@@ -434,8 +406,8 @@ public class Confirmation extends javax.swing.JFrame {
                     .addComponent(jLabel15)
                     .addComponent(jLabel14)
                     .addComponent(jLabel9)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGroup(conFullNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(conFullNameLayout.createSequentialGroup()
                             .addGap(10, 10, 10)
                             .addComponent(jLabel5))
                         .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.TRAILING))
@@ -448,21 +420,25 @@ public class Confirmation extends javax.swing.JFrame {
                     .addComponent(jLabel7)
                     .addComponent(jLabel3)
                     .addComponent(jLabel13))
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(conFullNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(conFullNameLayout.createSequentialGroup()
+                        .addGroup(conFullNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(conFullNameLayout.createSequentialGroup()
                                 .addGap(10, 10, 10)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(conFN, javax.swing.GroupLayout.DEFAULT_SIZE, 615, Short.MAX_VALUE)
-                                    .addComponent(conLN, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addGroup(conFullNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(conLN, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addGroup(conFullNameLayout.createSequentialGroup()
+                                        .addComponent(conFN, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(38, 38, 38)
+                                        .addComponent(conFull, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(0, 0, Short.MAX_VALUE))))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, conFullNameLayout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(conDoB, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                         .addContainerGap())
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGroup(conFullNameLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(conFullNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(conMI, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(conCWUID, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(conEmail, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -490,180 +466,191 @@ public class Confirmation extends javax.swing.JFrame {
                             .addComponent(conEStreet, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(conENumber, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(conDeathB, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(conPrior, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(conGuardianPS, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(conEnlisted, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(conJunior, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(conEagle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(conECity, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(conEState, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
-            .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addComponent(conEState, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, conFullNameLayout.createSequentialGroup()
+                                .addGroup(conFullNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(conPrior, javax.swing.GroupLayout.DEFAULT_SIZE, 63, Short.MAX_VALUE)
+                                    .addComponent(conGuardianPS, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(conFullNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(conPriorYes, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE)
+                                    .addComponent(conGuardianPSYes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(481, 481, 481))))))
+            .addGroup(conFullNameLayout.createSequentialGroup()
                 .addGap(99, 99, 99)
                 .addComponent(jButton1)
                 .addGap(18, 18, 18)
                 .addComponent(jButton3)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        conFullNameLayout.setVerticalGroup(
+            conFullNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(conFullNameLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(conFN)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(conFullNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(conFullNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(conFN)
+                        .addComponent(conFull))
+                    .addGroup(conFullNameLayout.createSequentialGroup()
                         .addComponent(jLabel6)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(conFullNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel2)
                             .addComponent(conLN))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(conFullNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel7)
                             .addComponent(conMI))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(conFullNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel10)
                             .addComponent(conCWUID))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(conFullNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel5)
                             .addComponent(conEmail))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(conFullNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel8)
                             .addComponent(conDoB))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(conFullNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel4)
                             .addComponent(conPNum))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(conFullNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(conStreet))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(conFullNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel14)
                     .addComponent(conAptNumber))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(conFullNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel11)
                     .addComponent(conCity))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(conFullNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel12)
                     .addComponent(conState))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(conFullNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel13)
                     .addComponent(conZip))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(conFullNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9)
                     .addComponent(conGender))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(conFullNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel15)
                     .addComponent(conSSN))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(conFullNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel16)
                     .addComponent(conAcaM))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(conFullNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel17)
                     .addComponent(conGradD))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(conFullNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel18)
                     .addComponent(conEthnicity))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(conFullNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel19)
                     .addComponent(conMaritialS))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(conFullNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel20)
                     .addComponent(conPartnerN))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(conFullNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel21)
                     .addComponent(conPAddress))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(conFullNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel22)
                     .addComponent(conPCity))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(conFullNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel23)
                     .addComponent(conPState))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(conFullNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel24)
                     .addComponent(conPNumber))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(conFullNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel25)
                     .addComponent(conPPoB))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(conFullNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel26)
                     .addComponent(conNoD))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(conFullNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel27)
                     .addComponent(conChildren))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(conFullNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel28)
                     .addComponent(conEContact))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(conFullNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel29)
                     .addComponent(conEStreet))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(conFullNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel37)
                     .addComponent(conECity))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(conFullNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel38)
                     .addComponent(conEState))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(conFullNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel30)
                     .addComponent(conENumber))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(conFullNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel31)
                     .addComponent(conDeathB))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(conFullNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel32)
-                    .addComponent(conPrior))
+                    .addComponent(conPrior)
+                    .addComponent(conPriorYes))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(conFullNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel33)
-                    .addComponent(conGuardianPS))
+                    .addComponent(conGuardianPS)
+                    .addComponent(conGuardianPSYes))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(conFullNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel34)
                     .addComponent(conEnlisted))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(conFullNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel35)
                     .addComponent(conJunior))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(conFullNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel36)
                     .addComponent(conEagle))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(conFullNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton3))
                 .addContainerGap(24, Short.MAX_VALUE))
         );
 
-        jScrollPane1.setViewportView(jPanel1);
+        jScrollPane1.setViewportView(conFullName);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -710,19 +697,18 @@ public class Confirmation extends javax.swing.JFrame {
          String password = "cadrecwu";
          con = DriverManager.getConnection(url, username, password);
          Statement sta = con.createStatement();
-         System.out.println(conChildren1 + " " + conPrior1 + " " +conGuardianPS1 + " " +conEagle1);
-         
-         sta.executeUpdate("INSERT INTO INFO " +
- "VALUES ('"+conLN.getText()+"', '"+conFN.getText()+"', '"+conMI.getText()+"','"+fullName+"', '"+conSSN.getText()+"','"+conDoB.getText()+"','"+conCWUID.getText()+"',"
-                 + " '"+conEmail.getText()+"','"+conPNum.getText()+"', '"+conStreet.getText()+"', '"+conAptNumber.getText()+"',"
-                 + "'"+conCity.getText()+"', '"+conState.getText()+"', '"+conZip.getText()+"','"+conGender.getText()+"', "
-                 + "'"+conAcaM.getText()+"', '"+conGradD.getText()+"', '"+conEthnicity.getText()+"', "
-                 + "'"+conMaritialS.getText()+"','"+conPartnerN.getText()+"', '"+conPAddress.getText()+"', '"+conPCity.getText()+"', "
-                 + "'"+conPState.getText()+"','"+conPNumber.getText()+"', '"+conPPoB.getText()+"', '"+conNoD.getText()+"', '"+ conChildren1+"', "
-                 + "'"+conEContact.getText()+"', '"+conEStreet.getText()+"', '"+conECity.getText()+"', '"+conEState.getText()+"', '"+conENumber.getText()+"', '"+conDeathB.getText()+"', "
-                 + "'"+conPrior1+"', '"+conPrior2+"', '"+conGuardianPS1+"', '"+conGuardianPS2+"', "
-                 + "'"+conEnlisted.getText()+"', '"+conJunior.getText()+"', '"+conEagle1+"')");
-         
+         //sta.executeUpdate("INSERT INTO TESTER VALUES('"+ conLN.getText() +"')");
+         sta.executeUpdate("INSERT INTO INFO VALUES ('"+conLN.getText()+"', '"+conFN.getText()+"', '"+conMI.getText()+"','"+conFull.getText()+"','"+conSSN.getText()+"','"+conDoB.getText()+"','"+conCWUID.getText()+"',"
+                 + "'"+conEmail.getText()+"','"+conPNum.getText()+"', '"+conStreet.getText()+"','"+conAptNumber.getText()+"',"
+                 + "'"+conCity.getText()+"','"+conState.getText()+"', '"+conZip.getText()+"','"+conGender.getText()+"',"
+                 + "'"+conAcaM.getText()+"','"+conGradD.getText()+"', '"+conEthnicity.getText()+"',"
+                 + "'"+conMaritialS.getText()+"','"+conPartnerN.getText()+"', '"+conPAddress.getText()+"', '"+conPCity.getText()+"',"
+                 + "'"+conPState.getText()+"','"+conPNumber.getText()+"', '"+conPPoB.getText()+"', '"+conNoD.getText()+"',  "
+                 + "'"+conEContact.getText()+"','"+conEStreet.getText()+"', '"+conECity.getText()+"','"+conEState.getText()+"', '"+conENumber.getText()+"','"+conDeathB.getText()+"',"
+                 + "'"+conPriorYes.getText()+"',"
+                 + "'"+conJunior.getText()+"','"+ conChildren.getText()+"',"
+                 + "'"+conPrior.getText()+"','"+conEagle.getText()+"','"+conEnlisted.getText()+"','"+conGuardianPSYes.getText()+"', '"+conGuardianPS.getText()+"')");
+                 
          sta.close();
          
      }catch (Exception e) {
@@ -793,9 +779,12 @@ public class Confirmation extends javax.swing.JFrame {
     private javax.swing.JLabel conEnlisted;
     private javax.swing.JLabel conEthnicity;
     private javax.swing.JLabel conFN;
+    private javax.swing.JLabel conFull;
+    private javax.swing.JPanel conFullName;
     private javax.swing.JLabel conGender;
     private javax.swing.JLabel conGradD;
     private javax.swing.JLabel conGuardianPS;
+    private javax.swing.JLabel conGuardianPSYes;
     private javax.swing.JLabel conJunior;
     private javax.swing.JLabel conLN;
     private javax.swing.JLabel conMI;
@@ -809,6 +798,7 @@ public class Confirmation extends javax.swing.JFrame {
     private javax.swing.JLabel conPState;
     private javax.swing.JLabel conPartnerN;
     private javax.swing.JLabel conPrior;
+    private javax.swing.JLabel conPriorYes;
     private javax.swing.JLabel conSSN;
     private javax.swing.JLabel conState;
     private javax.swing.JLabel conStreet;
@@ -853,7 +843,6 @@ public class Confirmation extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }

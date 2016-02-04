@@ -60,7 +60,7 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Container class="javax.swing.JPanel" name="jPanel1">
+        <Container class="javax.swing.JPanel" name="conFullName">
 
           <Layout>
             <DimensionLayout dim="0">
@@ -117,8 +117,13 @@
                                   <Group type="102" attributes="0">
                                       <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="conFN" alignment="0" pref="615" max="32767" attributes="0"/>
-                                          <Component id="conLN" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="conLN" max="32767" attributes="0"/>
+                                          <Group type="102" attributes="0">
+                                              <Component id="conFN" min="-2" pref="94" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+                                              <Component id="conFull" min="-2" pref="106" max="-2" attributes="0"/>
+                                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                          </Group>
                                       </Group>
                                   </Group>
                                   <Group type="102" alignment="1" attributes="0">
@@ -158,13 +163,23 @@
                                   <Component id="conEStreet" max="32767" attributes="0"/>
                                   <Component id="conENumber" max="32767" attributes="0"/>
                                   <Component id="conDeathB" max="32767" attributes="0"/>
-                                  <Component id="conPrior" max="32767" attributes="0"/>
-                                  <Component id="conGuardianPS" max="32767" attributes="0"/>
                                   <Component id="conEnlisted" max="32767" attributes="0"/>
                                   <Component id="conJunior" max="32767" attributes="0"/>
                                   <Component id="conEagle" alignment="0" max="32767" attributes="0"/>
                                   <Component id="conECity" alignment="0" max="32767" attributes="0"/>
                                   <Component id="conEState" alignment="0" max="32767" attributes="0"/>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="conPrior" pref="63" max="32767" attributes="0"/>
+                                          <Component id="conGuardianPS" max="32767" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Component id="conPriorYes" pref="75" max="32767" attributes="0"/>
+                                          <Component id="conGuardianPSYes" max="32767" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="481" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
                           </Group>
                       </Group>
@@ -183,7 +198,10 @@
                   <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="conFN" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                              <Component id="conFN" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="conFull" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
@@ -347,11 +365,13 @@
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel32" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="conPrior" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="conPriorYes" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel33" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="conGuardianPS" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="conGuardianPSYes" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -765,6 +785,21 @@
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton3ActionPerformed"/>
               </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="conPriorYes">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="jLabel54"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="conGuardianPSYes">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="jLabel55"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="conFull">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="jLabel40"/>
+              </Properties>
             </Component>
           </SubComponents>
         </Container>
