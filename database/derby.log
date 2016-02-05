@@ -1,16 +1,16 @@
-Wed Feb 03 18:41:10 PST 2016 : Apache Derby Network Server - 10.11.1.2 - (1629631) started and ready to accept connections on port 1527
+Thu Feb 04 14:30:53 PST 2016 : Apache Derby Network Server - 10.11.1.2 - (1629631) started and ready to accept connections on port 1527
 ----------------------------------------------------------------
-Wed Feb 03 18:41:12 PST 2016:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.11.1.2 - (1629631): instance a816c00e-0152-aa27-a209-ffffa4f782c1 
-on database directory E:\CS481\LatestVer\database\CadetInfo with class loader sun.misc.Launcher$AppClassLoader@5e2de80c 
-Loaded from file:/C:/Program%20Files/Java/jdk1.8.0_71/db/lib/derby.jar
+Thu Feb 04 14:30:54 PST 2016:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.11.1.2 - (1629631): instance a816c00e-0152-ae68-da84-ffff81e2d992 
+on database directory U:\LatestVer\database\CadetInfo with class loader sun.misc.Launcher$AppClassLoader@60e53b93 
+Loaded from file:/C:/Program%20Files/Java/jdk/db/lib/derby.jar
 java.vendor=Oracle Corporation
-java.runtime.version=1.8.0_71-b15
-user.dir=C:\Program Files\Java\jdk1.8.0_71\db
-os.name=Windows 10
+java.runtime.version=1.8.0_51-b16
+user.dir=C:\Program Files\Java\jdk\db
+os.name=Windows 7
 os.arch=amd64
-os.version=10.0
-derby.system.home=E:\CS481\LatestVer\database
+os.version=6.1
+derby.system.home=U:\LatestVer\database
 Database Class Loader started - derby.database.classpath=''
 ----------------------------------------------------------------
-Wed Feb 03 18:41:58 PST 2016: Shutting down Derby engine
+Thu Feb 04 14:36:25 PST 2016: Shutting down Derby engine
