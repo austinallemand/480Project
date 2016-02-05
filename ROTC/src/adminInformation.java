@@ -64,7 +64,7 @@ public class adminInformation extends javax.swing.JFrame {
         searchCadet = new javax.swing.JTextField();
         removeCadet = new javax.swing.JButton();
         updateCadet = new javax.swing.JButton();
-        cadetForm = new javax.swing.JComboBox<String>();
+        cadetForm = new javax.swing.JComboBox<>();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
@@ -174,7 +174,7 @@ public class adminInformation extends javax.swing.JFrame {
             }
         });
 
-        cadetForm.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Please Select a Form", "Item 2", "Item 3", "Item 4" }));
+        cadetForm.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Please Select a Form", "Item 2", "Item 3", "Item 4" }));
         cadetForm.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cadetFormActionPerformed(evt);
@@ -441,12 +441,6 @@ public class adminInformation extends javax.swing.JFrame {
                     .addComponent(userNoD)
                     .addComponent(userEmergency)
                     .addComponent(userEStreet)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(userAreaCode, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(userMPN, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(userLPN, javax.swing.GroupLayout.DEFAULT_SIZE, 177, Short.MAX_VALUE))
                     .addComponent(userDeath)
                     .addComponent(userMI, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(userLN)
@@ -457,19 +451,25 @@ public class adminInformation extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(userPartnerNumber, javax.swing.GroupLayout.DEFAULT_SIZE, 255, Short.MAX_VALUE)
                                 .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(userGuardStatus, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(userPriorS, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGap(32, 32, 32)
                                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(userHasPriorGuardS, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+                                        .addComponent(userGuardStatus, javax.swing.GroupLayout.DEFAULT_SIZE, 105, Short.MAX_VALUE)
+                                        .addComponent(userPriorS))
+                                    .addGap(18, 18, 18)
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(userHasPriorGuardS, javax.swing.GroupLayout.DEFAULT_SIZE, 86, Short.MAX_VALUE)
                                         .addComponent(userHasPriorS)))
                                 .addComponent(userPartnerPoB))
-                            .addComponent(userEagleScout, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(userJuniorROTC, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 91, Short.MAX_VALUE)
-                                .addComponent(userEnlistment, javax.swing.GroupLayout.Alignment.TRAILING)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(userAreaCode, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(userMPN, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(userLPN, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(userEagleScout, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 105, Short.MAX_VALUE)
+                                .addComponent(userJuniorROTC, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(userEnlistment, javax.swing.GroupLayout.Alignment.LEADING)))
+                        .addGap(0, 156, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -628,7 +628,7 @@ public class adminInformation extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel31)
                     .addComponent(userEagleScout, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(132, Short.MAX_VALUE))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
         jLabel34.setText("Admin Access");
@@ -692,7 +692,7 @@ public class adminInformation extends javax.swing.JFrame {
                     .addComponent(jButton1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addContainerGap(24, Short.MAX_VALUE))
         );
 
         jScrollPane2.setViewportView(jPanel2);
@@ -701,14 +701,14 @@ public class adminInformation extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 681, Short.MAX_VALUE)
+            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 671, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 1181, Short.MAX_VALUE)
-                .addGap(23, 23, 23))
+                .addGap(0, 0, 0)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 1352, Short.MAX_VALUE)
+                .addGap(0, 0, 0))
         );
 
         pack();
@@ -803,52 +803,55 @@ public class adminInformation extends javax.swing.JFrame {
     }//GEN-LAST:event_userPartnerNumberActionPerformed
 
     private void importCadetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_importCadetActionPerformed
+       
+        decrypt decryption = new decrypt();
+        
         try {  
             FileReader fileReader = new FileReader("cadetQuestionare.txt");
             BufferedReader bufferedReader = new BufferedReader(fileReader);
             
-            userFN.setText(bufferedReader.readLine());
-            userLN.setText(bufferedReader.readLine());
-            userMI.setText(bufferedReader.readLine());
-            userCWUID.setText(bufferedReader.readLine());
-            userEmail.setText(bufferedReader.readLine());
-            userDoB.setText(bufferedReader.readLine());
-            userAreaCode.setText(bufferedReader.readLine());
-            userMPN.setText(bufferedReader.readLine());
-            userLPN.setText(bufferedReader.readLine());
-            userStreet.setText(bufferedReader.readLine());
-            userApt.setText(bufferedReader.readLine());
-            userCity.setText(bufferedReader.readLine());
-            userState.setText(bufferedReader.readLine());
-            userZip.setText(bufferedReader.readLine());
-            userGender.setText(bufferedReader.readLine());
-            userSSN.setText(bufferedReader.readLine());
-            userAcMajor.setText(bufferedReader.readLine());
-            userGradDate.setText(bufferedReader.readLine());
-            userRace.setText(bufferedReader.readLine());
-            userMaritialS.setText(bufferedReader.readLine());
-            userPartnerName.setText(bufferedReader.readLine());
-            userPartnerAddress.setText(bufferedReader.readLine());
-            userPartnerCity.setText(bufferedReader.readLine());
-            userPartnerState.setText(bufferedReader.readLine());
-            userPartnerNumber.setText(bufferedReader.readLine());
-            userPartnerPoB.setText(bufferedReader.readLine());
-            userNoD.setText(bufferedReader.readLine());
+            userFN.setText(decryption.deCrypt(bufferedReader.readLine()));
+            userLN.setText(decryption.deCrypt(bufferedReader.readLine()));
+            userMI.setText(decryption.deCrypt(bufferedReader.readLine()));
+            userCWUID.setText(decryption.deCrypt(bufferedReader.readLine()));
+            userEmail.setText(decryption.deCrypt(bufferedReader.readLine()));
+            userDoB.setText(decryption.deCrypt(bufferedReader.readLine()));
+            userAreaCode.setText(decryption.deCrypt(bufferedReader.readLine()));
+            userMPN.setText(decryption.deCrypt(bufferedReader.readLine()));
+            userLPN.setText(decryption.deCrypt(bufferedReader.readLine()));
+            userStreet.setText(decryption.deCrypt(bufferedReader.readLine()));
+            userApt.setText(decryption.deCrypt(bufferedReader.readLine()));
+            userCity.setText(decryption.deCrypt(bufferedReader.readLine()));
+            userState.setText(decryption.deCrypt(bufferedReader.readLine()));
+            userZip.setText(decryption.deCrypt(bufferedReader.readLine()));
+            userGender.setText(decryption.deCrypt(bufferedReader.readLine()));
+            userSSN.setText(decryption.deCrypt(bufferedReader.readLine()));
+            userAcMajor.setText(decryption.deCrypt(bufferedReader.readLine()));
+            userGradDate.setText(decryption.deCrypt(bufferedReader.readLine()));
+            userRace.setText(decryption.deCrypt(bufferedReader.readLine()));
+            userMaritialS.setText(decryption.deCrypt(bufferedReader.readLine()));
+            userPartnerName.setText(decryption.deCrypt(bufferedReader.readLine()));
+            userPartnerAddress.setText(decryption.deCrypt(bufferedReader.readLine()));
+            userPartnerCity.setText(decryption.deCrypt(bufferedReader.readLine()));
+            userPartnerState.setText(decryption.deCrypt(bufferedReader.readLine()));
+            userPartnerNumber.setText(decryption.deCrypt(bufferedReader.readLine()));
+            userPartnerPoB.setText(decryption.deCrypt(bufferedReader.readLine()));
+            userNoD.setText(decryption.deCrypt(bufferedReader.readLine()));
             
-            userChildren.setText(bufferedReader.readLine());
-            userEmergency.setText(bufferedReader.readLine());
-            userEStreet.setText(bufferedReader.readLine());
-            userECity.setText(bufferedReader.readLine());
-            userEState.setText(bufferedReader.readLine());
-            userENumber.setText(bufferedReader.readLine());
-            userDeath.setText(bufferedReader.readLine());
-            userPriorS.setText(bufferedReader.readLine());
-            userHasPriorS.setText(bufferedReader.readLine());
-            userGuardStatus.setText(bufferedReader.readLine());
-            userHasPriorGuardS.setText(bufferedReader.readLine());
-            userEnlistment.setText(bufferedReader.readLine());
-            userJuniorROTC.setText(bufferedReader.readLine());
-            userEagleScout.setText(bufferedReader.readLine());
+            userChildren.setText(decryption.deCrypt(bufferedReader.readLine()));
+            userEmergency.setText(decryption.deCrypt(bufferedReader.readLine()));
+            userEStreet.setText(decryption.deCrypt(bufferedReader.readLine()));
+            userECity.setText(decryption.deCrypt(bufferedReader.readLine()));
+            userEState.setText(decryption.deCrypt(bufferedReader.readLine()));
+            userENumber.setText(decryption.deCrypt(bufferedReader.readLine()));
+            userDeath.setText(decryption.deCrypt(bufferedReader.readLine()));
+            userPriorS.setText(decryption.deCrypt(bufferedReader.readLine()));
+            userHasPriorS.setText(decryption.deCrypt(bufferedReader.readLine()));
+            userGuardStatus.setText(decryption.deCrypt(bufferedReader.readLine()));
+            userHasPriorGuardS.setText(decryption.deCrypt(bufferedReader.readLine()));
+            userEnlistment.setText(decryption.deCrypt(bufferedReader.readLine()));
+            userJuniorROTC.setText(decryption.deCrypt(bufferedReader.readLine()));
+            userEagleScout.setText(decryption.deCrypt(bufferedReader.readLine()));
             
             
             
