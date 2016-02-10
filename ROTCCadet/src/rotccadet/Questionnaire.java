@@ -94,7 +94,7 @@ public class Questionnaire extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jPanel1 = new javax.swing.JPanel();
         userMI = new javax.swing.JTextField();
-        userChildren = new javax.swing.JComboBox<String>();
+        userChildren = new javax.swing.JComboBox<>();
         jLabelSSN = new javax.swing.JLabel();
         userDeath = new javax.swing.JTextField();
         jLabelCity = new javax.swing.JLabel();
@@ -103,14 +103,14 @@ public class Questionnaire extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabelPN = new javax.swing.JLabel();
         userCWUID = new javax.swing.JTextField();
-        userPriorS = new javax.swing.JComboBox<String>();
+        userPriorS = new javax.swing.JComboBox<>();
         jLabelNoD = new javax.swing.JLabel();
         userGradDate = new javax.swing.JTextField();
         jLabelDoB = new javax.swing.JLabel();
         userEmergencyStreet = new javax.swing.JTextField();
         userAreaCode = new javax.swing.JTextField();
         userGender = new javax.swing.JComboBox();
-        userMaritialS = new javax.swing.JComboBox<String>();
+        userMaritialS = new javax.swing.JComboBox<>();
         userAcMajor = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jLabelPS = new javax.swing.JLabel();
@@ -122,7 +122,7 @@ public class Questionnaire extends javax.swing.JFrame {
         userLPN = new javax.swing.JTextField();
         jLabelState = new javax.swing.JLabel();
         userZip = new javax.swing.JTextField();
-        userRace = new javax.swing.JComboBox<String>();
+        userRace = new javax.swing.JComboBox<>();
         userPartnerPoB = new javax.swing.JTextField();
         userSSN = new javax.swing.JTextField();
         userCity = new javax.swing.JTextField();
@@ -153,13 +153,13 @@ public class Questionnaire extends javax.swing.JFrame {
         userENumber = new javax.swing.JTextField();
         jLabelFN = new javax.swing.JLabel();
         jLabelStreet = new javax.swing.JLabel();
-        userHasPriorS = new javax.swing.JComboBox<String>();
-        userHasPriorGuardS = new javax.swing.JComboBox<String>();
+        userHasPriorS = new javax.swing.JComboBox<>();
+        userHasPriorGuardS = new javax.swing.JComboBox<>();
         jLabelJROTC = new javax.swing.JLabel();
-        userJuniorROTC = new javax.swing.JComboBox<String>();
+        userJuniorROTC = new javax.swing.JComboBox<>();
         jLabelEagleScount = new javax.swing.JLabel();
-        userEagleScout = new javax.swing.JComboBox<String>();
-        userGuardStatus = new javax.swing.JComboBox<String>();
+        userEagleScout = new javax.swing.JComboBox<>();
+        userGuardStatus = new javax.swing.JComboBox<>();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         userPartnerAddress = new javax.swing.JTextField();
@@ -182,7 +182,7 @@ public class Questionnaire extends javax.swing.JFrame {
             }
         });
 
-        userChildren.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Yes", "No", " " }));
+        userChildren.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Yes", "No", " " }));
         userChildren.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 userChildrenActionPerformed(evt);
@@ -207,7 +207,7 @@ public class Questionnaire extends javax.swing.JFrame {
             }
         });
 
-        userPriorS.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Please Pick    ", "Yes", "No" }));
+        userPriorS.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Please Pick    ", "Yes", "No" }));
         userPriorS.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 userPriorSMouseClicked(evt);
@@ -241,7 +241,7 @@ public class Questionnaire extends javax.swing.JFrame {
             }
         });
 
-        userMaritialS.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Single", "Married", "Widowed", " " }));
+        userMaritialS.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Single", "Married", "Widowed", " " }));
 
         jButton1.setText("Submit");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -262,7 +262,7 @@ public class Questionnaire extends javax.swing.JFrame {
 
         jLabelState.setText("State:");
 
-        userRace.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Race 1", "Race 2", "Race 3", "Race 4" }));
+        userRace.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Race 1", "Race 2", "Race 3", "Race 4" }));
 
         jLabelPGD.setText("Projected Graduation Date:");
 
@@ -325,10 +325,10 @@ public class Questionnaire extends javax.swing.JFrame {
 
         jLabelStreet.setText("Street Address:");
 
-        userHasPriorS.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Army", "Air Force", "Navy", "Marines", "Cost Guard", "Merchant Marine" }));
+        userHasPriorS.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Army", "Air Force", "Navy", "Marines", "Cost Guard", "Merchant Marine" }));
         userHasPriorS.setEnabled(false);
 
-        userHasPriorGuardS.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Army", "Air Force", "Navy", "Marines", "Coast Guard", "Merchant Marine" }));
+        userHasPriorGuardS.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Army", "Air Force", "Navy", "Marines", "Coast Guard", "Merchant Marine" }));
         userHasPriorGuardS.setEnabled(false);
         userHasPriorGuardS.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -343,13 +343,13 @@ public class Questionnaire extends javax.swing.JFrame {
 
         jLabelJROTC.setText("Junior ROTC:");
 
-        userJuniorROTC.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "None", "1 Year", "2 Years", "3 Years", "4 Years" }));
+        userJuniorROTC.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "None", "1 Year", "2 Years", "3 Years", "4 Years" }));
 
         jLabelEagleScount.setText("Easgle Scout:");
 
-        userEagleScout.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "No", "Yes" }));
+        userEagleScout.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "No", "Yes" }));
 
-        userGuardStatus.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Guardian Status:", "Civilian", "Retired Military", "Active Duty" }));
+        userGuardStatus.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Guardian Status:", "Civilian", "Retired Military", "Active Duty" }));
         userGuardStatus.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 userGuardStatusMouseClicked(evt);
@@ -455,9 +455,8 @@ public class Questionnaire extends javax.swing.JFrame {
                                 .addComponent(userGradDate)
                                 .addComponent(userPartnerName, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 374, Short.MAX_VALUE)
                                 .addComponent(userPartnerAddress, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(userRace, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(userMaritialS, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                .addComponent(userRace, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(userMaritialS, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addComponent(userPartnerState, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(userPartnerNumber, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 373, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(userPartnerPoB, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 371, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -646,7 +645,7 @@ public class Questionnaire extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(goBack)
                     .addComponent(jButton1))
-                .addGap(0, 100, Short.MAX_VALUE))
+                .addGap(0, 10, Short.MAX_VALUE))
         );
 
         jLabel10.getAccessibleContext().setAccessibleDescription("");
@@ -657,14 +656,16 @@ public class Questionnaire extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 746, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(0, 0, 0)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 772, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1099, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0))
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -715,54 +716,57 @@ public class Questionnaire extends javax.swing.JFrame {
     }//GEN-LAST:event_userLNActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-
+        
+        
+        Encrypt encryption = new Encrypt();
+        
         try
         {
             //C:\Users\cs362001_13\Desktop
-            File savedFile = new File("C:\\Users\\cs470001_29\\Desktop/cadetQuestionare.txt");
+            File savedFile = new File("C:\\Users\\Austin\\Documents\\NetBeansProjects\\480Project\\ROTCCadet/cadetQuestionare.txt");
             //open the file
             PrintWriter outputFile = new PrintWriter (savedFile);
-            outputFile.println(userFN.getText());
-            outputFile.println(userLN.getText());
-            outputFile.println(userMI.getText());
-            outputFile.println(userCWUID.getText());
-            outputFile.println(userEmail.getText());
-            outputFile.println(userDoB.getText());
-            outputFile.println(userAreaCode.getText());
-            outputFile.println(userMPN.getText());
-            outputFile.println(userLPN.getText());
-            outputFile.println(userStreet.getText());
-            outputFile.println(userApt.getText());
-            outputFile.println(userCity.getText());
-            outputFile.println(userState.getText());
-            outputFile.println(userZip.getText());
-            outputFile.println(userGender.getSelectedItem());
-            outputFile.println(userSSN.getText());
-            outputFile.println(userAcMajor.getText());
-            outputFile.println(userGradDate.getText());
-            outputFile.println(userRace.getSelectedItem());
-            outputFile.println(userMaritialS.getSelectedItem());
-            outputFile.println(userPartnerName.getText());
-            outputFile.println(userPartnerAddress.getText());
-            outputFile.println(userPartnerCity.getText());
-            outputFile.println(userPartnerState.getText());
-            outputFile.println(userPartnerNumber.getText());
-            outputFile.println(userPartnerPoB.getText());
-            outputFile.println(userNoD.getText());
-            outputFile.println(userChildren.getSelectedItem());
-            outputFile.println(userEmergency.getText());
-            outputFile.println(userEmergencyStreet.getText());
-            outputFile.println(userEmergencyCity.getText());
-            outputFile.println(userEmergencyState.getText());
-            outputFile.println(userENumber.getText());
-            outputFile.println(userDeath.getText());
-            outputFile.println(userPriorS.getSelectedItem());
-            outputFile.println(userHasPriorS.getSelectedItem());
-            outputFile.println(userGuardStatus.getSelectedItem());
-            outputFile.println(userHasPriorGuardS.getSelectedItem());
-            outputFile.println(userEnlistment.getText());
-            outputFile.println(userJuniorROTC.getSelectedItem());
-            outputFile.println(userEagleScout.getSelectedItem());
+            outputFile.println(encryption.doEncrypt(userFN.getText()));
+            outputFile.println(encryption.doEncrypt(userLN.getText()));
+            outputFile.println(encryption.doEncrypt(userMI.getText()));
+            outputFile.println(encryption.doEncrypt(userCWUID.getText()));
+            outputFile.println(encryption.doEncrypt(userEmail.getText()));
+            outputFile.println(encryption.doEncrypt(userDoB.getText()));
+            outputFile.println(encryption.doEncrypt(userAreaCode.getText()));
+            outputFile.println(encryption.doEncrypt(userMPN.getText()));
+            outputFile.println(encryption.doEncrypt(userLPN.getText()));
+            outputFile.println(encryption.doEncrypt(userStreet.getText()));
+            outputFile.println(encryption.doEncrypt(userApt.getText()));
+            outputFile.println(encryption.doEncrypt(userCity.getText()));
+            outputFile.println(encryption.doEncrypt(userState.getText()));
+            outputFile.println(encryption.doEncrypt(userZip.getText()));
+            outputFile.println(encryption.doEncrypt((String)userGender.getSelectedItem()));
+            outputFile.println(encryption.doEncrypt(userSSN.getText()));
+            outputFile.println(encryption.doEncrypt(userAcMajor.getText()));
+            outputFile.println(encryption.doEncrypt(userGradDate.getText()));
+            outputFile.println(encryption.doEncrypt((String)userRace.getSelectedItem()));
+            outputFile.println(encryption.doEncrypt((String)userMaritialS.getSelectedItem()));
+            outputFile.println(encryption.doEncrypt(userPartnerName.getText()));
+            outputFile.println(encryption.doEncrypt(userPartnerAddress.getText()));
+            outputFile.println(encryption.doEncrypt(userPartnerCity.getText()));
+            outputFile.println(encryption.doEncrypt(userPartnerState.getText()));
+            outputFile.println(encryption.doEncrypt(userPartnerNumber.getText()));
+            outputFile.println(encryption.doEncrypt(userPartnerPoB.getText()));
+            outputFile.println(encryption.doEncrypt(userNoD.getText()));
+            outputFile.println(encryption.doEncrypt((String)userChildren.getSelectedItem()));
+            outputFile.println(encryption.doEncrypt(userEmergency.getText()));
+            outputFile.println(encryption.doEncrypt(userEmergencyStreet.getText()));
+            outputFile.println(encryption.doEncrypt(userEmergencyCity.getText()));
+            outputFile.println(encryption.doEncrypt(userEmergencyState.getText()));
+            outputFile.println(encryption.doEncrypt(userENumber.getText()));
+            outputFile.println(encryption.doEncrypt(userDeath.getText()));
+            outputFile.println(encryption.doEncrypt((String)userPriorS.getSelectedItem()));
+            outputFile.println(encryption.doEncrypt((String)userHasPriorS.getSelectedItem()));
+            outputFile.println(encryption.doEncrypt((String)userGuardStatus.getSelectedItem()));
+            outputFile.println(encryption.doEncrypt((String)userHasPriorGuardS.getSelectedItem()));
+            outputFile.println(encryption.doEncrypt(userEnlistment.getText()));
+            outputFile.println(encryption.doEncrypt((String)userJuniorROTC.getSelectedItem()));
+            outputFile.println(encryption.doEncrypt((String)userEagleScout.getSelectedItem()));
             outputFile.close ();
             //outputFile.println(encrypt(Integer.parseInt(userSSN.getText())));
 

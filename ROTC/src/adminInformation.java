@@ -24,26 +24,8 @@ import java.io.*;
  */
 public class adminInformation extends javax.swing.JFrame {
 
-    final void Fill(){
-        
-        
-            try{
-                System.out.println("Enter was pressed");
-                String url = "jdbc:derby://localhost:1527/CadetInfo";
-                String username = "adminCadre";
-                String password = "cadrecwu";
-                
-                String theKey = searchCadet.getText();
-                Connection con = DriverManager.getConnection(url);
-                Statement stmt = con.createStatement();
-                String QUERY = "SELECT * FROM INFORMATION";
-                
-            }
-            catch(SQLException ex){
-                JOptionPane.showMessageDialog(null, ex.toString());
-            
-            }
-}
+    private String searchID;
+    
     public adminInformation() {
         initComponents();
         this.setLocationRelativeTo(null);
@@ -148,6 +130,7 @@ public class adminInformation extends javax.swing.JFrame {
         userENumber = new javax.swing.JTextField();
         jLabel34 = new javax.swing.JLabel();
         importCadet = new javax.swing.JButton();
+        searchCadetButton = new javax.swing.JButton();
 
         jLabel21.setText("jLabel21");
 
@@ -441,12 +424,6 @@ public class adminInformation extends javax.swing.JFrame {
                     .addComponent(userNoD)
                     .addComponent(userEmergency)
                     .addComponent(userEStreet)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(userAreaCode, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(userMPN, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(userLPN, javax.swing.GroupLayout.DEFAULT_SIZE, 177, Short.MAX_VALUE))
                     .addComponent(userDeath)
                     .addComponent(userMI, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(userLN)
@@ -457,19 +434,25 @@ public class adminInformation extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(userPartnerNumber, javax.swing.GroupLayout.DEFAULT_SIZE, 255, Short.MAX_VALUE)
                                 .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(userGuardStatus, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(userPriorS, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGap(32, 32, 32)
                                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(userHasPriorGuardS, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
-                                        .addComponent(userHasPriorS)))
+                                        .addComponent(userGuardStatus, javax.swing.GroupLayout.DEFAULT_SIZE, 105, Short.MAX_VALUE)
+                                        .addComponent(userPriorS))
+                                    .addGap(18, 18, 18)
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(userHasPriorS, javax.swing.GroupLayout.DEFAULT_SIZE, 125, Short.MAX_VALUE)
+                                        .addComponent(userHasPriorGuardS)))
                                 .addComponent(userPartnerPoB))
-                            .addComponent(userEagleScout, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(userJuniorROTC, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 91, Short.MAX_VALUE)
-                                .addComponent(userEnlistment, javax.swing.GroupLayout.Alignment.TRAILING)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(userAreaCode, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(userMPN, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(userLPN, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(userEagleScout, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 105, Short.MAX_VALUE)
+                                .addComponent(userJuniorROTC, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(userEnlistment, javax.swing.GroupLayout.Alignment.LEADING)))
+                        .addGap(0, 156, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -628,7 +611,7 @@ public class adminInformation extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel31)
                     .addComponent(userEagleScout, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(132, Short.MAX_VALUE))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
         jLabel34.setText("Admin Access");
@@ -637,6 +620,13 @@ public class adminInformation extends javax.swing.JFrame {
         importCadet.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 importCadetActionPerformed(evt);
+            }
+        });
+
+        searchCadetButton.setText("Search Cadet");
+        searchCadetButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                searchCadetButtonActionPerformed(evt);
             }
         });
 
@@ -661,15 +651,18 @@ public class adminInformation extends javax.swing.JFrame {
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(65, 65, 65)
                         .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(searchCadet, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(cadetForm, javax.swing.GroupLayout.Alignment.LEADING, 0, 469, Short.MAX_VALUE)
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
-                            .addComponent(updateCadet, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(18, 18, 18)
-                            .addComponent(removeCadet, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(18, 18, 18)
-                            .addComponent(importCadet, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addComponent(cadetForm, javax.swing.GroupLayout.PREFERRED_SIZE, 469, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(searchCadet, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
+                                .addComponent(updateCadet, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(removeCadet, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(importCadet, javax.swing.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE)
+                            .addComponent(searchCadetButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -678,7 +671,9 @@ public class adminInformation extends javax.swing.JFrame {
                 .addGap(4, 4, 4)
                 .addComponent(jLabel34)
                 .addGap(18, 18, 18)
-                .addComponent(searchCadet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(searchCadet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(searchCadetButton))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(updateCadet)
@@ -692,7 +687,7 @@ public class adminInformation extends javax.swing.JFrame {
                     .addComponent(jButton1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addContainerGap(198, Short.MAX_VALUE))
         );
 
         jScrollPane2.setViewportView(jPanel2);
@@ -701,14 +696,14 @@ public class adminInformation extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 681, Short.MAX_VALUE)
+            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 671, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 1181, Short.MAX_VALUE)
-                .addGap(23, 23, 23))
+                .addGap(0, 0, 0)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 1352, Short.MAX_VALUE)
+                .addGap(0, 0, 0))
         );
 
         pack();
@@ -727,7 +722,7 @@ public class adminInformation extends javax.swing.JFrame {
     }//GEN-LAST:event_cadetFormActionPerformed
 
     private void searchCadetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchCadetActionPerformed
-        //Action action = new AbstractAction();
+        
     }//GEN-LAST:event_searchCadetActionPerformed
 
     private void userMIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userMIActionPerformed
@@ -763,30 +758,64 @@ public class adminInformation extends javax.swing.JFrame {
     }//GEN-LAST:event_userEStreetActionPerformed
 
     private void searchCadetKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_searchCadetKeyPressed
-        if(evt.getKeyCode() == KeyEvent.VK_ENTER){
-            //Fill();
-         
-            Connection con = null;  
-         try { 
-         String url = "jdbc:derby://localhost:1527/CadetInfo";
-         String username = "adminCadre";
-         String password = "cadrecwu";
-         con = DriverManager.getConnection(url, username, password);
-         Statement sta = con.createStatement();
-         //String search = "SELECT * FROM INFO WHERE CWUID "
-         
-         
-         
-         
-         
-            
-            
-           }catch (Exception e) {
-      System.err.println("Exception: "+e.getMessage());
+        if (evt.getKeyCode()==KeyEvent.VK_ENTER){
+             Connection con;
+             searchID = searchCadet.getText();
+             try { 
+                String url = "jdbc:derby://localhost:1527/CadetInfo";
+                String username = "adminCadre";
+                String password = "cadrecwu";
+                con = DriverManager.getConnection(url, username, password);
+                Statement sta = con.createStatement();
+                ResultSet rs = sta.executeQuery("Select * From INFO WHERE CWUID ='"+ searchID+"'");
+                if(rs.next()){
+                    userFN.setText(rs.getString("FIRSTNAME"));
+                    userLN.setText(rs.getString("LASTNAME"));
+                    userMI.setText(rs.getString("MIDDLEINITIAL"));
+                    userCWUID.setText(rs.getString("CWUID"));
+                    userEmail.setText(rs.getString("EMAIL"));
+                    userDoB.setText(rs.getString("DATEOFBIRTHMDDYYYY"));
+                    userAreaCode.setText(rs.getString("PHONENUMBER").substring(1, 4));
+                    userMPN.setText(rs.getString("PHONENUMBER").substring(6, 9));
+                    userLPN.setText(rs.getString("PHONENUMBER").substring(10, 14));
+                    userStreet.setText(rs.getString("STREETADDRESS"));
+                    userApt.setText(rs.getString("APT"));
+                    userCity.setText(rs.getString("CITY"));
+                    userState.setText(rs.getString("STATE"));
+                    userZip.setText(rs.getString("ZIPCODE"));
+                    userGender.setText(rs.getString("GENDER"));
+                    userSSN.setText(rs.getString("SSAN"));
+                    userAcMajor.setText(rs.getString("ACAMAJOR"));
+                    userGradDate.setText(rs.getString("GRADDATE"));
+                    userRace.setText(rs.getString("ETHNICITY"));
+                    userMaritialS.setText(rs.getString("MARITIALSTATUS"));
+                    userPartnerName.setText(rs.getString("PARTNERNAME"));
+                    userPartnerAddress.setText(rs.getString("PARTNERADDRESS"));
+                    userPartnerCity.setText(rs.getString("PARTNERCITY"));
+                    userPartnerState.setText(rs.getString("PARTNERSTATE"));
+                    userPartnerNumber.setText(rs.getString("PARTNERNUMBER"));
+                    userPartnerPoB.setText(rs.getString("PARTNERPOB"));
+                    userNoD.setText(rs.getString("DEPENDENTS"));
+                    userChildren.setText(rs.getString("CHILDREN"));
+                    userEmergency.setText(rs.getString("EMERGENCYCONTACT"));
+                    userEStreet.setText(rs.getString("EMERGENCYSTREET"));
+                    userECity.setText(rs.getString("EMERGENCYCITY"));
+                    userEState.setText(rs.getString("EMERGENCYSTATE"));
+                    userENumber.setText(rs.getString("EMERGENCYNUMBER"));
+                    userDeath.setText(rs.getString("DEATHBENEFICARY"));
+                    userPriorS.setText(rs.getString("PRIORSERVICE"));
+                    userHasPriorS.setText(rs.getString("PRIORSERVICEYES"));
+                    userGuardStatus.setText(rs.getString("GUARDIANPRIORSERVICEYES"));
+                    userHasPriorGuardS.setText(rs.getString("GUARDIANPRIORSERVICE"));
+                    userEnlistment.setText(rs.getString("ENLISTEDWARRANT"));
+                    userJuniorROTC.setText(rs.getString("JUNIORROTC"));
+                    userEagleScout.setText(rs.getString("EAGLESCOUT"));
+                    
+                    
+                }
+               }catch(Exception e) {
+            System.err.println("Exception: "+e.getMessage());
     }
-            
-            
-            
         }
     }//GEN-LAST:event_searchCadetKeyPressed
 
@@ -803,52 +832,55 @@ public class adminInformation extends javax.swing.JFrame {
     }//GEN-LAST:event_userPartnerNumberActionPerformed
 
     private void importCadetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_importCadetActionPerformed
+       
+        decrypt decryption = new decrypt();
+        
         try {  
             FileReader fileReader = new FileReader("cadetQuestionare.txt");
             BufferedReader bufferedReader = new BufferedReader(fileReader);
             
-            userFN.setText(bufferedReader.readLine());
-            userLN.setText(bufferedReader.readLine());
-            userMI.setText(bufferedReader.readLine());
-            userCWUID.setText(bufferedReader.readLine());
-            userEmail.setText(bufferedReader.readLine());
-            userDoB.setText(bufferedReader.readLine());
-            userAreaCode.setText(bufferedReader.readLine());
-            userMPN.setText(bufferedReader.readLine());
-            userLPN.setText(bufferedReader.readLine());
-            userStreet.setText(bufferedReader.readLine());
-            userApt.setText(bufferedReader.readLine());
-            userCity.setText(bufferedReader.readLine());
-            userState.setText(bufferedReader.readLine());
-            userZip.setText(bufferedReader.readLine());
-            userGender.setText(bufferedReader.readLine());
-            userSSN.setText(bufferedReader.readLine());
-            userAcMajor.setText(bufferedReader.readLine());
-            userGradDate.setText(bufferedReader.readLine());
-            userRace.setText(bufferedReader.readLine());
-            userMaritialS.setText(bufferedReader.readLine());
-            userPartnerName.setText(bufferedReader.readLine());
-            userPartnerAddress.setText(bufferedReader.readLine());
-            userPartnerCity.setText(bufferedReader.readLine());
-            userPartnerState.setText(bufferedReader.readLine());
-            userPartnerNumber.setText(bufferedReader.readLine());
-            userPartnerPoB.setText(bufferedReader.readLine());
-            userNoD.setText(bufferedReader.readLine());
+            userFN.setText(decryption.deCrypt(bufferedReader.readLine()));
+            userLN.setText(decryption.deCrypt(bufferedReader.readLine()));
+            userMI.setText(decryption.deCrypt(bufferedReader.readLine()));
+            userCWUID.setText(decryption.deCrypt(bufferedReader.readLine()));
+            userEmail.setText(decryption.deCrypt(bufferedReader.readLine()));
+            userDoB.setText(decryption.deCrypt(bufferedReader.readLine()));
+            userAreaCode.setText(decryption.deCrypt(bufferedReader.readLine()));
+            userMPN.setText(decryption.deCrypt(bufferedReader.readLine()));
+            userLPN.setText(decryption.deCrypt(bufferedReader.readLine()));
+            userStreet.setText(decryption.deCrypt(bufferedReader.readLine()));
+            userApt.setText(decryption.deCrypt(bufferedReader.readLine()));
+            userCity.setText(decryption.deCrypt(bufferedReader.readLine()));
+            userState.setText(decryption.deCrypt(bufferedReader.readLine()));
+            userZip.setText(decryption.deCrypt(bufferedReader.readLine()));
+            userGender.setText(decryption.deCrypt(bufferedReader.readLine()));
+            userSSN.setText(decryption.deCrypt(bufferedReader.readLine()));
+            userAcMajor.setText(decryption.deCrypt(bufferedReader.readLine()));
+            userGradDate.setText(decryption.deCrypt(bufferedReader.readLine()));
+            userRace.setText(decryption.deCrypt(bufferedReader.readLine()));
+            userMaritialS.setText(decryption.deCrypt(bufferedReader.readLine()));
+            userPartnerName.setText(decryption.deCrypt(bufferedReader.readLine()));
+            userPartnerAddress.setText(decryption.deCrypt(bufferedReader.readLine()));
+            userPartnerCity.setText(decryption.deCrypt(bufferedReader.readLine()));
+            userPartnerState.setText(decryption.deCrypt(bufferedReader.readLine()));
+            userPartnerNumber.setText(decryption.deCrypt(bufferedReader.readLine()));
+            userPartnerPoB.setText(decryption.deCrypt(bufferedReader.readLine()));
+            userNoD.setText(decryption.deCrypt(bufferedReader.readLine()));
             
-            userChildren.setText(bufferedReader.readLine());
-            userEmergency.setText(bufferedReader.readLine());
-            userEStreet.setText(bufferedReader.readLine());
-            userECity.setText(bufferedReader.readLine());
-            userEState.setText(bufferedReader.readLine());
-            userENumber.setText(bufferedReader.readLine());
-            userDeath.setText(bufferedReader.readLine());
-            userPriorS.setText(bufferedReader.readLine());
-            userHasPriorS.setText(bufferedReader.readLine());
-            userGuardStatus.setText(bufferedReader.readLine());
-            userHasPriorGuardS.setText(bufferedReader.readLine());
-            userEnlistment.setText(bufferedReader.readLine());
-            userJuniorROTC.setText(bufferedReader.readLine());
-            userEagleScout.setText(bufferedReader.readLine());
+            userChildren.setText(decryption.deCrypt(bufferedReader.readLine()));
+            userEmergency.setText(decryption.deCrypt(bufferedReader.readLine()));
+            userEStreet.setText(decryption.deCrypt(bufferedReader.readLine()));
+            userECity.setText(decryption.deCrypt(bufferedReader.readLine()));
+            userEState.setText(decryption.deCrypt(bufferedReader.readLine()));
+            userENumber.setText(decryption.deCrypt(bufferedReader.readLine()));
+            userDeath.setText(decryption.deCrypt(bufferedReader.readLine()));
+            userPriorS.setText(decryption.deCrypt(bufferedReader.readLine()));
+            userHasPriorS.setText(decryption.deCrypt(bufferedReader.readLine()));
+            userGuardStatus.setText(decryption.deCrypt(bufferedReader.readLine()));
+            userHasPriorGuardS.setText(decryption.deCrypt(bufferedReader.readLine()));
+            userEnlistment.setText(decryption.deCrypt(bufferedReader.readLine()));
+            userJuniorROTC.setText(decryption.deCrypt(bufferedReader.readLine()));
+            userEagleScout.setText(decryption.deCrypt(bufferedReader.readLine()));
             
             
             
@@ -942,6 +974,66 @@ public class adminInformation extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_userJuniorROTCActionPerformed
 
+    private void searchCadetButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchCadetButtonActionPerformed
+        Connection con;
+             searchID = searchCadet.getText();
+             try { 
+                String url = "jdbc:derby://localhost:1527/CadetInfo";
+                String username = "adminCadre";
+                String password = "cadrecwu";
+                con = DriverManager.getConnection(url, username, password);
+                Statement sta = con.createStatement();
+                ResultSet rs = sta.executeQuery("Select * From INFO WHERE CWUID ='"+ searchID+"'");
+                if(rs.next()){
+                    userFN.setText(rs.getString("FIRSTNAME"));
+                    userLN.setText(rs.getString("LASTNAME"));
+                    userMI.setText(rs.getString("MIDDLEINITIAL"));
+                    userCWUID.setText(rs.getString("CWUID"));
+                    userEmail.setText(rs.getString("EMAIL"));
+                    userDoB.setText(rs.getString("DATEOFBIRTHMDDYYYY"));
+                    userAreaCode.setText(rs.getString("PHONENUMBER").substring(1, 4));
+                    userMPN.setText(rs.getString("PHONENUMBER").substring(6, 9));
+                    userLPN.setText(rs.getString("PHONENUMBER").substring(10, 14));
+                    userStreet.setText(rs.getString("STREETADDRESS"));
+                    userApt.setText(rs.getString("APT"));
+                    userCity.setText(rs.getString("CITY"));
+                    userState.setText(rs.getString("STATE"));
+                    userZip.setText(rs.getString("ZIPCODE"));
+                    userGender.setText(rs.getString("GENDER"));
+                    userSSN.setText(rs.getString("SSAN"));
+                    userAcMajor.setText(rs.getString("ACAMAJOR"));
+                    userGradDate.setText(rs.getString("GRADDATE"));
+                    userRace.setText(rs.getString("ETHNICITY"));
+                    userMaritialS.setText(rs.getString("MARITIALSTATUS"));
+                    userPartnerName.setText(rs.getString("PARTNERNAME"));
+                    userPartnerAddress.setText(rs.getString("PARTNERADDRESS"));
+                    userPartnerCity.setText(rs.getString("PARTNERCITY"));
+                    userPartnerState.setText(rs.getString("PARTNERSTATE"));
+                    userPartnerNumber.setText(rs.getString("PARTNERNUMBER"));
+                    userPartnerPoB.setText(rs.getString("PARTNERPOB"));
+                    userNoD.setText(rs.getString("DEPENDENTS"));
+                    userChildren.setText(rs.getString("CHILDREN"));
+                    userEmergency.setText(rs.getString("EMERGENCYCONTACT"));
+                    userEStreet.setText(rs.getString("EMERGENCYSTREET"));
+                    userECity.setText(rs.getString("EMERGENCYCITY"));
+                    userEState.setText(rs.getString("EMERGENCYSTATE"));
+                    userENumber.setText(rs.getString("EMERGENCYNUMBER"));
+                    userDeath.setText(rs.getString("DEATHBENEFICARY"));
+                    userPriorS.setText(rs.getString("PRIORSERVICE"));
+                    userHasPriorS.setText(rs.getString("PRIORSERVICEYES"));
+                    userGuardStatus.setText(rs.getString("GUARDIANPRIORSERVICEYES"));
+                    userHasPriorGuardS.setText(rs.getString("GUARDIANPRIORSERVICE"));
+                    userEnlistment.setText(rs.getString("ENLISTEDWARRANT"));
+                    userJuniorROTC.setText(rs.getString("JUNIORROTC"));
+                    userEagleScout.setText(rs.getString("EAGLESCOUT"));
+                    
+                    
+                }
+               }catch(Exception e) {
+            System.err.println("Exception: "+e.getMessage());
+    }
+    }//GEN-LAST:event_searchCadetButtonActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1027,6 +1119,7 @@ public class adminInformation extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JButton removeCadet;
     private javax.swing.JTextField searchCadet;
+    private javax.swing.JButton searchCadetButton;
     private javax.swing.JButton updateCadet;
     private javax.swing.JTextField userAcMajor;
     private javax.swing.JTextField userApt;

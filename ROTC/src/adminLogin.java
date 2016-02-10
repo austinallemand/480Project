@@ -1,3 +1,12 @@
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -10,12 +19,17 @@
  */
 public class adminLogin extends javax.swing.JFrame {
 
+    
+    private String userName;
+    private String loginPassword;
     /**
      * Creates new form adminLogin
      */
     public adminLogin() {
         initComponents();
         this.setLocationRelativeTo(null);
+        labelForLoginSuccess.setVisible(false);
+        
     }
 
     /**
@@ -28,12 +42,13 @@ public class adminLogin extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jPasswordField1 = new javax.swing.JPasswordField();
-        jTextField1 = new javax.swing.JTextField();
+        passedLoginPassword = new javax.swing.JPasswordField();
+        passedUserName = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         adminLogin = new javax.swing.JButton();
         goBack = new javax.swing.JButton();
+        labelForLoginSuccess = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -52,8 +67,8 @@ public class adminLogin extends javax.swing.JFrame {
                     .addComponent(jLabel2))
                 .addGap(31, 31, 31)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jTextField1)
-                    .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(passedUserName)
+                    .addComponent(passedLoginPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -62,11 +77,11 @@ public class adminLogin extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(passedUserName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(passedLoginPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
@@ -84,6 +99,9 @@ public class adminLogin extends javax.swing.JFrame {
             }
         });
 
+        labelForLoginSuccess.setForeground(new java.awt.Color(255, 0, 0));
+        labelForLoginSuccess.setText("Login Failed");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -99,11 +117,16 @@ public class adminLogin extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(goBack)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(labelForLoginSuccess, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addComponent(labelForLoginSuccess, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -116,10 +139,33 @@ public class adminLogin extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void adminLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adminLoginActionPerformed
+        String url = "jdbc:derby://localhost:1527/adminLogin";
+        String username = "adminCadre";
+        String password = "cadrecwu";
+        Connection con;
+        try {
+            con = DriverManager.getConnection(url, username, password);
+            Statement sta = con.createStatement();
+            ResultSet rs = sta.executeQuery("Select * From ADMINAUTH");
+            while (rs.next()){
+                userName = rs.getString("USERNAME");
+                loginPassword = rs.getString("PASSWORD");
+            }
+            if(userName.equals(passedUserName.getText()) && loginPassword.equals(passedLoginPassword.getText())){
+                this.dispose();
+                adminInformation secureLogin = new adminInformation();
+                secureLogin.setVisible(true);
+            }
+            else{
+                labelForLoginSuccess.setVisible(true);
+            }
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(adminLogin.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        
 
-        this.dispose();
-        adminInformation secureLogin = new adminInformation();
-        secureLogin.setVisible(true);
     }//GEN-LAST:event_adminLoginActionPerformed
 
     private void goBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_goBackActionPerformed
@@ -169,7 +215,8 @@ public class adminLogin extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JLabel labelForLoginSuccess;
+    private javax.swing.JPasswordField passedLoginPassword;
+    private javax.swing.JTextField passedUserName;
     // End of variables declaration//GEN-END:variables
 }

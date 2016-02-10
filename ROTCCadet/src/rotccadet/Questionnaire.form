@@ -23,15 +23,18 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jScrollPane1" alignment="0" pref="746" max="32767" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
+              <Component id="jScrollPane1" pref="772" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace max="32767" attributes="0"/>
-              <Component id="jScrollPane1" min="-2" pref="1099" max="-2" attributes="0"/>
-              <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <Component id="jScrollPane1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -121,10 +124,8 @@
                                       <Component id="userGradDate" alignment="1" max="32767" attributes="0"/>
                                       <Component id="userPartnerName" alignment="0" pref="374" max="32767" attributes="0"/>
                                       <Component id="userPartnerAddress" alignment="0" max="32767" attributes="0"/>
-                                      <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                          <Component id="userRace" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="userMaritialS" alignment="0" max="32767" attributes="0"/>
-                                      </Group>
+                                      <Component id="userRace" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="userMaritialS" alignment="0" max="32767" attributes="0"/>
                                   </Group>
                                   <Component id="userPartnerState" alignment="0" min="-2" pref="57" max="-2" attributes="0"/>
                                   <Component id="userPartnerNumber" alignment="0" min="-2" pref="373" max="-2" attributes="0"/>
@@ -362,7 +363,7 @@
                           <Component id="goBack" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="0" pref="100" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="10" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>

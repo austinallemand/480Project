@@ -30,15 +30,15 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jScrollPane2" alignment="0" pref="681" max="32767" attributes="0"/>
+          <Component id="jScrollPane2" alignment="0" pref="671" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="jScrollPane2" pref="1181" max="32767" attributes="0"/>
-              <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+              <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
+              <Component id="jScrollPane2" pref="1352" max="32767" attributes="0"/>
+              <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -75,15 +75,20 @@
                               <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
                               <Component id="jButton2" min="-2" pref="212" max="-2" attributes="0"/>
                           </Group>
-                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                              <Component id="searchCadet" alignment="0" max="32767" attributes="0"/>
-                              <Component id="cadetForm" alignment="0" pref="469" max="32767" attributes="0"/>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="updateCadet" min="-2" pref="127" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="removeCadet" min="-2" pref="128" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="importCadet" min="-2" pref="170" max="-2" attributes="0"/>
+                          <Component id="cadetForm" alignment="0" min="-2" pref="469" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                  <Component id="searchCadet" alignment="0" max="32767" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="updateCadet" min="-2" pref="127" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="removeCadet" min="-2" pref="128" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="importCadet" pref="170" max="32767" attributes="0"/>
+                                  <Component id="searchCadetButton" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -97,7 +102,10 @@
                       <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
                       <Component id="jLabel34" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="searchCadet" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="searchCadet" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="searchCadetButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="updateCadet" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -113,7 +121,7 @@
                       </Group>
                       <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
                       <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="16" max="32767" attributes="0"/>
+                      <EmptySpace pref="198" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -248,13 +256,6 @@
                               <Component id="userNoD" alignment="0" max="32767" attributes="0"/>
                               <Component id="userEmergency" alignment="0" max="32767" attributes="0"/>
                               <Component id="userEStreet" max="32767" attributes="0"/>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="userAreaCode" min="-2" pref="111" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="userMPN" min="-2" pref="87" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="userLPN" pref="177" max="32767" attributes="0"/>
-                              </Group>
                               <Component id="userDeath" alignment="0" max="32767" attributes="0"/>
                               <Component id="userMI" alignment="1" max="32767" attributes="0"/>
                               <Component id="userLN" max="32767" attributes="0"/>
@@ -265,25 +266,32 @@
                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                           <Component id="userPartnerNumber" alignment="0" pref="255" max="32767" attributes="0"/>
                                           <Group type="102" alignment="0" attributes="0">
-                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="userGuardStatus" alignment="1" min="-2" pref="91" max="-2" attributes="0"/>
-                                                  <Component id="userPriorS" min="-2" pref="91" max="-2" attributes="0"/>
-                                              </Group>
-                                              <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                                  <Component id="userHasPriorGuardS" pref="70" max="32767" attributes="0"/>
-                                                  <Component id="userHasPriorS" max="32767" attributes="0"/>
+                                                  <Component id="userGuardStatus" pref="105" max="32767" attributes="0"/>
+                                                  <Component id="userPriorS" max="32767" attributes="0"/>
+                                              </Group>
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                  <Component id="userHasPriorS" pref="125" max="32767" attributes="0"/>
+                                                  <Component id="userHasPriorGuardS" max="32767" attributes="0"/>
                                               </Group>
                                           </Group>
                                           <Component id="userPartnerPoB" alignment="0" max="32767" attributes="0"/>
                                       </Group>
-                                      <Component id="userEagleScout" alignment="0" min="-2" pref="91" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="userJuniorROTC" alignment="1" pref="91" max="32767" attributes="0"/>
-                                          <Component id="userEnlistment" alignment="1" max="32767" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="userAreaCode" min="-2" pref="52" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="userMPN" min="-2" pref="47" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="userLPN" min="-2" pref="55" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                          <Component id="userEagleScout" alignment="0" pref="105" max="32767" attributes="0"/>
+                                          <Component id="userJuniorROTC" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="userEnlistment" alignment="0" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  <EmptySpace min="0" pref="156" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
@@ -484,7 +492,7 @@
                               <Component id="jLabel31" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="userEagleScout" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="132" max="32767" attributes="0"/>
+                          <EmptySpace pref="15" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -824,6 +832,14 @@
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="importCadetActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="searchCadetButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Search Cadet"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="searchCadetButtonActionPerformed"/>
               </Events>
             </Component>
           </SubComponents>
