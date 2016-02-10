@@ -46,7 +46,7 @@ public class adminInformation extends javax.swing.JFrame {
         searchCadet = new javax.swing.JTextField();
         removeCadet = new javax.swing.JButton();
         updateCadet = new javax.swing.JButton();
-        cadetForm = new javax.swing.JComboBox<>();
+        cadetForm = new javax.swing.JComboBox<String>();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
@@ -157,7 +157,7 @@ public class adminInformation extends javax.swing.JFrame {
             }
         });
 
-        cadetForm.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Please Select a Form", "Item 2", "Item 3", "Item 4" }));
+        cadetForm.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Please Select a Form", "Item 2", "Item 3", "Item 4" }));
         cadetForm.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cadetFormActionPerformed(evt);
@@ -439,13 +439,8 @@ public class adminInformation extends javax.swing.JFrame {
                                         .addComponent(userPriorS))
                                     .addGap(18, 18, 18)
                                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-<<<<<<< HEAD
                                         .addComponent(userHasPriorS, javax.swing.GroupLayout.DEFAULT_SIZE, 125, Short.MAX_VALUE)
                                         .addComponent(userHasPriorGuardS)))
-=======
-                                        .addComponent(userHasPriorGuardS, javax.swing.GroupLayout.DEFAULT_SIZE, 86, Short.MAX_VALUE)
-                                        .addComponent(userHasPriorS)))
->>>>>>> origin/CadetForm
                                 .addComponent(userPartnerPoB))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(userAreaCode, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -692,11 +687,7 @@ public class adminInformation extends javax.swing.JFrame {
                     .addComponent(jButton1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-<<<<<<< HEAD
                 .addContainerGap(198, Short.MAX_VALUE))
-=======
-                .addContainerGap(24, Short.MAX_VALUE))
->>>>>>> origin/CadetForm
         );
 
         jScrollPane2.setViewportView(jPanel2);
