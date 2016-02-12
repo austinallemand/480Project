@@ -1,81 +1,20 @@
-Tue Feb 09 20:55:40 PST 2016 : Apache Derby Network Server - 10.11.1.2 - (1629631) started and ready to accept connections on port 1527
+Fri Feb 12 11:30:11 PST 2016 : Apache Derby Network Server - 10.10.1.3 - (1557168) started and ready to accept connections on port 1527
 ----------------------------------------------------------------
-Tue Feb 09 20:55:40 PST 2016:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.11.1.2 - (1629631): instance a816c00e-0152-c988-eef5-000076657ebc 
-on database directory E:\CS481\Today\database\CadetInfo with class loader sun.misc.Launcher$AppClassLoader@5e2de80c 
-Loaded from file:/C:/Program%20Files/Java/jdk1.8.0_71/db/lib/derby.jar
+Fri Feb 12 11:30:11 PST 2016:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.10.1.3 - (1557168): instance a816c00e-0152-d6f6-4897-00007576168d 
+on database directory C:\Users\Matt\Desktop\Project\database\CadetInfo with class loader sun.misc.Launcher$AppClassLoader@1d44bcfa 
+Loaded from file:/C:/Program%20Files/Java/jdk1.8.0_25/db/lib/derby.jar
 java.vendor=Oracle Corporation
-java.runtime.version=1.8.0_71-b15
-user.dir=C:\Program Files\Java\jdk1.8.0_71\db
-os.name=Windows 10
+java.runtime.version=1.8.0_25-b18
+user.dir=C:\Program Files\Java\jdk1.8.0_25\db
+os.name=Windows 8.1
 os.arch=amd64
-os.version=10.0
-derby.system.home=E:\CS481\Today\database
+os.version=6.3
+derby.system.home=C:\Users\Matt\Desktop\Project\database
 Database Class Loader started - derby.database.classpath=''
 ----------------------------------------------------------------
-Tue Feb 09 20:55:43 PST 2016:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.11.1.2 - (1629631): instance c42d805d-0152-c988-eef5-000076657ebc 
-on database directory E:\CS481\Today\database\adminLogin with class loader sun.misc.Launcher$AppClassLoader@5e2de80c 
-Loaded from file:/C:/Program%20Files/Java/jdk1.8.0_71/db/lib/derby.jar
-java.vendor=Oracle Corporation
-java.runtime.version=1.8.0_71-b15
-user.dir=C:\Program Files\Java\jdk1.8.0_71\db
-os.name=Windows 10
-os.arch=amd64
-os.version=10.0
-derby.system.home=E:\CS481\Today\database
-Database Class Loader started - derby.database.classpath=''
-Tue Feb 09 20:55:43 PST 2016 Thread[DRDAConnThread_3,5,main] (XID = 345), (SESSIONID = 0), (DATABASE = adminLogin), (DRDAID = {2}), Cleanup action starting
-java.sql.SQLNonTransientConnectionException: Connection authentication failure occurred.  Reason: Invalid authentication..
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.checkUserCredentials(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver.getNewEmbedConnection(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
-	at org.apache.derby.jdbc.EmbeddedDriver.connect(Unknown Source)
-	at org.apache.derby.impl.drda.Database.makeConnection(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.getConnFromDatabaseName(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.verifyUserIdPassword(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.parseSECCHK(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
-Caused by: ERROR 08004: Connection authentication failure occurred.  Reason: Invalid authentication..
-	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory.wrapArgsForTransportAcrossDRDA(Unknown Source)
-	... 18 more
-============= begin nested exception, level (1) ===========
-ERROR 08004: Connection authentication failure occurred.  Reason: Invalid authentication..
-	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory.wrapArgsForTransportAcrossDRDA(Unknown Source)
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.checkUserCredentials(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver.getNewEmbedConnection(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
-	at org.apache.derby.jdbc.EmbeddedDriver.connect(Unknown Source)
-	at org.apache.derby.impl.drda.Database.makeConnection(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.getConnFromDatabaseName(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.verifyUserIdPassword(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.parseSECCHK(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
-============= end nested exception, level (1) ===========
-Cleanup action completed
-Tue Feb 09 20:55:43 PST 2016 Thread[DRDAConnThread_3,5,main] (DATABASE = adminLogin), (DRDAID = {2}), Connection authentication failure occurred.  Reason: Invalid authentication..
+Fri Feb 12 11:37:22 PST 2016: Shutting down Derby engine
 ----------------------------------------------------------------
-Tue Feb 09 20:56:23 PST 2016: Shutting down Derby engine
+Fri Feb 12 11:37:22 PST 2016:
+Shutting down instance a816c00e-0152-d6f6-4897-00007576168d on database directory C:\Users\Matt\Desktop\Project\database\CadetInfo with class loader sun.misc.Launcher$AppClassLoader@1d44bcfa 
 ----------------------------------------------------------------
-Tue Feb 09 20:56:23 PST 2016:
-Shutting down instance c42d805d-0152-c988-eef5-000076657ebc on database directory E:\CS481\Today\database\adminLogin with class loader sun.misc.Launcher$AppClassLoader@5e2de80c 

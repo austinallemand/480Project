@@ -722,8 +722,16 @@ public class Confirmation extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        adminInformation adminInfo = new adminInformation(conFN.getText(),conLN.getText(), conMI.getText(),conCWUID.getText(), 
+                conEmail.getText(), conDoB.getText(), conPNum.getText().substring(1, 4), conPNum.getText().substring(6, 9), conPNum.getText().substring(10, 14), 
+                conAptNumber.getText(),conStreet.getText(), conCity.getText(), conState.getText(), conZip.getText(), conGender.getText(),conSSN.getText(),
+                conAcaM.getText(), conGradD.getText(), conEthnicity.getText(), conMaritialS.getText(), conPartnerN.getText(), conPAddress.getText(), conPCity.getText(),
+                conPState.getText(), conPNumber.getText(), conPPoB.getText(), conNoD.getText(), conChildren.getText(), conEContact.getText(), conEStreet.getText(), conECity.getText(),
+                conEState.getText(), conENumber.getText(),conDeathB.getText(),
+                conPrior.getText(), conPriorYes.getText(), conGuardianPS.getText(), conGuardianPSYes.getText(), conEnlisted.getText(), conJunior.getText(),conEagle.getText());
         
-      
+      adminInfo.setVisible(true);
+      this.dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
