@@ -11,6 +11,9 @@ import javax.swing.AbstractAction;
 import javax.swing.Action;
 import javax.swing.JOptionPane;
 import java.io.*;
+import javax.swing.JFileChooser;
+import java.io.File;
+import java.io.FileReader;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -1016,11 +1019,14 @@ public class adminInformation extends javax.swing.JFrame {
     }//GEN-LAST:event_searchCadetButtonActionPerformed
 
     private void importCadetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_importCadetActionPerformed
-
+        JFileChooser cadetFile = new JFileChooser();
+        cadetFile.showOpenDialog(null);
+        File file = cadetFile.getSelectedFile();
         decrypt decryption = new decrypt();
+        String fileName = file.getAbsolutePath();
 
         try {
-            FileReader fileReader = new FileReader("cadetQuestionare.txt");
+            FileReader fileReader = new FileReader(fileName);
             BufferedReader bufferedReader = new BufferedReader(fileReader);
 
             userFN.setText(decryption.deCrypt(bufferedReader.readLine()));

@@ -15,7 +15,14 @@ public class Encrypt {
     
     public String doEncrypt(String encrypt) {
         
+        
+        if(encrypt.isEmpty()) {
+            
+            encrypt = "No Value";
+        }
         encrypt = encrypt.toLowerCase();
+        
+       
         
         String encrypt2 = new StringBuffer(encrypt).reverse().toString();
        

@@ -2,6 +2,7 @@ package rotccadet;
 import java.io.PrintWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
+import javax.swing.JFileChooser;
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -801,6 +802,19 @@ public class Questionnaire extends javax.swing.JFrame {
     }//GEN-LAST:event_userLNActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        Questionnaire parentFrame = new Questionnaire();
+        JFileChooser fileChooser = new JFileChooser();
+        fileChooser.setDialogTitle("Specify a file to save");   
+ 
+        int userSelection = fileChooser.showSaveDialog(parentFrame);
+ 
+        if (userSelection == JFileChooser.APPROVE_OPTION) {
+        File fileToSave = fileChooser.getSelectedFile();
+        
+        String userFile = fileToSave.getAbsolutePath();
+        System.out.println("Save as file: " + fileToSave.getAbsolutePath());
+
+        
         
         
         Encrypt encryption = new Encrypt();
@@ -809,10 +823,10 @@ public class Questionnaire extends javax.swing.JFrame {
         {
             //C:\Users\cs362001_13\Desktop
             //File savedFile = new File("C:\\Users\\Austin\\Documents\\NetBeansProjects\\480Project\\ROTCCadet/cadetQuestionare.txt");
-            File savedFile = new File("C:\\Desktop/cadetQuestionare.txt");
+            File savedFile = new File(userFile);
             //Desktop
             //open the file
-            PrintWriter outputFile = new PrintWriter (savedFile);
+            PrintWriter outputFile = new PrintWriter (userFile);
             outputFile.println(encryption.doEncrypt(userFN.getText()));
             outputFile.println(encryption.doEncrypt(userLN.getText()));
             outputFile.println(encryption.doEncrypt(userMI.getText()));
@@ -861,6 +875,8 @@ public class Questionnaire extends javax.swing.JFrame {
         catch (FileNotFoundException e)
         {
             e.printStackTrace();
+        }
+        
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
