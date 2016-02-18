@@ -14,6 +14,7 @@ import java.io.*;
 import javax.swing.JFileChooser;
 import java.io.File;
 import java.io.FileReader;
+import java.sql.PreparedStatement;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -244,7 +245,12 @@ public class adminInformation extends javax.swing.JFrame {
 
         jButton1.setText("Print");
 
-        jButton2.setText("Preview");
+        jButton2.setText("Export Database to Text File");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jLabel34.setText("Admin Access");
 
@@ -824,13 +830,12 @@ public class adminInformation extends javax.swing.JFrame {
                         .addComponent(removeCadet, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(importCadet, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(cadetForm, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 262, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(jTabbedPane2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 547, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(cadetForm, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 262, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTabbedPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 547, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(773, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -1158,6 +1163,39 @@ public class adminInformation extends javax.swing.JFrame {
     private void searchCadetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchCadetActionPerformed
 
     }//GEN-LAST:event_searchCadetActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        adminInformation parentFrame = new adminInformation();
+        JFileChooser fileChooser = new JFileChooser();
+        fileChooser.setDialogTitle("Specify a file to save");   
+ 
+        int userSelection = fileChooser.showSaveDialog(parentFrame);
+ 
+        if (userSelection == JFileChooser.APPROVE_OPTION) {
+            File fileToSave = fileChooser.getSelectedFile();
+        
+            String userFile = fileToSave.getAbsolutePath();
+        
+            try{    
+            Connection con;
+            String url = "jdbc:derby://localhost:1527/CadetInfo";
+            String username = "adminCadre";
+            String password = "cadrecwu";
+            con = DriverManager.getConnection(url, username, password);
+            PreparedStatement ps = con.prepareStatement("CALL SYSCS_UTIL.SYSCS_EXPORT_TABLE (?,?,?,?,?,?)");
+            ps.setString(1,"ADMINCADRE");
+            ps.setString(2,"INFO");
+            ps.setString(3,userFile);
+            ps.setString(4,null);
+            ps.setString(5,null);
+            ps.setString(6,null);
+            ps.execute();
+            }
+            catch(Exception e) {
+                System.err.println("Exception: "+e.getMessage());
+            }
+        }
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
