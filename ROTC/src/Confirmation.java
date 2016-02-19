@@ -103,7 +103,7 @@ public class Confirmation extends javax.swing.JFrame {
         conEnlisted.setText(passedEnlisted);
         conJunior.setText(passedJunior);
         conEagle.setText(passedEagle);
-        conFull.setText(passedLastName+ ","+passedFirstName +", "+passedMiddleInitial); 
+        conFull.setText(passedLastName+ ","+passedFirstName +" "+passedMiddleInitial); 
         
                 
      
@@ -691,13 +691,15 @@ public class Confirmation extends javax.swing.JFrame {
     
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
      Connection con = null;
-     
      try {
+         
          String url = "jdbc:derby://localhost:1527/CadetInfo";
          String username = "adminCadre";
          String password = "cadrecwu";
          con = DriverManager.getConnection(url, username, password);
          Statement sta = con.createStatement();
+         
+        
          //sta.executeUpdate("INSERT INTO TESTER VALUES('"+ conLN.getText() +"')");
          sta.executeUpdate("INSERT INTO INFO VALUES ('"+conLN.getText()+"', '"+conFN.getText()+"', '"+conMI.getText()+"','"+conFull.getText()+"','"+conSSN.getText()+"','"+conDoB.getText()+"','"+conCWUID.getText()+"',"
                  + "'"+conEmail.getText()+"','"+conPNum.getText()+"', '"+conStreet.getText()+"','"+conAptNumber.getText()+"',"

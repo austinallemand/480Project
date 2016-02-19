@@ -821,9 +821,6 @@ public class Questionnaire extends javax.swing.JFrame {
         
         try
         {
-            //C:\Users\cs362001_13\Desktop
-            //File savedFile = new File("C:\\Users\\Austin\\Documents\\NetBeansProjects\\480Project\\ROTCCadet/cadetQuestionare.txt");
-            File savedFile = new File(userFile);
             //Desktop
             //open the file
             PrintWriter outputFile = new PrintWriter (userFile);

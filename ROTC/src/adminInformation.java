@@ -15,6 +15,10 @@ import javax.swing.JFileChooser;
 import java.io.File;
 import java.io.FileReader;
 import java.sql.PreparedStatement;
+import java.util.HashMap;
+import java.util.Map;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -107,9 +111,9 @@ public class adminInformation extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         jPanel2 = new javax.swing.JPanel();
         searchCadet = new javax.swing.JTextField();
-        removeCadet = new javax.swing.JButton();
+        exportCadet = new javax.swing.JButton();
         updateCadet = new javax.swing.JButton();
-        cadetForm = new javax.swing.JComboBox<>();
+        cadetForm = new javax.swing.JComboBox<String>();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jLabel34 = new javax.swing.JLabel();
@@ -152,10 +156,10 @@ public class adminInformation extends javax.swing.JFrame {
         jLabelPGD = new javax.swing.JLabel();
         userGradDate = new javax.swing.JTextField();
         jLabelEth = new javax.swing.JLabel();
-        userRace = new javax.swing.JComboBox<>();
+        userRace = new javax.swing.JComboBox<String>();
         jPanel5 = new javax.swing.JPanel();
         jLabelMS = new javax.swing.JLabel();
-        userMaritialS = new javax.swing.JComboBox<>();
+        userMaritialS = new javax.swing.JComboBox<String>();
         jLabel41 = new javax.swing.JLabel();
         userPartnerName = new javax.swing.JTextField();
         jLabel42 = new javax.swing.JLabel();
@@ -171,7 +175,7 @@ public class adminInformation extends javax.swing.JFrame {
         jLabelNoD = new javax.swing.JLabel();
         userNoD = new javax.swing.JTextField();
         jLabel47 = new javax.swing.JLabel();
-        userChildren = new javax.swing.JComboBox<>();
+        userChildren = new javax.swing.JComboBox<String>();
         jLabelEC = new javax.swing.JLabel();
         userEmergency = new javax.swing.JTextField();
         jLabel48 = new javax.swing.JLabel();
@@ -185,15 +189,15 @@ public class adminInformation extends javax.swing.JFrame {
         jLabelDB = new javax.swing.JLabel();
         userDeath = new javax.swing.JTextField();
         jLabelPS = new javax.swing.JLabel();
-        userPriorS = new javax.swing.JComboBox<>();
-        userHasPriorS = new javax.swing.JComboBox<>();
+        userPriorS = new javax.swing.JComboBox<String>();
+        userHasPriorS = new javax.swing.JComboBox<String>();
         jLabelGPS = new javax.swing.JLabel();
-        userGuardStatus = new javax.swing.JComboBox<>();
-        userHasPriorGuardS = new javax.swing.JComboBox<>();
+        userGuardStatus = new javax.swing.JComboBox<String>();
+        userHasPriorGuardS = new javax.swing.JComboBox<String>();
         jLabelJROTC = new javax.swing.JLabel();
-        userJuniorROTC = new javax.swing.JComboBox<>();
+        userJuniorROTC = new javax.swing.JComboBox<String>();
         jLabelEagleScount = new javax.swing.JLabel();
-        userEagleScout = new javax.swing.JComboBox<>();
+        userEagleScout = new javax.swing.JComboBox<String>();
         jPanel6 = new javax.swing.JPanel();
         jLabel52 = new javax.swing.JLabel();
         userEnlistment = new javax.swing.JTextField();
@@ -227,23 +231,33 @@ public class adminInformation extends javax.swing.JFrame {
             }
         });
 
-        removeCadet.setText("Remove");
+        exportCadet.setText("Export Cadet to Text File");
+        exportCadet.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                exportCadetActionPerformed(evt);
+            }
+        });
 
-        updateCadet.setText("Update");
+        updateCadet.setText("Update/Add Cadet");
         updateCadet.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 updateCadetActionPerformed(evt);
             }
         });
 
-        cadetForm.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Please Select a Form", "Item 2", "Item 3", "Item 4" }));
+        cadetForm.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Please Select a Form", "Item 2", "Item 3", "Item 4" }));
         cadetForm.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cadetFormActionPerformed(evt);
             }
         });
 
-        jButton1.setText("Print");
+        jButton1.setText("Export Text File to Excel");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("Export Database to Text File");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -351,7 +365,7 @@ public class adminInformation extends javax.swing.JFrame {
 
         jLabelEth.setText("Ethnicity:");
 
-        userRace.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Race 1", "Race 2", "Race 3", "Race 4" }));
+        userRace.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Race 1", "Race 2", "Race 3", "Race 4" }));
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -503,7 +517,7 @@ public class adminInformation extends javax.swing.JFrame {
 
         jLabelMS.setText("Maritial Status:");
 
-        userMaritialS.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Single", "Married", "Widowed", " " }));
+        userMaritialS.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Single", "Married", "Widowed", " " }));
 
         jLabel41.setText("Partner Name:");
 
@@ -527,7 +541,7 @@ public class adminInformation extends javax.swing.JFrame {
 
         jLabel47.setText("Do you have any children?");
 
-        userChildren.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Yes", "No", " " }));
+        userChildren.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Yes", "No", " " }));
         userChildren.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 userChildrenActionPerformed(evt);
@@ -548,7 +562,7 @@ public class adminInformation extends javax.swing.JFrame {
 
         jLabelPS.setText("Prior Service:");
 
-        userPriorS.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Please Pick    ", "Yes", "No" }));
+        userPriorS.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Please Pick    ", "Yes", "No" }));
         userPriorS.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 userPriorSMouseClicked(evt);
@@ -565,7 +579,7 @@ public class adminInformation extends javax.swing.JFrame {
             }
         });
 
-        userHasPriorS.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Army", "Air Force", "Navy", "Marines", "Cost Guard", "Merchant Marine" }));
+        userHasPriorS.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Army", "Air Force", "Navy", "Marines", "Cost Guard", "Merchant Marine" }));
         userHasPriorS.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 userHasPriorSActionPerformed(evt);
@@ -574,7 +588,7 @@ public class adminInformation extends javax.swing.JFrame {
 
         jLabelGPS.setText("Guardian Prior Service:");
 
-        userGuardStatus.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Guardian Status:", "Civilian", "Retired Military", "Active Duty" }));
+        userGuardStatus.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Guardian Status:", "Civilian", "Retired Military", "Active Duty" }));
         userGuardStatus.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 userGuardStatusMouseClicked(evt);
@@ -586,7 +600,7 @@ public class adminInformation extends javax.swing.JFrame {
             }
         });
 
-        userHasPriorGuardS.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Army", "Air Force", "Navy", "Marines", "Coast Guard", "Merchant Marine" }));
+        userHasPriorGuardS.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Army", "Air Force", "Navy", "Marines", "Coast Guard", "Merchant Marine" }));
         userHasPriorGuardS.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 userHasPriorGuardSMouseClicked(evt);
@@ -600,11 +614,11 @@ public class adminInformation extends javax.swing.JFrame {
 
         jLabelJROTC.setText("Junior ROTC:");
 
-        userJuniorROTC.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "None", "1 Year", "2 Years", "3 Years", "4 Years" }));
+        userJuniorROTC.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "None", "1 Year", "2 Years", "3 Years", "4 Years" }));
 
         jLabelEagleScount.setText("Eagle Scout:");
 
-        userEagleScout.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "No", "Yes" }));
+        userEagleScout.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "No", "Yes" }));
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -827,7 +841,7 @@ public class adminInformation extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addComponent(updateCadet, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGap(18, 18, 18)
-                        .addComponent(removeCadet, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(exportCadet, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(importCadet, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(cadetForm, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -850,7 +864,7 @@ public class adminInformation extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(importCadet)
-                    .addComponent(removeCadet)
+                    .addComponent(exportCadet)
                     .addComponent(updateCadet))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(cadetForm, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1197,6 +1211,106 @@ public class adminInformation extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton2ActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        //XSSFWorkbook  workbook = new XSSFWorkbook ();
+        //Map<String, Object[]> data = new HashMap<String, Object[]>();
+        //FileReader fileReader = new FileReader(fileName);
+        //BufferedReader bufferedReader = new BufferedReader(fileReader);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void exportCadetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exportCadetActionPerformed
+        try { 
+            PrintWriter outputFile = new PrintWriter ("cadetPDF.txt");
+            outputFile.print("LASTNAME\t");
+            outputFile.print("FIRSTNAME\t");
+            outputFile.print("MIDDLEINITIAL\t");
+            outputFile.print("FULLNAME\t");
+            outputFile.print("SSAN\t");
+            outputFile.print("DATEOFBIRTHMDDYYYY\t");
+            outputFile.print("CWUID\t");
+            outputFile.print("EMAIL\t");
+            outputFile.print("PHONENUMBER\t");
+            outputFile.print("STREETADDRESS\t");
+            outputFile.print("APT\t");
+            outputFile.print("CITY\t");
+            outputFile.print("STATE\t");
+            outputFile.print("ZIPCODE\t");
+            outputFile.print("GENDER\t");
+            outputFile.print("ACAMAJOR\t");
+            outputFile.print("GRADDATE\t");
+            outputFile.print("ETHNICTY\t");
+            outputFile.print("MARITIALSTATUS\t");
+            outputFile.print("PARTNERNAME\t");
+            outputFile.print("PARTNERADDRESS\t");
+            outputFile.print("PARTNERCITY\t");
+            outputFile.print("PARTNERSTATE\t");
+            outputFile.print("PARTNERNUMBER\t");
+            outputFile.print("PARTNERPOB\t");
+            outputFile.print("DEPENDENTS\t");
+            outputFile.print("EMERGENCYCONTACT\t");
+            outputFile.print("EMERGENCYSTREET\t");
+            outputFile.print("EMERGENCYCITY\t");
+            outputFile.print("EMERGENCYSTATE\t");
+            outputFile.print("EMERGENCYNUMBER\t");
+            outputFile.print("DEATHBENEFICARY\t");
+            outputFile.print("PRIORSERVICEYES\t");
+            outputFile.print("JUNIORROTC\t");
+            outputFile.print("CHILDREN\t");
+            outputFile.print("PRIORSERVICE\t");
+            outputFile.print("EAGLESCOUT\t");
+            outputFile.print("ENLISTEDWARRANT\t");
+            outputFile.print("GUARDIANPRIORSERVICE\t");
+            outputFile.print("GUARDIANPRIORSERVICEYES\t");
+            outputFile.println();
+            
+            outputFile.print(userLN.getText()+"\t");
+            outputFile.print(userFN.getText()+"\t");
+            outputFile.print(userMI.getText()+"\t");
+            outputFile.print(userLN.getText()+", " + userFN.getText() + " " + userMI.getText()+ "\t");
+            outputFile.print(userSSN.getText()+"\t");
+            outputFile.print(userDoB.getText()+"\t");
+            outputFile.print(userCWUID.getText()+"\t");
+            outputFile.print(userEmail.getText()+"\t");
+            outputFile.print(userAreaCode.getText()+ userMPN.getText() + userLPN.getText()+"\t");
+            outputFile.print(userStreet.getText()+"\t");
+            outputFile.print(userApt.getText()+"\t");
+            outputFile.print(userCity.getText()+"\t");
+            outputFile.print(userState.getText()+"\t");
+            outputFile.print(userZip.getText()+"\t");
+            outputFile.print(userGender.getSelectedItem().toString()+"\t");
+            outputFile.print(userAcMajor.getText()+"\t");
+            outputFile.print(userGradDate.getText()+"\t");
+            outputFile.print(userRace.getSelectedItem().toString()+"\t");
+            outputFile.print(userMaritialS.getSelectedItem().toString()+"\t");
+            outputFile.print(userPartnerName.getText()+"\t");
+            outputFile.print(userPartnerAddress.getText()+"\t");
+            outputFile.print(userPartnerCity.getText()+"\t");
+            outputFile.print(userPartnerState.getText()+"\t");
+            outputFile.print(userPartnerNumber.getText()+"\t");
+            outputFile.print(userPartnerPoB.getText()+"\t");
+            outputFile.print(userNoD.getText() +"\t");    
+            outputFile.print(userEmergency.getText()+"\t");
+            outputFile.print(userEmergencyStreet.getText()+"\t");
+            outputFile.print(userEmergencyCity.getText() +"\t");
+            outputFile.print(userEmergencyState.getText()+"\t");
+            outputFile.print(userENumber.getText()+"\t");
+            outputFile.print(userDeath.getText()+"\t");
+            outputFile.print(userHasPriorS.getSelectedItem().toString()+"\t");
+            outputFile.print(userJuniorROTC.getSelectedItem().toString()+"\t");
+            outputFile.print(userChildren.getSelectedItem().toString()+"\t");
+            outputFile.print(userPriorS.getSelectedItem().toString()+"\t");
+            outputFile.print(userEagleScout.getSelectedItem().toString()+"\t");
+            outputFile.print(userEnlistment.getText()+"\t");
+            outputFile.print(userGuardStatus.getSelectedItem().toString()+"\t");
+            outputFile.print(userHasPriorGuardS.getSelectedItem().toString()+"\t");
+            outputFile.close();
+            
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(adminInformation.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+    }//GEN-LAST:event_exportCadetActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1235,6 +1349,7 @@ public class adminInformation extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> cadetForm;
+    private javax.swing.JButton exportCadet;
     private javax.swing.JButton goBack;
     private javax.swing.JButton importCadet;
     private javax.swing.JButton jButton1;
@@ -1290,7 +1405,6 @@ public class adminInformation extends javax.swing.JFrame {
     private javax.swing.JTabbedPane jTabbedPane3;
     private javax.swing.JTabbedPane jTabbedPane4;
     private javax.swing.JTabbedPane jTabbedPane5;
-    private javax.swing.JButton removeCadet;
     private javax.swing.JTextField searchCadet;
     private javax.swing.JButton searchCadetButton;
     private javax.swing.JButton updateCadet;

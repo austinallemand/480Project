@@ -99,7 +99,7 @@
                           <Group type="102" alignment="1" attributes="0">
                               <Component id="updateCadet" max="32767" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="removeCadet" min="-2" pref="172" max="-2" attributes="0"/>
+                              <Component id="exportCadet" min="-2" pref="172" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="importCadet" min="-2" pref="140" max="-2" attributes="0"/>
                           </Group>
@@ -128,7 +128,7 @@
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="importCadet" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="removeCadet" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="exportCadet" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="updateCadet" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -155,14 +155,17 @@
                 <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="searchCadetKeyPressed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="removeCadet">
+            <Component class="javax.swing.JButton" name="exportCadet">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Remove"/>
+                <Property name="text" type="java.lang.String" value="Export Cadet to Text File"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="exportCadetActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="updateCadet">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Update"/>
+                <Property name="text" type="java.lang.String" value="Update/Add Cadet"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="updateCadetActionPerformed"/>
@@ -188,8 +191,11 @@
             </Component>
             <Component class="javax.swing.JButton" name="jButton1">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Print"/>
+                <Property name="text" type="java.lang.String" value="Export Text File to Excel"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="jButton2">
               <Properties>
