@@ -131,10 +131,10 @@ public class Questionnaire extends javax.swing.JFrame {
         jLabelPGD = new javax.swing.JLabel();
         userGradDate = new javax.swing.JTextField();
         jLabelEth = new javax.swing.JLabel();
-        userRace = new javax.swing.JComboBox<>();
+        userRace = new javax.swing.JComboBox<String>();
         jPanel5 = new javax.swing.JPanel();
         jLabelMS = new javax.swing.JLabel();
-        userMaritialS = new javax.swing.JComboBox<>();
+        userMaritialS = new javax.swing.JComboBox<String>();
         jLabel4 = new javax.swing.JLabel();
         userPartnerName = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
@@ -150,7 +150,7 @@ public class Questionnaire extends javax.swing.JFrame {
         jLabelNoD = new javax.swing.JLabel();
         userNoD = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        userChildren = new javax.swing.JComboBox<>();
+        userChildren = new javax.swing.JComboBox<String>();
         jLabelEC = new javax.swing.JLabel();
         userEmergency = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
@@ -164,15 +164,15 @@ public class Questionnaire extends javax.swing.JFrame {
         jLabelDB = new javax.swing.JLabel();
         userDeath = new javax.swing.JTextField();
         jLabelPS = new javax.swing.JLabel();
-        userPriorS = new javax.swing.JComboBox<>();
-        userHasPriorS = new javax.swing.JComboBox<>();
+        userPriorS = new javax.swing.JComboBox<String>();
+        userHasPriorS = new javax.swing.JComboBox<String>();
         jLabelGPS = new javax.swing.JLabel();
-        userGuardStatus = new javax.swing.JComboBox<>();
-        userHasPriorGuardS = new javax.swing.JComboBox<>();
+        userGuardStatus = new javax.swing.JComboBox<String>();
+        userHasPriorGuardS = new javax.swing.JComboBox<String>();
         jLabelJROTC = new javax.swing.JLabel();
-        userJuniorROTC = new javax.swing.JComboBox<>();
+        userJuniorROTC = new javax.swing.JComboBox<String>();
         jLabelEagleScount = new javax.swing.JLabel();
-        userEagleScout = new javax.swing.JComboBox<>();
+        userEagleScout = new javax.swing.JComboBox<String>();
         jPanel3 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
         userEnlistment = new javax.swing.JTextField();
@@ -264,7 +264,7 @@ public class Questionnaire extends javax.swing.JFrame {
 
         jLabelEth.setText("Ethnicity:");
 
-        userRace.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Race 1", "Race 2", "Race 3", "Race 4" }));
+        userRace.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Race 1", "Race 2", "Race 3", "Race 4" }));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -412,9 +412,9 @@ public class Questionnaire extends javax.swing.JFrame {
 
         jTabbedPane2.addTab("Personal Information", jPanel2);
 
-        jLabelMS.setText("Maritial Status:");
+        jLabelMS.setText("Marital Status:");
 
-        userMaritialS.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Single", "Married", "Widowed", " " }));
+        userMaritialS.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Single", "Married", "Widowed", " " }));
 
         jLabel4.setText("Partner Name:");
 
@@ -438,7 +438,7 @@ public class Questionnaire extends javax.swing.JFrame {
 
         jLabel2.setText("Do you have any children?");
 
-        userChildren.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Yes", "No", " " }));
+        userChildren.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Yes", "No", " " }));
         userChildren.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 userChildrenActionPerformed(evt);
@@ -459,7 +459,7 @@ public class Questionnaire extends javax.swing.JFrame {
 
         jLabelPS.setText("Prior Service:");
 
-        userPriorS.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Please Pick    ", "Yes", "No" }));
+        userPriorS.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Please Pick    ", "Yes", "No" }));
         userPriorS.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 userPriorSMouseClicked(evt);
@@ -476,12 +476,17 @@ public class Questionnaire extends javax.swing.JFrame {
             }
         });
 
-        userHasPriorS.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Army", "Air Force", "Navy", "Marines", "Cost Guard", "Merchant Marine" }));
+        userHasPriorS.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Army", "Air Force", "Navy", "Marines", "Cost Guard", "Merchant Marine" }));
         userHasPriorS.setEnabled(false);
+        userHasPriorS.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                userHasPriorSActionPerformed(evt);
+            }
+        });
 
         jLabelGPS.setText("Guardian Prior Service:");
 
-        userGuardStatus.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Guardian Status:", "Civilian", "Retired Military", "Active Duty" }));
+        userGuardStatus.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Guardian Status:", "Civilian", "Retired Military", "Active Duty" }));
         userGuardStatus.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 userGuardStatusMouseClicked(evt);
@@ -493,7 +498,7 @@ public class Questionnaire extends javax.swing.JFrame {
             }
         });
 
-        userHasPriorGuardS.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Army", "Air Force", "Navy", "Marines", "Coast Guard", "Merchant Marine" }));
+        userHasPriorGuardS.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Army", "Air Force", "Navy", "Marines", "Coast Guard", "Merchant Marine" }));
         userHasPriorGuardS.setEnabled(false);
         userHasPriorGuardS.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -508,11 +513,11 @@ public class Questionnaire extends javax.swing.JFrame {
 
         jLabelJROTC.setText("Junior ROTC:");
 
-        userJuniorROTC.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "None", "1 Year", "2 Years", "3 Years", "4 Years" }));
+        userJuniorROTC.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "None", "1 Year", "2 Years", "3 Years", "4 Years" }));
 
         jLabelEagleScount.setText("Eagle Scout:");
 
-        userEagleScout.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "No", "Yes" }));
+        userEagleScout.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "No", "Yes" }));
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -917,6 +922,10 @@ public class Questionnaire extends javax.swing.JFrame {
     private void userPartnerNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userPartnerNameActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_userPartnerNameActionPerformed
+
+    private void userHasPriorSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userHasPriorSActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_userHasPriorSActionPerformed
 
     /**
      * @param args the command line arguments

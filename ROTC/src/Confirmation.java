@@ -5,7 +5,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author Austin
@@ -22,54 +21,47 @@ import javax.swing.AbstractAction;
 import javax.swing.Action;
 import javax.swing.JOptionPane;
 import java.io.*;
-
-
-
-
-
-
+import java.sql.PreparedStatement;
 
 public class Confirmation extends javax.swing.JFrame {
 
-
-    
     /**
      * Creates new form Confirmation
      */
     public Confirmation() {
-        
+
         initComponents();
         this.setLocationRelativeTo(null);
     }
 
-     public Confirmation( String passedFirstName, String passedLastName, String passedMiddleInitial, 
+    public Confirmation(String passedFirstName, String passedLastName, String passedMiddleInitial,
             String passedCwuID, String passedEmail, String passedDateOfBirth, String passedAreaCode,
             String passedMiddleThreePhoneNumber, String passedLastThreePhoneNumber, String passedAptNumber,
             String passedStreetAddress, String passedCity, String passedState, String passedZipcode, String passedGender, String passedSSN, String passedAcaM,
             String passedPGradD, String passedEthnicity, String passedMaritialS, String passedPName, String passedPAddress, String passedPCity, String passedPState,
-            String passedPNumber, String passedPoB, String passedNoD, String passedChildren, String passedEContact, String passedEStreet,String passedECity, String passedEState, String passedENumber,
-            String passedDBeneficiary, String passedPriorS,String passedHasPriorS, String passedGuardianPS,String passedGuardianHasPS, String passedEnlisted, 
-             String passedJunior, String passedEagle
-            ){
-       
-         initComponents();
-         this.setLocationRelativeTo(null);
-         
+            String passedPNumber, String passedPoB, String passedNoD, String passedChildren, String passedEContact, String passedEStreet, String passedECity, String passedEState, String passedENumber,
+            String passedDBeneficiary, String passedPriorS, String passedHasPriorS, String passedGuardianPS, String passedGuardianHasPS, String passedEnlisted,
+            String passedJunior, String passedEagle
+    ) {
+
+        initComponents();
+        this.setLocationRelativeTo(null);
+
         String fullName, conPrior2, conGuardianPS2;
-        
-      
+
         conFN.setText(passedFirstName);
         conLN.setText(passedLastName);
         conMI.setText(passedMiddleInitial);
         conCWUID.setText(passedCwuID);
         conEmail.setText(passedEmail);
         conDoB.setText(passedDateOfBirth);
-        
-        if(passedAreaCode.isEmpty() || passedMiddleThreePhoneNumber.isEmpty() || passedLastThreePhoneNumber.isEmpty()) {
-                conPNum.setText("No input found");
-            }else
-                conPNum.setText("(" + passedAreaCode + ")" + "-" + passedMiddleThreePhoneNumber + "-" + passedLastThreePhoneNumber);
-       
+
+        if (passedAreaCode.isEmpty() || passedMiddleThreePhoneNumber.isEmpty() || passedLastThreePhoneNumber.isEmpty()) {
+            conPNum.setText("No input found");
+        } else {
+            conPNum.setText("(" + passedAreaCode + ")" + "-" + passedMiddleThreePhoneNumber + "-" + passedLastThreePhoneNumber);
+        }
+
         conStreet.setText(passedStreetAddress);
         conAptNumber.setText(passedAptNumber);
         conCity.setText(passedCity);
@@ -97,17 +89,16 @@ public class Confirmation extends javax.swing.JFrame {
         conDeathB.setText(passedDBeneficiary);
         conPrior.setText(passedPriorS);
         conPriorYes.setText(passedHasPriorS);
-        
+
         conGuardianPSYes.setText(passedGuardianHasPS);
         conGuardianPS.setText(passedGuardianPS);
         conEnlisted.setText(passedEnlisted);
         conJunior.setText(passedJunior);
         conEagle.setText(passedEagle);
-        conFull.setText(passedLastName+ ","+passedFirstName +" "+passedMiddleInitial); 
-        
-                
-     
-     }
+        conFull.setText(passedLastName + "," + passedFirstName + " " + passedMiddleInitial);
+
+    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -265,7 +256,7 @@ public class Confirmation extends javax.swing.JFrame {
 
         jLabel18.setText("Ethnicity");
 
-        jLabel19.setText("Maritial Status:");
+        jLabel19.setText("Marital Status:");
 
         jLabel20.setText("Partner Name:");
 
@@ -429,13 +420,14 @@ public class Confirmation extends javax.swing.JFrame {
                         .addGap(10, 10, 10)
                         .addGroup(conFullNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(conFullNameLayout.createSequentialGroup()
-                                .addComponent(conFull, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addComponent(conFN, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(conFullNameLayout.createSequentialGroup()
                                 .addComponent(conLN, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGap(112, 112, 112))
-                            .addComponent(conMI, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(conMI, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(conFullNameLayout.createSequentialGroup()
+                                .addGroup(conFullNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(conFull, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(conFN, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(0, 0, Short.MAX_VALUE)))
                         .addContainerGap())
                     .addGroup(conFullNameLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -680,60 +672,89 @@ public class Confirmation extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-   /* (LASTNAME, FIRSTNAME, MIDDLEINITIAL, CWUID,EMAIL,DATEOFBIRTHMDDYYYY,PHONENUMBER,STREETADDRESS
-          ,APT,CITY,STATE,ZIPCODE,GENDER,SSAN,ACAMAJOR,GRADDATE,ETHNICITY,MARITIALSTATUS,PARTNERNAME,PARTNERADDRESS,PARTNERCITY
-        ,PARTNERSTATE,PARTNERNUMBER,PARTNERNUMBER,PARTNERPOB,DEPENDANTS,CHILDREN,EMERGENCYCONTACT,EMERGENCYSTREET,EMERGENCYNUMBER,
-        DEATHBENEFICARY,PRIORSERVICE,PRIORSERVICEYES,GUARDIANPRIORSERVICE,GUARDIANPRIORSERVICEYES,ENLISTEDWARRANT
-        ,JUNIORROTC,EAGESCOUT)
-    */
-    
-    
-    
+    /* (LASTNAME, FIRSTNAME, MIDDLEINITIAL, CWUID,EMAIL,DATEOFBIRTHMDDYYYY,PHONENUMBER,STREETADDRESS
+     ,APT,CITY,STATE,ZIPCODE,GENDER,SSAN,ACAMAJOR,GRADDATE,ETHNICITY,MARITIALSTATUS,PARTNERNAME,PARTNERADDRESS,PARTNERCITY
+     ,PARTNERSTATE,PARTNERNUMBER,PARTNERNUMBER,PARTNERPOB,DEPENDANTS,CHILDREN,EMERGENCYCONTACT,EMERGENCYSTREET,EMERGENCYNUMBER,
+     DEATHBENEFICARY,PRIORSERVICE,PRIORSERVICEYES,GUARDIANPRIORSERVICE,GUARDIANPRIORSERVICEYES,ENLISTEDWARRANT
+     ,JUNIORROTC,EAGESCOUT)
+     */
+
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-     Connection con = null;
-     try {
-         
-         String url = "jdbc:derby://localhost:1527/CadetInfo";
-         String username = "adminCadre";
-         String password = "cadrecwu";
-         con = DriverManager.getConnection(url, username, password);
-         Statement sta = con.createStatement();
-         
-        
-         //sta.executeUpdate("INSERT INTO TESTER VALUES('"+ conLN.getText() +"')");
-         sta.executeUpdate("INSERT INTO INFO VALUES ('"+conLN.getText()+"', '"+conFN.getText()+"', '"+conMI.getText()+"','"+conFull.getText()+"','"+conSSN.getText()+"','"+conDoB.getText()+"','"+conCWUID.getText()+"',"
-                 + "'"+conEmail.getText()+"','"+conPNum.getText()+"', '"+conStreet.getText()+"','"+conAptNumber.getText()+"',"
-                 + "'"+conCity.getText()+"','"+conState.getText()+"', '"+conZip.getText()+"','"+conGender.getText()+"',"
-                 + "'"+conAcaM.getText()+"','"+conGradD.getText()+"', '"+conEthnicity.getText()+"',"
-                 + "'"+conMaritialS.getText()+"','"+conPartnerN.getText()+"', '"+conPAddress.getText()+"', '"+conPCity.getText()+"',"
-                 + "'"+conPState.getText()+"','"+conPNumber.getText()+"', '"+conPPoB.getText()+"', '"+conNoD.getText()+"',  "
-                 + "'"+conEContact.getText()+"','"+conEStreet.getText()+"', '"+conECity.getText()+"','"+conEState.getText()+"', '"+conENumber.getText()+"','"+conDeathB.getText()+"',"
-                 + "'"+conPriorYes.getText()+"',"
-                 + "'"+conJunior.getText()+"','"+ conChildren.getText()+"',"
-                 + "'"+conPrior.getText()+"','"+conEagle.getText()+"','"+conEnlisted.getText()+"','"+conGuardianPSYes.getText()+"', '"+conGuardianPS.getText()+"')");
-                 
-         sta.close();
-         
-     }catch (Exception e) {
-      System.err.println("Exception: "+e.getMessage());
-    }
-        
-        
-        
-        
+
+        try {
+            Connection con = null;
+            String queryCheck = "SELECT * from INFO WHERE CWUID = " + "'" + conCWUID.getText() +"'";
+            String url = "jdbc:derby://localhost:1527/CadetInfo";
+            String username = "adminCadre";
+            String password = "cadrecwu";
+
+            con = DriverManager.getConnection(url, username, password);
+            Statement sta = con.createStatement();
+            ResultSet rs = sta.executeQuery(queryCheck); // execute the query, and get a java resultset
+
+// if this ID already exists, we delete the old coloumn and readd the cadet
+            if (rs.next()) {
+
+                try {
+
+                    //delete the old entry
+                    
+                    String query = "delete from INFO where CWUID = " + conCWUID.getText();
+                    PreparedStatement preparedStmt = con.prepareStatement(query);
+                    preparedStmt.execute();
+                    //add new entry
+                    sta.executeUpdate("INSERT INTO INFO VALUES ('" + conLN.getText() + "', '" + conFN.getText() + "', '" + conMI.getText() + "','" + conFull.getText() + "','" + conSSN.getText() + "','" + conDoB.getText() + "','" + conCWUID.getText() + "',"
+                            + "'" + conEmail.getText() + "','" + conPNum.getText() + "', '" + conStreet.getText() + "','" + conAptNumber.getText() + "',"
+                            + "'" + conCity.getText() + "','" + conState.getText() + "', '" + conZip.getText() + "','" + conGender.getText() + "',"
+                            + "'" + conAcaM.getText() + "','" + conGradD.getText() + "', '" + conEthnicity.getText() + "',"
+                            + "'" + conMaritialS.getText() + "','" + conPartnerN.getText() + "', '" + conPAddress.getText() + "', '" + conPCity.getText() + "',"
+                            + "'" + conPState.getText() + "','" + conPNumber.getText() + "', '" + conPPoB.getText() + "', '" + conNoD.getText() + "',  "
+                            + "'" + conEContact.getText() + "','" + conEStreet.getText() + "', '" + conECity.getText() + "','" + conEState.getText() + "', '" + conENumber.getText() + "','" + conDeathB.getText() + "',"
+                            + "'" + conPriorYes.getText() + "',"
+                            + "'" + conJunior.getText() + "','" + conChildren.getText() + "',"
+                            + "'" + conPrior.getText() + "','" + conEagle.getText() + "','" + conEnlisted.getText() + "','" + conGuardianPSYes.getText() + "', '" + conGuardianPS.getText() + "')");
+
+                    sta.close();    
+                } catch (Exception e) {
+                    System.err.println("Exception: " + e.getMessage());
+                
+                }
+            } else {//else it dose not exist
+                System.out.println("HERE");
+                //add new entry
+                sta.executeUpdate("INSERT INTO INFO VALUES ('" + conLN.getText() + "', '" + conFN.getText() + "', '" + conMI.getText() + "','" + conFull.getText() + "','" + conSSN.getText() + "','" + conDoB.getText() + "','" + conCWUID.getText() + "',"
+                        + "'" + conEmail.getText() + "','" + conPNum.getText() + "', '" + conStreet.getText() + "','" + conAptNumber.getText() + "',"
+                        + "'" + conCity.getText() + "','" + conState.getText() + "', '" + conZip.getText() + "','" + conGender.getText() + "',"
+                        + "'" + conAcaM.getText() + "','" + conGradD.getText() + "', '" + conEthnicity.getText() + "',"
+                        + "'" + conMaritialS.getText() + "','" + conPartnerN.getText() + "', '" + conPAddress.getText() + "', '" + conPCity.getText() + "',"
+                        + "'" + conPState.getText() + "','" + conPNumber.getText() + "', '" + conPPoB.getText() + "', '" + conNoD.getText() + "',  "
+                        + "'" + conEContact.getText() + "','" + conEStreet.getText() + "', '" + conECity.getText() + "','" + conEState.getText() + "', '" + conENumber.getText() + "','" + conDeathB.getText() + "',"
+                        + "'" + conPriorYes.getText() + "',"
+                        + "'" + conJunior.getText() + "','" + conChildren.getText() + "',"
+                        + "'" + conPrior.getText() + "','" + conEagle.getText() + "','" + conEnlisted.getText() + "','" + conGuardianPSYes.getText() + "', '" + conGuardianPS.getText() + "')");
+
+                sta.close();
+
+            }
+        } catch (Exception e) {
+            System.err.println("Exception: " + e.getMessage());
+        }
+
+//end else
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        adminInformation adminInfo = new adminInformation(conFN.getText(),conLN.getText(), conMI.getText(),conCWUID.getText(), 
-                conEmail.getText(), conDoB.getText(), conPNum.getText().substring(1, 4), conPNum.getText().substring(6, 9), conPNum.getText().substring(10, 14), 
-                conAptNumber.getText(),conStreet.getText(), conCity.getText(), conState.getText(), conZip.getText(), conGender.getText(),conSSN.getText(),
+        adminInformation adminInfo = new adminInformation(conFN.getText(), conLN.getText(), conMI.getText(), conCWUID.getText(),
+                conEmail.getText(), conDoB.getText(), conPNum.getText().substring(1, 4), conPNum.getText().substring(6, 9), conPNum.getText().substring(10, 14),
+                conAptNumber.getText(), conStreet.getText(), conCity.getText(), conState.getText(), conZip.getText(), conGender.getText(), conSSN.getText(),
                 conAcaM.getText(), conGradD.getText(), conEthnicity.getText(), conMaritialS.getText(), conPartnerN.getText(), conPAddress.getText(), conPCity.getText(),
                 conPState.getText(), conPNumber.getText(), conPPoB.getText(), conNoD.getText(), conChildren.getText(), conEContact.getText(), conEStreet.getText(), conECity.getText(),
-                conEState.getText(), conENumber.getText(),conDeathB.getText(),
-                conPrior.getText(), conPriorYes.getText(), conGuardianPS.getText(), conGuardianPSYes.getText(), conEnlisted.getText(), conJunior.getText(),conEagle.getText());
-        
-      adminInfo.setVisible(true);
-      this.dispose();
+                conEState.getText(), conENumber.getText(), conDeathB.getText(),
+                conPrior.getText(), conPriorYes.getText(), conGuardianPS.getText(), conGuardianPSYes.getText(), conEnlisted.getText(), conJunior.getText(), conEagle.getText());
+
+        adminInfo.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
 
     /**

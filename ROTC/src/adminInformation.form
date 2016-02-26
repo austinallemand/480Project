@@ -317,8 +317,8 @@
                                               </Group>
                                               <EmptySpace type="separate" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="userRace" alignment="0" min="-2" pref="115" max="-2" attributes="0"/>
-                                                  <Component id="userGradDate" alignment="0" min="-2" pref="153" max="-2" attributes="0"/>
+                                                  <Component id="userGradDate" min="-2" pref="153" max="-2" attributes="0"/>
+                                                  <Component id="userRace" min="-2" pref="206" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
                                       </Group>
@@ -580,11 +580,14 @@
                     <Component class="javax.swing.JComboBox" name="userRace">
                       <Properties>
                         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                          <StringArray count="4">
-                            <StringItem index="0" value="Race 1"/>
-                            <StringItem index="1" value="Race 2"/>
-                            <StringItem index="2" value="Race 3"/>
-                            <StringItem index="3" value="Race 4"/>
+                          <StringArray count="7">
+                            <StringItem index="0" value="Asian"/>
+                            <StringItem index="1" value="American Indian Or Alaskan Native"/>
+                            <StringItem index="2" value="Hawaiian"/>
+                            <StringItem index="3" value="Black, Not Of Hispanic Origin"/>
+                            <StringItem index="4" value="White, Not Of Hispanic Origin"/>
+                            <StringItem index="5" value="Hispanic"/>
+                            <StringItem index="6" value="Decline To Respond"/>
                           </StringArray>
                         </Property>
                       </Properties>
@@ -794,7 +797,7 @@
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="jLabelMS">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="Maritial Status:"/>
+                        <Property name="text" type="java.lang.String" value="Marital Status:"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JComboBox" name="userMaritialS">
@@ -964,6 +967,7 @@
                             <StringItem index="5" value="Merchant Marine"/>
                           </StringArray>
                         </Property>
+                        <Property name="enabled" type="boolean" value="false"/>
                       </Properties>
                       <Events>
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="userHasPriorSActionPerformed"/>
@@ -1008,6 +1012,7 @@
                             <StringItem index="5" value="Merchant Marine"/>
                           </StringArray>
                         </Property>
+                        <Property name="enabled" type="boolean" value="false"/>
                       </Properties>
                       <Events>
                         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="userHasPriorGuardSMouseClicked"/>

@@ -365,7 +365,7 @@ public class adminInformation extends javax.swing.JFrame {
 
         jLabelEth.setText("Ethnicity:");
 
-        userRace.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Race 1", "Race 2", "Race 3", "Race 4" }));
+        userRace.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Asian", "American Indian Or Alaskan Native", "Hawaiian", "Black, Not Of Hispanic Origin", "White, Not Of Hispanic Origin", "Hispanic", "Decline To Respond" }));
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -433,8 +433,8 @@ public class adminInformation extends javax.swing.JFrame {
                                     .addComponent(jLabelEth))
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(userRace, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(userGradDate, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                                    .addComponent(userGradDate, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(userRace, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
@@ -515,7 +515,7 @@ public class adminInformation extends javax.swing.JFrame {
 
         jTabbedPane2.addTab("Personal Information", jPanel4);
 
-        jLabelMS.setText("Maritial Status:");
+        jLabelMS.setText("Marital Status:");
 
         userMaritialS.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Single", "Married", "Widowed", " " }));
 
@@ -580,6 +580,7 @@ public class adminInformation extends javax.swing.JFrame {
         });
 
         userHasPriorS.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Army", "Air Force", "Navy", "Marines", "Cost Guard", "Merchant Marine" }));
+        userHasPriorS.setEnabled(false);
         userHasPriorS.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 userHasPriorSActionPerformed(evt);
@@ -601,6 +602,7 @@ public class adminInformation extends javax.swing.JFrame {
         });
 
         userHasPriorGuardS.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Army", "Air Force", "Navy", "Marines", "Coast Guard", "Merchant Marine" }));
+        userHasPriorGuardS.setEnabled(false);
         userHasPriorGuardS.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 userHasPriorGuardSMouseClicked(evt);
@@ -915,7 +917,12 @@ public class adminInformation extends javax.swing.JFrame {
     }//GEN-LAST:event_userHasPriorGuardSMouseClicked
 
     private void userGuardStatusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userGuardStatusActionPerformed
+        String yes = (String)userGuardStatus.getSelectedItem();
+        if(yes.equals("Retired Military") || yes.equals("Active Duty")) {
+            userHasPriorGuardS.setEnabled(true);
 
+        }else
+        userHasPriorGuardS.setEnabled(false);
     }//GEN-LAST:event_userGuardStatusActionPerformed
 
     private void userGuardStatusMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_userGuardStatusMouseClicked
@@ -931,7 +938,12 @@ public class adminInformation extends javax.swing.JFrame {
     }//GEN-LAST:event_userPriorSPropertyChange
 
     private void userPriorSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userPriorSActionPerformed
+        String yes = (String)userPriorS.getSelectedItem();
+        if(yes.equals("Yes")) {
+            userHasPriorS.setEnabled(true);
 
+        }else
+        userHasPriorS.setEnabled(false);
     }//GEN-LAST:event_userPriorSActionPerformed
 
     private void userPriorSMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_userPriorSMouseClicked
