@@ -34,68 +34,77 @@ public class Confirmation extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
     }
 
-    public Confirmation(String passedFirstName, String passedLastName, String passedMiddleInitial,
-            String passedCwuID, String passedEmail, String passedDateOfBirth, String passedAreaCode,
-            String passedMiddleThreePhoneNumber, String passedLastThreePhoneNumber, String passedAptNumber,
-            String passedStreetAddress, String passedCity, String passedState, String passedZipcode, String passedGender, String passedSSN, String passedAcaM,
-            String passedPGradD, String passedEthnicity, String passedMaritialS, String passedPName, String passedPAddress, String passedPCity, String passedPState,
-            String passedPNumber, String passedPoB, String passedNoD, String passedChildren, String passedEContact, String passedEStreet, String passedECity, String passedEState, String passedENumber,
-            String passedDBeneficiary, String passedPriorS, String passedHasPriorS, String passedGuardianPS, String passedGuardianHasPS, String passedEnlisted,
-            String passedJunior, String passedEagle
-    ) {
+    public Confirmation(String passedFirstName, String passedLastName, String passedMiddleName, String passedCwuID, String passedEmail, String passedDateOfBirth,
+            String passedAreaCode, String passedMiddleThreePhoneNumber, String passedLastThreePhoneNumber, String passedStreetAddress,
+            String passedAptNumber, String passedCity, String passedState, String passedZipcode, String passedGender, String passedSSN,
+            String passedAcaM, String passedPGradD, String passedEthnicity, String passedPlaceOfBirth, String passedSelectiveNumber, String passedMailingResident, String passedMailingDorm,
+            String passedMailingStreet, String passedMailingCity, String passedMailingState, String passedMailingZip, String passedPriorS, 
+            String passedHasPriorS, String passedIllHealth, String passedNotify, String passedMaritialS, String passedPFirst, String passedPMI, String passedPLast, String passedPAddress,
+            String passedPCity, String passedPState, String passedPZipcode, String passedPNumber, String passedPPlaceOfBirth, String passedNoD,
+            String passedChildren, String passedChildFN, String passedChildMI, String passedChildLN, String passedChildDoB, String passedChildRelatonship,
+            String passedChildStreet, String passedChildCity, String passedChildState, String passedChildZip, String passedChildPN, String passedFatherFN, String passedFatherMI,
+            String passedFatherLN, String passedFatherStreet, String passedFatherCity, String passedFatherState, String passedFatherZip,
+            String passedFatherPN, String passedMotherFN, String passedMotherMI, String passedMotherLN, String passedMotherStreet,
+            String passedMotherCity, String passedMotherState, String passedMotherZip, String passedMotherPN,
+            String passedEContact, String passedEContactStreet, String passedEContactCity, String passedEContactState, String passedEZip,
+            String passedEContactPN, String passedDBeneficiary, String passedDBeneficiaryRelationship, String passedDBeneficiaryStreet,
+            String passedDBeneficiaryCity, String passedDBeneficiaryState, String passedDBeneficiaryZip, String passedDBeneficiaryPN,
+            String passedDBeneficiaryPercent, String passedGuardianPS, String passedGuardianHasPS, String passedGuardianPSYears, String passedGuardianPSGrade,
+            String passedGuardianPSStart, String passedGuardianPSFinish, String passedGuardianPSDischarge, String passedGuardianPSRemaining,
+            String psasedJunior, String passedEagle, String passedEnlisted) {
 
-        initComponents();
-        this.setLocationRelativeTo(null);
+            initComponents();
+            this.setLocationRelativeTo(null);
 
-        String fullName, conPrior2, conGuardianPS2;
+            String fullName, conPrior2, conGuardianPS2;
 
-        conFN.setText(passedFirstName);
-        conLN.setText(passedLastName);
-        conMI.setText(passedMiddleInitial);
-        conCWUID.setText(passedCwuID);
-        conEmail.setText(passedEmail);
-        conDoB.setText(passedDateOfBirth);
+            conFN.setText(passedFirstName);
+            conLN.setText(passedLastName);
+            conMI.setText(passedMiddleName);
+            conCWUID.setText(passedCwuID);
+            conEmail.setText(passedEmail);
+            conDoB.setText(passedDateOfBirth);
 
-        if (passedAreaCode.isEmpty() || passedMiddleThreePhoneNumber.isEmpty() || passedLastThreePhoneNumber.isEmpty()) {
-            conPNum.setText("No input found");
-        } else {
-            conPNum.setText("(" + passedAreaCode + ")" + "-" + passedMiddleThreePhoneNumber + "-" + passedLastThreePhoneNumber);
-        }
+            if (passedAreaCode.isEmpty() || passedMiddleThreePhoneNumber.isEmpty() || passedLastThreePhoneNumber.isEmpty()) {
+                conPNum.setText("No input found");
+            } else {
+                conPNum.setText("(" + passedAreaCode + ")" + "-" + passedMiddleThreePhoneNumber + "-" + passedLastThreePhoneNumber);
+            }
 
-        conStreet.setText(passedStreetAddress);
-        conAptNumber.setText(passedAptNumber);
-        conCity.setText(passedCity);
-        conState.setText(passedState);
-        conZip.setText(passedZipcode);
-        conGender.setText(passedGender);
-        conSSN.setText(passedSSN);
-        conAcaM.setText(passedAcaM);
-        conGradD.setText(passedPGradD);
-        conEthnicity.setText(passedEthnicity);
-        conMaritialS.setText(passedMaritialS);
-        conPartnerN.setText(passedPName);
-        conPAddress.setText(passedPAddress);
-        conPCity.setText(passedPCity);
-        conPState.setText(passedPState);
-        conPNumber.setText(passedPNumber);
-        conPPoB.setText(passedPoB);
-        conNoD.setText(passedNoD);
-        conChildren.setText(passedChildren);
-        conEContact.setText(passedEContact);
-        conEStreet.setText(passedEStreet);
-        conECity.setText(passedECity);
-        conEState.setText(passedEState);
-        conENumber.setText(passedENumber);
-        conDeathB.setText(passedDBeneficiary);
-        conPrior.setText(passedPriorS);
-        conPriorYes.setText(passedHasPriorS);
+            conStreet.setText(passedStreetAddress);
+            conAptNumber.setText(passedAptNumber);
+            conCity.setText(passedCity);
+            conState.setText(passedState);
+            conZip.setText(passedZipcode);
+            conGender.setText(passedGender);
+            conSSN.setText(passedSSN);
+            conAcaM.setText(passedAcaM);
+            conGradD.setText(passedPGradD);
+            conEthnicity.setText(passedEthnicity);
+            conMaritialS.setText(passedMaritialS);
+            conPartnerN.setText(passedPName);
+            conPAddress.setText(passedPAddress);
+            conPCity.setText(passedPCity);
+            conPState.setText(passedPState);
+            conPNumber.setText(passedPNumber);
+            conPPoB.setText(passedPoB);
+            conNoD.setText(passedNoD);
+            conChildren.setText(passedChildren);
+            conEContact.setText(passedEContact);
+            conEStreet.setText(passedEStreet);
+            conECity.setText(passedECity);
+            conEState.setText(passedEState);
+            conENumber.setText(passedENumber);
+            conDeathB.setText(passedDBeneficiary);
+            conPrior.setText(passedPriorS);
+            conPriorYes.setText(passedHasPriorS);
 
-        conGuardianPSYes.setText(passedGuardianHasPS);
-        conGuardianPS.setText(passedGuardianPS);
-        conEnlisted.setText(passedEnlisted);
-        conJunior.setText(passedJunior);
-        conEagle.setText(passedEagle);
-        conFull.setText(passedLastName + "," + passedFirstName + " " + passedMiddleInitial);
+            conGuardianPSYes.setText(passedGuardianHasPS);
+            conGuardianPS.setText(passedGuardianPS);
+            conEnlisted.setText(passedEnlisted);
+            conJunior.setText(passedJunior);
+            conEagle.setText(passedEagle);
+            conFull.setText(passedLastName + "," + passedFirstName + " " + passedMiddleName);
 
     }
 

@@ -1,32 +1,19 @@
-Thu Feb 25 13:07:55 PST 2016 : Apache Derby Network Server - 10.11.1.2 - (1629631) started and ready to accept connections on port 1527
+Tue Mar 01 18:43:20 PST 2016 : Apache Derby Network Server - 10.11.1.2 - (1629631) started and ready to accept connections on port 1527
 ----------------------------------------------------------------
-Thu Feb 25 13:07:56 PST 2016:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.11.1.2 - (1629631): instance a816c00e-0153-1a42-7387-ffff9e519521 
-on database directory F:\CollegeWork\CS481\LatestVersion\database\CadetInfo with class loader sun.misc.Launcher$AppClassLoader@60e53b93 
-Loaded from file:/C:/Program%20Files/Java/jdk/db/lib/derby.jar
+Tue Mar 01 18:43:21 PST 2016:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.11.1.2 - (1629631): instance a816c00e-0153-3535-53fc-ffff9e519521 
+on database directory F:\CollegeWork\CS481\LatestVersion\database\CadetInfo with class loader sun.misc.Launcher$AppClassLoader@5e2de80c 
+Loaded from file:/C:/Program%20Files/Java/jdk1.8.0_71/db/lib/derby.jar
 java.vendor=Oracle Corporation
-java.runtime.version=1.8.0_51-b16
-user.dir=C:\Program Files\Java\jdk\db
-os.name=Windows 7
+java.runtime.version=1.8.0_71-b15
+user.dir=C:\Program Files\Java\jdk1.8.0_71\db
+os.name=Windows 10
 os.arch=amd64
-os.version=6.1
+os.version=10.0
 derby.system.home=F:\CollegeWork\CS481\LatestVersion\database
 Database Class Loader started - derby.database.classpath=''
 ----------------------------------------------------------------
-Thu Feb 25 13:10:29 PST 2016:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.11.1.2 - (1629631): instance d381409a-0153-1a42-7387-ffff9e519521 
-on database directory F:\CollegeWork\CS481\LatestVersion\database\adminLogin with class loader sun.misc.Launcher$AppClassLoader@60e53b93 
-Loaded from file:/C:/Program%20Files/Java/jdk/db/lib/derby.jar
-java.vendor=Oracle Corporation
-java.runtime.version=1.8.0_51-b16
-user.dir=C:\Program Files\Java\jdk\db
-os.name=Windows 7
-os.arch=amd64
-os.version=6.1
-derby.system.home=F:\CollegeWork\CS481\LatestVersion\database
-Database Class Loader started - derby.database.classpath=''
+Tue Mar 01 18:43:33 PST 2016: Shutting down Derby engine
 ----------------------------------------------------------------
-Thu Feb 25 13:42:30 PST 2016: Shutting down Derby engine
-----------------------------------------------------------------
-Thu Feb 25 13:42:31 PST 2016:
-Shutting down instance d381409a-0153-1a42-7387-ffff9e519521 on database directory F:\CollegeWork\CS481\LatestVersion\database\adminLogin with class loader sun.misc.Launcher$AppClassLoader@60e53b93 
+Tue Mar 01 18:43:33 PST 2016:
+Shutting down instance a816c00e-0153-3535-53fc-ffff9e519521 on database directory F:\CollegeWork\CS481\LatestVersion\database\CadetInfo with class loader sun.misc.Launcher$AppClassLoader@5e2de80c 
