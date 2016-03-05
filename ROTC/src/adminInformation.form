@@ -90,35 +90,36 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Group type="102" alignment="1" attributes="0">
-                              <Component id="searchCadet" max="32767" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="searchCadetButton" min="-2" pref="170" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
                               <EmptySpace min="-2" pref="246" max="-2" attributes="0"/>
                               <Component id="jLabel34" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <Component id="updateCadet" max="32767" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="exportCadet" min="-2" pref="172" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="importCadet" min="-2" pref="140" max="-2" attributes="0"/>
-                          </Group>
-                          <Component id="cadetForm" alignment="0" max="32767" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="jButton1" min="-2" pref="262" max="-2" attributes="0"/>
-                              <EmptySpace pref="37" max="32767" attributes="0"/>
-                              <Component id="jButton2" min="-2" pref="248" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Component id="searchCadet" alignment="0" max="32767" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                          <Component id="exportCadet" alignment="0" pref="263" max="32767" attributes="0"/>
+                                          <Component id="updateCadet" alignment="0" max="32767" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="importCadet" max="32767" attributes="0"/>
+                                  <Component id="jButton2" pref="213" max="32767" attributes="0"/>
+                                  <Component id="searchCadetButton" max="32767" attributes="0"/>
+                              </Group>
                           </Group>
                       </Group>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="94" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <Component id="jTabbedPane2" min="-2" pref="640" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="645" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="11" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -133,17 +134,14 @@
                           <Component id="searchCadetButton" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="importCadet" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="exportCadet" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="updateCadet" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="updateCadet" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="importCadet" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="cadetForm" min="-2" pref="20" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jButton2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="exportCadet" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jTabbedPane2" min="-2" pref="1232" max="-2" attributes="0"/>
@@ -176,32 +174,6 @@
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="updateCadetActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JComboBox" name="cadetForm">
-              <Properties>
-                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="4">
-                    <StringItem index="0" value="Please Select a Form"/>
-                    <StringItem index="1" value="Item 2"/>
-                    <StringItem index="2" value="Item 3"/>
-                    <StringItem index="3" value="Item 4"/>
-                  </StringArray>
-                </Property>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cadetFormActionPerformed"/>
-              </Events>
-              <AuxValues>
-                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-              </AuxValues>
-            </Component>
-            <Component class="javax.swing.JButton" name="jButton1">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Export Text File to Excel"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JButton" name="jButton2">
@@ -1626,13 +1598,6 @@
                                   </Group>
                               </Group>
                           </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jLabel10" min="-2" pref="283" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="userEnlistment" min="-2" pref="234" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          </Group>
                       </Group>
                     </DimensionLayout>
                     <DimensionLayout dim="1">
@@ -1724,18 +1689,7 @@
                                   <Component id="jLabelEagleScount1" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="userEagleScout" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
-                                      <Component id="userEnlistment" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="32767" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <EmptySpace max="32767" attributes="0"/>
-                                      <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="170" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
+                              <EmptySpace type="separate" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jButton3" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="goBack" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -1950,12 +1904,420 @@
                         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                       </AuxValues>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="jLabel10">
+                  </SubComponents>
+                </Container>
+                <Container class="javax.swing.JPanel" name="jPanel10">
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+                      <JTabbedPaneConstraints tabName="Yes/No Questions">
+                        <Property name="tabTitle" type="java.lang.String" value="Yes/No Questions"/>
+                      </JTabbedPaneConstraints>
+                    </Constraint>
+                  </Constraints>
+
+                  <Layout>
+                    <DimensionLayout dim="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="103" alignment="0" groupAlignment="0" attributes="0">
+                                              <Component id="Question2" alignment="0" min="-2" pref="290" max="-2" attributes="0"/>
+                                              <Component id="Question1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="Question8" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="Question6" alignment="0" min="-2" pref="300" max="-2" attributes="0"/>
+                                              <Component id="Question9" alignment="0" min="-2" pref="303" max="-2" attributes="0"/>
+                                              <Component id="Question3" alignment="0" min="-2" pref="290" max="-2" attributes="0"/>
+                                              <Component id="jLabel10" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="Question4" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="Question5" alignment="0" min="-2" pref="300" max="-2" attributes="0"/>
+                                              <Component id="Question10" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="Question11" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="Question12" alignment="1" min="-2" pref="303" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Component id="Question7" alignment="0" min="-2" pref="300" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="userQuestion8A" alignment="0" min="-2" pref="83" max="-2" attributes="0"/>
+                                          <Component id="userQuestion13A" alignment="0" min="-2" pref="83" max="-2" attributes="0"/>
+                                          <Component id="userQuestion7A" alignment="0" min="-2" pref="83" max="-2" attributes="0"/>
+                                          <Component id="userQuestion12A" alignment="0" min="-2" pref="83" max="-2" attributes="0"/>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Group type="103" groupAlignment="1" attributes="0">
+                                                  <Component id="userQuestion11A" alignment="0" pref="113" max="32767" attributes="0"/>
+                                                  <Component id="userQuestion10A" alignment="0" pref="0" max="32767" attributes="0"/>
+                                                  <Component id="userQuestion9A" alignment="0" pref="0" max="32767" attributes="0"/>
+                                                  <Component id="userQuestion4A" alignment="0" pref="0" max="32767" attributes="0"/>
+                                                  <Component id="userQuestion3A" alignment="0" pref="0" max="32767" attributes="0"/>
+                                                  <Component id="userQuestion2A" alignment="0" pref="0" max="32767" attributes="0"/>
+                                                  <Component id="userQuestion1A" alignment="0" pref="0" max="32767" attributes="0"/>
+                                                  <Component id="userQuestion6A" alignment="1" pref="0" max="32767" attributes="0"/>
+                                              </Group>
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="userQuestion6B" min="-2" pref="83" max="-2" attributes="0"/>
+                                                  <Component id="userQuestion10B" alignment="0" min="-2" pref="81" max="-2" attributes="0"/>
+                                              </Group>
+                                              <EmptySpace min="-2" pref="104" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="Question14" min="-2" pref="290" max="-2" attributes="0"/>
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Component id="userQuestion5A" min="-2" pref="84" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="Question13" min="-2" pref="303" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="userQuestion14A" min="-2" pref="83" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                    <DimensionLayout dim="1">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="Question1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="userQuestion1A" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="userQuestion2A" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="Question2" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                                      <Component id="userQuestion3A" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="Question3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="userQuestion4A" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="Question14" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="userQuestion5A" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="Question4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="userQuestion6A" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="userQuestion6B" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="Question5" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Component id="Question6" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="userQuestion7A" alignment="1" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="userQuestion8A" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Question7" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="Question8" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="userQuestion9A" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="Question10" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="userQuestion10A" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="userQuestion10B" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="Question11" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="userQuestion11A" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+                                      <Component id="userQuestion12A" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
+                                      <Component id="userQuestion13A" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="Question9" min="-2" pref="94" max="-2" attributes="0"/>
+                                      <EmptySpace pref="70" max="32767" attributes="0"/>
+                                      <Component id="Question12" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="Question13" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="userQuestion14A" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace pref="448" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JLabel" name="Question1">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="&lt;html&gt;Are you now or have you ever been an enlisted or warrant&#xa;&lt;br&gt;  officer of any component of the US armed forces?&lt;/html&gt;"/>
+                        <Property name="text" type="java.lang.String" value="&lt;html&gt;Are you now or have you ever been an enlisted or warrant &lt;br&gt;  officer of any component of the US armed forces?&lt;/html&gt;"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="userEnlistment">
+                    <Component class="javax.swing.JLabel" name="Question2">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="&lt;html&gt;Are you now, or have you ever been, a commissioned officer of any component of the armed forces&lt;br&gt;&lt;/br&gt;(including Reserve, USAF,USMC,USCG,USG,Merchant,Marine, or preparatory schools?)&lt;br&gt;&lt;/br&gt;&lt;/html&gt;"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="Question3">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="&lt;html&gt;Are you now, or have you ever been, an officer of the&lt;br&gt;&lt;/br&gt; Health Services and Metnal health Administsteration?&lt;/html&gt;"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="Question4">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Are you a U.S citizen? If yes, how obtained:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="Question5">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="&lt;html&gt;If a naturalized citizen, or born outside of the U.S of &lt;br&gt;&lt;/br&gt;American parents, submit proof of citizenship. Reference AFROTCI 36-2011.)&lt;/html&gt;"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="Question6">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="&lt;html&gt;Have you ever taken the AFOQT (if yes, indicate in remarks &lt;br&gt;&lt;/br&gt;section where and when.)&lt;/html&gt;"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="Question7">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="&lt;html&gt;Have you ever had a physical for entry into the &lt;br&gt;&lt;/br&gt;armed forces, Air Force ROTC, etc?&lt;/html&gt;"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="Question8">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Have you ever been denied enlistment into the armed forces?"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="Question10">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Do you already have a degree(BA, BS, etc?)"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="Question11">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Are you an AFROTC ScholarShip Designee?"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="Question9">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="&lt;html&gt;Are you a conscientious objector?(A conscientious objector is defined as: &lt;br&gt;&lt;/br&gt; one who has or had a firm, fixed and sincere objection to participation in war in any form or to bearing of arms because of religious training or belief. which includes solely moral or ethical beliefs.)&lt;/html&gt;"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="Question12">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;br&gt;&lt;/br&gt;Are you now or have you ever been&#xa;affiliated with any organization or movement that seeks to alter our form of government by unconstitutional means, or sympathetically associated with any such organization, movement, or members thereof? (if yes, please describe)&lt;/html&gt;"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="Question13">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="&lt;html&gt;Do you understand that participation in Air &lt;br&gt;&lt;/br&gt;Force ROTC required strenuous physical activity? (You will be required to obtain medicalclearance from a physician prior to program entry.)&lt;/html&gt;"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="userQuestion1A">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="2">
+                            <StringItem index="0" value="No"/>
+                            <StringItem index="1" value="Yes"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="userQuestion2A">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="2">
+                            <StringItem index="0" value="No"/>
+                            <StringItem index="1" value="Yes"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="userQuestion4A">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="2">
+                            <StringItem index="0" value="No"/>
+                            <StringItem index="1" value="Yes"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="userQuestion13A">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="2">
+                            <StringItem index="0" value="No"/>
+                            <StringItem index="1" value="Yes"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="userQuestion3A">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="2">
+                            <StringItem index="0" value="No"/>
+                            <StringItem index="1" value="Yes"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="userQuestion6B">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="3">
+                            <StringItem index="0" value="N/A"/>
+                            <StringItem index="1" value="Birth"/>
+                            <StringItem index="2" value="Naturalized"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="userQuestion7A">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="2">
+                            <StringItem index="0" value="No"/>
+                            <StringItem index="1" value="Yes"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="userQuestion8A">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="2">
+                            <StringItem index="0" value="No"/>
+                            <StringItem index="1" value="Yes"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="userQuestion9A">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="2">
+                            <StringItem index="0" value="No"/>
+                            <StringItem index="1" value="Yes"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="userQuestion12A">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="2">
+                            <StringItem index="0" value="No"/>
+                            <StringItem index="1" value="Yes"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="userQuestion10A">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="2">
+                            <StringItem index="0" value="No"/>
+                            <StringItem index="1" value="Yes"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="userQuestion11A">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="2">
+                            <StringItem index="0" value="No"/>
+                            <StringItem index="1" value="Yes"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="userQuestion10B">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="3">
+                            <StringItem index="0" value="N/A"/>
+                            <StringItem index="1" value="4-year"/>
+                            <StringItem index="2" value="3-year"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel10">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="&lt;html&gt;Have you ever applied for, been enrolled, or on contract &lt;br&gt; in an Officer Training Program of the US army, &lt;br&gt;USAF, USMC, USCG, USN, Merchant Marine, or preparatory?&lt;/html&gt;"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="userQuestion6A">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="2">
+                            <StringItem index="0" value="No"/>
+                            <StringItem index="1" value="Yes"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="userQuestion6AActionPerformed"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="Question14">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="&lt;html&gt;Are you now, or have you ever been, a memberr of the&lt;br&gt;&lt;/br&gt; National Oceanic Atmospheric Administration?&lt;/html&gt;"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="userQuestion5A">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="2">
+                            <StringItem index="0" value="No"/>
+                            <StringItem index="1" value="Yes"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="userQuestion14A">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="2">
+                            <StringItem index="0" value="No"/>
+                            <StringItem index="1" value="Yes"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="userQuestion14AActionPerformed"/>
+                      </Events>
                     </Component>
                   </SubComponents>
                 </Container>

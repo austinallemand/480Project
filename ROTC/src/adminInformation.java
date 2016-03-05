@@ -56,7 +56,11 @@ public class adminInformation extends javax.swing.JFrame {
             String passedDBeneficiaryCity, String passedDBeneficiaryState, String passedDBeneficiaryZip, String passedDBeneficiaryPN,
             String passedDBeneficiaryPercent, String passedGuardianPS, String passedGuardianHasPS, String passedGuardianPSYears, String passedGuardianPSGrade,
             String passedGuardianPSStart, String passedGuardianPSFinish, String passedGuardianPSDischarge, String passedGuardianPSRemaining,
-            String psasedJunior, String passedEagle, String passedEnlisted){
+            String psasedJunior, String passedEagle, 
+            
+            String passedQuestion1A, String passedQuestion2A, String passedQuestion3A, String passedQuestion4A, String passedQuestion5A, String passedQuestion6A,
+            String passedQuestion6B, String passedQuestion7A, String passedQuestion8A, String passedQuestion9A, String passedQuestion10A,String passedQuestion10B,
+            String passedQuestion11A, String passedQuestion12A, String passedQuestion13A, String passedQuestion14A){
             
             initComponents();
             this.setLocationRelativeTo(null);
@@ -96,7 +100,7 @@ public class adminInformation extends javax.swing.JFrame {
             userNotify.setText(passedNotify);
             userNoD.setText(passedNoD);
             
-            //Family tab
+            //Partner and Child tab
     
             userMaritialS.setSelectedItem(passedMaritialS);
             userPartnerFN.setText(passedPFirst);
@@ -119,6 +123,9 @@ public class adminInformation extends javax.swing.JFrame {
             userChildState.setText(passedChildState);
             userChildZip.setText(passedChildZip);
             userChildPN.setText(passedChildPN);
+            
+            //Parents tab
+            
             userFatherFN.setText(passedFatherFN);
             userFatherMI.setText(passedFatherMI);
             userFatherLN.setText(passedFatherLN);
@@ -162,7 +169,25 @@ public class adminInformation extends javax.swing.JFrame {
             userGuardianYearsRem.setText(passedGuardianPSRemaining);
             userJuniorROTC.setSelectedItem(psasedJunior);
             userEagleScout.setSelectedItem(passedEagle);
-            userEnlistment.setText(passedEnlisted);
+            
+            //Yes or no tab
+            
+            userQuestion1A.setSelectedItem(passedQuestion1A);
+            userQuestion2A.setSelectedItem(passedQuestion2A);
+            userQuestion3A.setSelectedItem(passedQuestion3A);
+            userQuestion4A.setSelectedItem(passedQuestion4A);
+            userQuestion5A.setSelectedItem(passedQuestion5A);
+            userQuestion6A.setSelectedItem(passedQuestion6A);
+            userQuestion6B.setSelectedItem(passedQuestion6B);
+            userQuestion7A.setSelectedItem(passedQuestion7A);
+            userQuestion8A.setSelectedItem(passedQuestion8A);
+            userQuestion9A.setSelectedItem(passedQuestion9A);
+            userQuestion10A.setSelectedItem(passedQuestion10A);
+            userQuestion10B.setSelectedItem(passedQuestion10B);
+            userQuestion11A.setSelectedItem(passedQuestion11A);
+            userQuestion12A.setSelectedItem(passedQuestion12A);
+            userQuestion13A.setSelectedItem(passedQuestion13A);
+            userQuestion14A.setSelectedItem(passedQuestion14A);
     
     
     }
@@ -178,6 +203,8 @@ public class adminInformation extends javax.swing.JFrame {
                 Statement sta = con.createStatement();
                 ResultSet rs = sta.executeQuery("Select * From INFO WHERE CWUID ='"+ searchID+"'");
                 if(rs.next()){
+                    
+                    //Personal tab
                     
                     userLN.setText(rs.getString("LASTNAME"));
                     userFN.setText(rs.getString("FIRSTNAME"));
@@ -211,7 +238,8 @@ public class adminInformation extends javax.swing.JFrame {
                     userIllHealth.setText(rs.getString("CADETILLHEALTH"));
                     userNotify.setText(rs.getString("CADETNOTIFY"));
                     userNoD.setText(rs.getString("DEPENDENTS"));
-                    //Family tab
+                    
+                    //Spouse and child tab
 
                     userMaritialS.setSelectedItem(rs.getString("MARITIALSTATUS"));
                     userPartnerFN.setText(rs.getString("PARTNERFIRSTNAME"));
@@ -234,6 +262,9 @@ public class adminInformation extends javax.swing.JFrame {
                     userChildState.setText(rs.getString("CHILDSTATE"));
                     userChildZip.setText(rs.getString("CHILDZIP"));
                     userChildPN.setText(rs.getString("CHILDNUMBER"));
+                    
+                    //Parents and Emergency tab
+                    
                     userFatherFN.setText(rs.getString("FATHERFIRSTNAME"));
                     userFatherMI.setText(rs.getString("FATHERMI"));
                     userFatherLN.setText(rs.getString("FATHERLASTNAME"));
@@ -277,71 +308,17 @@ public class adminInformation extends javax.swing.JFrame {
                     userGuardianYearsRem.setText(rs.getString("GUARDIANPRIORSERVICEREMAIN"));
                     userJuniorROTC.setSelectedItem(rs.getString("JUNIORROTC"));
                     userEagleScout.setSelectedItem(rs.getString("EAGLESCOUT"));
-                    userEnlistment.setText(rs.getString("ENLISTEDWARRANT"));
+                    
+                    //Yes or no tab
+                    
+                    //userEnlistment.setText(rs.getString("ENLISTEDWARRANT"));
 
                 }
             }catch(Exception e) {
                 System.err.println("Exception: "+e.getMessage());
             }
      }       
-    
-    /*
-    public adminInformation(String passedFirstName, String passedLastName, String passedMiddleInitial, 
-            String passedCwuID, String passedEmail, String passedDateOfBirth, String passedAreaCode,
-            String passedMiddleThreePhoneNumber, String passedLastThreePhoneNumber, String passedAptNumber,
-            String passedStreetAddress, String passedCity, String passedState, String passedZipcode, String passedGender, String passedSSN, String passedAcaM,
-            String passedPGradD, String passedEthnicity, String passedMaritialS, String passedPName, String passedPAddress, String passedPCity, String passedPState,
-            String passedPNumber, String passedPoB, String passedNoD, String passedChildren, String passedEContact, String passedEStreet,String passedECity, String passedEState, String passedENumber,
-            String passedDBeneficiary, String passedPriorS,String passedHasPriorS, String passedGuardianPS,String passedGuardianHasPS, String passedEnlisted, 
-             String psasedJunior, String passedEagle){
-            
-            initComponents();
-            this.setLocationRelativeTo(null);
-            userFN.setText(passedFirstName);
-            userLN.setText(passedLastName);
-            userMN.setText(passedMiddleInitial);
-            userCWUID.setText(passedCwuID);
-            userEmail.setText(passedEmail);
-            userDoB.setText(passedDateOfBirth);
-            userAreaCode.setText(passedAreaCode);
-            userMPN.setText(passedMiddleThreePhoneNumber);
-            userLPN.setText(passedLastThreePhoneNumber);
-            userStreet.setText(passedStreetAddress);
-            userApt.setText(passedAptNumber);
-            userCity.setText(passedCity);
-            userState.setText(passedState);
-            userZip.setText(passedZipcode);
-            userGender.setSelectedItem(passedGender);
-            
-            userSSN.setText(passedSSN);
-            userAcMajor.setText(passedAcaM);
-            userGradDate.setText(passedPGradD);
-            userRace.setSelectedItem(passedEthnicity);
-            userMaritialS.setSelectedItem(passedMaritialS);
-            //userPartnerName.setText(passedPName);
-            userPartnerAddress.setText(passedPAddress);
-            userPartnerCity.setText(passedPCity);
-            userPartnerState.setText(passedPState);
-            userPartnerNumber.setText(passedPNumber);
-            userPartnerPoB.setText(passedPoB);
-            userNoD.setText(passedNoD);
-            userChildren.setSelectedItem(passedChildren);
-            userEmergency.setText(passedEContact);
-            userEmergencyStreet.setText(passedEStreet);
-            userEmergencyCity.setText(passedECity);
-            userEmergencyState.setText(passedEState);
-            userENumber.setText(passedENumber);
-            userDeath.setText(passedDBeneficiary);
-            userPriorS.setSelectedItem(passedPriorS);
-            userHasPriorS.setSelectedItem(passedHasPriorS);
-            userGuardStatus.setSelectedItem(passedGuardianPS);
-            userHasPriorGuardS.setSelectedItem(passedGuardianHasPS);
-            userEnlistment.setText(passedEnlisted);
-            userJuniorROTC.setSelectedItem(psasedJunior);
-            userEagleScout.setSelectedItem(passedEagle);
-    
-    }
-    */    
+  
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -362,8 +339,6 @@ public class adminInformation extends javax.swing.JFrame {
         searchCadet = new javax.swing.JTextField();
         exportCadet = new javax.swing.JButton();
         updateCadet = new javax.swing.JButton();
-        cadetForm = new javax.swing.JComboBox<>();
-        jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jLabel34 = new javax.swing.JLabel();
         importCadet = new javax.swing.JButton();
@@ -557,8 +532,38 @@ public class adminInformation extends javax.swing.JFrame {
         userJuniorROTC = new javax.swing.JComboBox<>();
         jLabelEagleScount1 = new javax.swing.JLabel();
         userEagleScout = new javax.swing.JComboBox<>();
+        jPanel10 = new javax.swing.JPanel();
+        Question1 = new javax.swing.JLabel();
+        Question2 = new javax.swing.JLabel();
+        Question3 = new javax.swing.JLabel();
+        Question4 = new javax.swing.JLabel();
+        Question5 = new javax.swing.JLabel();
+        Question6 = new javax.swing.JLabel();
+        Question7 = new javax.swing.JLabel();
+        Question8 = new javax.swing.JLabel();
+        Question10 = new javax.swing.JLabel();
+        Question11 = new javax.swing.JLabel();
+        Question9 = new javax.swing.JLabel();
+        Question12 = new javax.swing.JLabel();
+        Question13 = new javax.swing.JLabel();
+        userQuestion1A = new javax.swing.JComboBox();
+        userQuestion2A = new javax.swing.JComboBox();
+        userQuestion4A = new javax.swing.JComboBox();
+        userQuestion13A = new javax.swing.JComboBox();
+        userQuestion3A = new javax.swing.JComboBox();
+        userQuestion6B = new javax.swing.JComboBox();
+        userQuestion7A = new javax.swing.JComboBox();
+        userQuestion8A = new javax.swing.JComboBox();
+        userQuestion9A = new javax.swing.JComboBox();
+        userQuestion12A = new javax.swing.JComboBox();
+        userQuestion10A = new javax.swing.JComboBox();
+        userQuestion11A = new javax.swing.JComboBox();
+        userQuestion10B = new javax.swing.JComboBox();
         jLabel10 = new javax.swing.JLabel();
-        userEnlistment = new javax.swing.JTextField();
+        userQuestion6A = new javax.swing.JComboBox();
+        Question14 = new javax.swing.JLabel();
+        userQuestion5A = new javax.swing.JComboBox();
+        userQuestion14A = new javax.swing.JComboBox();
 
         jLabel21.setText("jLabel21");
 
@@ -598,20 +603,6 @@ public class adminInformation extends javax.swing.JFrame {
         updateCadet.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 updateCadetActionPerformed(evt);
-            }
-        });
-
-        cadetForm.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Please Select a Form", "Item 2", "Item 3", "Item 4" }));
-        cadetForm.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cadetFormActionPerformed(evt);
-            }
-        });
-
-        jButton1.setText("Export Text File to Excel");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
             }
         });
 
@@ -1508,8 +1499,6 @@ public class adminInformation extends javax.swing.JFrame {
 
         userEagleScout.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "No", "Yes" }));
 
-        jLabel10.setText("<html>Are you now or have you ever been an enlisted or warrant\n<br>  officer of any component of the US armed forces?</html>");
-
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
@@ -1566,12 +1555,6 @@ public class adminInformation extends javax.swing.JFrame {
                     .addGroup(jPanel6Layout.createSequentialGroup()
                         .addComponent(goBack, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(userEnlistment, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1645,15 +1628,7 @@ public class adminInformation extends javax.swing.JFrame {
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelEagleScount1)
                     .addComponent(userEagleScout, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addGap(11, 11, 11)
-                        .addComponent(userEnlistment, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(170, 170, 170)))
+                .addGap(18, 18, Short.MAX_VALUE)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton3)
                     .addComponent(goBack))
@@ -1662,35 +1637,236 @@ public class adminInformation extends javax.swing.JFrame {
 
         jTabbedPane2.addTab("Other Information", jPanel6);
 
+        Question1.setText("<html>Are you now or have you ever been an enlisted or warrant <br>  officer of any component of the US armed forces?</html>");
+
+        Question2.setText("<html>Are you now, or have you ever been, a commissioned officer of any component of the armed forces<br></br>(including Reserve, USAF,USMC,USCG,USG,Merchant,Marine, or preparatory schools?)<br></br></html>");
+
+        Question3.setText("<html>Are you now, or have you ever been, an officer of the<br></br> Health Services and Metnal health Administsteration?</html>");
+
+        Question4.setText("Are you a U.S citizen? If yes, how obtained:");
+
+        Question5.setText("<html>If a naturalized citizen, or born outside of the U.S of <br></br>American parents, submit proof of citizenship. Reference AFROTCI 36-2011.)</html>");
+
+        Question6.setText("<html>Have you ever taken the AFOQT (if yes, indicate in remarks <br></br>section where and when.)</html>");
+
+        Question7.setText("<html>Have you ever had a physical for entry into the <br></br>armed forces, Air Force ROTC, etc?</html>");
+
+        Question8.setText("Have you ever been denied enlistment into the armed forces?");
+
+        Question10.setText("Do you already have a degree(BA, BS, etc?)");
+
+        Question11.setText("Are you an AFROTC ScholarShip Designee?");
+
+        Question9.setText("<html>Are you a conscientious objector?(A conscientious objector is defined as: <br></br> one who has or had a firm, fixed and sincere objection to participation in war in any form or to bearing of arms because of religious training or belief. which includes solely moral or ethical beliefs.)</html>");
+
+        Question12.setText("<html><br></br>Are you now or have you ever been\naffiliated with any organization or movement that seeks to alter our form of government by unconstitutional means, or sympathetically associated with any such organization, movement, or members thereof? (if yes, please describe)</html>");
+
+        Question13.setText("<html>Do you understand that participation in Air <br></br>Force ROTC required strenuous physical activity? (You will be required to obtain medicalclearance from a physician prior to program entry.)</html>");
+
+        userQuestion1A.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "No", "Yes" }));
+
+        userQuestion2A.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "No", "Yes" }));
+
+        userQuestion4A.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "No", "Yes" }));
+
+        userQuestion13A.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "No", "Yes" }));
+
+        userQuestion3A.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "No", "Yes" }));
+
+        userQuestion6B.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "N/A", "Birth", "Naturalized" }));
+
+        userQuestion7A.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "No", "Yes" }));
+
+        userQuestion8A.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "No", "Yes" }));
+
+        userQuestion9A.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "No", "Yes" }));
+
+        userQuestion12A.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "No", "Yes" }));
+
+        userQuestion10A.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "No", "Yes" }));
+
+        userQuestion11A.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "No", "Yes" }));
+
+        userQuestion10B.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "N/A", "4-year", "3-year" }));
+
+        jLabel10.setText("<html>Have you ever applied for, been enrolled, or on contract <br> in an Officer Training Program of the US army, <br>USAF, USMC, USCG, USN, Merchant Marine, or preparatory?</html>");
+
+        userQuestion6A.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "No", "Yes" }));
+        userQuestion6A.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                userQuestion6AActionPerformed(evt);
+            }
+        });
+
+        Question14.setText("<html>Are you now, or have you ever been, a memberr of the<br></br> National Oceanic Atmospheric Administration?</html>");
+
+        userQuestion5A.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "No", "Yes" }));
+
+        userQuestion14A.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "No", "Yes" }));
+        userQuestion14A.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                userQuestion14AActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
+        jPanel10.setLayout(jPanel10Layout);
+        jPanel10Layout.setHorizontalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel10Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel10Layout.createSequentialGroup()
+                        .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(Question2, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(Question1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(Question8)
+                                .addComponent(Question6, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(Question9, javax.swing.GroupLayout.PREFERRED_SIZE, 303, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(Question3, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(Question4)
+                                .addComponent(Question5, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(Question10)
+                                .addComponent(Question11)
+                                .addComponent(Question12, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 303, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(Question7, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(userQuestion8A, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(userQuestion13A, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(userQuestion7A, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(userQuestion12A, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel10Layout.createSequentialGroup()
+                                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(userQuestion11A, javax.swing.GroupLayout.Alignment.LEADING, 0, 113, Short.MAX_VALUE)
+                                    .addComponent(userQuestion10A, javax.swing.GroupLayout.Alignment.LEADING, 0, 1, Short.MAX_VALUE)
+                                    .addComponent(userQuestion9A, javax.swing.GroupLayout.Alignment.LEADING, 0, 1, Short.MAX_VALUE)
+                                    .addComponent(userQuestion4A, javax.swing.GroupLayout.Alignment.LEADING, 0, 1, Short.MAX_VALUE)
+                                    .addComponent(userQuestion3A, javax.swing.GroupLayout.Alignment.LEADING, 0, 0, Short.MAX_VALUE)
+                                    .addComponent(userQuestion2A, javax.swing.GroupLayout.Alignment.LEADING, 0, 1, Short.MAX_VALUE)
+                                    .addComponent(userQuestion1A, javax.swing.GroupLayout.Alignment.LEADING, 0, 1, Short.MAX_VALUE)
+                                    .addComponent(userQuestion6A, 0, 1, Short.MAX_VALUE))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(userQuestion6B, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(userQuestion10B, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(104, 104, 104))))
+                    .addGroup(jPanel10Layout.createSequentialGroup()
+                        .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel10Layout.createSequentialGroup()
+                                .addComponent(Question14, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(userQuestion5A, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel10Layout.createSequentialGroup()
+                                .addComponent(Question13, javax.swing.GroupLayout.PREFERRED_SIZE, 303, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(userQuestion14A, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(48, 48, 48))))
+        );
+        jPanel10Layout.setVerticalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel10Layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Question1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(userQuestion1A, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(userQuestion2A, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel10Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Question2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel10Layout.createSequentialGroup()
+                        .addGap(36, 36, 36)
+                        .addComponent(userQuestion3A, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Question3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(userQuestion4A, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Question14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(userQuestion5A, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Question4)
+                    .addComponent(userQuestion6A, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(userQuestion6B, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Question5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(Question6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(userQuestion7A, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(userQuestion8A, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Question7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Question8)
+                    .addComponent(userQuestion9A, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(21, 21, 21)
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Question10)
+                    .addComponent(userQuestion10A, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(userQuestion10B, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Question11)
+                    .addComponent(userQuestion11A, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(21, 21, 21)
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel10Layout.createSequentialGroup()
+                        .addGap(45, 45, 45)
+                        .addComponent(userQuestion12A, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(80, 80, 80)
+                        .addComponent(userQuestion13A, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel10Layout.createSequentialGroup()
+                        .addComponent(Question9, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 70, Short.MAX_VALUE)
+                        .addComponent(Question12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Question13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(userQuestion14A, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(448, Short.MAX_VALUE))
+        );
+
+        jTabbedPane2.addTab("Yes/No Questions", jPanel10);
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(searchCadet)
-                        .addGap(18, 18, 18)
-                        .addComponent(searchCadetButton, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(246, 246, 246)
-                        .addComponent(jLabel34))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(updateCadet, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(18, 18, 18)
-                        .addComponent(exportCadet, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(importCadet, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(cadetForm, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel34)
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 262, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(searchCadet, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(exportCadet, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 263, Short.MAX_VALUE)
+                                    .addComponent(updateCadet, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(0, 0, Short.MAX_VALUE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(importCadet, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 213, Short.MAX_VALUE)
+                            .addComponent(searchCadetButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addGap(94, 94, 94))
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addComponent(jTabbedPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 640, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 645, Short.MAX_VALUE))
+                .addGap(0, 11, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1702,16 +1878,13 @@ public class adminInformation extends javax.swing.JFrame {
                     .addComponent(searchCadet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(searchCadetButton))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(importCadet)
-                    .addComponent(exportCadet)
-                    .addComponent(updateCadet))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(cadetForm, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(updateCadet)
+                    .addComponent(importCadet))
+                .addGap(19, 19, 19)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton2)
-                    .addComponent(jButton1))
+                    .addComponent(exportCadet))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTabbedPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 1232, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(1168, Short.MAX_VALUE))
@@ -1783,120 +1956,7 @@ public class adminInformation extends javax.swing.JFrame {
 
     private void searchCadetButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchCadetButtonActionPerformed
         Fill();
-        /*
-        Connection con;
-        searchID = searchCadet.getText();
-        try {
-            String url = "jdbc:derby://localhost:1527/CadetInfo";
-            String username = "adminCadre";
-            String password = "cadrecwu";
-            con = DriverManager.getConnection(url, username, password);
-            Statement sta = con.createStatement();
-            ResultSet rs = sta.executeQuery("Select * From INFO WHERE CWUID ='"+ searchID+"'");
-            if(rs.next()){
-                
-                userLN.setText(rs.getString("LASTNAME"));
-                userFN.setText(rs.getString("FIRSTNAME"));
-                userMN.setText(rs.getString("MIDDLEINITIAL"));
-                userCWUID.setText(rs.getString("CWUID"));
-                userEmail.setText(rs.getString("EMAIL"));
-                userDoB.setText(rs.getString("DATEOFBIRTHMDDYYYY"));
-                userAreaCode.setText(rs.getString("PHONENUMBER").substring(1, 4));
-                userMPN.setText(rs.getString("PHONENUMBER").substring(6, 9));
-                userLPN.setText(rs.getString("PHONENUMBER").substring(10, 14));
-                userStreet.setText(rs.getString("STREETADDRESS"));
-                userApt.setText(rs.getString("APT"));
-                userCity.setText(rs.getString("CITY"));
-                userState.setText(rs.getString("STATE"));
-                userZip.setText(rs.getString("ZIPCODE"));
-                userGender.setSelectedItem(rs.getString("GENDER"));
-                userSSN.setText(rs.getString("SSAN"));
-                userAcMajor.setText(rs.getString("ACAMAJOR"));
-                userGradDate.setText(rs.getString("GRADDATE"));
-                userRace.setSelectedItem(rs.getString("ETHNICITY"));
-                userPoB.setText(rs.getString("PLACEOFBIRTH"));
-                userSelectiveServiceNum.setText(rs.getString("SELECTIVESERVERNUMBER"));
-                userDiffMailing.setSelectedItem(rs.getString("MAILINGYESORNO"));
-                userMailingStreet.setText(rs.getString("MAILINGSTREET"));
-                userMailingCity.setText(rs.getString("MAILINGCITY"));
-                userMailingState.setText(rs.getString("MAILINGSTATE"));
-                userMailingZip.setText(rs.getString("MAILINGZIP"));
-                userPriorS.setSelectedItem(rs.getString("PRIORSERVICE"));
-                userHasPriorS.setSelectedItem(rs.getString("PRIORSERVICEYES"));
-
-                //Family tab
-
-                userMaritialS.setSelectedItem(rs.getString("MARITIALSTATUS"));
-                userPartnerFN.setText(rs.getString("PARTNERFIRSTNAME"));
-                userPartnerMI.setText(rs.getString("PARTNERMI"));
-                userPartnerLN.setText(rs.getString("PARTNERLASTNAME"));
-                userPartnerStreet.setText(rs.getString("PARTNERADDRESS"));
-                userPartnerCity.setText(rs.getString("PARTNERCITY"));
-                userPartnerState.setText(rs.getString("PARTNERSTATE"));
-                userPartnerZipcode.setText(rs.getString("PARTNER"));
-                userPartnerNumber.setText(rs.getString("PARTNERNUMBER"));
-                userPartnerPoB.setText(rs.getString("PARTNERPOB"));
-                userNoD.setText(rs.getString("DEPENDENTS"));
-                userChildren.setSelectedItem(rs.getString("CHILDREN"));
-                userChildFirstName.setText(rs.getString("CHILDFIRSTNAME"));
-                userChildMI.setText(rs.getString("CHILDMI"));
-                userChildLastName.setText(rs.getString("CHILDLASTNAME"));
-                userChildDoB.setText(rs.getString("CHILDDOB"));
-                userChildRelationship.setText(rs.getString("CHILDRELATIONSHIP"));
-                userChildStreet.setText(rs.getString("CHILDADDRESS"));
-                userChildCity.setText(rs.getString("CHILDCITY"));
-                userChildState.setText(rs.getString("CHILDSTATE"));
-                userChildZip.setText(rs.getString("CHILDZIP"));
-                userChildPN.setText(rs.getString("CHILDNUMBER"));
-                userFatherFN.setText(rs.getString("FATHERFIRSTNAME"));
-                userFatherMI.setText(rs.getString("FATHERMI"));
-                userFatherLN.setText(rs.getString("FATHERLASTNAME"));
-                userFatherStreet.setText(rs.getString("FATHERADDRESS"));
-                userFatherCity.setText(rs.getString("FATHERCITY"));
-                userFatherState.setText(rs.getString("FATHERSTATE"));
-                userFatherZip.setText(rs.getString("FATHERZIP"));
-                userFatherNum.setText(rs.getString("FATHERPN"));
-                userMotherFN.setText(rs.getString("MOTHERFIRSTNAME"));
-                userMotherMI.setText(rs.getString("MOTHERMI"));
-                userMotherLN.setText(rs.getString("MOTHERLASTNAME"));
-                userMotherStreet.setText(rs.getString("MOTHERADDRESS"));
-                userMotherCity.setText(rs.getString("MOTHERCITY"));
-                userMotherState.setText(rs.getString("MOTHERSTATE"));
-                userMotherZip.setText(rs.getString("MOTHERZIP"));
-                userMotherNum.setText(rs.getString("MOTHERPN"));
-                userEmergency.setText(rs.getString("EMERGENCYCONTACT"));
-                userEmergencyStreet.setText(rs.getString("EMERGENCYSTREET"));
-                userEmergencyCity.setText(rs.getString("EMERGENCYCITY"));
-                userEmergencyState.setText(rs.getString("EMERGENCYSTATE"));
-                userEmergencyPN.setText(rs.getString("EMERGENCYNUMBER"));
-
-                //Other tab
-
-                userDeath.setText(rs.getString("DEATHBENEFICARY"));
-                userDeathRelationship.setText(rs.getString("DEATHBENEFICARYRELATIONSHIP"));
-                userDeathStreet.setText(rs.getString("DEATHBENEFICARYSTREET"));
-                userDeathCity.setText(rs.getString("DEATHBENEFICARYCITY"));
-                userDeathState.setText(rs.getString("DEATHBENEFICARYSTATE"));
-                userDeathZip.setText(rs.getString("DEATHBENEFICARYZIP"));
-                userDeathPN.setText(rs.getString("DEATHBENEFICARYPN"));
-                userDeathPercentage.setText(rs.getString("DEATHBENEFICARYPERCENT"));
-                userGuardStatus.setSelectedItem(rs.getString("GUARDIANPRIORSERVICE"));
-                userHasPriorGuardS.setSelectedItem(rs.getString("GUARDIANPRIORSERVICEYES"));
-                userGuardianYearsOfService.setText(rs.getString("GUARDIANPRIORSERVICEYEARS"));
-                userGuardianHighGrade.setText(rs.getString("GUARDIANPRIORSERVICEGRADE"));
-                userGuardianFrom.setText(rs.getString("GUARDIANPRIORSERVICESTART"));
-                userGuardianTo.setText(rs.getString("GUARDIANPRIORSERVICEEND"));
-                userGuardianType.setText(rs.getString("GUARDIANPRIORSERVICECHARGE"));
-                userGuardianYearsRem.setText(rs.getString("GUARDIANPRIORSERVICEREMAIN"));
-                userJuniorROTC.setSelectedItem(rs.getString("JUNIORROTC"));
-                userEagleScout.setSelectedItem(rs.getString("EAGLESCOUT"));
-                userEnlistment.setText(rs.getString("ENLISTEDWARRANT"));
-                
-            }
-        }catch(Exception e) {
-            System.err.println("Exception: "+e.getMessage());
-        }
-        */
+        
     }//GEN-LAST:event_searchCadetButtonActionPerformed
 
     private void importCadetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_importCadetActionPerformed
@@ -1931,6 +1991,7 @@ public class adminInformation extends javax.swing.JFrame {
             userRace.setSelectedItem(decryption.deCrypt(bufferedReader.readLine()));
             userPoB.setText(decryption.deCrypt(bufferedReader.readLine()));
             userSelectiveServiceNum.setText(decryption.deCrypt(bufferedReader.readLine()));
+            userDiffMailing.setSelectedItem(decryption.deCrypt(bufferedReader.readLine()));
             userMailingDorm.setText(decryption.deCrypt(bufferedReader.readLine()));
             userMailingStreet.setText(decryption.deCrypt(bufferedReader.readLine()));
             userMailingCity.setText(decryption.deCrypt(bufferedReader.readLine()));
@@ -2007,18 +2068,32 @@ public class adminInformation extends javax.swing.JFrame {
             userGuardianYearsRem.setText(decryption.deCrypt(bufferedReader.readLine()));
             userJuniorROTC.setSelectedItem(decryption.deCrypt(bufferedReader.readLine()));
             userEagleScout.setSelectedItem(decryption.deCrypt(bufferedReader.readLine()));
-            userEnlistment.setText(decryption.deCrypt(bufferedReader.readLine()));
             
+            //userEnlistment.setText(decryption.deCrypt(bufferedReader.readLine()));
+            //Yes or no tab
+            
+            userQuestion1A.setSelectedItem(decryption.deCrypt(bufferedReader.readLine()));
+            userQuestion2A.setSelectedItem(decryption.deCrypt(bufferedReader.readLine()));
+            userQuestion3A.setSelectedItem(decryption.deCrypt(bufferedReader.readLine()));
+            userQuestion4A.setSelectedItem(decryption.deCrypt(bufferedReader.readLine()));
+            userQuestion5A.setSelectedItem(decryption.deCrypt(bufferedReader.readLine()));
+            userQuestion6A.setSelectedItem(decryption.deCrypt(bufferedReader.readLine()));
+            userQuestion6B.setSelectedItem(decryption.deCrypt(bufferedReader.readLine()));
+            userQuestion7A.setSelectedItem(decryption.deCrypt(bufferedReader.readLine()));
+            userQuestion8A.setSelectedItem(decryption.deCrypt(bufferedReader.readLine()));
+            userQuestion9A.setSelectedItem(decryption.deCrypt(bufferedReader.readLine()));
+            userQuestion10A.setSelectedItem(decryption.deCrypt(bufferedReader.readLine()));
+            userQuestion10B.setSelectedItem(decryption.deCrypt(bufferedReader.readLine()));
+            userQuestion11A.setSelectedItem(decryption.deCrypt(bufferedReader.readLine()));
+            userQuestion12A.setSelectedItem(decryption.deCrypt(bufferedReader.readLine()));
+            userQuestion13A.setSelectedItem(decryption.deCrypt(bufferedReader.readLine()));
+            userQuestion14A.setSelectedItem(decryption.deCrypt(bufferedReader.readLine()));
 
         }
         catch(IOException ex) {
 
         }
     }//GEN-LAST:event_importCadetActionPerformed
-
-    private void cadetFormActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadetFormActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cadetFormActionPerformed
 
     private void updateCadetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateCadetActionPerformed
         Confirmation confirm = new Confirmation(userFN.getText(),userLN.getText(), userMN.getText(), userCWUID.getText(),userEmail.getText(),userDoB.getText(), userAreaCode.getText(), userMPN.getText(),userLPN.getText(),
@@ -2032,7 +2107,9 @@ public class adminInformation extends javax.swing.JFrame {
             userPartnerLN.getText(), userPartnerStreet.getText(),userPartnerCity.getText(),userPartnerState.getText(),userPartnerZip.getText(), userPartnerPN.getText(),
             userPartnerPoB.getText(), userChildren.getSelectedItem().toString(), userChildFN.getText(), userChildMI.getText(), userChildLN.getText(),
             userChildDoB.getText(), userChildRelationship.getText(), userChildStreet.getText(), userChildCity.getText(), userChildState.getText(), userChildZip.getText(), 
-            userChildPN.getText(), userFatherFN.getText(), userFatherMI.getText(), userFatherLN.getText(), userFatherStreet.getText(), userFatherCity.getText(),     
+            userChildPN.getText(), 
+                
+            userFatherFN.getText(), userFatherMI.getText(), userFatherLN.getText(), userFatherStreet.getText(), userFatherCity.getText(),     
             userFatherState.getText(), userFatherZip.getText(), userFatherPN.getText(), userMotherFN.getText(), userMotherMI.getText(), userMotherLN.getText(),   
             userMotherStreet.getText(), userMotherCity.getText(), userMotherState.getText(), userMotherZip.getText(), userMotherPN.getText(),    
             userEmergency.getText(), userEmergencyStreet.getText(), userEmergencyCity.getText(), userEmergencyState.getText(), userEmergencyZip.getText(), userEmergencyPN.getText(),
@@ -2041,23 +2118,12 @@ public class adminInformation extends javax.swing.JFrame {
             userDeathPN.getText(), userDeathPercentage.getText(), userGuardStatus.getSelectedItem().toString(), userHasPriorGuardS.getSelectedItem().toString(),
             userGuardianYearsOfService.getText(), userGuardianHighGrade.getText(), userGuardianFrom.getText(), userGuardianTo.getText(),
             userGuardianType.getText(), userGuardianYearsRem.getText(), userJuniorROTC.getSelectedItem().toString(), userEagleScout.getSelectedItem().toString(),
-            userEnlistment.getText());
             
-        /*
-
-            userDeathPercentage.setText(passedDBeneficiaryPercent);
-            userGuardStatus.setSelectedItem(passedGuardianPS);
-            userHasPriorGuardS.setSelectedItem(passedGuardianHasPS);
-            userGuardianYearsOfService.setText(passedGuardianPSYears);
-            userGuardianHighGrade.setText(passedGuardianPSGrade);
-            userGuardianFrom.setText(passedGuardianPSStart);
-            userGuardianTo.setText(passedGuardianPSFinish);
-            userGuardianType.setText(passedGuardianPSDischarge);
-            userGuardianYearsRem.setText(passedGuardianPSRemaining);
-            userJuniorROTC.setSelectedItem(psasedJunior);
-            userEagleScout.setSelectedItem(passedEagle);
-            userEnlistment.setText(passedEnlisted);
-        */
+            userQuestion1A.getSelectedItem().toString(), userQuestion2A.getSelectedItem().toString(), userQuestion3A.getSelectedItem().toString(), userQuestion4A.getSelectedItem().toString(),
+            userQuestion5A.getSelectedItem().toString(), userQuestion6A.getSelectedItem().toString(), userQuestion6B.getSelectedItem().toString(), userQuestion7A.getSelectedItem().toString(), userQuestion8A.getSelectedItem().toString(),
+            userQuestion9A.getSelectedItem().toString(), userQuestion10A.getSelectedItem().toString(), userQuestion10B.getSelectedItem().toString(), userQuestion11A.getSelectedItem().toString(), 
+            userQuestion12A.getSelectedItem().toString(), userQuestion13A.getSelectedItem().toString(), userQuestion14A.getSelectedItem().toString());
+  
         confirm.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_updateCadetActionPerformed
@@ -2065,119 +2131,6 @@ public class adminInformation extends javax.swing.JFrame {
     private void searchCadetKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_searchCadetKeyPressed
         if (evt.getKeyCode()==KeyEvent.VK_ENTER){
             Fill();
-            /*
-            Connection con;
-            searchID = searchCadet.getText();
-            try {
-                String url = "jdbc:derby://localhost:1527/CadetInfo";
-                String username = "adminCadre";
-                String password = "cadrecwu";
-                con = DriverManager.getConnection(url, username, password);
-                Statement sta = con.createStatement();
-                ResultSet rs = sta.executeQuery("Select * From INFO WHERE CWUID ='"+ searchID+"'");
-                if(rs.next()){
-                    
-                    userLN.setText(rs.getString("LASTNAME"));
-                    userFN.setText(rs.getString("FIRSTNAME"));
-                    userMN.setText(rs.getString("MIDDLEINITIAL"));
-                    userCWUID.setText(rs.getString("CWUID"));
-                    userEmail.setText(rs.getString("EMAIL"));
-                    userDoB.setText(rs.getString("DATEOFBIRTHMDDYYYY"));
-                    userAreaCode.setText(rs.getString("PHONENUMBER").substring(1, 4));
-                    userMPN.setText(rs.getString("PHONENUMBER").substring(6, 9));
-                    userLPN.setText(rs.getString("PHONENUMBER").substring(10, 14));
-                    userStreet.setText(rs.getString("STREETADDRESS"));
-                    userApt.setText(rs.getString("APT"));
-                    userCity.setText(rs.getString("CITY"));
-                    userState.setText(rs.getString("STATE"));
-                    userZip.setText(rs.getString("ZIPCODE"));
-                    userGender.setSelectedItem(rs.getString("GENDER"));
-                    userSSN.setText(rs.getString("SSAN"));
-                    userAcMajor.setText(rs.getString("ACAMAJOR"));
-                    userGradDate.setText(rs.getString("GRADDATE"));
-                    userRace.setSelectedItem(rs.getString("ETHNICITY"));
-                    userPoB.setText(rs.getString("PLACEOFBIRTH"));
-                    userSelectiveServiceNum.setText(rs.getString("SELECTIVESERVERNUMBER"));
-                    userDiffMailing.setSelectedItem(rs.getString("MAILINGYESORNO"));
-                    userMailingStreet.setText(rs.getString("MAILINGSTREET"));
-                    userMailingCity.setText(rs.getString("MAILINGCITY"));
-                    userMailingState.setText(rs.getString("MAILINGSTATE"));
-                    userMailingZip.setText(rs.getString("MAILINGZIP"));
-                    userPriorS.setSelectedItem(rs.getString("PRIORSERVICE"));
-                    userHasPriorS.setSelectedItem(rs.getString("PRIORSERVICEYES"));
-
-                    //Family tab
-
-                    userMaritialS.setSelectedItem(rs.getString("MARITIALSTATUS"));
-                    userPartnerFN.setText(rs.getString("PARTNERFIRSTNAME"));
-                    userPartnerMI.setText(rs.getString("PARTNERMI"));
-                    userPartnerLN.setText(rs.getString("PARTNERLASTNAME"));
-                    userPartnerStreet.setText(rs.getString("PARTNERADDRESS"));
-                    userPartnerCity.setText(rs.getString("PARTNERCITY"));
-                    userPartnerState.setText(rs.getString("PARTNERSTATE"));
-                    userPartnerZipcode.setText(rs.getString("PARTNER"));
-                    userPartnerNumber.setText(rs.getString("PARTNERNUMBER"));
-                    userPartnerPoB.setText(rs.getString("PARTNERPOB"));
-                    userNoD.setText(rs.getString("DEPENDENTS"));
-                    userChildren.setSelectedItem(rs.getString("CHILDREN"));
-                    userChildFirstName.setText(rs.getString("CHILDFIRSTNAME"));
-                    userChildMI.setText(rs.getString("CHILDMI"));
-                    userChildLastName.setText(rs.getString("CHILDLASTNAME"));
-                    userChildDoB.setText(rs.getString("CHILDDOB"));
-                    userChildRelationship.setText(rs.getString("CHILDRELATIONSHIP"));
-                    userChildStreet.setText(rs.getString("CHILDADDRESS"));
-                    userChildCity.setText(rs.getString("CHILDCITY"));
-                    userChildState.setText(rs.getString("CHILDSTATE"));
-                    userChildZip.setText(rs.getString("CHILDZIP"));
-                    userFatherFN.setText(rs.getString("FATHERFIRSTNAME"));
-                    userFatherMI.setText(rs.getString("FATHERMI"));
-                    userFatherLN.setText(rs.getString("FATHERLASTNAME"));
-                    userFatherStreet.setText(rs.getString("FATHERADDRESS"));
-                    userFatherCity.setText(rs.getString("FATHERCITY"));
-                    userFatherState.setText(rs.getString("FATHERSTATE"));
-                    userFatherZip.setText(rs.getString("FATHERZIP"));
-                    userFatherNum.setText(rs.getString("FATHERPN"));
-                    userMotherFN.setText(rs.getString("MOTHERFIRSTNAME"));
-                    userMotherMI.setText(rs.getString("MOTHERMI"));
-                    userMotherLN.setText(rs.getString("MOTHERLASTNAME"));
-                    userMotherStreet.setText(rs.getString("MOTHERADDRESS"));
-                    userMotherCity.setText(rs.getString("MOTHERCITY"));
-                    userMotherState.setText(rs.getString("MOTHERSTATE"));
-                    userMotherZip.setText(rs.getString("MOTHERZIP"));
-                    userMotherNum.setText(rs.getString("MOTHERPN"));
-                    userEmergency.setText(rs.getString("EMERGENCYCONTACT"));
-                    userEmergencyStreet.setText(rs.getString("EMERGENCYSTREET"));
-                    userEmergencyCity.setText(rs.getString("EMERGENCYCITY"));
-                    userEmergencyState.setText(rs.getString("EMERGENCYSTATE"));
-                    userEmergencyPN.setText(rs.getString("EMERGENCYNUMBER"));
-
-                    //Other tab
-
-                    userDeath.setText(rs.getString("DEATHBENEFICARY"));
-                    userDeathRelationship.setText(rs.getString("DEATHBENEFICARYRELATIONSHIP"));
-                    userDeathStreet.setText(rs.getString("DEATHBENEFICARYSTREET"));
-                    userDeathCity.setText(rs.getString("DEATHBENEFICARYCITY"));
-                    userDeathState.setText(rs.getString("DEATHBENEFICARYSTATE"));
-                    userDeathZip.setText(rs.getString("DEATHBENEFICARYZIP"));
-                    userDeathPN.setText(rs.getString("DEATHBENEFICARYPN"));
-                    userDeathPercentage.setText(rs.getString("DEATHBENEFICARYPERCENT"));
-                    userGuardStatus.setSelectedItem(rs.getString("GUARDIANPRIORSERVICE"));
-                    userHasPriorGuardS.setSelectedItem(rs.getString("GUARDIANPRIORSERVICEYES"));
-                    userGuardianYearsOfService.setText(rs.getString("GUARDIANPRIORSERVICEYEARS"));
-                    userGuardianHighGrade.setText(rs.getString("GUARDIANPRIORSERVICEGRADE"));
-                    userGuardianFrom.setText(rs.getString("GUARDIANPRIORSERVICESTART"));
-                    userGuardianTo.setText(rs.getString("GUARDIANPRIORSERVICEEND"));
-                    userGuardianType.setText(rs.getString("GUARDIANPRIORSERVICECHARGE"));
-                    userGuardianYearsRem.setText(rs.getString("GUARDIANPRIORSERVICEREMAIN"));
-                    userJuniorROTC.setSelectedItem(rs.getString("JUNIORROTC"));
-                    userEagleScout.setSelectedItem(rs.getString("EAGLESCOUT"));
-                    userEnlistment.setText(rs.getString("ENLISTEDWARRANT"));
-
-                }
-            }catch(Exception e) {
-                System.err.println("Exception: "+e.getMessage());
-            }
-            */
             
         }
             
@@ -2220,16 +2173,20 @@ public class adminInformation extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        //XSSFWorkbook  workbook = new XSSFWorkbook ();
-        //Map<String, Object[]> data = new HashMap<String, Object[]>();
-        //FileReader fileReader = new FileReader(fileName);
-        //BufferedReader bufferedReader = new BufferedReader(fileReader);
-    }//GEN-LAST:event_jButton1ActionPerformed
-
     private void exportCadetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exportCadetActionPerformed
+        adminInformation parentFrame = new adminInformation();
+        JFileChooser fileChooser = new JFileChooser();
+        fileChooser.setDialogTitle("Specify a file to save");
+        
+        int userSelection = fileChooser.showSaveDialog(parentFrame);
+        
+        if (userSelection == JFileChooser.APPROVE_OPTION) {
+            File fileToSave = fileChooser.getSelectedFile();
+        
+            String userFile = fileToSave.getAbsolutePath();
+        
         try { 
-            PrintWriter outputFile = new PrintWriter ("cadetPDF.txt");
+            PrintWriter outputFile = new PrintWriter (userFile);
             outputFile.print("LASTNAME\t");
             outputFile.print("FIRSTNAME\t");
             outputFile.print("MIDDLEINITIAL\t");
@@ -2293,7 +2250,6 @@ public class adminInformation extends javax.swing.JFrame {
             outputFile.print("DEATHBENEFICARYRELATIONSHIP\t");
             outputFile.print("DEATHBENEFICARYADDRESS\t");
             outputFile.print("DEATHBENEFICARYPERCENT\t");
-            outputFile.print("MAILINGADDRESSPHONE\t");
             outputFile.print("MAILINGADDRESSEMAIL\t");
             outputFile.print("INITIALS\t");
             outputFile.print("PARTNERZIPCODE\t");
@@ -2329,6 +2285,7 @@ public class adminInformation extends javax.swing.JFrame {
             outputFile.print("PARTNERLASTNAME\t");
             outputFile.print("CHILDNUMBER\t");
             outputFile.print("EMERGENCYZIP\t");
+            outputFile.print("MAILINGDORM\t");
             outputFile.println();
             
             
@@ -2370,7 +2327,7 @@ public class adminInformation extends javax.swing.JFrame {
             outputFile.print(userChildren.getSelectedItem().toString()+"\t");
             outputFile.print(userPriorS.getSelectedItem().toString()+"\t");
             outputFile.print(userEagleScout.getSelectedItem().toString()+"\t");
-            outputFile.print(userEnlistment.getText()+"\t");
+            outputFile.print(userQuestion1A.getSelectedItem().toString()+"\t");
             outputFile.print(userGuardStatus.getSelectedItem().toString()+"\t");
             outputFile.print(userHasPriorGuardS.getSelectedItem().toString()+"\t");
             
@@ -2435,12 +2392,7 @@ public class adminInformation extends javax.swing.JFrame {
                    + userDeathPN.getText() + "\t");
             
             outputFile.print(userDeathPercentage.getText()+"\t");
-            
-            //Permanent Mailing no Email
-            outputFile.print(userStreet.getText() + ", " + userCity.getText() + ", " 
-                   + userState.getText() + ", " + userZip.getText() + ", "
-                   + userAreaCode.getText() + "-" +  userMPN.getText() + "-" + userLPN.getText() + "\t");
-            
+         
             //Permanent Mailing with Email
             outputFile.print(userStreet.getText() + ", " + userCity.getText() + ", " 
                    + userState.getText() + ", " + userZip.getText() + ", "
@@ -2487,11 +2439,14 @@ public class adminInformation extends javax.swing.JFrame {
             outputFile.print(userPartnerMI.getText()+"\t");
             outputFile.print(userPartnerLN.getText()+"\t");
             outputFile.print(userChildPN.getText()+"\t");
+            outputFile.print(userEmergencyZip.getText()+"\t");
+            outputFile.print(userMailingDorm.getText()+"\t");
             
             outputFile.close();
             
         } catch (FileNotFoundException ex) {
             Logger.getLogger(adminInformation.class.getName()).log(Level.SEVERE, null, ex);
+        }
         }
         
     }//GEN-LAST:event_exportCadetActionPerformed
@@ -2526,7 +2481,7 @@ public class adminInformation extends javax.swing.JFrame {
             userHasPriorS.setEnabled(true);
 
         }else
-        userHasPriorS.setEnabled(false);
+            userHasPriorS.setEnabled(false);
     }//GEN-LAST:event_userPriorSActionPerformed
 
     private void userPriorSPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_userPriorSPropertyChange
@@ -2569,6 +2524,17 @@ public class adminInformation extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_userFatherFNActionPerformed
 
+    private void userQuestion6AActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userQuestion6AActionPerformed
+        String yes = (String)userDiffMailing.getSelectedItem();
+        if(yes.equals("Yes")) {
+            userQuestion6B.setEnabled(true);
+        }
+    }//GEN-LAST:event_userQuestion6AActionPerformed
+
+    private void userQuestion14AActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userQuestion14AActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_userQuestion14AActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -2606,11 +2572,23 @@ public class adminInformation extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> cadetForm;
+    private javax.swing.JLabel Question1;
+    private javax.swing.JLabel Question10;
+    private javax.swing.JLabel Question11;
+    private javax.swing.JLabel Question12;
+    private javax.swing.JLabel Question13;
+    private javax.swing.JLabel Question14;
+    private javax.swing.JLabel Question2;
+    private javax.swing.JLabel Question3;
+    private javax.swing.JLabel Question4;
+    private javax.swing.JLabel Question5;
+    private javax.swing.JLabel Question6;
+    private javax.swing.JLabel Question7;
+    private javax.swing.JLabel Question8;
+    private javax.swing.JLabel Question9;
     private javax.swing.JButton exportCadet;
     private javax.swing.JButton goBack;
     private javax.swing.JButton importCadet;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel10;
@@ -2706,6 +2684,7 @@ public class adminInformation extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelStreet;
     private javax.swing.JLabel jLabelZip;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
@@ -2754,7 +2733,6 @@ public class adminInformation extends javax.swing.JFrame {
     private javax.swing.JTextField userEmergencyState;
     private javax.swing.JTextField userEmergencyStreet;
     private javax.swing.JTextField userEmergencyZip;
-    private javax.swing.JTextField userEnlistment;
     private javax.swing.JTextField userFN;
     private javax.swing.JTextField userFatherCity;
     private javax.swing.JTextField userFatherFN;
@@ -2808,6 +2786,22 @@ public class adminInformation extends javax.swing.JFrame {
     private javax.swing.JTextField userPartnerZip;
     private javax.swing.JTextField userPoB;
     private javax.swing.JComboBox<String> userPriorS;
+    private javax.swing.JComboBox userQuestion10A;
+    private javax.swing.JComboBox userQuestion10B;
+    private javax.swing.JComboBox userQuestion11A;
+    private javax.swing.JComboBox userQuestion12A;
+    private javax.swing.JComboBox userQuestion13A;
+    private javax.swing.JComboBox userQuestion14A;
+    private javax.swing.JComboBox userQuestion1A;
+    private javax.swing.JComboBox userQuestion2A;
+    private javax.swing.JComboBox userQuestion3A;
+    private javax.swing.JComboBox userQuestion4A;
+    private javax.swing.JComboBox userQuestion5A;
+    private javax.swing.JComboBox userQuestion6A;
+    private javax.swing.JComboBox userQuestion6B;
+    private javax.swing.JComboBox userQuestion7A;
+    private javax.swing.JComboBox userQuestion8A;
+    private javax.swing.JComboBox userQuestion9A;
     private javax.swing.JComboBox<String> userRace;
     private javax.swing.JTextField userSSN;
     private javax.swing.JTextField userSelectiveServiceNum;
