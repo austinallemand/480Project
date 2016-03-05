@@ -71,9 +71,9 @@
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+              <EmptySpace min="-2" max="-2" attributes="0"/>
               <Component id="jScrollPane2" min="-2" pref="1434" max="-2" attributes="0"/>
-              <EmptySpace pref="465" max="32767" attributes="0"/>
+              <EmptySpace pref="498" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -235,16 +235,14 @@
                                           <Component id="jLabel18" alignment="1" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="userMailingDorm" min="-2" pref="115" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                              <Component id="userSelectiveServiceNum" max="32767" attributes="0"/>
-                                              <Component id="userDiffMailing" pref="191" max="32767" attributes="0"/>
-                                          </Group>
-                                          <Component id="userMailingStreet" alignment="0" min="-2" pref="115" max="-2" attributes="0"/>
-                                          <Component id="userMailingCity" alignment="0" min="-2" pref="115" max="-2" attributes="0"/>
-                                          <Component id="userMailingState" alignment="0" min="-2" pref="115" max="-2" attributes="0"/>
-                                          <Component id="userMailingZip" min="-2" pref="115" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Component id="userSelectiveServiceNum" alignment="0" pref="151" max="32767" attributes="0"/>
+                                          <Component id="userDiffMailing" alignment="0" min="-2" pref="62" max="-2" attributes="0"/>
+                                          <Component id="userMailingDorm" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="userMailingStreet" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="userMailingCity" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="userMailingZip" alignment="0" pref="151" max="32767" attributes="0"/>
+                                          <Component id="userMailingState" alignment="0" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
@@ -277,7 +275,6 @@
                                           </Group>
                                       </Group>
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="userDoB" alignment="0" min="-2" pref="162" max="-2" attributes="0"/>
                                           <Group type="102" alignment="0" attributes="0">
                                               <Component id="userAreaCode" min="-2" pref="46" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
@@ -292,17 +289,20 @@
                                           <Component id="userZip" alignment="0" min="-2" pref="59" max="-2" attributes="0"/>
                                           <Component id="userAcMajor" alignment="0" min="-2" pref="153" max="-2" attributes="0"/>
                                           <Component id="userGradDate" alignment="0" min="-2" pref="153" max="-2" attributes="0"/>
-                                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                              <Component id="userSSN" alignment="0" min="-2" pref="153" max="-2" attributes="0"/>
-                                              <Component id="userFN" alignment="0" pref="371" max="32767" attributes="0"/>
-                                              <Component id="userEmail" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="userCWUID" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="userLN" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="userMN" alignment="0" max="32767" attributes="0"/>
-                                          </Group>
+                                          <Component id="userSSN" alignment="0" min="-2" pref="153" max="-2" attributes="0"/>
                                           <Component id="userRace" alignment="0" min="-2" max="-2" attributes="0"/>
                                           <Component id="userGender" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="userPoB" min="-2" pref="191" max="-2" attributes="0"/>
+                                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                              <Component id="userMN" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="userCWUID" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="userEmail" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="userDoB" alignment="0" pref="162" max="32767" attributes="0"/>
+                                          </Group>
+                                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                              <Component id="userLN" alignment="0" pref="161" max="32767" attributes="0"/>
+                                              <Component id="userFN" alignment="0" max="32767" attributes="0"/>
+                                          </Group>
+                                          <Component id="userPoB" alignment="0" min="-2" pref="151" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
@@ -329,7 +329,7 @@
                                       </Group>
                                   </Group>
                               </Group>
-                              <EmptySpace pref="68" max="32767" attributes="0"/>
+                              <EmptySpace pref="210" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -855,34 +855,30 @@
                                   </Group>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="userPartnerStreet" max="32767" attributes="0"/>
-                                  <Component id="userPartnerState" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="userPartnerZip" alignment="0" max="32767" attributes="0"/>
-                                  <Group type="102" attributes="0">
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="userChildPN" min="-2" pref="142" max="-2" attributes="0"/>
-                                          <Component id="userChildState" min="-2" pref="142" max="-2" attributes="0"/>
-                                          <Component id="userMaritialS" alignment="0" min="-2" pref="142" max="-2" attributes="0"/>
-                                          <Component id="userPartnerFN" alignment="0" min="-2" pref="184" max="-2" attributes="0"/>
-                                          <Component id="userPartnerMI" min="-2" pref="40" max="-2" attributes="0"/>
-                                          <Component id="userPartnerLN" min="-2" pref="184" max="-2" attributes="0"/>
-                                          <Component id="userPartnerCity" alignment="0" min="-2" pref="99" max="-2" attributes="0"/>
-                                          <Component id="userPartnerPN" alignment="0" min="-2" pref="142" max="-2" attributes="0"/>
-                                          <Component id="userPartnerPoB" alignment="0" min="-2" pref="142" max="-2" attributes="0"/>
-                                          <Component id="userChildren" alignment="0" min="-2" pref="102" max="-2" attributes="0"/>
-                                          <Component id="userChildFN" alignment="0" min="-2" pref="142" max="-2" attributes="0"/>
-                                          <Component id="userChildMI" alignment="0" min="-2" pref="142" max="-2" attributes="0"/>
-                                          <Component id="userChildLN" alignment="0" min="-2" pref="142" max="-2" attributes="0"/>
-                                          <Component id="userChildDoB" min="-2" pref="142" max="-2" attributes="0"/>
-                                          <Component id="userChildRelationship" min="-2" pref="142" max="-2" attributes="0"/>
-                                          <Component id="userChildStreet" min="-2" pref="142" max="-2" attributes="0"/>
-                                          <Component id="userChildCity" min="-2" pref="142" max="-2" attributes="0"/>
-                                          <Component id="userChildZip" alignment="0" min="-2" pref="142" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace min="0" pref="241" max="32767" attributes="0"/>
-                                  </Group>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="userChildPN" alignment="0" min="-2" pref="142" max="-2" attributes="0"/>
+                                  <Component id="userPartnerMI" alignment="0" min="-2" pref="40" max="-2" attributes="0"/>
+                                  <Component id="userPartnerPN" alignment="0" min="-2" pref="142" max="-2" attributes="0"/>
+                                  <Component id="userPartnerPoB" alignment="0" min="-2" pref="142" max="-2" attributes="0"/>
+                                  <Component id="userChildLN" alignment="0" min="-2" pref="142" max="-2" attributes="0"/>
+                                  <Component id="userChildDoB" alignment="0" min="-2" pref="142" max="-2" attributes="0"/>
+                                  <Component id="userChildRelationship" alignment="0" min="-2" pref="142" max="-2" attributes="0"/>
+                                  <Component id="userChildCity" alignment="0" min="-2" pref="142" max="-2" attributes="0"/>
+                                  <Component id="userChildZip" alignment="0" min="-2" pref="142" max="-2" attributes="0"/>
+                                  <Component id="userChildren" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="userChildFN" alignment="0" pref="197" max="32767" attributes="0"/>
+                                  <Component id="userPartnerLN" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="userPartnerFN" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="userMaritialS" alignment="0" pref="197" max="32767" attributes="0"/>
+                                  <Component id="userPartnerStreet" alignment="0" pref="197" max="32767" attributes="0"/>
+                                  <Component id="userPartnerState" alignment="0" min="-2" pref="53" max="-2" attributes="0"/>
+                                  <Component id="userPartnerCity" alignment="0" min="-2" pref="143" max="-2" attributes="0"/>
+                                  <Component id="userPartnerZip" min="-2" pref="89" max="-2" attributes="0"/>
+                                  <Component id="userChildMI" alignment="0" min="-2" pref="41" max="-2" attributes="0"/>
+                                  <Component id="userChildStreet" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="userChildState" alignment="0" min="-2" pref="46" max="-2" attributes="0"/>
                               </Group>
+                              <EmptySpace min="0" pref="228" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1220,37 +1216,43 @@
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="userFatherMI" max="32767" attributes="0"/>
-                                  <Component id="userFatherLN" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="userFatherStreet" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="userFatherCity" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="userFatherState" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="userFatherZip" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="userFatherPN" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="userMotherFN" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="userMotherMI" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="userMotherLN" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="userMotherStreet" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="userMotherCity" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="userMotherState" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="userMotherZip" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="userMotherPN" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="userEmergency" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="userEmergencyStreet" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="userEmergencyCity" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="userEmergencyState" alignment="0" pref="391" max="32767" attributes="0"/>
-                                  <Component id="userEmergencyZip" alignment="0" pref="391" max="32767" attributes="0"/>
-                                  <Component id="userEmergencyPN" max="32767" attributes="0"/>
-                                  <Component id="userFatherFN" alignment="0" max="32767" attributes="0"/>
+                                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                      <Component id="userEmergency" alignment="0" max="32767" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                              <Component id="userMotherStreet" alignment="0" pref="224" max="32767" attributes="0"/>
+                                              <Component id="userFatherLN" alignment="0" pref="224" max="32767" attributes="0"/>
+                                              <Component id="userFatherFN" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="userFatherMI" alignment="0" min="-2" pref="42" max="-2" attributes="0"/>
+                                              <Component id="userFatherStreet" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="userFatherCity" alignment="0" min="-2" pref="155" max="-2" attributes="0"/>
+                                              <Component id="userFatherState" alignment="0" min="-2" pref="40" max="-2" attributes="0"/>
+                                              <Component id="userFatherZip" alignment="0" min="-2" pref="87" max="-2" attributes="0"/>
+                                              <Component id="userFatherPN" alignment="0" min="-2" pref="155" max="-2" attributes="0"/>
+                                              <Component id="userMotherFN" alignment="0" min="-2" pref="155" max="-2" attributes="0"/>
+                                              <Component id="userMotherMI" alignment="0" min="-2" pref="39" max="-2" attributes="0"/>
+                                              <Component id="userMotherLN" alignment="0" min="-2" pref="155" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Component id="userMotherCity" alignment="0" min="-2" pref="153" max="-2" attributes="0"/>
+                                          <Component id="userMotherState" alignment="0" min="-2" pref="42" max="-2" attributes="0"/>
+                                          <Component id="userMotherZip" alignment="0" min="-2" pref="87" max="-2" attributes="0"/>
+                                          <Component id="userMotherPN" alignment="0" min="-2" pref="153" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Component id="userEmergencyStreet" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="userEmergencyCity" alignment="0" min="-2" pref="157" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="userEmergencyState" alignment="0" min="-2" pref="52" max="-2" attributes="0"/>
+                                  <Component id="userEmergencyZip" alignment="0" min="-2" pref="99" max="-2" attributes="0"/>
+                                  <Component id="userEmergencyPN" min="-2" pref="157" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace max="-2" attributes="0"/>
+                              <EmptySpace pref="177" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel67" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="userFatherFN" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -1360,7 +1362,7 @@
                                   <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="userEmergencyPN" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="627" max="32767" attributes="0"/>
+                              <EmptySpace pref="618" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1538,7 +1540,7 @@
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="146" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="86" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="1" attributes="0">
                                   <Component id="jLabelDB" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel59" alignment="1" min="-2" max="-2" attributes="0"/>
@@ -1557,19 +1559,12 @@
                                   <Component id="jLabel80" alignment="1" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabelJROTC1" alignment="1" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabelEagleScount1" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jButton3" alignment="1" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="userDeath" pref="260" max="32767" attributes="0"/>
-                                          <Component id="userDeathRelationship" max="32767" attributes="0"/>
                                           <Component id="userDeathStreet" max="32767" attributes="0"/>
-                                          <Component id="userDeathCity" max="32767" attributes="0"/>
-                                          <Component id="userDeathState" max="32767" attributes="0"/>
-                                          <Component id="userDeathZip" pref="260" max="32767" attributes="0"/>
-                                          <Component id="userDeathPN" pref="260" max="32767" attributes="0"/>
                                           <Group type="102" attributes="0">
                                               <Group type="103" groupAlignment="0" attributes="0">
                                                   <Component id="userDeathPercentage" min="-2" pref="59" max="-2" attributes="0"/>
@@ -1578,22 +1573,27 @@
                                                       <EmptySpace max="-2" attributes="0"/>
                                                       <Component id="userHasPriorGuardS" min="-2" pref="88" max="-2" attributes="0"/>
                                                   </Group>
+                                                  <Component id="userDeath" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
+                                                  <Component id="userDeathRelationship" alignment="0" min="-2" pref="104" max="-2" attributes="0"/>
+                                                  <Component id="userDeathCity" alignment="0" min="-2" pref="148" max="-2" attributes="0"/>
+                                                  <Component id="userDeathState" alignment="0" min="-2" pref="52" max="-2" attributes="0"/>
+                                                  <Component id="userDeathZip" alignment="0" min="-2" pref="99" max="-2" attributes="0"/>
+                                                  <Component id="userDeathPN" alignment="0" min="-2" pref="148" max="-2" attributes="0"/>
+                                                  <Component id="userGuardianYearsOfService" alignment="0" min="-2" pref="97" max="-2" attributes="0"/>
+                                                  <Component id="userGuardianHighGrade" alignment="0" min="-2" pref="97" max="-2" attributes="0"/>
+                                                  <Component id="userGuardianFrom" alignment="0" min="-2" pref="97" max="-2" attributes="0"/>
+                                                  <Component id="userGuardianTo" alignment="0" min="-2" pref="97" max="-2" attributes="0"/>
+                                                  <Component id="userGuardianType" alignment="0" min="-2" pref="148" max="-2" attributes="0"/>
+                                                  <Component id="userGuardianYearsRem" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                                                  <Component id="userJuniorROTC" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
                                               </Group>
-                                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                              <EmptySpace min="0" pref="86" max="32767" attributes="0"/>
                                           </Group>
-                                          <Component id="userGuardianYearsOfService" max="32767" attributes="0"/>
-                                          <Component id="userGuardianHighGrade" max="32767" attributes="0"/>
-                                          <Component id="userGuardianFrom" max="32767" attributes="0"/>
-                                          <Component id="userGuardianTo" max="32767" attributes="0"/>
-                                          <Component id="userGuardianType" max="32767" attributes="0"/>
-                                          <Component id="userGuardianYearsRem" alignment="0" pref="260" max="32767" attributes="0"/>
-                                          <Component id="userJuniorROTC" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="userEagleScout" pref="260" max="32767" attributes="0"/>
                                       </Group>
-                                      <EmptySpace pref="76" max="32767" attributes="0"/>
+                                      <EmptySpace pref="112" max="32767" attributes="0"/>
                                   </Group>
-                                  <Group type="102" attributes="0">
-                                      <Component id="goBack" min="-2" pref="74" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="userEagleScout" min="-2" pref="100" max="-2" attributes="0"/>
                                       <EmptySpace max="32767" attributes="0"/>
                                   </Group>
                               </Group>
@@ -1689,33 +1689,12 @@
                                   <Component id="jLabelEagleScount1" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="userEagleScout" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace type="separate" max="32767" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jButton3" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="goBack" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="875" max="-2" attributes="0"/>
+                              <EmptySpace pref="740" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
                   </Layout>
                   <SubComponents>
-                    <Component class="javax.swing.JButton" name="jButton3">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="Submit"/>
-                      </Properties>
-                      <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton3ActionPerformed"/>
-                      </Events>
-                    </Component>
-                    <Component class="javax.swing.JButton" name="goBack">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="Cancel"/>
-                      </Properties>
-                      <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="goBackActionPerformed"/>
-                      </Events>
-                    </Component>
                     <Component class="javax.swing.JLabel" name="jLabelDB">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Death beneficiary:"/>
@@ -2061,7 +2040,7 @@
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="Question9" min="-2" pref="94" max="-2" attributes="0"/>
-                                      <EmptySpace pref="70" max="32767" attributes="0"/>
+                                      <EmptySpace pref="11" max="32767" attributes="0"/>
                                       <Component id="Question12" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -2070,7 +2049,7 @@
                                   <Component id="Question13" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="userQuestion14A" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="448" max="32767" attributes="0"/>
+                              <EmptySpace pref="389" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
