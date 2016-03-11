@@ -1,3 +1,6 @@
+
+import java.util.StringTokenizer;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -18,7 +21,9 @@ public class decrypt {
         for(int swi = 0; swi <decrypt.length; swi++) {
            
            switch(decrypt[swi]) {
-               
+               case ' ':
+               decrypt[swi] = ' ';
+               break;
                case 'm':
                decrypt[swi] = 'a';
                break;
@@ -149,10 +154,34 @@ public class decrypt {
         
         String decrypt3 = new StringBuffer(decrypt2).reverse().toString();
         
+        String capLetters = "";
         
+        
+            
         
         
         decrypt3 = decrypt3.substring(0, 1).toUpperCase() + decrypt3.substring(1);
+        
+        if(decrypt3.contains(" ")) {
+            StringTokenizer st = new StringTokenizer(decrypt3," ");
+            while (st.hasMoreTokens()) {
+                
+                String temp = st.nextToken();
+                
+                
+                String temp2 = temp.substring(0,1).toUpperCase();
+                
+                capLetters += temp2 + temp.substring(1) + " ";
+            }
+            
+            
+            
+            
+         
+         return capLetters.substring(0, capLetters.length() -1);   
+        }
+        
+        
         
         
         return decrypt3;

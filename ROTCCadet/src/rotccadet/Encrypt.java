@@ -18,7 +18,7 @@ public class Encrypt {
         
         if(encrypt.isEmpty()) {
             
-            encrypt = "No Value";
+            encrypt = "N/A";
         }
         encrypt = encrypt.toLowerCase();
         
