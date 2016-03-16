@@ -150,6 +150,7 @@
                 <Property name="text" type="java.lang.String" value="Search Cadet..."/>
               </Properties>
               <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="searchCadetMouseClicked"/>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="searchCadetActionPerformed"/>
                 <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="searchCadetKeyPressed"/>
               </Events>
@@ -235,7 +236,7 @@
                                           </Group>
                                           <Group type="102" alignment="1" attributes="0">
                                               <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                       <Group type="103" groupAlignment="0" attributes="0">
@@ -262,7 +263,7 @@
                                           </Group>
                                           <Group type="102" alignment="0" attributes="0">
                                               <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
-                                              <Component id="userRace" min="-2" pref="182" max="-2" attributes="0"/>
+                                              <Component id="userRace" min="-2" pref="224" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                   </Group>
@@ -285,7 +286,7 @@
                                   <Group type="102" alignment="0" attributes="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="0" attributes="0">
-                                              <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="1" attributes="0">
                                                   <Component id="jLabel15" min="-2" max="-2" attributes="0"/>
                                                   <Component id="jLabel16" min="-2" max="-2" attributes="0"/>
@@ -297,7 +298,7 @@
                                               </Group>
                                           </Group>
                                           <Group type="102" alignment="0" attributes="0">
-                                              <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                                               <Component id="jLabelSSN1" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
@@ -314,7 +315,7 @@
                                       </Group>
                                   </Group>
                               </Group>
-                              <EmptySpace pref="256" max="32767" attributes="0"/>
+                              <EmptySpace pref="214" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -531,7 +532,7 @@
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelPN">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="Phone Number:"/>
+                        <Property name="text" type="java.lang.String" value="Phone Number(xxx-xxx-xxxx):"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JTextField" name="userPN">
@@ -548,7 +549,7 @@
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel40">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="Apartment:"/>
+                        <Property name="text" type="java.lang.String" value="Apartment Number(Apt xxx):"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JTextField" name="userApt">
@@ -562,7 +563,7 @@
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelState">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="State:"/>
+                        <Property name="text" type="java.lang.String" value="State(ST):"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JTextField" name="userState">
@@ -620,7 +621,7 @@
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel9">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="Place of Birth(City,State):"/>
+                        <Property name="text" type="java.lang.String" value="Place of Birth(City,ST):"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JTextField" name="userPoB">
@@ -699,7 +700,7 @@
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel23">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="Dorm and Room #"/>
+                        <Property name="text" type="java.lang.String" value="Apartment/Dorm and Room #:"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelNoD">
@@ -754,7 +755,7 @@
                                   <Group type="103" groupAlignment="1" attributes="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="0" attributes="0">
-                                              <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="1" attributes="0">
                                                   <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                                                   <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
@@ -764,7 +765,6 @@
                                                   <Component id="jLabel13" alignment="1" min="-2" max="-2" attributes="0"/>
                                                   <Component id="jLabel14" alignment="1" min="-2" max="-2" attributes="0"/>
                                                   <Component id="jLabel56" alignment="1" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="jLabel12" alignment="1" min="-2" max="-2" attributes="0"/>
                                                   <Component id="jLabel30" alignment="1" min="-2" max="-2" attributes="0"/>
                                                   <Component id="jLabel31" alignment="1" min="-2" max="-2" attributes="0"/>
                                                   <Component id="jLabel32" alignment="1" min="-2" max="-2" attributes="0"/>
@@ -772,7 +772,10 @@
                                           </Group>
                                           <Group type="102" alignment="1" attributes="0">
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="jLabel33" min="-2" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="jLabel33" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jLabel12" alignment="1" min="-2" max="-2" attributes="0"/>
+                                              </Group>
                                           </Group>
                                       </Group>
                                       <Group type="102" attributes="0">
@@ -819,7 +822,7 @@
                                   <Component id="userChildStreet" alignment="0" max="32767" attributes="0"/>
                                   <Component id="userChildState" alignment="0" min="-2" pref="46" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace min="0" pref="228" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="221" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -997,7 +1000,7 @@
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel14">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="Partner State:"/>
+                        <Property name="text" type="java.lang.String" value="Partner State(ST):"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JTextField" name="userPartnerState">
@@ -1011,7 +1014,7 @@
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel12">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="Phone Number:"/>
+                        <Property name="text" type="java.lang.String" value="Partner Phone Number(xxx-xxx-xxxx):"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JTextField" name="userPartnerPN">
@@ -1096,7 +1099,7 @@
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel55">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="Child Phone Number:"/>
+                        <Property name="text" type="java.lang.String" value="Child Phone Number(xxx-xxx-xxxx):"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JTextField" name="userChildZip">
@@ -1105,7 +1108,7 @@
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel52">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="Child State:"/>
+                        <Property name="text" type="java.lang.String" value="Child State(ST):"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JTextField" name="userChildPN">
@@ -1349,7 +1352,7 @@
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel44">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="Father State:"/>
+                        <Property name="text" type="java.lang.String" value="Father State(ST):"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JTextField" name="userFatherState">
@@ -1405,7 +1408,7 @@
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel51">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="Mother State:"/>
+                        <Property name="text" type="java.lang.String" value="Mother State(ST):"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JTextField" name="userMotherState">
@@ -1426,7 +1429,7 @@
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelEC">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="Emergency Contact:"/>
+                        <Property name="text" type="java.lang.String" value="Emergency Contact(First Last):"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JTextField" name="userEmergency">
@@ -1447,7 +1450,7 @@
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel7">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="Emergency State:"/>
+                        <Property name="text" type="java.lang.String" value="Emergency State(ST):"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JTextField" name="userEmergencyState">
@@ -1481,9 +1484,10 @@
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="143" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="1" attributes="0">
                                           <Component id="jLabel77" alignment="1" min="-2" max="-2" attributes="0"/>
                                           <Component id="jLabel78" alignment="1" min="-2" max="-2" attributes="0"/>
@@ -1512,10 +1516,10 @@
                                           <Component id="userPriorGrade" alignment="0" min="-2" pref="153" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <Group type="102" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Group type="102" attributes="0">
-                                              <EmptySpace min="-2" pref="130" max="-2" attributes="0"/>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="1" attributes="0">
                                                   <Component id="jLabelGPS1" alignment="1" min="-2" max="-2" attributes="0"/>
                                                   <Component id="jLabel70" alignment="1" min="-2" max="-2" attributes="0"/>
@@ -1531,8 +1535,8 @@
                                                   <Component id="jLabel76" alignment="1" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
-                                          <Group type="102" attributes="0">
-                                              <EmptySpace min="-2" pref="197" max="-2" attributes="0"/>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <EmptySpace min="-2" pref="129" max="-2" attributes="0"/>
                                               <Component id="jLabel26" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                           <Component id="jLabel25" alignment="1" min="-2" pref="228" max="-2" attributes="0"/>
@@ -1559,7 +1563,7 @@
                                       </Group>
                                   </Group>
                               </Group>
-                              <EmptySpace min="0" pref="135" max="32767" attributes="0"/>
+                              <EmptySpace pref="188" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -2212,9 +2216,10 @@
                         <Component class="javax.swing.JComboBox" name="userQuestion2A">
                           <Properties>
                             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                              <StringArray count="2">
-                                <StringItem index="0" value="No"/>
-                                <StringItem index="1" value="Yes"/>
+                              <StringArray count="3">
+                                <StringItem index="0" value="N/A"/>
+                                <StringItem index="1" value="No"/>
+                                <StringItem index="2" value="Yes"/>
                               </StringArray>
                             </Property>
                           </Properties>
@@ -2222,9 +2227,10 @@
                         <Component class="javax.swing.JComboBox" name="userQuestion1A">
                           <Properties>
                             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                              <StringArray count="2">
-                                <StringItem index="0" value="No"/>
-                                <StringItem index="1" value="Yes"/>
+                              <StringArray count="3">
+                                <StringItem index="0" value="N/A"/>
+                                <StringItem index="1" value="No"/>
+                                <StringItem index="2" value="Yes"/>
                               </StringArray>
                             </Property>
                           </Properties>
@@ -2232,9 +2238,10 @@
                         <Component class="javax.swing.JComboBox" name="userQuestion3A">
                           <Properties>
                             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                              <StringArray count="2">
-                                <StringItem index="0" value="No"/>
-                                <StringItem index="1" value="Yes"/>
+                              <StringArray count="3">
+                                <StringItem index="0" value="N/A"/>
+                                <StringItem index="1" value="No"/>
+                                <StringItem index="2" value="Yes"/>
                               </StringArray>
                             </Property>
                           </Properties>
@@ -2242,9 +2249,10 @@
                         <Component class="javax.swing.JComboBox" name="userQuestion10A">
                           <Properties>
                             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                              <StringArray count="2">
-                                <StringItem index="0" value="No"/>
-                                <StringItem index="1" value="Yes"/>
+                              <StringArray count="3">
+                                <StringItem index="0" value="N/A"/>
+                                <StringItem index="1" value="No"/>
+                                <StringItem index="2" value="Yes"/>
                               </StringArray>
                             </Property>
                           </Properties>
@@ -2255,9 +2263,10 @@
                         <Component class="javax.swing.JComboBox" name="userQuestion4A">
                           <Properties>
                             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                              <StringArray count="2">
-                                <StringItem index="0" value="No"/>
-                                <StringItem index="1" value="Yes"/>
+                              <StringArray count="3">
+                                <StringItem index="0" value="N/A"/>
+                                <StringItem index="1" value="No"/>
+                                <StringItem index="2" value="Yes"/>
                               </StringArray>
                             </Property>
                           </Properties>
@@ -2265,9 +2274,10 @@
                         <Component class="javax.swing.JComboBox" name="userQuestion13A">
                           <Properties>
                             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                              <StringArray count="2">
-                                <StringItem index="0" value="No"/>
-                                <StringItem index="1" value="Yes"/>
+                              <StringArray count="3">
+                                <StringItem index="0" value="N/A"/>
+                                <StringItem index="1" value="No"/>
+                                <StringItem index="2" value="Yes"/>
                               </StringArray>
                             </Property>
                           </Properties>
@@ -2278,9 +2288,10 @@
                         <Component class="javax.swing.JComboBox" name="userQuestion9A">
                           <Properties>
                             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                              <StringArray count="2">
-                                <StringItem index="0" value="No"/>
-                                <StringItem index="1" value="Yes"/>
+                              <StringArray count="3">
+                                <StringItem index="0" value="N/A"/>
+                                <StringItem index="1" value="No"/>
+                                <StringItem index="2" value="Yes"/>
                               </StringArray>
                             </Property>
                           </Properties>
@@ -2291,9 +2302,10 @@
                         <Component class="javax.swing.JComboBox" name="userQuestion7A">
                           <Properties>
                             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                              <StringArray count="2">
-                                <StringItem index="0" value="No"/>
-                                <StringItem index="1" value="Yes"/>
+                              <StringArray count="3">
+                                <StringItem index="0" value="N/A"/>
+                                <StringItem index="1" value="No"/>
+                                <StringItem index="2" value="Yes"/>
                               </StringArray>
                             </Property>
                           </Properties>
@@ -2301,9 +2313,10 @@
                         <Component class="javax.swing.JComboBox" name="userQuestion8A">
                           <Properties>
                             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                              <StringArray count="2">
-                                <StringItem index="0" value="No"/>
-                                <StringItem index="1" value="Yes"/>
+                              <StringArray count="3">
+                                <StringItem index="0" value="N/A"/>
+                                <StringItem index="1" value="No"/>
+                                <StringItem index="2" value="Yes"/>
                               </StringArray>
                             </Property>
                           </Properties>
@@ -2326,9 +2339,10 @@
                         <Component class="javax.swing.JComboBox" name="userQuestion11A">
                           <Properties>
                             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                              <StringArray count="2">
-                                <StringItem index="0" value="No"/>
-                                <StringItem index="1" value="Yes"/>
+                              <StringArray count="3">
+                                <StringItem index="0" value="N/A"/>
+                                <StringItem index="1" value="No"/>
+                                <StringItem index="2" value="Yes"/>
                               </StringArray>
                             </Property>
                           </Properties>
@@ -2336,9 +2350,10 @@
                         <Component class="javax.swing.JComboBox" name="userQuestion6A">
                           <Properties>
                             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                              <StringArray count="2">
-                                <StringItem index="0" value="No"/>
-                                <StringItem index="1" value="Yes"/>
+                              <StringArray count="3">
+                                <StringItem index="0" value="N/A"/>
+                                <StringItem index="1" value="No"/>
+                                <StringItem index="2" value="Yes"/>
                               </StringArray>
                             </Property>
                           </Properties>
@@ -2358,9 +2373,10 @@
                         <Component class="javax.swing.JComboBox" name="userQuestion5A">
                           <Properties>
                             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                              <StringArray count="2">
-                                <StringItem index="0" value="No"/>
-                                <StringItem index="1" value="Yes"/>
+                              <StringArray count="3">
+                                <StringItem index="0" value="N/A"/>
+                                <StringItem index="1" value="No"/>
+                                <StringItem index="2" value="Yes"/>
                               </StringArray>
                             </Property>
                           </Properties>
@@ -2371,9 +2387,10 @@
                         <Component class="javax.swing.JComboBox" name="userQuestion12A">
                           <Properties>
                             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                              <StringArray count="2">
-                                <StringItem index="0" value="No"/>
-                                <StringItem index="1" value="Yes"/>
+                              <StringArray count="3">
+                                <StringItem index="0" value="N/A"/>
+                                <StringItem index="1" value="No"/>
+                                <StringItem index="2" value="Yes"/>
                               </StringArray>
                             </Property>
                           </Properties>

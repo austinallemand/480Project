@@ -16,7 +16,7 @@ public class Encrypt {
     public String doEncrypt(String encrypt) {
         
         
-        if(encrypt.isEmpty()) {
+        if(encrypt.isEmpty() || encrypt.equals("N/A")) {
             
             encrypt = "N/A";
         }
@@ -146,6 +146,7 @@ public class Encrypt {
                case '9':
                encrypt3[swi] = '2';
                break;
+                   
               
                default: encrypt3 = encrypt3;
                

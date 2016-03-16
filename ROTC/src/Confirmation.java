@@ -442,6 +442,8 @@ public class Confirmation extends javax.swing.JFrame {
 
         jLabel1.setText("Please confirm that all information is correct.");
 
+        jScrollPane2.setMaximumSize(new java.awt.Dimension(32767, 1080));
+
         jLabelFN.setText("First Name:");
 
         jLabelLN.setText("Last Name:");
@@ -492,7 +494,7 @@ public class Confirmation extends javax.swing.JFrame {
 
         jLabelSSN2.setText("Notify instead:");
 
-        jLabel23.setText("Dorm and Room #");
+        jLabel23.setText("Apartment/Dorm and Room #");
 
         jLabelNoD.setText("Number of dependants:");
 
@@ -617,7 +619,7 @@ public class Confirmation extends javax.swing.JFrame {
                             .addComponent(conCWUID)
                             .addComponent(conFull)))
                     .addGroup(scrollPanelLayout.createSequentialGroup()
-                        .addGap(50, 50, 50)
+                        .addGap(29, 29, 29)
                         .addGroup(scrollPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel15)
                             .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1532,33 +1534,33 @@ public class Confirmation extends javax.swing.JFrame {
 
         jTabbedPane2.addTab("Other Information", jPanel6);
 
-        Question2.setText("<html>Are you now, or have you ever been, a commissioned officer of any component of the armed forces<br></br>(including Reserve, USAF,USMC,USCG,USG,Merchant,Marine, or preparatory schools?)<br></br></html>");
+        Question2.setText("<html>2)Are you now, or have you ever been, a commissioned officer of any component of the armed forces<br></br>(including Reserve, USAF,USMC,USCG,USG,Merchant,Marine, or preparatory schools?)<br></br></html>");
 
-        Question3.setText("<html>Are you now, or have you ever been, an officer of the<br></br> Health Services and Metnal health Administsteration?</html>");
+        Question3.setText("<html>3)Are you now, or have you ever been, an officer of the<br></br> Health Services and Metnal health Administsteration?</html>");
 
-        Question4.setText("Are you a U.S citizen? If yes, how obtained:");
+        Question4.setText("5)Are you a U.S citizen? If yes, how obtained:");
 
         Question5.setText("<html>If a naturalized citizen, or born outside of the U.S of <br></br>American parents, submit proof of citizenship. Reference AFROTCI 36-2011.)</html>");
 
-        Question6.setText("<html>Have you ever taken the AFOQT (if yes, indicate in remarks <br></br>section where and when.)</html>");
+        Question6.setText("<html>6)Have you ever taken the AFOQT (if yes, indicate in remarks <br></br>section where and when.)</html>");
 
-        Question7.setText("<html>Have you ever had a physical for entry into the <br></br>armed forces, Air Force ROTC, etc?</html>");
+        Question7.setText("<html>7)Have you ever had a physical for entry into the <br></br>armed forces, Air Force ROTC, etc?</html>");
 
-        Question8.setText("Have you ever been denied enlistment into the armed forces?");
+        Question8.setText("8)Have you ever been denied enlistment into the armed forces?");
 
-        Question10.setText("Do you already have a degree(BA, BS, etc?)");
+        Question10.setText("9)Do you already have a degree(BA, BS, etc?)");
 
-        Question11.setText("Are you an AFROTC ScholarShip Designee?");
+        Question11.setText("10)Are you an AFROTC ScholarShip Designee?");
 
-        Question9.setText("<html>Are you a conscientious objector?(A conscientious objector is defined as: <br></br> one who has or had a firm, fixed and sincere objection to participation in war in any form or to bearing of arms because of religious training or belief. which includes solely moral or ethical beliefs.)</html>");
+        Question9.setText("<html>11)Are you a conscientious objector?(A conscientious objector is defined as: <br></br> one who has or had a firm, fixed and sincere objection to participation in war in any form or to bearing of arms because of religious training or belief. which includes solely moral or ethical beliefs.)</html>");
 
-        Question12.setText("<html><br></br>Are you now or have you ever been\naffiliated with any organization or movement that seeks to alter our form of government by unconstitutional means, or sympathetically associated with any such organization, movement, or members thereof? (if yes, please describe)</html>");
+        Question12.setText("<html><br></br>12)Are you now or have you ever been affiliated with any organization or movement that seeks to alter our form of government by unconstitutional means, or sympathetically associated with any such organization, movement, or members thereof? (if yes, please describe)</html>");
 
-        Question13.setText("<html>Do you understand that participation in Air <br></br>Force ROTC required strenuous physical activity? (You will be required to obtain medicalclearance from a physician prior to program entry.)</html>");
+        Question13.setText("<html>13)Do you understand that participation in Air <br></br>Force ROTC required strenuous physical activity? (You will be required to obtain medicalclearance from a physician prior to program entry.)</html>");
 
-        jLabel10.setText("<html>Have you ever applied for, been enrolled, or on contract <br> in an Officer Training Program of the US army, <br>USAF, USMC, USCG, USN, Merchant Marine, or preparatory?</html>");
+        jLabel10.setText("<html>1)Have you ever applied for, been enrolled, or on contract <br> in an Officer Training Program of the US army, <br>USAF, USMC, USCG, USN, Merchant Marine, or preparatory?</html>");
 
-        Question14.setText("<html>Are you now, or have you ever been, a memberr of the<br></br> National Oceanic Atmospheric Administration?</html>");
+        Question14.setText("<html>4)Are you now, or have you ever been, a memberr of the<br></br> National Oceanic Atmospheric Administration?</html>");
 
         jButton3.setText("Submit");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -1624,12 +1626,12 @@ public class Confirmation extends javax.swing.JFrame {
                     .addComponent(conQuestion9A)
                     .addComponent(conQuestion8A)
                     .addComponent(conQuestion6A)
+                    .addComponent(conQuestion4A)
+                    .addComponent(conQuestion1A)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(conQuestion5A)
-                        .addGap(10, 10, 10)
-                        .addComponent(conQuestion5B))
-                    .addComponent(conQuestion4A)
-                    .addComponent(conQuestion1A))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(conQuestion5B)))
                 .addGap(49, 49, 49))
         );
         jPanel2Layout.setVerticalGroup(
@@ -1637,17 +1639,17 @@ public class Confirmation extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(conQuestion1A)
-                .addGap(35, 35, 35)
+                .addGap(61, 61, 61)
                 .addComponent(conQuestion2A)
-                .addGap(65, 65, 65)
+                .addGap(35, 35, 35)
                 .addComponent(conQuestion3A)
-                .addGap(33, 33, 33)
-                .addComponent(conQuestion4A)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(conQuestion4A)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(conQuestion5B)
-                    .addComponent(conQuestion5A))
-                .addGap(90, 90, 90)
+                    .addComponent(conQuestion5A)
+                    .addComponent(conQuestion5B))
+                .addGap(106, 106, 106)
                 .addComponent(conQuestion6A)
                 .addGap(45, 45, 45)
                 .addComponent(conQuestion7A)
@@ -1736,11 +1738,11 @@ public class Confirmation extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(Question13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton3)
                     .addComponent(goBack))
-                .addGap(25, 25, 25))
+                .addGap(1, 1, 1))
         );
 
         jTabbedPane2.addTab("Yes/No Questions", jPanel10);
@@ -1781,6 +1783,48 @@ public class Confirmation extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void goBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_goBackActionPerformed
+        adminInformation adminInfo = new adminInformation(conFN.getText(), conLN.getText(), conMN.getText(), conCWUID.getText(), conEmail.getText(), conDoB.getText(),
+            conPN.getText(),
+            conStreet.getText(), conApt.getText(), conCity.getText(), conState.getText(), conZip.getText(),
+            conGender.getText(), conSSN.getText(), conAcMajor.getText(), conGradDate.getText(), conRace.getText(),
+            conPoB.getText(), conSelectiveServiceNum.getText(),
+            conDiffMailing.getText(), conMailingDorm.getText(), conMailingStreet.getText(),
+            conMailingCity.getText(), conMailingState.getText(), conMailingZip.getText(),
+            conIllHealth.getText(), conNotify.getText(), conNoD.getText(),
+
+            conMaritialS.getText(), conPartnerFN.getText(), conPartnerMI.getText(), conPartnerLN.getText(), conPartnerStreet.getText(),
+            conPartnerCity.getText(), conPartnerState.getText(), conPartnerZip.getText(), conPartnerPN.getText(), conPartnerPoB.getText(),
+
+            conChildren.getText(), conChildFN.getText(), conChildMI.getText(), conChildLN.getText(), conChildDoB.getText(), conChildRelationship.getText(),
+            conChildStreet.getText(), conChildCity.getText(), conChildState.getText(), conChildZip.getText(), conChildPN.getText(),
+
+            conFatherFN.getText(), conFatherMI.getText(), conFatherLN.getText(), conFatherStreet.getText(), conFatherCity.getText(),
+            conFatherState.getText(), conFatherZip.getText(), conFatherPN.getText(),
+
+            conMotherFN.getText(), conMotherMI.getText(), conMotherLN.getText(), conMotherStreet.getText(), conMotherCity.getText(),
+            conMotherState.getText(), conMotherZip.getText(), conMotherPN.getText(),
+
+            conEmergency.getText(), conEmergencyStreet.getText(), conEmergencyCity.getText(), conEmergencyState.getText(), conEmergencyZip.getText(), conEmergencyPN.getText(),
+
+            conGuardianPriorS.getText(), conGuardianYearsOfService.getText(), conGuardianHighGrade.getText(), conGuardianStatus.getText(),
+
+            conDeath.getText(), conDeathRelationship.getText(), conDeathStreet.getText(),
+            conDeathCity.getText(), conDeathState.getText(), conDeathZip.getText(), conDeathPN.getText(), conDeathPercentage.getText(),
+
+            conPriorS.getText(), conHasPriorS.getText(), conPriorFrom.getText(), conPriorTo.getText(), conPriorDischarge.getText(), conPriorRemaining.getText(), conPriorGrade.getText(),
+            conJuniorROTC.getText(), conEagleScout.getText(), conCivilAir.getText(), conCivilAirYes.getText(),
+
+            conQuestion1A.getText(), conQuestion2A.getText(), conQuestion3A.getText(),
+            conQuestion4A.getText(), conQuestion5A.getText(), conQuestion5B.getText(), conQuestion6A.getText(),
+            conQuestion7A.getText(), conQuestion8A.getText(), conQuestion9A.getText(),
+            conQuestion10A.getText(), conQuestion10B.getText(), conQuestion11A.getText(), conQuestion12A.getText(), conQuestion13A.getText() );
+
+        adminInfo.setVisible(true);
+        this.dispose();
+        //goBack.setVisible(true);
+    }//GEN-LAST:event_goBackActionPerformed
+
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         try {
             Connection con = null;
@@ -1793,254 +1837,212 @@ public class Confirmation extends javax.swing.JFrame {
             Statement sta = con.createStatement();
             ResultSet rs = sta.executeQuery(queryCheck); // execute the query, and get a java resultset
 
-// if this ID already exists, we delete the old coloumn and readd the cadet
+            // if this ID already exists, we delete the old coloumn and readd the cadet
             if (rs.next()) {
 
                 try {
 
                     //delete the old entry
-                    
+
                     //String query = "delete from INFO where CWUID = " + conCWUID.getText();
                     String query = "delete from INFO where CWUID = " + "'" + conCWUID.getText() + "'";
                     PreparedStatement preparedStmt = con.prepareStatement(query);
                     preparedStmt.execute();
                     //add new entry
                     sta.executeUpdate("INSERT INTO INFO VALUES ('" + conLN.getText()+ "', '" + conFN.getText()+ "', '" + conMN.getText()+ "', '" + conFull.getText() + "', '" + conSSN.getText() + "', '"
-                         + conDoB.getText() + "', '" + conCWUID.getText() + "', '" + conEmail.getText() + "', '" +  conPN.getText() + "', '" 
-                         + conStreet.getText() + "', '" + conApt.getText() + "', '" + conCity.getText() + "', '" + conState.getText() + "', '" + conZip.getText() + "', '" 
-                         + conGender.getText() + "', '" + conAcMajor.getText() + "', '" + conGradDate.getText() + "', '" + conRace.getText() + "', '" + conMaritialS.getText() + "', '" 
-                         + (conPartnerLN.getText()+ ", " + conPartnerFN.getText() + " " + conPartnerMI.getText())  + "', '" + conPartnerStreet.getText() + "', '" 
-                         + conPartnerCity.getText() + "', '" +  conPartnerState.getText() + "', '" + conPartnerPN.getText() + "', '" +  conPartnerPoB.getText() + "', '" 
-                         + conNoD.getText() + "', '" + conEmergency.getText() + "', '" + conEmergencyStreet.getText() + "', '" + conEmergencyCity.getText()  + "', '" 
-                         + conEmergencyState.getText() + "', '" + conEmergencyPN.getText() + "', '"
-                         + conHasPriorS.getText() + "', '" + conJuniorROTC.getText() + "', '" + conChildren.getText() + "', '" + conPriorS.getText() + "', '" 
-                         
-                         + conEagleScout.getText() + "', '" + conGuardianStatus.getText() + "', '" + conGuardianPriorS.getText() + "', '"
-                            
-                         + conPoB.getText() + "', '" + conSelectiveServiceNum.getText() + "', '"
-                         + (conPN.getText() +conStreet.getText()+ " " + conCity.getText() + ", " + conState.getText()  + " " + conZip.getText()) + "', '" 
-                         + conGuardianYearsOfService.getText() + "', '" + conGuardianHighGrade.getText() + "', '" 
+                        + conDoB.getText() + "', '" + conCWUID.getText() + "', '" + conEmail.getText() + "', '" +  conPN.getText() + "', '"
+                        + conStreet.getText() + "', '" + conApt.getText() + "', '" + conCity.getText() + "', '" + conState.getText() + "', '" + conZip.getText() + "', '"
+                        + conGender.getText() + "', '" + conAcMajor.getText() + "', '" + conGradDate.getText() + "', '" + conRace.getText() + "', '" + conMaritialS.getText() + "', '"
+                        + (conPartnerLN.getText()+ ", " + conPartnerFN.getText() + " " + conPartnerMI.getText())  + "', '" + conPartnerStreet.getText() + "', '"
+                        + conPartnerCity.getText() + "', '" +  conPartnerState.getText() + "', '" + conPartnerPN.getText() + "', '" +  conPartnerPoB.getText() + "', '"
+                        + conNoD.getText() + "', '" + conEmergency.getText() + "', '" + conEmergencyStreet.getText() + "', '" + conEmergencyCity.getText()  + "', '"
+                        + conEmergencyState.getText() + "', '" + conEmergencyPN.getText() + "', '"
+                        + conHasPriorS.getText() + "', '" + conJuniorROTC.getText() + "', '" + conChildren.getText() + "', '" + conPriorS.getText() + "', '"
 
-                         + (conPartnerStreet.getText() + " " + conPartnerCity.getText() + ", " + conPartnerState.getText() + " " + conPartnerZip.getText() + " " + conPartnerPN.getText()) + "', '" 
-                         + (conChildLN.getText() + ", " + conChildFN.getText() + " " + conChildMI.getText()) + "', '" 
-                         + conChildRelationship.getText() + "', '" + conChildDoB.getText() + "', '" 
-                         + (conChildStreet.getText() + " " + conChildCity.getText() + ", "  + conChildState.getText() + " " + conChildZip.getText() + " "  + conChildPN.getText()) + "', '" 
-                         + (conFatherLN.getText()+ ", " + conFatherFN.getText() + " " + conFatherMI.getText()) + "', '" 
-                         + (conFatherStreet.getText() + " " + conFatherCity.getText() + ", "  + conFatherState.getText() + " " + conFatherZip.getText() + " " + conFatherPN.getText()) + "', '" 
-                         + (conMotherLN.getText()+ ", " + conMotherFN.getText() + " " + conMotherMI.getText()) + "', '" 
-                         + (conMotherStreet.getText() + " " + conMotherCity.getText() + ", " + conMotherState.getText() + " " + conMotherZip.getText() + " " + conMotherPN.getText()) + "', '"
-                         
-                         + conNotify.getText() + "', '" + conIllHealth.getText() + "', '" + conDeathRelationship.getText() + "', '" 
-                         + (conDeathStreet.getText() + " " + conDeathCity.getText() + ", " + conDeathState.getText() + " " + conDeathZip.getText() + " " + conDeathPN.getText()) + "', '" 
-                         +  conDeathPercentage.getText() + "', '" 
-                         
-                         + (conStreet.getText() + " " + conCity.getText() + ", "  + conState.getText() + " " + conZip.getText() + " " + conPN.getText() + " " + conEmail.getText()) + "', '" 
-                         + (conFN.getText().charAt(0)+ "." + conLN.getText().charAt(0)) + "', '" 
-                         + conPartnerZip.getText() + "', '" + conDiffMailing.getText() + "', '" 
-                         + conChildFN.getText() + "', '" + conChildMI.getText() + "', '" + conChildLN.getText() + "', '" + conChildCity.getText() + "', '" 
-                         + conChildState.getText() + "', '" + conChildZip.getText() + "', '" + conFatherFN.getText() + "', '" + conFatherMI.getText() + "', '"
-                         + conFatherLN.getText() + "', '" + conFatherCity.getText() + "', '" + conFatherState.getText() + "', '" + conFatherZip.getText() + "', '" 
-                         + conFatherPN.getText() + "', '" +  conMotherFN.getText() + "', '" + conMotherMI.getText() + "', '" + conMotherLN.getText() + "', '" 
-                         + conMotherCity.getText() + "', '" + conMotherState.getText() + "', '" + conMotherZip.getText() + "', '" + conMotherPN.getText() + "', '" 
-                         + conDeathStreet.getText() + "', '" + conDeathCity.getText() + "', '" + conMailingStreet.getText() + "', '" + conMailingCity.getText() + "', '" 
-                         + conMailingState.getText() + "', '" + conMailingZip.getText() + "', '" + conPartnerFN.getText() + "', '" +  conPartnerMI.getText() + "', '" 
-                         
-                         + conPartnerLN.getText() + "', '" +  conChildPN.getText() + "', '" + conEmergencyZip.getText() + "', '" + conMailingDorm.getText() + "', '"
-                         + conFatherStreet.getText() + "', '" + conMotherStreet.getText() + "', '" + conDeathState.getText() + "', '" + conDeathZip.getText() + "', '"
-                         + conDeathPN.getText() +  "', '" + conDeath.getText() + "', '" + conPriorFrom.getText() + "', '" + conPriorTo.getText() + "', '" + conPriorDischarge.getText() + "', '" + conPriorRemaining.getText() + "', '" 
-                         + conPriorGrade.getText() + "', '" + conCivilAir.getText() + "', '" + conCivilAirYes.getText() + "', '"
-                         + conQuestion1A.getText() + "', '" +  conQuestion2A.getText() + "', '" + conQuestion3A.getText() + "', '" + conQuestion4A.getText() + "', '" 
-                         + conQuestion5A.getText() + "', '" + conQuestion5B.getText() + "', '"  +conQuestion6A.getText() + "', '" + conQuestion7A.getText() + "', '" 
-                         + conQuestion8A.getText() + "', '" + conQuestion9A.getText() + "', '" + conQuestion10A.getText() + "', '" + conQuestion10B.getText() + "', '" 
-                         + conQuestion11A.getText() + "', '" + conQuestion12A.getText() + "', '" + conQuestion13A.getText() + "', '" 
-                         + (conLN.getText() + ", " + conFN.getText() + " " + conMN.getText().charAt(0)) + "')");
-                         
-                         
-                    sta.close(); 
+                        + conEagleScout.getText() + "', '" + conGuardianStatus.getText() + "', '" + conGuardianPriorS.getText() + "', '"
+
+                        + conPoB.getText() + "', '" + conSelectiveServiceNum.getText() + "', '"
+                        + (conPN.getText() +conStreet.getText()+ " " + conCity.getText() + ", " + conState.getText()  + " " + conZip.getText()) + "', '"
+                        + conGuardianYearsOfService.getText() + "', '" + conGuardianHighGrade.getText() + "', '"
+
+                        + (conPartnerStreet.getText() + " " + conPartnerCity.getText() + ", " + conPartnerState.getText() + " " + conPartnerZip.getText() + " " + conPartnerPN.getText()) + "', '"
+                        + (conChildLN.getText() + ", " + conChildFN.getText() + " " + conChildMI.getText()) + "', '"
+                        + conChildRelationship.getText() + "', '" + conChildDoB.getText() + "', '"
+                        + (conChildStreet.getText() + " " + conChildCity.getText() + ", "  + conChildState.getText() + " " + conChildZip.getText() + " "  + conChildPN.getText()) + "', '"
+                        + (conFatherLN.getText()+ ", " + conFatherFN.getText() + " " + conFatherMI.getText()) + "', '"
+                        + (conFatherStreet.getText() + " " + conFatherCity.getText() + ", "  + conFatherState.getText() + " " + conFatherZip.getText() + " " + conFatherPN.getText()) + "', '"
+                        + (conMotherLN.getText()+ ", " + conMotherFN.getText() + " " + conMotherMI.getText()) + "', '"
+                        + (conMotherStreet.getText() + " " + conMotherCity.getText() + ", " + conMotherState.getText() + " " + conMotherZip.getText() + " " + conMotherPN.getText()) + "', '"
+
+                        + conNotify.getText() + "', '" + conIllHealth.getText() + "', '" + conDeathRelationship.getText() + "', '"
+                        + (conDeathStreet.getText() + " " + conDeathCity.getText() + ", " + conDeathState.getText() + " " + conDeathZip.getText() + " " + conDeathPN.getText()) + "', '"
+                        +  conDeathPercentage.getText() + "', '"
+
+                        + (conStreet.getText() + " " + conCity.getText() + ", "  + conState.getText() + " " + conZip.getText() + " " + conPN.getText() + " " + conEmail.getText()) + "', '"
+                        + (conFN.getText().charAt(0)+ "." + conLN.getText().charAt(0)) + "', '"
+                        + conPartnerZip.getText() + "', '" + conDiffMailing.getText() + "', '"
+                        + conChildFN.getText() + "', '" + conChildMI.getText() + "', '" + conChildLN.getText() + "', '" + conChildCity.getText() + "', '"
+                        + conChildState.getText() + "', '" + conChildZip.getText() + "', '" + conFatherFN.getText() + "', '" + conFatherMI.getText() + "', '"
+                        + conFatherLN.getText() + "', '" + conFatherCity.getText() + "', '" + conFatherState.getText() + "', '" + conFatherZip.getText() + "', '"
+                        + conFatherPN.getText() + "', '" +  conMotherFN.getText() + "', '" + conMotherMI.getText() + "', '" + conMotherLN.getText() + "', '"
+                        + conMotherCity.getText() +  "', '" + conMotherState.getText() + "', '" + conMotherZip.getText() + "', '" + conMotherPN.getText() + "', '"
+                        + conDeathStreet.getText() + "', '" + conDeathCity.getText() + "', '" + conMailingStreet.getText() + "', '" + conMailingCity.getText() + "', '"
+                        + conMailingState.getText() + "', '" + conMailingZip.getText() + "', '" + conPartnerFN.getText() + "', '" +  conPartnerMI.getText() + "', '"
+
+                        + conPartnerLN.getText() + "', '" +  conChildPN.getText() + "', '" + conEmergencyZip.getText() + "', '" + conMailingDorm.getText() + "', '"
+                        + conFatherStreet.getText() + "', '" + conMotherStreet.getText() + "', '" + conDeathState.getText() + "', '" + conDeathZip.getText() + "', '"
+                        + conDeathPN.getText() +  "', '" + conDeath.getText() + "', '" + conPriorFrom.getText() + "', '" + conPriorTo.getText() + "', '" + conPriorDischarge.getText() + "', '" + conPriorRemaining.getText() + "', '"
+                        + conPriorGrade.getText() + "', '" + conCivilAir.getText() + "', '" + conCivilAirYes.getText() + "', '"
+                        + conQuestion1A.getText() + "', '" +  conQuestion2A.getText() + "', '" + conQuestion3A.getText() + "', '" + conQuestion4A.getText() + "', '"
+                        + conQuestion5A.getText() + "', '" + conQuestion5B.getText() + "', '"  +conQuestion6A.getText() + "', '" + conQuestion7A.getText() + "', '"
+                        + conQuestion8A.getText() + "', '" + conQuestion9A.getText() + "', '" + conQuestion10A.getText() + "', '" + conQuestion10B.getText() + "', '"
+                        + conQuestion11A.getText() + "', '" + conQuestion12A.getText() + "', '" + conQuestion13A.getText() + "', '"
+                        + (conLN.getText() + ", " + conFN.getText() + " " + conMN.getText().charAt(0)) + "')");
+
+                    sta.close();
                     adminInformation adminInfo = new adminInformation(conFN.getText(), conLN.getText(), conMN.getText(), conCWUID.getText(), conEmail.getText(), conDoB.getText(),
-                conPN.getText(), 
-                conStreet.getText(), conApt.getText(), conCity.getText(), conState.getText(), conZip.getText(), 
-                conGender.getText(), conSSN.getText(), conAcMajor.getText(), conGradDate.getText(), conRace.getText(),
-                conPoB.getText(), conSelectiveServiceNum.getText(), 
-                conDiffMailing.getText(), conMailingDorm.getText(), conMailingStreet.getText(),
-                conMailingCity.getText(), conMailingState.getText(), conMailingZip.getText(),
-                conIllHealth.getText(), conNotify.getText(), conNoD.getText(),
-                
-                conMaritialS.getText(), conPartnerFN.getText(), conPartnerMI.getText(), conPartnerLN.getText(), conPartnerStreet.getText(),
-                conPartnerCity.getText(), conPartnerState.getText(), conPartnerZip.getText(), conPartnerPN.getText(), conPartnerPoB.getText(),
-                
-                conChildren.getText(), conChildFN.getText(), conChildMI.getText(), conChildLN.getText(), conChildDoB.getText(), conChildRelationship.getText(),
-                conChildStreet.getText(), conChildCity.getText(), conChildState.getText(), conChildZip.getText(), conChildPN.getText(),
-                
-                conFatherFN.getText(), conFatherMI.getText(), conFatherLN.getText(), conFatherStreet.getText(), conFatherCity.getText(),
-                conFatherState.getText(), conFatherZip.getText(), conFatherPN.getText(),
-                
-                conMotherFN.getText(), conMotherMI.getText(), conMotherLN.getText(), conMotherStreet.getText(), conMotherCity.getText(),
-                conMotherState.getText(), conMotherZip.getText(), conMotherPN.getText(),
-                
-                conEmergency.getText(), conEmergencyStreet.getText(), conEmergencyCity.getText(), conEmergencyState.getText(), conEmergencyZip.getText(), conEmergencyPN.getText(),
-                
-                conGuardianPriorS.getText(), conGuardianYearsOfService.getText(), conGuardianHighGrade.getText(), conGuardianStatus.getText(),
-                
-                conDeath.getText(), conDeathRelationship.getText(), conDeathStreet.getText(), 
-                conDeathCity.getText(), conDeathState.getText(), conDeathZip.getText(), conDeathPN.getText(), conDeathPercentage.getText(),
-                
-                conPriorS.getText(), conHasPriorS.getText(), conPriorFrom.getText(), conPriorTo.getText(), conPriorDischarge.getText(), conPriorRemaining.getText(), conPriorGrade.getText(),
-                conJuniorROTC.getText(), conEagleScout.getText(), conCivilAir.getText(), conCivilAirYes.getText(),
-                
-                conQuestion1A.getText(), conQuestion2A.getText(), conQuestion3A.getText(),
-                conQuestion4A.getText(), conQuestion5A.getText(), conQuestion5B.getText(), conQuestion6A.getText(),
-                conQuestion7A.getText(), conQuestion8A.getText(), conQuestion9A.getText(), 
-                conQuestion10A.getText(), conQuestion10B.getText(), conQuestion11A.getText(), conQuestion12A.getText(), conQuestion13A.getText() );
-                    
-                adminInfo.setVisible(true);
-                this.dispose();
+                        conPN.getText(),
+                        conStreet.getText(), conApt.getText(), conCity.getText(), conState.getText(), conZip.getText(),
+                        conGender.getText(), conSSN.getText(), conAcMajor.getText(), conGradDate.getText(), conRace.getText(),
+                        conPoB.getText(), conSelectiveServiceNum.getText(),
+                        conDiffMailing.getText(), conMailingDorm.getText(), conMailingStreet.getText(),
+                        conMailingCity.getText(), conMailingState.getText(), conMailingZip.getText(),
+                        conIllHealth.getText(), conNotify.getText(), conNoD.getText(),
+
+                        conMaritialS.getText(), conPartnerFN.getText(), conPartnerMI.getText(), conPartnerLN.getText(), conPartnerStreet.getText(),
+                        conPartnerCity.getText(), conPartnerState.getText(), conPartnerZip.getText(), conPartnerPN.getText(), conPartnerPoB.getText(),
+
+                        conChildren.getText(), conChildFN.getText(), conChildMI.getText(), conChildLN.getText(), conChildDoB.getText(), conChildRelationship.getText(),
+                        conChildStreet.getText(), conChildCity.getText(), conChildState.getText(), conChildZip.getText(), conChildPN.getText(),
+
+                        conFatherFN.getText(), conFatherMI.getText(), conFatherLN.getText(), conFatherStreet.getText(), conFatherCity.getText(),
+                        conFatherState.getText(), conFatherZip.getText(), conFatherPN.getText(),
+
+                        conMotherFN.getText(), conMotherMI.getText(), conMotherLN.getText(), conMotherStreet.getText(), conMotherCity.getText(),
+                        conMotherState.getText(), conMotherZip.getText(), conMotherPN.getText(),
+
+                        conEmergency.getText(), conEmergencyStreet.getText(), conEmergencyCity.getText(), conEmergencyState.getText(), conEmergencyZip.getText(), conEmergencyPN.getText(),
+
+                        conGuardianPriorS.getText(), conGuardianYearsOfService.getText(), conGuardianHighGrade.getText(), conGuardianStatus.getText(),
+
+                        conDeath.getText(), conDeathRelationship.getText(), conDeathStreet.getText(),
+                        conDeathCity.getText(), conDeathState.getText(), conDeathZip.getText(), conDeathPN.getText(), conDeathPercentage.getText(),
+
+                        conPriorS.getText(), conHasPriorS.getText(), conPriorFrom.getText(), conPriorTo.getText(), conPriorDischarge.getText(), conPriorRemaining.getText(), conPriorGrade.getText(),
+                        conJuniorROTC.getText(), conEagleScout.getText(), conCivilAir.getText(), conCivilAirYes.getText(),
+
+                        conQuestion1A.getText(), conQuestion2A.getText(), conQuestion3A.getText(),
+                        conQuestion4A.getText(), conQuestion5A.getText(), conQuestion5B.getText(), conQuestion6A.getText(),
+                        conQuestion7A.getText(), conQuestion8A.getText(), conQuestion9A.getText(),
+                        conQuestion10A.getText(), conQuestion10B.getText(), conQuestion11A.getText(), conQuestion12A.getText(), conQuestion13A.getText() );
+
+                    adminInfo.setVisible(true);
+                    JOptionPane.showMessageDialog(null, "The cadet has been updated in the database.");
+                    this.dispose();
                 } catch (Exception e) {
                     System.err.println("Exception: " + e.getMessage());
-                
+
                 }
             } else {//else it dose not exist
-                
+
                 //add new entry
                 sta.executeUpdate("INSERT INTO INFO VALUES ('" + conLN.getText()+ "', '" + conFN.getText()+ "', '" + conMN.getText()+ "', '" + conFull.getText() + "', '" + conSSN.getText() + "', '"
-                         + conDoB.getText() + "', '" + conCWUID.getText() + "', '" + conEmail.getText() + "', '" +  conPN.getText() + "', '" 
-                         + conStreet.getText() + "', '" + conApt.getText() + "', '" + conCity.getText() + "', '" + conState.getText() + "', '" + conZip.getText() + "', '" 
-                         + conGender.getText() + "', '" + conAcMajor.getText() + "', '" + conGradDate.getText() + "', '" + conRace.getText() + "', '" + conMaritialS.getText() + "', '" 
-                         + (conPartnerLN.getText()+ ", " + conPartnerFN.getText() + " " + conPartnerMI.getText())  + "', '" + conPartnerStreet.getText() + "', '" 
-                         + conPartnerCity.getText() + "', '" +  conPartnerState.getText() + "', '" + conPartnerPN.getText() + "', '" +  conPartnerPoB.getText() + "', '" 
-                         + conNoD.getText() + "', '" + conEmergency.getText() + "', '" + conEmergencyStreet.getText() + "', '" + conEmergencyCity.getText()  + "', '" 
-                         + conEmergencyState.getText() + "', '" + conEmergencyPN.getText() + "', '"
-                         + conHasPriorS.getText() + "', '" + conJuniorROTC.getText() + "', '" + conChildren.getText() + "', '" + conPriorS.getText() + "', '" 
-                         
-                         + conEagleScout.getText() + "', '" + conGuardianStatus.getText() + "', '" + conGuardianPriorS.getText() + "', '"
-                            
-                         + conPoB.getText() + "', '" + conSelectiveServiceNum.getText() + "', '"
-                         + (conPN.getText() +conStreet.getText()+ " " + conCity.getText() + ", " + conState.getText()  + " " + conZip.getText()) + "', '" 
-                         + conGuardianYearsOfService.getText() + "', '" + conGuardianHighGrade.getText() + "', '" 
+                    + conDoB.getText() + "', '" + conCWUID.getText() + "', '" + conEmail.getText() + "', '" +  conPN.getText() + "', '"
+                    + conStreet.getText() + "', '" + conApt.getText() + "', '" + conCity.getText() + "', '" + conState.getText() + "', '" + conZip.getText() + "', '"
+                    + conGender.getText() + "', '" + conAcMajor.getText() + "', '" + conGradDate.getText() + "', '" + conRace.getText() + "', '" + conMaritialS.getText() + "', '"
+                    + (conPartnerLN.getText()+ ", " + conPartnerFN.getText() + " " + conPartnerMI.getText())  + "', '" + conPartnerStreet.getText() + "', '"
+                    + conPartnerCity.getText() + "', '" +  conPartnerState.getText() + "', '" + conPartnerPN.getText() + "', '" +  conPartnerPoB.getText() + "', '"
+                    + conNoD.getText() + "', '" + conEmergency.getText() + "', '" + conEmergencyStreet.getText() + "', '" + conEmergencyCity.getText()  + "', '"
+                    + conEmergencyState.getText() + "', '" + conEmergencyPN.getText() + "', '"
+                    + conHasPriorS.getText() + "', '" + conJuniorROTC.getText() + "', '" + conChildren.getText() + "', '" + conPriorS.getText() + "', '"
 
-                         + (conPartnerStreet.getText() + " " + conPartnerCity.getText() + ", " + conPartnerState.getText() + " " + conPartnerZip.getText() + " " + conPartnerPN.getText()) + "', '" 
-                         + (conChildLN.getText() + ", " + conChildFN.getText() + " " + conChildMI.getText()) + "', '" 
-                         + conChildRelationship.getText() + "', '" + conChildDoB.getText() + "', '" 
-                         + (conChildStreet.getText() + " " + conChildCity.getText() + ", "  + conChildState.getText() + " " + conChildZip.getText() + " "  + conChildPN.getText()) + "', '" 
-                         + (conFatherLN.getText()+ ", " + conFatherFN.getText() + " " + conFatherMI.getText()) + "', '" 
-                         + (conFatherStreet.getText() + " " + conFatherCity.getText() + ", "  + conFatherState.getText() + " " + conFatherZip.getText() + " " + conFatherPN.getText()) + "', '" 
-                         + (conMotherLN.getText()+ ", " + conMotherFN.getText() + " " + conMotherMI.getText()) + "', '" 
-                         + (conMotherStreet.getText() + " " + conMotherCity.getText() + ", " + conMotherState.getText() + " " + conMotherZip.getText() + " " + conMotherPN.getText()) + "', '"
-                         
-                         + conNotify.getText() + "', '" + conIllHealth.getText() + "', '" + conDeathRelationship.getText() + "', '" 
-                         + (conDeathStreet.getText() + " " + conDeathCity.getText() + ", " + conDeathState.getText() + " " + conDeathZip.getText() + " " + conDeathPN.getText()) + "', '" 
-                         +  conDeathPercentage.getText() + "', '" 
-                         
-                         + (conStreet.getText() + " " + conCity.getText() + ", "  + conState.getText() + " " + conZip.getText() + " " + conPN.getText() + " " + conEmail.getText()) + "', '" 
-                         + (conFN.getText().charAt(0)+ "." + conLN.getText().charAt(0)) + "', '" 
-                         + conPartnerZip.getText() + "', '" + conDiffMailing.getText() + "', '" 
-                         + conChildFN.getText() + "', '" + conChildMI.getText() + "', '" + conChildLN.getText() + "', '" + conChildCity.getText() + "', '" 
-                         + conChildState.getText() + "', '" + conChildZip.getText() + "', '" + conFatherFN.getText() + "', '" + conFatherMI.getText() + "', '"
-                         + conFatherLN.getText() + "', '" + conFatherCity.getText() + "', '" + conFatherState.getText() + "', '" + conFatherZip.getText() + "', '" 
-                         + conFatherPN.getText() + "', '" +  conMotherFN.getText() + "', '" + conMotherMI.getText() + "', '" + conMotherLN.getText() + "', '" 
-                         + conMotherCity.getText() + "', '" + conMotherState.getText() + "', '" + conMotherZip.getText() + "', '" + conMotherPN.getText() + "', '" 
-                         + conDeathStreet.getText() + "', '" + conDeathCity.getText() + "', '" + conMailingStreet.getText() + "', '" + conMailingCity.getText() + "', '" 
-                         + conMailingState.getText() + "', '" + conMailingZip.getText() + "', '" + conPartnerFN.getText() + "', '" +  conPartnerMI.getText() + "', '" 
-                         
-                         + conPartnerLN.getText() + "', '" +  conChildPN.getText() + "', '" + conEmergencyZip.getText() + "', '" + conMailingDorm.getText() + "', '"
-                         + conFatherStreet.getText() + "', '" + conMotherStreet.getText() + "', '" + conDeathState.getText() + "', '" + conDeathZip.getText() + "', '"
-                         + conDeathPN.getText() +  "', '" + conDeath.getText() + "', '" + conPriorFrom.getText() + "', '" + conPriorTo.getText() + "', '" + conPriorDischarge.getText() + "', '" + conPriorRemaining.getText() + "', '" 
-                         + conPriorGrade.getText() + "', '" + conCivilAir.getText() + "', '" + conCivilAirYes.getText() + "', '"
-                         + conQuestion1A.getText() + "', '" +  conQuestion2A.getText() + "', '" + conQuestion3A.getText() + "', '" + conQuestion4A.getText() + "', '" 
-                         + conQuestion5A.getText() + "', '" + conQuestion5B.getText() + "', '"  +conQuestion6A.getText() + "', '" + conQuestion7A.getText() + "', '" 
-                         + conQuestion8A.getText() + "', '" + conQuestion9A.getText() + "', '" + conQuestion10A.getText() + "', '" + conQuestion10B.getText() + "', '" 
-                         + conQuestion11A.getText() + "', '" + conQuestion12A.getText() + "', '" + conQuestion13A.getText() + "', '" 
-                         + (conLN.getText() + ", " + conFN.getText() + " " + conMN.getText().charAt(0)) + "')");
+                    + conEagleScout.getText() + "', '" + conGuardianStatus.getText() + "', '" + conGuardianPriorS.getText() + "', '"
+
+                    + conPoB.getText() + "', '" + conSelectiveServiceNum.getText() + "', '"
+                    + (conPN.getText() +conStreet.getText()+ " " + conCity.getText() + ", " + conState.getText()  + " " + conZip.getText()) + "', '"
+                    + conGuardianYearsOfService.getText() + "', '" + conGuardianHighGrade.getText() + "', '"
+
+                    + (conPartnerStreet.getText() + " " + conPartnerCity.getText() + ", " + conPartnerState.getText() + " " + conPartnerZip.getText() + " " + conPartnerPN.getText()) + "', '"
+                    + (conChildLN.getText() + ", " + conChildFN.getText() + " " + conChildMI.getText()) + "', '"
+                    + conChildRelationship.getText() + "', '" + conChildDoB.getText() + "', '"
+                    + (conChildStreet.getText() + " " + conChildCity.getText() + ", "  + conChildState.getText() + " " + conChildZip.getText() + " "  + conChildPN.getText()) + "', '"
+                    + (conFatherLN.getText()+ ", " + conFatherFN.getText() + " " + conFatherMI.getText()) + "', '"
+                    + (conFatherStreet.getText() + " " + conFatherCity.getText() + ", "  + conFatherState.getText() + " " + conFatherZip.getText() + " " + conFatherPN.getText()) + "', '"
+                    + (conMotherLN.getText()+ ", " + conMotherFN.getText() + " " + conMotherMI.getText()) + "', '"
+                    + (conMotherStreet.getText() + " " + conMotherCity.getText() + ", " + conMotherState.getText() + " " + conMotherZip.getText() + " " + conMotherPN.getText()) + "', '"
+
+                    + conNotify.getText() + "', '" + conIllHealth.getText() + "', '" + conDeathRelationship.getText() + "', '"
+                    + (conDeathStreet.getText() + " " + conDeathCity.getText() + ", " + conDeathState.getText() + " " + conDeathZip.getText() + " " + conDeathPN.getText()) + "', '"
+                    +  conDeathPercentage.getText() + "', '"
+
+                    + (conStreet.getText() + " " + conCity.getText() + ", "  + conState.getText() + " " + conZip.getText() + " " + conPN.getText() + " " + conEmail.getText()) + "', '"
+                    + (conFN.getText().charAt(0)+ "." + conLN.getText().charAt(0)) + "', '"
+                    + conPartnerZip.getText() + "', '" + conDiffMailing.getText() + "', '"
+                    + conChildFN.getText() + "', '" + conChildMI.getText() + "', '" + conChildLN.getText() + "', '" + conChildCity.getText() + "', '"
+                    + conChildState.getText() + "', '" + conChildZip.getText() + "', '" + conFatherFN.getText() + "', '" + conFatherMI.getText() + "', '"
+                    + conFatherLN.getText() + "', '" + conFatherCity.getText() + "', '" + conFatherState.getText() + "', '" + conFatherZip.getText() + "', '"
+                    + conFatherPN.getText() + "', '" +  conMotherFN.getText() + "', '" + conMotherMI.getText() + "', '" + conMotherLN.getText() + "', '"
+                    + conMotherCity.getText() + "', '" + conMotherState.getText() + "', '" + conMotherZip.getText() + "', '" + conMotherPN.getText() + "', '"
+                    + conDeathStreet.getText() + "', '" + conDeathCity.getText() + "', '" + conMailingStreet.getText() + "', '" + conMailingCity.getText() + "', '"
+                    + conMailingState.getText() + "', '" + conMailingZip.getText() + "', '" + conPartnerFN.getText() + "', '" +  conPartnerMI.getText() + "', '"
+
+                    + conPartnerLN.getText() + "', '" +  conChildPN.getText() + "', '" + conEmergencyZip.getText() + "', '" + conMailingDorm.getText() + "', '"
+                    + conFatherStreet.getText() + "', '" + conMotherStreet.getText() + "', '" + conDeathState.getText() + "', '" + conDeathZip.getText() + "', '"
+                    + conDeathPN.getText() +  "', '" + conDeath.getText() + "', '" + conPriorFrom.getText() + "', '" + conPriorTo.getText() + "', '" + conPriorDischarge.getText() + "', '" + conPriorRemaining.getText() + "', '"
+                    + conPriorGrade.getText() + "', '" + conCivilAir.getText() + "', '" + conCivilAirYes.getText() + "', '"
+                    + conQuestion1A.getText() + "', '" +  conQuestion2A.getText() + "', '" + conQuestion3A.getText() + "', '" + conQuestion4A.getText() + "', '"
+                    + conQuestion5A.getText() + "', '" + conQuestion5B.getText() + "', '"  +conQuestion6A.getText() + "', '" + conQuestion7A.getText() + "', '"
+                    + conQuestion8A.getText() + "', '" + conQuestion9A.getText() + "', '" + conQuestion10A.getText() + "', '" + conQuestion10B.getText() + "', '"
+                    + conQuestion11A.getText() + "', '" + conQuestion12A.getText() + "', '" + conQuestion13A.getText() + "', '"
+                    + (conLN.getText() + ", " + conFN.getText() + " " + conMN.getText().charAt(0)) + "')");
 
                 sta.close();
                 adminInformation adminInfo = new adminInformation(conFN.getText(), conLN.getText(), conMN.getText(), conCWUID.getText(), conEmail.getText(), conDoB.getText(),
-                conPN.getText(), 
-                conStreet.getText(), conApt.getText(), conCity.getText(), conState.getText(), conZip.getText(), 
-                conGender.getText(), conSSN.getText(), conAcMajor.getText(), conGradDate.getText(), conRace.getText(),
-                conPoB.getText(), conSelectiveServiceNum.getText(), 
-                conDiffMailing.getText(), conMailingDorm.getText(), conMailingStreet.getText(),
-                conMailingCity.getText(), conMailingState.getText(), conMailingZip.getText(),
-                conIllHealth.getText(), conNotify.getText(), conNoD.getText(),
-                
-                conMaritialS.getText(), conPartnerFN.getText(), conPartnerMI.getText(), conPartnerLN.getText(), conPartnerStreet.getText(),
-                conPartnerCity.getText(), conPartnerState.getText(), conPartnerZip.getText(), conPartnerPN.getText(), conPartnerPoB.getText(),
-                
-                conChildren.getText(), conChildFN.getText(), conChildMI.getText(), conChildLN.getText(), conChildDoB.getText(), conChildRelationship.getText(),
-                conChildStreet.getText(), conChildCity.getText(), conChildState.getText(), conChildZip.getText(), conChildPN.getText(),
-                
-                conFatherFN.getText(), conFatherMI.getText(), conFatherLN.getText(), conFatherStreet.getText(), conFatherCity.getText(),
-                conFatherState.getText(), conFatherZip.getText(), conFatherPN.getText(),
-                
-                conMotherFN.getText(), conMotherMI.getText(), conMotherLN.getText(), conMotherStreet.getText(), conMotherCity.getText(),
-                conMotherState.getText(), conMotherZip.getText(), conMotherPN.getText(),
-                
-                conEmergency.getText(), conEmergencyStreet.getText(), conEmergencyCity.getText(), conEmergencyState.getText(), conEmergencyZip.getText(), conEmergencyPN.getText(),
-                
-                conGuardianPriorS.getText(), conGuardianYearsOfService.getText(), conGuardianHighGrade.getText(), conGuardianStatus.getText(),
-                
-                conDeath.getText(), conDeathRelationship.getText(), conDeathStreet.getText(), 
-                conDeathCity.getText(), conDeathState.getText(), conDeathZip.getText(), conDeathPN.getText(), conDeathPercentage.getText(),
-                
-                conPriorS.getText(), conHasPriorS.getText(), conPriorFrom.getText(), conPriorTo.getText(), conPriorDischarge.getText(), conPriorRemaining.getText(), conPriorGrade.getText(),
-                conJuniorROTC.getText(), conEagleScout.getText(), conCivilAir.getText(), conCivilAirYes.getText(),
-                
-                conQuestion1A.getText(), conQuestion2A.getText(), conQuestion3A.getText(),
-                conQuestion4A.getText(), conQuestion5A.getText(), conQuestion5B.getText(), conQuestion6A.getText(),
-                conQuestion7A.getText(), conQuestion8A.getText(), conQuestion9A.getText(), 
-                conQuestion10A.getText(), conQuestion10B.getText(), conQuestion11A.getText(), conQuestion12A.getText(), conQuestion13A.getText() );
+                    conPN.getText(),
+                    conStreet.getText(), conApt.getText(), conCity.getText(), conState.getText(), conZip.getText(),
+                    conGender.getText(), conSSN.getText(), conAcMajor.getText(), conGradDate.getText(), conRace.getText(),
+                    conPoB.getText(), conSelectiveServiceNum.getText(),
+                    conDiffMailing.getText(), conMailingDorm.getText(), conMailingStreet.getText(),
+                    conMailingCity.getText(), conMailingState.getText(), conMailingZip.getText(),
+                    conIllHealth.getText(), conNotify.getText(), conNoD.getText(),
+
+                    conMaritialS.getText(), conPartnerFN.getText(), conPartnerMI.getText(), conPartnerLN.getText(), conPartnerStreet.getText(),
+                    conPartnerCity.getText(), conPartnerState.getText(), conPartnerZip.getText(), conPartnerPN.getText(), conPartnerPoB.getText(),
+
+                    conChildren.getText(), conChildFN.getText(), conChildMI.getText(), conChildLN.getText(), conChildDoB.getText(), conChildRelationship.getText(),
+                    conChildStreet.getText(), conChildCity.getText(), conChildState.getText(), conChildZip.getText(), conChildPN.getText(),
+
+                    conFatherFN.getText(), conFatherMI.getText(), conFatherLN.getText(), conFatherStreet.getText(), conFatherCity.getText(),
+                    conFatherState.getText(), conFatherZip.getText(), conFatherPN.getText(),
+
+                    conMotherFN.getText(), conMotherMI.getText(), conMotherLN.getText(), conMotherStreet.getText(), conMotherCity.getText(),
+                    conMotherState.getText(), conMotherZip.getText(), conMotherPN.getText(),
+
+                    conEmergency.getText(), conEmergencyStreet.getText(), conEmergencyCity.getText(), conEmergencyState.getText(), conEmergencyZip.getText(), conEmergencyPN.getText(),
+
+                    conGuardianPriorS.getText(), conGuardianYearsOfService.getText(), conGuardianHighGrade.getText(), conGuardianStatus.getText(),
+
+                    conDeath.getText(), conDeathRelationship.getText(), conDeathStreet.getText(),
+                    conDeathCity.getText(), conDeathState.getText(), conDeathZip.getText(), conDeathPN.getText(), conDeathPercentage.getText(),
+
+                    conPriorS.getText(), conHasPriorS.getText(), conPriorFrom.getText(), conPriorTo.getText(), conPriorDischarge.getText(), conPriorRemaining.getText(), conPriorGrade.getText(),
+                    conJuniorROTC.getText(), conEagleScout.getText(), conCivilAir.getText(), conCivilAirYes.getText(),
+
+                    conQuestion1A.getText(), conQuestion2A.getText(), conQuestion3A.getText(),
+                    conQuestion4A.getText(), conQuestion5A.getText(), conQuestion5B.getText(), conQuestion6A.getText(),
+                    conQuestion7A.getText(), conQuestion8A.getText(), conQuestion9A.getText(),
+                    conQuestion10A.getText(), conQuestion10B.getText(), conQuestion11A.getText(), conQuestion12A.getText(), conQuestion13A.getText() );
                 adminInfo.setVisible(true);
+                JOptionPane.showMessageDialog(null, "The cadet has been successfully input to the database.");
                 this.dispose();
             }
         } catch (Exception e) {
             System.err.println("Exception: " + e.getMessage());
         }
 
-//end else
+        //end else
 
-    
     }//GEN-LAST:event_jButton3ActionPerformed
-
-    private void goBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_goBackActionPerformed
-        adminInformation adminInfo = new adminInformation(conFN.getText(), conLN.getText(), conMN.getText(), conCWUID.getText(), conEmail.getText(), conDoB.getText(),
-                conPN.getText(), 
-                conStreet.getText(), conApt.getText(), conCity.getText(), conState.getText(), conZip.getText(), 
-                conGender.getText(), conSSN.getText(), conAcMajor.getText(), conGradDate.getText(), conRace.getText(),
-                conPoB.getText(), conSelectiveServiceNum.getText(), 
-                conDiffMailing.getText(), conMailingDorm.getText(), conMailingStreet.getText(),
-                conMailingCity.getText(), conMailingState.getText(), conMailingZip.getText(),
-                conIllHealth.getText(), conNotify.getText(), conNoD.getText(),
-                
-                conMaritialS.getText(), conPartnerFN.getText(), conPartnerMI.getText(), conPartnerLN.getText(), conPartnerStreet.getText(),
-                conPartnerCity.getText(), conPartnerState.getText(), conPartnerZip.getText(), conPartnerPN.getText(), conPartnerPoB.getText(),
-                
-                conChildren.getText(), conChildFN.getText(), conChildMI.getText(), conChildLN.getText(), conChildDoB.getText(), conChildRelationship.getText(),
-                conChildStreet.getText(), conChildCity.getText(), conChildState.getText(), conChildZip.getText(), conChildPN.getText(),
-                
-                conFatherFN.getText(), conFatherMI.getText(), conFatherLN.getText(), conFatherStreet.getText(), conFatherCity.getText(),
-                conFatherState.getText(), conFatherZip.getText(), conFatherPN.getText(),
-                
-                conMotherFN.getText(), conMotherMI.getText(), conMotherLN.getText(), conMotherStreet.getText(), conMotherCity.getText(),
-                conMotherState.getText(), conMotherZip.getText(), conMotherPN.getText(),
-                
-                conEmergency.getText(), conEmergencyStreet.getText(), conEmergencyCity.getText(), conEmergencyState.getText(), conEmergencyZip.getText(), conEmergencyPN.getText(),
-                
-                conGuardianPriorS.getText(), conGuardianYearsOfService.getText(), conGuardianHighGrade.getText(), conGuardianStatus.getText(),
-                
-                conDeath.getText(), conDeathRelationship.getText(), conDeathStreet.getText(), 
-                conDeathCity.getText(), conDeathState.getText(), conDeathZip.getText(), conDeathPN.getText(), conDeathPercentage.getText(),
-                
-                conPriorS.getText(), conHasPriorS.getText(), conPriorFrom.getText(), conPriorTo.getText(), conPriorDischarge.getText(), conPriorRemaining.getText(), conPriorGrade.getText(),
-                conJuniorROTC.getText(), conEagleScout.getText(), conCivilAir.getText(), conCivilAirYes.getText(),
-                
-                conQuestion1A.getText(), conQuestion2A.getText(), conQuestion3A.getText(),
-                conQuestion4A.getText(), conQuestion5A.getText(), conQuestion5B.getText(), conQuestion6A.getText(),
-                conQuestion7A.getText(), conQuestion8A.getText(), conQuestion9A.getText(), 
-                conQuestion10A.getText(), conQuestion10B.getText(), conQuestion11A.getText(), conQuestion12A.getText(), conQuestion13A.getText() );
-        
-        adminInfo.setVisible(true);
-        this.dispose();
-        //goBack.setVisible(true);
-    }//GEN-LAST:event_goBackActionPerformed
 
     /**
      * @param args the command line arguments

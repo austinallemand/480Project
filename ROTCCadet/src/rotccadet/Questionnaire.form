@@ -3,6 +3,9 @@
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+      <Dimension value="[1920, 1080]"/>
+    </Property>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
@@ -42,6 +45,11 @@
   </Layout>
   <SubComponents>
     <Container class="javax.swing.JPanel" name="jPanel6">
+      <Properties>
+        <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[1920, 1080]"/>
+        </Property>
+      </Properties>
 
       <Layout>
         <DimensionLayout dim="0">
@@ -65,10 +73,20 @@
       </Layout>
       <SubComponents>
         <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+          <Properties>
+            <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[1920, 1080]"/>
+            </Property>
+          </Properties>
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
             <Container class="javax.swing.JTabbedPane" name="jTabbedPane2">
+              <Properties>
+                <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[1920, 1080]"/>
+                </Property>
+              </Properties>
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
               <SubComponents>
@@ -91,11 +109,11 @@
                                       <Component id="jLabel17" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
                                       <Component id="jPanel4" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <EmptySpace pref="1433" max="32767" attributes="0"/>
+                              <EmptySpace pref="1554" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -122,9 +140,94 @@
                               <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="1" attributes="0">
+                                          <EmptySpace min="19" max="32767" attributes="0"/>
+                                          <Group type="103" groupAlignment="1" attributes="0">
+                                              <Component id="jLabelNoD" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabelPS2" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabel21" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabel20" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabel19" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabel18" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabel23" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabelPS3" alignment="1" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabelEth" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabelStreet" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabelCity" alignment="1" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabelState" alignment="1" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabelZip" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabelGender" alignment="1" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabelSSN" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabelAM" alignment="1" min="-2" max="-2" attributes="0"/>
+                                              <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
+                                                  <Component id="jLabel16" alignment="1" pref="0" max="32767" attributes="0"/>
+                                                  <Component id="jLabel15" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jLabel9" alignment="1" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Component id="jLabelPGD" alignment="1" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="102" attributes="0">
+                                                  <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+                                                  <Component id="userStreet" min="-2" pref="161" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Component id="userCity" min="-2" pref="161" max="-2" attributes="0"/>
+                                                      <Component id="userApt" min="-2" pref="161" max="-2" attributes="0"/>
+                                                      <Component id="userState" alignment="0" min="-2" pref="54" max="-2" attributes="0"/>
+                                                      <Component id="userZip" alignment="0" min="-2" pref="161" max="-2" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Component id="userGender" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="userSSN" min="-2" pref="161" max="-2" attributes="0"/>
+                                                      <Component id="userAcMajor" alignment="0" min="-2" pref="161" max="-2" attributes="0"/>
+                                                      <Component id="userGradDate" alignment="0" min="-2" pref="161" max="-2" attributes="0"/>
+                                                      <Component id="userRace" min="-2" pref="204" max="-2" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                      <Component id="userSelectiveServiceNum" pref="161" max="32767" attributes="0"/>
+                                                      <Component id="userPoB" max="32767" attributes="0"/>
+                                                      <Component id="userDiffMailing" alignment="0" min="-2" pref="115" max="-2" attributes="0"/>
+                                                      <Component id="userMailingState" alignment="0" min="-2" pref="50" max="-2" attributes="0"/>
+                                                      <Component id="userIllHealth" alignment="0" max="32767" attributes="0"/>
+                                                      <Component id="userNotify" max="32767" attributes="0"/>
+                                                      <Component id="userNoD" max="32767" attributes="0"/>
+                                                      <Component id="userMailingDorm" alignment="0" max="32767" attributes="0"/>
+                                                      <Component id="userMailingStreet" alignment="0" max="32767" attributes="0"/>
+                                                      <Component id="userMailingCity" alignment="0" max="32767" attributes="0"/>
+                                                      <Component id="userMailingZip" alignment="0" max="32767" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                          </Group>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
+                                          <Component id="jLabel22" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="jLabelDoB1" min="-2" max="-2" attributes="0"/>
+                                              <Component id="userPN" min="-2" pref="161" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="1" attributes="0">
+                                      <Group type="102" attributes="0">
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="102" alignment="0" attributes="0">
-                                                  <EmptySpace min="-2" pref="134" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="78" max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="1" attributes="0">
                                                       <Component id="jLabelEmail" min="-2" max="-2" attributes="0"/>
                                                       <Component id="jLabelFN" min="-2" max="-2" attributes="0"/>
@@ -135,92 +238,26 @@
                                               </Group>
                                               <Component id="jLabelDoB" alignment="1" min="-2" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="userDoB" min="-2" pref="161" max="-2" attributes="0"/>
-                                              <Component id="userEmail" alignment="0" min="-2" pref="161" max="-2" attributes="0"/>
-                                              <Component id="userCWUID" alignment="0" min="-2" pref="161" max="-2" attributes="0"/>
-                                              <Component id="userMI" alignment="0" min="-2" pref="161" max="-2" attributes="0"/>
-                                              <Component id="userLN" alignment="0" min="-2" pref="161" max="-2" attributes="0"/>
-                                              <Component id="userFN" min="-2" pref="161" max="-2" attributes="0"/>
-                                          </Group>
-                                      </Group>
-                                      <Group type="102" alignment="1" attributes="0">
-                                          <EmptySpace max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                              <Group type="102" alignment="1" attributes="0">
-                                                  <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
-                                                  <Component id="jLabelPN" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace max="32767" attributes="0"/>
-                                                  <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Group type="102" attributes="0">
-                                                          <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                                                          <Component id="jLabelDoB1" min="-2" max="-2" attributes="0"/>
-                                                      </Group>
-                                                      <Component id="userPN" min="-2" pref="161" max="-2" attributes="0"/>
-                                                  </Group>
-                                              </Group>
-                                              <Group type="102" alignment="1" attributes="0">
-                                                  <Group type="103" groupAlignment="1" attributes="0">
-                                                      <Component id="jLabelNoD" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="jLabelPS2" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="jLabel21" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="jLabel20" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="jLabel19" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="jLabel18" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="jLabel23" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="jLabelPS3" alignment="1" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="jLabelEth" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="jLabelStreet" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="jLabelCity" alignment="1" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="jLabelState" alignment="1" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="jLabelZip" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="jLabelGender" alignment="1" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="jLabelSSN" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="jLabelAM" alignment="1" min="-2" max="-2" attributes="0"/>
-                                                      <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
-                                                          <Component id="jLabel16" alignment="1" pref="0" max="32767" attributes="0"/>
-                                                          <Component id="jLabel15" alignment="1" min="-2" max="-2" attributes="0"/>
-                                                          <Component id="jLabel9" alignment="1" min="-2" max="-2" attributes="0"/>
-                                                      </Group>
-                                                      <Component id="jLabelPGD" alignment="1" min="-2" max="-2" attributes="0"/>
-                                                  </Group>
-                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                                      <Component id="userDiffMailing" alignment="0" min="-2" pref="115" max="-2" attributes="0"/>
-                                                      <Component id="userSelectiveServiceNum" alignment="0" max="32767" attributes="0"/>
-                                                      <Component id="userStreet" alignment="0" max="32767" attributes="0"/>
-                                                      <Component id="userApt" alignment="0" max="32767" attributes="0"/>
-                                                      <Component id="userCity" alignment="0" max="32767" attributes="0"/>
-                                                      <Component id="userGender" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="userZip" alignment="0" max="32767" attributes="0"/>
-                                                      <Component id="userSSN" alignment="0" max="32767" attributes="0"/>
-                                                      <Component id="userAcMajor" alignment="0" max="32767" attributes="0"/>
-                                                      <Component id="userGradDate" alignment="0" max="32767" attributes="0"/>
-                                                      <Component id="userRace" alignment="0" min="-2" pref="161" max="-2" attributes="0"/>
-                                                      <Component id="userPoB" alignment="0" max="32767" attributes="0"/>
-                                                      <Component id="userMailingDorm" alignment="0" max="32767" attributes="0"/>
-                                                      <Component id="userMailingStreet" alignment="0" max="32767" attributes="0"/>
-                                                      <Component id="userMailingCity" alignment="0" max="32767" attributes="0"/>
-                                                      <Component id="userMailingState" alignment="0" min="-2" pref="50" max="-2" attributes="0"/>
-                                                      <Component id="userMailingZip" alignment="0" max="32767" attributes="0"/>
-                                                      <Component id="userIllHealth" alignment="0" max="32767" attributes="0"/>
-                                                      <Component id="userNotify" alignment="0" max="32767" attributes="0"/>
-                                                      <Component id="userNoD" alignment="0" max="32767" attributes="0"/>
-                                                      <Component id="userState" alignment="0" min="-2" pref="54" max="-2" attributes="0"/>
-                                                  </Group>
-                                              </Group>
+                                              <Component id="userDoB" pref="201" max="32767" attributes="0"/>
+                                              <Component id="userEmail" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="userCWUID" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="userMI" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="userLN" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="userFN" max="32767" attributes="0"/>
                                           </Group>
                                       </Group>
+                                      <Component id="jLabel39" min="-2" pref="226" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
                         <DimensionLayout dim="1">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
+                                  <Component id="jLabel39" min="-2" pref="14" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabelFN" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -253,8 +290,8 @@
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="jLabelPN" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="userPN" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel22" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jLabelDoB1" min="-2" max="-2" attributes="0"/>
@@ -304,11 +341,11 @@
                                       <Component id="userGradDate" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jLabelEth" min="-2" max="-2" attributes="0"/>
-                                      <Component id="userRace" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jLabelEth" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="userRace" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="userPoB" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -363,7 +400,7 @@
                                       <Component id="jLabelNoD" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="userNoD" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace pref="40" max="32767" attributes="0"/>
+                                  <EmptySpace pref="37" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -473,7 +510,7 @@
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel1">
                           <Properties>
-                            <Property name="text" type="java.lang.String" value="Apartment Number:"/>
+                            <Property name="text" type="java.lang.String" value="Apartment Number(Apt xxx):"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel18">
@@ -507,7 +544,7 @@
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel20">
                           <Properties>
-                            <Property name="text" type="java.lang.String" value="State:"/>
+                            <Property name="text" type="java.lang.String" value="State(ST):"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JTextField" name="userState">
@@ -539,13 +576,8 @@
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabelState">
                           <Properties>
-                            <Property name="text" type="java.lang.String" value="State:"/>
+                            <Property name="text" type="java.lang.String" value="State(ST):"/>
                           </Properties>
-                        </Component>
-                        <Component class="javax.swing.JTextField" name="userPN">
-                          <Events>
-                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="userPNActionPerformed"/>
-                          </Events>
                         </Component>
                         <Component class="javax.swing.JTextField" name="userMailingCity">
                           <Properties>
@@ -558,11 +590,6 @@
                           </Events>
                         </Component>
                         <Component class="javax.swing.JTextField" name="userIllHealth">
-                        </Component>
-                        <Component class="javax.swing.JLabel" name="jLabelPN">
-                          <Properties>
-                            <Property name="text" type="java.lang.String" value="Phone Number(xxx-xxx-xxxx):"/>
-                          </Properties>
                         </Component>
                         <Component class="javax.swing.JComboBox" name="userGender">
                           <Properties>
@@ -663,6 +690,24 @@
                             <Property name="text" type="java.lang.String" value="Permanent Mailing Address"/>
                           </Properties>
                         </Component>
+                        <Component class="javax.swing.JTextField" name="userPN">
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="userPNActionPerformed"/>
+                          </Events>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="jLabel22">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Phone Number(xxx-xxx-xxxx):"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="jLabel39">
+                          <Properties>
+                            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                              <Color blue="0" green="0" red="ff" type="rgb"/>
+                            </Property>
+                            <Property name="text" type="java.lang.String" value="If you do not know an answer leave blank"/>
+                          </Properties>
+                        </Component>
                       </SubComponents>
                     </Container>
                   </SubComponents>
@@ -738,7 +783,7 @@
                                       <Component id="jLabel5" min="-2" pref="126" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <EmptySpace pref="1483" max="32767" attributes="0"/>
+                              <EmptySpace pref="1599" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1119,82 +1164,90 @@
                   <Layout>
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Group type="103" groupAlignment="1" attributes="0">
-                                          <Component id="jLabel87" alignment="1" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabel27" alignment="1" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabel26" alignment="1" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabel25" alignment="1" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabel24" alignment="1" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabelEC1" alignment="1" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabel86" alignment="1" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabel85" alignment="1" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabel84" alignment="1" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabel83" alignment="1" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabel82" alignment="1" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabel81" alignment="1" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabel74" alignment="1" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabel73" alignment="1" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="userMotherMI" alignment="0" min="-2" pref="65" max="-2" attributes="0"/>
-                                          <Component id="userMotherState" alignment="0" min="-2" pref="63" max="-2" attributes="0"/>
-                                          <Component id="userEmergencyState" alignment="0" min="-2" pref="62" max="-2" attributes="0"/>
-                                          <Component id="motherNoInfo" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                              <Component id="userEmergencyStreet" alignment="0" pref="205" max="32767" attributes="0"/>
-                                              <Component id="userEmergency" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="userMotherPN" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="userMotherZip" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="userMotherCity" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="userMotherStreet" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="userMotherLN" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="userMotherFN" alignment="0" max="32767" attributes="0"/>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Group type="103" groupAlignment="1" attributes="0">
+                                                  <Component id="jLabel87" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jLabel27" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jLabel26" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jLabel25" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jLabel24" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jLabelEC1" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jLabel86" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jLabel85" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jLabel84" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jLabel83" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jLabel82" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jLabel81" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jLabel74" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jLabel73" alignment="1" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="userMotherMI" alignment="0" min="-2" pref="65" max="-2" attributes="0"/>
+                                                  <Component id="userMotherState" alignment="0" min="-2" pref="63" max="-2" attributes="0"/>
+                                                  <Component id="userEmergencyState" alignment="0" min="-2" pref="62" max="-2" attributes="0"/>
+                                                  <Component id="motherNoInfo" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                                      <Component id="userEmergencyStreet" alignment="0" pref="205" max="32767" attributes="0"/>
+                                                      <Component id="userEmergency" alignment="0" max="32767" attributes="0"/>
+                                                      <Component id="userMotherPN" alignment="0" max="32767" attributes="0"/>
+                                                      <Component id="userMotherZip" alignment="0" max="32767" attributes="0"/>
+                                                      <Component id="userMotherCity" alignment="0" max="32767" attributes="0"/>
+                                                      <Component id="userMotherStreet" alignment="0" max="32767" attributes="0"/>
+                                                      <Component id="userMotherLN" alignment="0" max="32767" attributes="0"/>
+                                                      <Component id="userMotherFN" alignment="0" max="32767" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                                      <Component id="userEmergencyPN" alignment="0" max="32767" attributes="0"/>
+                                                      <Component id="userEmergencyZip" alignment="0" max="32767" attributes="0"/>
+                                                      <Component id="userEmergencyCity" alignment="0" pref="204" max="32767" attributes="0"/>
+                                                  </Group>
+                                              </Group>
                                           </Group>
-                                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                              <Component id="userEmergencyPN" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="userEmergencyZip" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="userEmergencyCity" alignment="0" pref="204" max="32767" attributes="0"/>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="1" attributes="0">
+                                                  <Component id="jLabel72" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jLabel71" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jLabel70" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jLabel66" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jLabel65" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jLabel69" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jLabel68" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jLabel67" alignment="1" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="userFatherFN" alignment="0" min="-2" pref="205" max="-2" attributes="0"/>
+                                                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                                      <Component id="userFatherStreet" alignment="0" max="32767" attributes="0"/>
+                                                      <Component id="userFatherPN" alignment="0" min="-2" pref="204" max="-2" attributes="0"/>
+                                                      <Component id="userFatherCity" alignment="0" min="-2" pref="203" max="-2" attributes="0"/>
+                                                      <Component id="userFatherZip" alignment="0" min="-2" pref="203" max="-2" attributes="0"/>
+                                                      <Component id="userFatherLN" alignment="0" pref="205" max="32767" attributes="0"/>
+                                                      <Component id="userFatherMI" alignment="0" min="-2" pref="62" max="-2" attributes="0"/>
+                                                      <Component id="userFatherState" alignment="0" min="-2" pref="58" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="102" attributes="0">
+                                                      <Component id="fatherNoInfo" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                      <Component id="parentAddressSame" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                              </Group>
                                           </Group>
                                       </Group>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="1" attributes="0">
-                                          <Component id="jLabel72" alignment="1" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabel71" alignment="1" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabel70" alignment="1" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabel66" alignment="1" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabel65" alignment="1" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabel69" alignment="1" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabel68" alignment="1" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabel67" alignment="1" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="userFatherFN" alignment="0" min="-2" pref="205" max="-2" attributes="0"/>
-                                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                              <Component id="userFatherStreet" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="userFatherPN" alignment="0" min="-2" pref="204" max="-2" attributes="0"/>
-                                              <Component id="userFatherCity" alignment="0" min="-2" pref="203" max="-2" attributes="0"/>
-                                              <Component id="userFatherZip" alignment="0" min="-2" pref="203" max="-2" attributes="0"/>
-                                              <Component id="userFatherLN" alignment="0" pref="205" max="32767" attributes="0"/>
-                                              <Component id="userFatherMI" alignment="0" min="-2" pref="62" max="-2" attributes="0"/>
-                                              <Component id="userFatherState" alignment="0" min="-2" pref="58" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Group type="102" attributes="0">
-                                              <Component id="fatherNoInfo" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Component id="parentAddressSame" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                      </Group>
+                                      <EmptySpace min="-2" pref="257" max="-2" attributes="0"/>
+                                      <Component id="jLabel38" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <EmptySpace pref="1352" max="32767" attributes="0"/>
+                              <EmptySpace pref="1468" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1289,6 +1342,8 @@
                                   <Component id="userMotherPN" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jLabel38" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabelEC1" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="userEmergency" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -1364,7 +1419,7 @@
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel70">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="Father State:"/>
+                        <Property name="text" type="java.lang.String" value="Father State(ST):"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JTextField" name="userFatherState">
@@ -1420,7 +1475,7 @@
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel84">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="Mother State:"/>
+                        <Property name="text" type="java.lang.String" value="Mother State(ST):"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JTextField" name="userMotherState">
@@ -1462,7 +1517,7 @@
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel26">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="Emergency State:"/>
+                        <Property name="text" type="java.lang.String" value="Emergency State(ST):"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JTextField" name="userEmergencyState">
@@ -1508,6 +1563,11 @@
                         <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="fatherNoInfoStateChanged"/>
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fatherNoInfoActionPerformed"/>
                       </Events>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel38">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Emergency Contact Informatiion"/>
+                      </Properties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -1588,7 +1648,7 @@
                                           <Component id="jLabel88" alignment="1" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                           <Component id="userEagleScout" min="-2" pref="153" max="-2" attributes="0"/>
                                           <Component id="userPriorFrom" alignment="0" min="-2" pref="153" max="-2" attributes="0"/>
                                           <Component id="userPriorTo" alignment="0" min="-2" pref="153" max="-2" attributes="0"/>
@@ -1596,15 +1656,15 @@
                                           <Component id="userPriorRemaining" alignment="0" min="-2" pref="153" max="-2" attributes="0"/>
                                           <Component id="userJuniorROTC" alignment="0" min="-2" pref="153" max="-2" attributes="0"/>
                                           <Group type="102" alignment="0" attributes="0">
-                                              <Component id="userCivilAir" min="-2" pref="65" max="-2" attributes="0"/>
+                                              <Component id="userCivilAir" min="-2" pref="54" max="-2" attributes="0"/>
                                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Component id="userCivilAirYes" min="-2" pref="86" max="-2" attributes="0"/>
+                                              <Component id="userCivilAirYes" max="32767" attributes="0"/>
                                           </Group>
                                           <Component id="userPriorGrade" min="-2" pref="153" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
-                              <EmptySpace pref="1388" max="32767" attributes="0"/>
+                              <EmptySpace pref="1504" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1732,7 +1792,7 @@
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="jLabelDB">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="Death beneficiary:"/>
+                        <Property name="text" type="java.lang.String" value="Death beneficiary(First Last):"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JTextField" name="userDeath">
@@ -1757,7 +1817,7 @@
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel60">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="State:"/>
+                        <Property name="text" type="java.lang.String" value="State(ST):"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel61">
@@ -2070,21 +2130,25 @@
                                           <Component id="Question12" alignment="0" min="-2" pref="303" max="-2" attributes="0"/>
                                           <Component id="Question9" alignment="0" min="-2" pref="303" max="-2" attributes="0"/>
                                           <Group type="102" alignment="0" attributes="0">
-                                              <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="Question2" alignment="0" min="-2" pref="290" max="-2" attributes="0"/>
-                                                  <Component id="Question6" alignment="0" min="-2" pref="300" max="-2" attributes="0"/>
-                                                  <Component id="Question3" alignment="0" min="-2" pref="290" max="-2" attributes="0"/>
-                                                  <Component id="Question4" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="Question5" alignment="0" min="-2" pref="300" max="-2" attributes="0"/>
-                                                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                                      <Component id="Question8" alignment="0" pref="0" max="32767" attributes="0"/>
-                                                      <Component id="jLabel3" alignment="0" max="32767" attributes="0"/>
+                                                  <Group type="102" attributes="0">
+                                                      <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+                                                      <Group type="103" groupAlignment="0" attributes="0">
+                                                          <Component id="Question2" alignment="0" min="-2" pref="290" max="-2" attributes="0"/>
+                                                          <Component id="Question6" alignment="0" min="-2" pref="300" max="-2" attributes="0"/>
+                                                          <Component id="Question3" alignment="0" min="-2" pref="290" max="-2" attributes="0"/>
+                                                          <Component id="Question4" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="Question5" alignment="0" min="-2" pref="300" max="-2" attributes="0"/>
+                                                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                                              <Component id="Question8" alignment="0" pref="0" max="32767" attributes="0"/>
+                                                              <Component id="jLabel3" alignment="0" max="32767" attributes="0"/>
+                                                          </Group>
+                                                          <Component id="Question14" alignment="0" min="-2" pref="290" max="-2" attributes="0"/>
+                                                          <Component id="Question7" alignment="0" min="-2" pref="300" max="-2" attributes="0"/>
+                                                          <Component id="Question10" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      </Group>
                                                   </Group>
-                                                  <Component id="Question14" alignment="0" min="-2" pref="290" max="-2" attributes="0"/>
                                                   <Component id="Question11" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="Question7" alignment="0" min="-2" pref="300" max="-2" attributes="0"/>
-                                                  <Component id="Question10" alignment="0" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Component id="jPanel7" min="-2" pref="206" max="-2" attributes="0"/>
@@ -2097,8 +2161,12 @@
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Component id="goBack" min="-2" pref="74" max="-2" attributes="0"/>
                                   </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="196" max="-2" attributes="0"/>
+                                      <Component id="jLabel40" min="-2" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
-                              <EmptySpace pref="1344" max="32767" attributes="0"/>
+                              <EmptySpace pref="1460" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -2146,6 +2214,8 @@
                                   <Component id="goBack" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jLabel40" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -2245,40 +2315,35 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="103" groupAlignment="1" attributes="0">
-                                          <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                                              <Group type="102" alignment="0" attributes="0">
-                                                  <Component id="userQuestion5A" min="-2" pref="114" max="-2" attributes="0"/>
-                                                  <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="userQuestion5B" min="-2" pref="83" max="-2" attributes="0"/>
-                                              </Group>
-                                              <Group type="102" alignment="0" attributes="0">
-                                                  <Group type="103" groupAlignment="1" attributes="0">
-                                                      <Component id="userQuestion10A" min="-2" pref="114" max="-2" attributes="0"/>
-                                                      <Component id="userQuestion11A" min="-2" pref="112" max="-2" attributes="0"/>
-                                                  </Group>
-                                                  <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="userQuestion10B" min="-2" pref="81" max="-2" attributes="0"/>
-                                              </Group>
-                                          </Group>
-                                          <Group type="102" alignment="1" attributes="0">
-                                              <Component id="userQuestion4A" min="-2" pref="114" max="-2" attributes="0"/>
-                                              <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
-                                          </Group>
-                                      </Group>
                                       <Component id="userQuestion3A" min="-2" pref="113" max="-2" attributes="0"/>
                                       <Component id="userQuestion2A" min="-2" pref="113" max="-2" attributes="0"/>
                                       <Component id="userQuestion1A" min="-2" pref="113" max="-2" attributes="0"/>
+                                      <Component id="userQuestion13A" alignment="0" min="-2" pref="112" max="-2" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="userQuestion5A" min="-2" pref="114" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="userQuestion5B" min="-2" pref="83" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Component id="userQuestion4A" min="-2" pref="114" max="-2" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="1" attributes="0">
+                                              <Component id="userQuestion10A" min="-2" pref="114" max="-2" attributes="0"/>
+                                              <Component id="userQuestion11A" min="-2" pref="112" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="userQuestion10B" min="-2" pref="81" max="-2" attributes="0"/>
+                                      </Group>
                                       <Component id="userQuestion9A" alignment="0" min="-2" pref="114" max="-2" attributes="0"/>
                                       <Component id="userQuestion8A" min="-2" pref="114" max="-2" attributes="0"/>
                                       <Component id="userQuestion7A" min="-2" pref="114" max="-2" attributes="0"/>
                                       <Component id="userQuestion6A" min="-2" pref="114" max="-2" attributes="0"/>
-                                      <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                          <Component id="userQuestion13A" alignment="0" pref="112" max="32767" attributes="0"/>
-                                          <Component id="userQuestion12A" alignment="0" max="32767" attributes="0"/>
-                                      </Group>
                                   </Group>
-                                  <EmptySpace max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="userQuestion12A" max="32767" attributes="0"/>
+                                  <EmptySpace min="-2" pref="98" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -2288,20 +2353,20 @@
                                   <Component id="userQuestion1A" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace pref="47" max="32767" attributes="0"/>
                                   <Component id="userQuestion2A" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="62" max="32767" attributes="0"/>
+                                  <EmptySpace pref="87" max="32767" attributes="0"/>
                                   <Component id="userQuestion3A" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="34" max="32767" attributes="0"/>
+                                  <EmptySpace pref="56" max="32767" attributes="0"/>
                                   <Component id="userQuestion4A" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="34" max="32767" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="userQuestion5B" min="-2" max="-2" attributes="0"/>
-                                      <Component id="userQuestion5A" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="userQuestion5A" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="userQuestion5B" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace pref="85" max="32767" attributes="0"/>
+                                  <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
                                   <Component id="userQuestion6A" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" pref="28" max="32767" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="userQuestion7A" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="38" max="32767" attributes="0"/>
+                                  <EmptySpace pref="26" max="32767" attributes="0"/>
                                   <Component id="userQuestion8A" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace pref="44" max="32767" attributes="0"/>
                                   <Component id="userQuestion9A" min="-2" max="-2" attributes="0"/>
@@ -2312,11 +2377,10 @@
                                   </Group>
                                   <EmptySpace type="separate" pref="26" max="32767" attributes="0"/>
                                   <Component id="userQuestion11A" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="87" max="32767" attributes="0"/>
+                                  <EmptySpace pref="102" max="32767" attributes="0"/>
                                   <Component id="userQuestion12A" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="72" max="32767" attributes="0"/>
+                                  <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
                                   <Component id="userQuestion13A" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -2325,9 +2389,10 @@
                         <Component class="javax.swing.JComboBox" name="userQuestion1A">
                           <Properties>
                             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                              <StringArray count="2">
-                                <StringItem index="0" value="No"/>
-                                <StringItem index="1" value="Yes"/>
+                              <StringArray count="3">
+                                <StringItem index="0" value="N/A"/>
+                                <StringItem index="1" value="No"/>
+                                <StringItem index="2" value="Yes"/>
                               </StringArray>
                             </Property>
                           </Properties>
@@ -2335,9 +2400,10 @@
                         <Component class="javax.swing.JComboBox" name="userQuestion7A">
                           <Properties>
                             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                              <StringArray count="2">
-                                <StringItem index="0" value="No"/>
-                                <StringItem index="1" value="Yes"/>
+                              <StringArray count="3">
+                                <StringItem index="0" value="N/A"/>
+                                <StringItem index="1" value="No"/>
+                                <StringItem index="2" value="Yes"/>
                               </StringArray>
                             </Property>
                           </Properties>
@@ -2345,9 +2411,10 @@
                         <Component class="javax.swing.JComboBox" name="userQuestion2A">
                           <Properties>
                             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                              <StringArray count="2">
-                                <StringItem index="0" value="No"/>
-                                <StringItem index="1" value="Yes"/>
+                              <StringArray count="3">
+                                <StringItem index="0" value="N/A"/>
+                                <StringItem index="1" value="No"/>
+                                <StringItem index="2" value="Yes"/>
                               </StringArray>
                             </Property>
                           </Properties>
@@ -2367,9 +2434,10 @@
                         <Component class="javax.swing.JComboBox" name="userQuestion3A">
                           <Properties>
                             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                              <StringArray count="2">
-                                <StringItem index="0" value="No"/>
-                                <StringItem index="1" value="Yes"/>
+                              <StringArray count="3">
+                                <StringItem index="0" value="N/A"/>
+                                <StringItem index="1" value="No"/>
+                                <StringItem index="2" value="Yes"/>
                               </StringArray>
                             </Property>
                           </Properties>
@@ -2377,9 +2445,10 @@
                         <Component class="javax.swing.JComboBox" name="userQuestion8A">
                           <Properties>
                             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                              <StringArray count="2">
-                                <StringItem index="0" value="No"/>
-                                <StringItem index="1" value="Yes"/>
+                              <StringArray count="3">
+                                <StringItem index="0" value="N/A"/>
+                                <StringItem index="1" value="No"/>
+                                <StringItem index="2" value="Yes"/>
                               </StringArray>
                             </Property>
                           </Properties>
@@ -2387,9 +2456,10 @@
                         <Component class="javax.swing.JComboBox" name="userQuestion12A">
                           <Properties>
                             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                              <StringArray count="2">
-                                <StringItem index="0" value="No"/>
-                                <StringItem index="1" value="Yes"/>
+                              <StringArray count="3">
+                                <StringItem index="0" value="N/A"/>
+                                <StringItem index="1" value="No"/>
+                                <StringItem index="2" value="Yes"/>
                               </StringArray>
                             </Property>
                           </Properties>
@@ -2400,9 +2470,10 @@
                         <Component class="javax.swing.JComboBox" name="userQuestion10A">
                           <Properties>
                             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                              <StringArray count="2">
-                                <StringItem index="0" value="No"/>
-                                <StringItem index="1" value="Yes"/>
+                              <StringArray count="3">
+                                <StringItem index="0" value="N/A"/>
+                                <StringItem index="1" value="No"/>
+                                <StringItem index="2" value="Yes"/>
                               </StringArray>
                             </Property>
                           </Properties>
@@ -2414,9 +2485,10 @@
                         <Component class="javax.swing.JComboBox" name="userQuestion5A">
                           <Properties>
                             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                              <StringArray count="2">
-                                <StringItem index="0" value="No"/>
-                                <StringItem index="1" value="Yes"/>
+                              <StringArray count="3">
+                                <StringItem index="0" value="N/A"/>
+                                <StringItem index="1" value="No"/>
+                                <StringItem index="2" value="Yes"/>
                               </StringArray>
                             </Property>
                           </Properties>
@@ -2439,9 +2511,10 @@
                         <Component class="javax.swing.JComboBox" name="userQuestion9A">
                           <Properties>
                             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                              <StringArray count="2">
-                                <StringItem index="0" value="No"/>
-                                <StringItem index="1" value="Yes"/>
+                              <StringArray count="3">
+                                <StringItem index="0" value="N/A"/>
+                                <StringItem index="1" value="No"/>
+                                <StringItem index="2" value="Yes"/>
                               </StringArray>
                             </Property>
                           </Properties>
@@ -2452,9 +2525,10 @@
                         <Component class="javax.swing.JComboBox" name="userQuestion4A">
                           <Properties>
                             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                              <StringArray count="2">
-                                <StringItem index="0" value="No"/>
-                                <StringItem index="1" value="Yes"/>
+                              <StringArray count="3">
+                                <StringItem index="0" value="N/A"/>
+                                <StringItem index="1" value="No"/>
+                                <StringItem index="2" value="Yes"/>
                               </StringArray>
                             </Property>
                           </Properties>
@@ -2462,9 +2536,10 @@
                         <Component class="javax.swing.JComboBox" name="userQuestion11A">
                           <Properties>
                             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                              <StringArray count="2">
-                                <StringItem index="0" value="No"/>
-                                <StringItem index="1" value="Yes"/>
+                              <StringArray count="3">
+                                <StringItem index="0" value="N/A"/>
+                                <StringItem index="1" value="No"/>
+                                <StringItem index="2" value="Yes"/>
                               </StringArray>
                             </Property>
                           </Properties>
@@ -2472,9 +2547,10 @@
                         <Component class="javax.swing.JComboBox" name="userQuestion6A">
                           <Properties>
                             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                              <StringArray count="2">
-                                <StringItem index="0" value="No"/>
-                                <StringItem index="1" value="Yes"/>
+                              <StringArray count="3">
+                                <StringItem index="0" value="N/A"/>
+                                <StringItem index="1" value="No"/>
+                                <StringItem index="2" value="Yes"/>
                               </StringArray>
                             </Property>
                           </Properties>
@@ -2492,6 +2568,14 @@
                         </Component>
                       </SubComponents>
                     </Container>
+                    <Component class="javax.swing.JLabel" name="jLabel40">
+                      <Properties>
+                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="0" green="0" red="ff" type="rgb"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="Add .txt  to the end of your file name after clicking submit"/>
+                      </Properties>
+                    </Component>
                   </SubComponents>
                 </Container>
               </SubComponents>

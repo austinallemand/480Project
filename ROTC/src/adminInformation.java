@@ -621,6 +621,11 @@ public class adminInformation extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         searchCadet.setText("Search Cadet...");
+        searchCadet.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                searchCadetMouseClicked(evt);
+            }
+        });
         searchCadet.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 searchCadetActionPerformed(evt);
@@ -710,7 +715,7 @@ public class adminInformation extends javax.swing.JFrame {
             }
         });
 
-        jLabelPN.setText("Phone Number:");
+        jLabelPN.setText("Phone Number(xxx-xxx-xxxx):");
 
         userPN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -720,11 +725,11 @@ public class adminInformation extends javax.swing.JFrame {
 
         jLabelStreet.setText("Street Address:");
 
-        jLabel40.setText("Apartment:");
+        jLabel40.setText("Apartment Number(Apt xxx):");
 
         jLabelCity.setText("City:");
 
-        jLabelState.setText("State:");
+        jLabelState.setText("State(ST):");
 
         jLabelZip.setText("Zip Code:");
 
@@ -745,7 +750,7 @@ public class adminInformation extends javax.swing.JFrame {
 
         jLabelEth.setText("Ethnicity:");
 
-        jLabel9.setText("Place of Birth(City,State):");
+        jLabel9.setText("Place of Birth(City,ST):");
 
         userPoB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -776,7 +781,7 @@ public class adminInformation extends javax.swing.JFrame {
 
         jLabelSSN2.setText("Notify instead:");
 
-        jLabel23.setText("Dorm and Room #");
+        jLabel23.setText("Apartment/Dorm and Room #:");
 
         jLabelNoD.setText("Number of dependants:");
 
@@ -819,7 +824,7 @@ public class adminInformation extends javax.swing.JFrame {
                                 .addGap(21, 21, 21))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                                 .addComponent(jLabel9)
-                                .addGap(18, 18, 18)))
+                                .addGap(21, 21, 21)))
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(userStreet, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(userApt, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -842,7 +847,7 @@ public class adminInformation extends javax.swing.JFrame {
                                 .addComponent(userDoB, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 162, Short.MAX_VALUE))
                             .addGroup(jPanel4Layout.createSequentialGroup()
                                 .addGap(1, 1, 1)
-                                .addComponent(userRace, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(userRace, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGap(61, 61, 61)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -858,7 +863,7 @@ public class adminInformation extends javax.swing.JFrame {
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel4Layout.createSequentialGroup()
-                                .addGap(50, 50, 50)
+                                .addGap(26, 26, 26)
                                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(jLabel15)
                                     .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -868,7 +873,7 @@ public class adminInformation extends javax.swing.JFrame {
                                     .addComponent(jLabel23)
                                     .addComponent(jLabel18)))
                             .addGroup(jPanel4Layout.createSequentialGroup()
-                                .addGap(25, 25, 25)
+                                .addGap(37, 37, 37)
                                 .addComponent(jLabelSSN1)))
                         .addGap(22, 22, 22)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -880,7 +885,7 @@ public class adminInformation extends javax.swing.JFrame {
                             .addComponent(userMailingCity, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(userMailingState, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(userMailingZip, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(256, Short.MAX_VALUE))
+                .addContainerGap(214, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1024,11 +1029,11 @@ public class adminInformation extends javax.swing.JFrame {
 
         jLabel13.setText("Partner City:");
 
-        jLabel14.setText("Partner State:");
+        jLabel14.setText("Partner State(ST):");
 
         jLabel56.setText("Partner Zipcode:");
 
-        jLabel12.setText("Phone Number:");
+        jLabel12.setText("Partner Phone Number(xxx-xxx-xxxx):");
 
         jLabel8.setText("Partner place of Birth :");
 
@@ -1055,9 +1060,9 @@ public class adminInformation extends javax.swing.JFrame {
 
         jLabel37.setText("Child City:");
 
-        jLabel55.setText("Child Phone Number:");
+        jLabel55.setText("Child Phone Number(xxx-xxx-xxxx):");
 
-        jLabel52.setText("Child State:");
+        jLabel52.setText("Child State(ST):");
 
         jLabel66.setText("Child Zipcode:");
 
@@ -1070,7 +1075,7 @@ public class adminInformation extends javax.swing.JFrame {
                     .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel5Layout.createSequentialGroup()
-                                .addGap(65, 65, 65)
+                                .addGap(72, 72, 72)
                                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(jLabel2)
                                     .addComponent(jLabel8)
@@ -1080,13 +1085,14 @@ public class adminInformation extends javax.swing.JFrame {
                                     .addComponent(jLabel13)
                                     .addComponent(jLabel14)
                                     .addComponent(jLabel56)
-                                    .addComponent(jLabel12)
                                     .addComponent(jLabel30)
                                     .addComponent(jLabel31)
                                     .addComponent(jLabel32)))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
                                 .addContainerGap()
-                                .addComponent(jLabel33)))
+                                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel33, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel12, javax.swing.GroupLayout.Alignment.TRAILING))))
                         .addGroup(jPanel5Layout.createSequentialGroup()
                             .addContainerGap()
                             .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -1124,7 +1130,7 @@ public class adminInformation extends javax.swing.JFrame {
                     .addComponent(userChildMI, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(userChildStreet)
                     .addComponent(userChildState, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 228, Short.MAX_VALUE))
+                .addGap(0, 221, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1234,7 +1240,7 @@ public class adminInformation extends javax.swing.JFrame {
 
         jLabel43.setText("Father City:");
 
-        jLabel44.setText("Father State:");
+        jLabel44.setText("Father State(ST):");
 
         jLabel54.setText("Father Zipcode:");
 
@@ -1250,19 +1256,19 @@ public class adminInformation extends javax.swing.JFrame {
 
         jLabel50.setText("Mother City:");
 
-        jLabel51.setText("Mother State:");
+        jLabel51.setText("Mother State(ST):");
 
         jLabel57.setText("Mother Zipcode:");
 
         jLabel58.setText("Mother Phone Number(xxx-xxx-xxxx):");
 
-        jLabelEC.setText("Emergency Contact:");
+        jLabelEC.setText("Emergency Contact(First Last):");
 
         jLabel3.setText("Emergency Street Address:");
 
         jLabel6.setText("Emergency City:");
 
-        jLabel7.setText("Emergency State:");
+        jLabel7.setText("Emergency State(ST):");
 
         jLabel17.setText("Emergency Zipcode:");
 
@@ -1547,9 +1553,10 @@ public class adminInformation extends javax.swing.JFrame {
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
+                .addGap(18, 18, 18)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addGap(143, 143, 143)
+                        .addGap(72, 72, 72)
                         .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel77)
                             .addComponent(jLabel78)
@@ -1576,7 +1583,7 @@ public class adminInformation extends javax.swing.JFrame {
                     .addGroup(jPanel6Layout.createSequentialGroup()
                         .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel6Layout.createSequentialGroup()
-                                .addGap(130, 130, 130)
+                                .addGap(54, 54, 54)
                                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(jLabelGPS1)
                                     .addComponent(jLabel70)
@@ -1591,7 +1598,7 @@ public class adminInformation extends javax.swing.JFrame {
                                     .addComponent(jLabel75)
                                     .addComponent(jLabel76)))
                             .addGroup(jPanel6Layout.createSequentialGroup()
-                                .addGap(197, 197, 197)
+                                .addGap(129, 129, 129)
                                 .addComponent(jLabel26))
                             .addComponent(jLabel25, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
@@ -1612,7 +1619,7 @@ public class adminInformation extends javax.swing.JFrame {
                             .addComponent(jLabel24)
                             .addComponent(userPriorS, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(userHasPriorS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(0, 135, Short.MAX_VALUE))
+                .addContainerGap(188, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1744,38 +1751,38 @@ public class adminInformation extends javax.swing.JFrame {
 
         Question13.setText("<html>13)Do you understand that participation in Air <br></br>Force ROTC required strenuous physical activity? (You will be required to obtain medicalclearance from a physician prior to program entry.)</html>");
 
-        userQuestion2A.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "No", "Yes" }));
+        userQuestion2A.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "N/A", "No", "Yes" }));
 
-        userQuestion1A.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "No", "Yes" }));
+        userQuestion1A.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "N/A", "No", "Yes" }));
 
-        userQuestion3A.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "No", "Yes" }));
+        userQuestion3A.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "N/A", "No", "Yes" }));
 
-        userQuestion10A.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "No", "Yes" }));
+        userQuestion10A.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "N/A", "No", "Yes" }));
         userQuestion10A.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 userQuestion10AMouseClicked(evt);
             }
         });
 
-        userQuestion4A.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "No", "Yes" }));
+        userQuestion4A.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "N/A", "No", "Yes" }));
 
-        userQuestion13A.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "No", "Yes" }));
+        userQuestion13A.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "N/A", "No", "Yes" }));
         userQuestion13A.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 userQuestion13AActionPerformed(evt);
             }
         });
 
-        userQuestion9A.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "No", "Yes" }));
+        userQuestion9A.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "N/A", "No", "Yes" }));
         userQuestion9A.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 userQuestion9AActionPerformed(evt);
             }
         });
 
-        userQuestion7A.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "No", "Yes" }));
+        userQuestion7A.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "N/A", "No", "Yes" }));
 
-        userQuestion8A.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "No", "Yes" }));
+        userQuestion8A.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "N/A", "No", "Yes" }));
         userQuestion8A.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 userQuestion8AActionPerformed(evt);
@@ -1785,21 +1792,21 @@ public class adminInformation extends javax.swing.JFrame {
         userQuestion5B.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "N/A", "Birth", "Naturalized" }));
         userQuestion5B.setEnabled(false);
 
-        userQuestion11A.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "No", "Yes" }));
+        userQuestion11A.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "N/A", "No", "Yes" }));
 
-        userQuestion6A.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "No", "Yes" }));
+        userQuestion6A.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "N/A", "No", "Yes" }));
 
         userQuestion10B.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "N/A", "4-year", "3-year" }));
         userQuestion10B.setEnabled(false);
 
-        userQuestion5A.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "No", "Yes" }));
+        userQuestion5A.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "N/A", "No", "Yes" }));
         userQuestion5A.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 userQuestion5AActionPerformed(evt);
             }
         });
 
-        userQuestion12A.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "No", "Yes" }));
+        userQuestion12A.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "N/A", "No", "Yes" }));
         userQuestion12A.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 userQuestion12AActionPerformed(evt);
@@ -2251,47 +2258,47 @@ public class adminInformation extends javax.swing.JFrame {
         
         try { 
             PrintWriter outputFile = new PrintWriter (userFile);
-            //outputFile.print("LASTNAME\t");
-            //outputFile.print("FIRSTNAME\t");
-            //outputFile.print("MIDDLEINITIAL\t");
-            //outputFile.print("FULLNAME\t");
+            outputFile.print("LASTNAME\t");
+            outputFile.print("FIRSTNAME\t");
+            outputFile.print("MIDDLEINITIAL\t");
+            outputFile.print("FULLNAME\t");
             outputFile.print("SSAN\t");
             outputFile.print("DATEOFBIRTHMDDYYYY\t");
             outputFile.print("CWUID\t");
-            //outputFile.print("EMAIL\t");
-            //outputFile.print("PHONENUMBER\t");
-            //outputFile.print("STREETADDRESS\t");
-            //outputFile.print("APT\t");
-            //outputFile.print("CITY\t");
-            //outputFile.print("STATE\t");
-            //outputFile.print("ZIPCODE\t");
+            outputFile.print("EMAIL\t");
+            outputFile.print("PHONENUMBER\t");
+            outputFile.print("STREETADDRESS\t");
+            outputFile.print("APT\t");
+            outputFile.print("CITY\t");
+            outputFile.print("STATE\t");
+            outputFile.print("ZIPCODE\t");
             outputFile.print("GENDER\t");
             outputFile.print("ACAMAJOR\t");
             outputFile.print("GRADDATE\t"); 
             
-           // outputFile.print("ETHNICTY\t");
-           // outputFile.print("MARITIALSTATUS\t");
+            outputFile.print("ETHNICTY\t");
+            outputFile.print("MARITIALSTATUS\t");
             outputFile.print("PARTNERNAME\t");
-            //outputFile.print("PARTNERADDRESS\t");
-            //outputFile.print("PARTNERCITY\t");
-            //outputFile.print("PARTNERSTATE\t");
-            //outputFile.print("PARTNERNUMBER\t");
-            //outputFile.print("PARTNERPOB\t");
+           outputFile.print("PARTNERADDRESS\t");
+           outputFile.print("PARTNERCITY\t");
+            outputFile.print("PARTNERSTATE\t");
+            outputFile.print("PARTNERNUMBER\t");
+            outputFile.print("PARTNERPOB\t");
             outputFile.print("DEPENDENTS\t");
             outputFile.print("EMERGENCYCONTACT\t");
             
-            //outputFile.print("EMERGENCYSTREET\t");
-            //outputFile.print("EMERGENCYCITY\t");
-            //outputFile.print("EMERGENCYSTATE\t");
+            outputFile.print("EMERGENCYSTREET\t");
+            outputFile.print("EMERGENCYCITY\t");
+            outputFile.print("EMERGENCYSTATE\t");
             
             outputFile.print("EMERGENCYNUMBER\t");
             outputFile.print("PRIORSERVICEYES\t");
             outputFile.print("JUNIORROTC\t");
-            //outputFile.print("CHILDREN\t"); 
+            outputFile.print("CHILDREN\t"); 
             outputFile.print("PRIORSERVICE\t");
             outputFile.print("EAGLESCOUT\t");
             outputFile.print("GUARDIANPRIORSERVICE\t");
-            //outputFile.print("GUARDIANPRIORSERVICEYES\t");
+            outputFile.print("GUARDIANPRIORSERVICEYES\t");
             outputFile.print("PLACEOFBIRTH\t");
             outputFile.print("SELECTIVESERVERNUMBER\t");
             outputFile.print("CURRENTMAILINGADDRESS\t");
@@ -2313,46 +2320,46 @@ public class adminInformation extends javax.swing.JFrame {
             outputFile.print("DEATHBENEFICARYPERCENT\t");
             outputFile.print("MAILINGADDRESSEMAIL\t");
             outputFile.print("INITIALS\t");
-            //outputFile.print("PARTNERZIPCODE\t");
-            //outputFile.print("MAILINGYESORNO\t");
-            //outputFile.print("CHILDFIRSTNAME\t");
-            //outputFile.print("CHILDMI\t");
-            //outputFile.print("CHILDLASTNAME\t");
-            //outputFile.print("CHILDCITY\t");
-           // outputFile.print("CHILDSTATE\t");
-            //outputFile.print("CHILDZIP\t");
-            //outputFile.print("FATHERFIRSTNAME\t");
-            //outputFile.print("FATHERMI\t");
-            //outputFile.print("FATHERLASTNAME\t");
-            //outputFile.print("FATHERCITY\t");
-            //outputFile.print("FATHERSTATE\t");
-            //outputFile.print("FATHERZIP\t");
-            //outputFile.print("FATHERPN\t");
-            //outputFile.print("MOTHERFIRSTNAME\t");
-            //outputFile.print("MOTHERMI\t");
-            //outputFile.print("MOTHERLASTNAME\t");
-            //outputFile.print("MOTHERCITY\t");
-            //outputFile.print("MOTHERSTATE\t");
-            //outputFile.print("MOTHERZIP\t");
-            //outputFile.print("MOTHERPN\t");
-            //outputFile.print("DEATHBENEFICARYSTREET\t");
-            //outputFile.print("DEATHBENEFICARYCITY\t");
-            //outputFile.print("MAILINGSTREET\t");
-            //outputFile.print("MAILINGCITY\t");
-            //outputFile.print("MAILINGSTATE\t");
-            //outputFile.print("MAILINGZIP\t");
-            //outputFile.print("PARTNERFIRSTNAME\t");
-            //outputFile.print("PARTNERMI\t");
-           // outputFile.print("PARTNERLASTNAME\t");
-            //outputFile.print("CHILDNUMBER\t");
-            //outputFile.print("EMERGENCYZIP\t");
-            //outputFile.print("MAILINGDORM\t");
+            outputFile.print("PARTNERZIPCODE\t");
+            outputFile.print("MAILINGYESORNO\t");
+            outputFile.print("CHILDFIRSTNAME\t");
+            outputFile.print("CHILDMI\t");
+            outputFile.print("CHILDLASTNAME\t");
+            outputFile.print("CHILDCITY\t");
+            outputFile.print("CHILDSTATE\t");
+            outputFile.print("CHILDZIP\t");
+            outputFile.print("FATHERFIRSTNAME\t");
+            outputFile.print("FATHERMI\t");
+            outputFile.print("FATHERLASTNAME\t");
+            outputFile.print("FATHERCITY\t");
+            outputFile.print("FATHERSTATE\t");
+            outputFile.print("FATHERZIP\t");
+            outputFile.print("FATHERPN\t");
+            outputFile.print("MOTHERFIRSTNAME\t");
+            outputFile.print("MOTHERMI\t");
+            outputFile.print("MOTHERLASTNAME\t");
+            outputFile.print("MOTHERCITY\t");
+            outputFile.print("MOTHERSTATE\t");
+            outputFile.print("MOTHERZIP\t");
+            outputFile.print("MOTHERPN\t");
+            outputFile.print("DEATHBENEFICARYSTREET\t");
+            outputFile.print("DEATHBENEFICARYCITY\t");
+            outputFile.print("MAILINGSTREET\t");
+            outputFile.print("MAILINGCITY\t");
+            outputFile.print("MAILINGSTATE\t");
+            outputFile.print("MAILINGZIP\t");
+            outputFile.print("PARTNERFIRSTNAME\t");
+            outputFile.print("PARTNERMI\t");
+            outputFile.print("PARTNERLASTNAME\t");
+            outputFile.print("CHILDNUMBER\t");
+            outputFile.print("EMERGENCYZIP\t");
+            outputFile.print("MAILINGDORM\t");
             
-            //outputFile.print("FATHERSTREET\t");
-            //outputFile.print("MOTHERSTREET\t");
-            //outputFile.print("DEATHBENEFICARYSTATE\t");
-            //outputFile.print("DEATHBENEFICARYZIP\t");
-            //outputFile.print("DEATHBENEFICARYPN\t");
+            outputFile.print("FATHERSTREET\t");
+            outputFile.print("MOTHERSTREET\t");
+            outputFile.print("DEATHBENEFICARYSTATE\t");
+            outputFile.print("DEATHBENEFICARYZIP\t");
+            outputFile.print("DEATHBENEFICARYPN\t");
             outputFile.print("DEATHBENEFICARY\t");
             outputFile.print("PRIORSERVICEFROM\t");
             outputFile.print("PRIORSERVICETO\t");
@@ -2368,7 +2375,7 @@ public class adminInformation extends javax.swing.JFrame {
             outputFile.print("QUESTION3A\t");
             outputFile.print("QUESTION4A\t");
             outputFile.print("QUESTION5A\t");
-            //outputFile.print("QUESTION5B\t"); 
+            outputFile.print("QUESTION5B\t"); 
             outputFile.print("QUESTION6A\t");
             outputFile.print("QUESTION7A\t");
             outputFile.print("QUESTION8A\t");
@@ -2384,54 +2391,54 @@ public class adminInformation extends javax.swing.JFrame {
             outputFile.println();
             
             
-            //outputFile.print(userLN.getText()+"\t");
-            //outputFile.print(userFN.getText()+"\t");
-            //outputFile.print(userMN.getText()+"\t");
-            //outputFile.print(userLN.getText()+", " + userFN.getText() + " " + userMN.getText()+ "\t");
+            outputFile.print(userLN.getText()+"\t");
+            outputFile.print(userFN.getText()+"\t");
+            outputFile.print(userMN.getText()+"\t");
+            outputFile.print(userLN.getText()+", " + userFN.getText() + " " + userMN.getText()+ "\t");
             outputFile.print(userSSN.getText()+"\t");
             outputFile.print(userDoB.getText()+"\t");
             outputFile.print(userCWUID.getText()+"\t");
-            //outputFile.print(userEmail.getText()+"\t");
-            //outputFile.print(userPN.getText()+"\t");
-            /*
+            outputFile.print(userEmail.getText()+"\t");
+            outputFile.print(userPN.getText()+"\t");
+            
             outputFile.print(userStreet.getText()+"\t");
             outputFile.print(userApt.getText()+"\t");
             outputFile.print(userCity.getText()+"\t");
             outputFile.print(userState.getText()+"\t");
             outputFile.print(userZip.getText()+"\t");
-            */
+            
             
             outputFile.print(userGender.getSelectedItem().toString()+"\t"); 
             outputFile.print(userAcMajor.getText()+"\t");
             outputFile.print(userGradDate.getText()+"\t");
             
-            //outputFile.print(userRace.getSelectedItem().toString()+"\t");
-            //outputFile.print(userMaritialS.getSelectedItem().toString()+"\t");
+            outputFile.print(userRace.getSelectedItem().toString()+"\t");
+            outputFile.print(userMaritialS.getSelectedItem().toString()+"\t");
             outputFile.print(userPartnerLN.getText()+ ", " + userPartnerFN.getText() + " " + userPartnerMI.getText() +"\t");
-            /*
+            
             outputFile.print(userPartnerStreet.getText()+"\t");
             outputFile.print(userPartnerCity.getText()+"\t");
             outputFile.print(userPartnerState.getText()+"\t");
             outputFile.print(userPartnerPN.getText()+"\t");
-            */
-            //outputFile.print(userPartnerPoB.getText()+"\t");
+            
+            outputFile.print(userPartnerPoB.getText()+"\t");
             outputFile.print(userNoD.getText() +"\t");    
             outputFile.print(userEmergency.getText()+"\t");
             
-            /*
+            
             outputFile.print(userEmergencyStreet.getText()+"\t");
             outputFile.print(userEmergencyCity.getText() +"\t");
             outputFile.print(userEmergencyState.getText()+"\t");
             
-            */
+            
             outputFile.print(userEmergencyPN.getText()+"\t");
             outputFile.print(userHasPriorS.getSelectedItem().toString()+"\t"); 
             outputFile.print(userJuniorROTC.getSelectedItem().toString()+"\t");
-            //outputFile.print(userChildren.getSelectedItem().toString()+"\t");
+            outputFile.print(userChildren.getSelectedItem().toString()+"\t");
             outputFile.print(userPriorS.getSelectedItem().toString()+"\t");
             outputFile.print(userEagleScout.getSelectedItem().toString()+"\t");
             outputFile.print(userGuardianStatus.getSelectedItem().toString()+"\t");
-            //outputFile.print(userGuardianPriorS.getSelectedItem().toString()+"\t");
+            outputFile.print(userGuardianPriorS.getSelectedItem().toString()+"\t");
             
             outputFile.print(userPoB.getText()+"\t");
             if ((userGender.getSelectedItem().toString()).equals("Female")){
@@ -2502,9 +2509,9 @@ public class adminInformation extends javax.swing.JFrame {
             //Initials first and last
             outputFile.print(userFN.getText().charAt(0)+ "." + userLN.getText().charAt(0) + "\t");
             
-            //outputFile.print(userPartnerZip.getText()+"\t");
-            //outputFile.print(userDiffMailing.getSelectedItem().toString()+"\t");
-            /*
+            outputFile.print(userPartnerZip.getText()+"\t");
+            outputFile.print(userDiffMailing.getSelectedItem().toString()+"\t");
+            
             outputFile.print(userChildFN.getText()+"\t");
             outputFile.print(userChildMI.getText()+"\t");
             outputFile.print(userChildLN.getText()+"\t");
@@ -2548,7 +2555,7 @@ public class adminInformation extends javax.swing.JFrame {
             outputFile.print(userDeathZip.getText()+"\t");
             outputFile.print(userDeathPN.getText()+"\t");
             
-            */
+            
             outputFile.print(userDeath.getText()+ "\t");
             outputFile.print(userPriorFrom.getText()+ "\t"); 
             outputFile.print(userPriorTo.getText()+ "\t");
@@ -2563,7 +2570,7 @@ public class adminInformation extends javax.swing.JFrame {
             outputFile.print(userQuestion3A.getSelectedItem().toString()+"\t");
             outputFile.print(userQuestion4A.getSelectedItem().toString()+"\t"); 
             outputFile.print(userQuestion5A.getSelectedItem().toString()+"\t");
-            //outputFile.print(userQuestion5B.getSelectedItem().toString()+"\t");
+            outputFile.print(userQuestion5B.getSelectedItem().toString()+"\t");
             outputFile.print(userQuestion6A.getSelectedItem().toString()+"\t");
             outputFile.print(userQuestion7A.getSelectedItem().toString()+"\t");
             outputFile.print(userQuestion8A.getSelectedItem().toString()+"\t");
@@ -2702,6 +2709,10 @@ public class adminInformation extends javax.swing.JFrame {
     private void userQuestion8AActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userQuestion8AActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_userQuestion8AActionPerformed
+
+    private void searchCadetMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_searchCadetMouseClicked
+        searchCadet.setText("");
+    }//GEN-LAST:event_searchCadetMouseClicked
 
     /**
      * @param args the command line arguments
